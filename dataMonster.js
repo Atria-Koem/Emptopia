@@ -1,4 +1,4 @@
-const dataMonster = {
+ const dataMonster = {
     M10000000: {
         name: 'Goblin',
       health:{
