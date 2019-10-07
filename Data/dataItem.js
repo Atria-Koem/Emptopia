@@ -128,4 +128,22 @@ const dataItem = {
 		},
 		exp : 'Simple Case / (30)' 
 	}
+	IT0000008 : { 
+	  code : 'IT0000008', 
+	  name : 'Bon Helm', 
+	 category : 'Head', 
+	 type : Helmet', 
+	 health : {
+ 		Hp : 10,Mp : 15,
+ 		pHp : 3,pMp : 5
+	}, 
+	 state : {
+ 		str : 3, 	vit : 4, 	int : 4, 	wis : 4, 	dex : -1, 	
+ 		agi : -1, 	res : 2, 	spd : -1
+	}, 
+	 option : {
+ 		resPhyPer : 3, 	resMagPer : 3
+	}, 
+	  exp : 'Just bone helm', 
+	}
 }
