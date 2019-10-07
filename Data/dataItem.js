@@ -336,7 +336,7 @@ const dataItem = {
 	}
 	IT0000022 : { 
 	 	code : 'IT0000022', 
-	 	name : '  Anxiety', 
+	 	name : 'Anxiety', 
 	 	category : 'Weapon', 
 	 	type : BowGun', 
 	 	state : {
@@ -347,5 +347,19 @@ const dataItem = {
  			rateHitJust : 60, 	atkRapid : 2, 	rateCrtLuk : 20
 		}, 
 		exp : 'Looking for a chance to get revenge on someone.', 
+	}
+	IT0000023 : { 
+	 	code : 'IT0000023', 
+	 	name : 'Attack Type Changer(N)', 
+	 	category : 'Item', 
+	 	type : Item', 
+	 	exp : 'Make that the general damage is applied as a magic damage.', 
+	}
+	IT0000024 : { 
+	 	code : 'IT0000024', 
+	 	name : 'Attack Type Changer(M)', 
+	 	category : 'Item', 
+	 	type : Item', 
+	 	exp : 'Make that the magic damage is applied as a general damage.', 
 	}
 }
