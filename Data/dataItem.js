@@ -253,4 +253,74 @@ const dataItem = {
 		}, 
 	 	exp : 'It's a willow club, but it's definitely a sword.', 
 		}
+	IT0000015 : { 
+		code : 'IT0000015', 
+	 	name : 'Damaging Charm', 
+	 	category : 'Other', 
+		type : Item', 
+	 	state : {
+ 			str : 4, 	int : 4, 	dex : 4, 	spd : 4, 	luk : 4
+		}, 
+		option : {
+ 			atkPhy : 15, 	atkMag : 15, 	atkPhyTrue : 10, 	atkMagTrue : 10
+		}, 
+		exp : 'An object that increases your attack if you have it.', 
+	}
+	IT0000016 : { 
+	 	code : 'IT0000016', 
+	 	name : 'Peace Maker', 
+		category : 'Item', 
+	 	type : Item', 
+	 	exp : 'We wish for peace. All the objects are restored to health.', 
+	}
+	IT0000017 : { 
+	 	code : 'IT0000017', 
+		name : 'Monkey's Dagger', 
+	 	category : 'Weapon', 
+	 	type : SubSword', 
+	 	state : {
+ 			str : 7, 	vit : 2, 	int : 4, 	dex : 7, 	spd : 5
+	 	}, 
+	 	option : {
+ 			atkPhy : 37, 	atkMag : 22, 	atkPhyTrue : 13, 	atkMagTrue : 10, 	rateHit : 30, 	
+ 			rateHitJust : 10, 	atkRapid : 3
+	 	}, 
+	 	exp : 'It's a green dagger with a monkey's magic', 
+	}
+	IT0000018 : { 
+	 	code : 'IT0000018', 
+	 	name : 'Long live the sun', 
+	 	category : 'Weapon', 
+	 	type : Shield', 
+	 	health : {
+ 			Hp : 150
+		}, 
+	 	state : {
+ 			str : 7, 	vit : 12, 	dis : 10, 	res : 10
+	 	}, 
+	 	option : {
+ 			defPhyPer : 52, 	defPhyNum : 5, 	resPhyPer : 10, 	resPhyNum : 5, 	defMagPer : 43, 	
+ 			defMagNum : 5, 	resMagPer : 10, 	resMagNum : 5, 	rateRes : 10, 	ratePFD : 15
+	 	}, 
+	 	exp : 'Long live the sun.', 
+	}
+	IT0000019 : { 
+	 	code : 'IT0000019', 
+	 	name : 'Blackwing Male', 
+	 	category : 'Ammor', 
+	 	type : Ammor', 
+	 	health : {
+ 			Hp : 300,
+ 			pHp : 10
+	 	}, 
+	 	state : {
+ 			str : 12, 	vit : 15, 	dis : 10, 	res : 20
+		}, 
+		option : {
+ 			defPhyPer : 70, 	defPhyNum : 5, 	resPhyPer : 10, 	resPhyNum : 10, 	defMagPer : 66, 	
+ 			defMagNum : 5, 	resMagPer : 10, 	resMagNum : 10, 	rateDis : 10, 	rateRes : 10, 	
+ 			ratePFD : 20
+		}, 
+		exp : 'A black armor with winghs', 
+	}
 }
