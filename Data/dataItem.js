@@ -320,4 +320,32 @@ const dataItem = {
 		}, 
 		exp : 'Good means of communication', 
 	}
+	IT0000021 : { 
+		code : 'IT0000021', 
+		name : 'Retirbution', 
+	 	category : 'Weapon', 
+	 	type : BowGun', 
+	 	state : {
+ 			str : 12, 	dex : 25
+	 	}, 
+	 	option : {
+ 			atkPhy : 55, 	atkPhyTrue : 21, 	rateHit : 95, 	rateCrt : 20, 	valCrt : 150, 	
+ 			rateHitJust : 60, 	atkRapid : 2, 	rateCrtLuk : 20
+	 	}, 
+	 	exp : 'Looking for a chance to get revenge on someone.', 
+	}
+	IT0000022 : { 
+	 	code : 'IT0000022', 
+	 	name : '  Anxiety', 
+	 	category : 'Weapon', 
+	 	type : BowGun', 
+	 	state : {
+ 			str : 12, 	dex : 27
+		}, 
+		option : {
+ 			atkPhy : 60, 	atkPhyTrue : 22, 	rateHit : 95, 	rateCrt : 20, 	valCrt : 130, 	
+ 			rateHitJust : 60, 	atkRapid : 2, 	rateCrtLuk : 20
+		}, 
+		exp : 'Looking for a chance to get revenge on someone.', 
+	}
 }
