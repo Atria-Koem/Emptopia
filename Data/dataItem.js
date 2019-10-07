@@ -231,4 +231,26 @@ const dataItem = {
 	}, 
 	  exp : 'Jolteon's leather', 
 	}
+	IT0000013 : { 
+	  code : 'IT0000013', 
+	  name : 'Silk Bangage', 
+	 category : 'Other', 
+	 type : Item', 
+	  exp : 'It helps you regain your physical strength. It's a secret weapon for thieves. Heals 30% of your total health.', 
+	}
+		  IT0000014 : { 
+	  code : 'IT0000014', 
+	  name : 'A Willow Club', 
+	 category : 'Weapon', 
+	 type : Sword', 
+	 state : {
+ 		str : 13, 	vit : 12, 	dex : 5, 	res : 5, 	spd : 7, 	
+ 		luk : 5
+	}, 
+	 option : {
+ 		atkPhy : 52, 	atkMag : 20, 	rateHit : 60, 	rateCrt : 20, 	valCrt : 20, 	
+ 		rateHitJust : 40
+	}, 
+	  exp : 'It's a willow club, but it's definitely a sword.', 
+	}
 }
