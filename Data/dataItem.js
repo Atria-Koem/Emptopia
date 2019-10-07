@@ -146,4 +146,89 @@ const dataItem = {
 	}, 
 	  exp : 'Just bone helm', 
 	}
+	IT0000009 : { 
+	  code : 'IT0000009', 
+	  name : '56-Type', 
+	 category : 'Weapon', 
+	 type : Gun', 
+	 health : {
+ 		
+ 		pSp : 12
+	}, 
+	 state : {
+ 		str : 4, 	dex : 7, 	agi : 2, 	res : 2, 	spd : 5, 	
+ 		luk : 3
+	}, 
+	 option : {
+ 		atkPhy : 10, 	resPhyPer : 3, 	resMagPer : 3, 	atkPhyTrue : 3, 	rateHit : 10, 	
+ 		rateDodge : 3, 	rateCrt : 3, 	valCrt : 30, 	rateHitJust : 10, 	atkRapid : 5, 	
+ 		rateCrtLuk : 12, 	rateDodgeLuk : 3
+	}, 
+	  exp : 'Like FPS weapon', 
+	}
+	 IT0000010 : { 
+	  code : 'IT0000010', 
+	  name : 'Bear's Viking', 
+	 category : 'Weapon', 
+	 type : Sword', 
+	 state : {
+ 		str : 3, 	vit : 2
+	}, 
+	 option : {
+ 		atkPhy : 41, 	atkPhyTrue : 29, 	rateHit : 5, 	rateHitJust : 5, 	atkRapid : 3
+	}, 
+	  exp : 'This item is green', 
+	}
+	  IT0000011 : { 
+	  code : 'IT0000011', 
+	  name : 'Ghost Belt', 
+	 category : 'Ammor', 
+	 type : Ammor', 
+	 health : {
+ 		
+ 		pHp : 7,pSp : 7,pMp : 7
+	}, 
+	 state : {
+ 		dis : 7, 	res : 7, 	spd : 7, 	luk : 7
+	}, 
+	  exp : 'Ghost belt, not curse', 
+	}
+	IT0000012 : { 
+	  code : 'IT0000012', 
+	  name : 'Thunther Ring', 
+	 category : 'Head', 
+	 type : Circlet', 
+	 health : {
+ 		Mp : 30,
+ 		pHp : 3,pSp : 7,pMp : 3
+	}, 
+	 state : {
+ 		vit : 2, 	int : 5, 	wis : 5, 	dex : 3, 	agi : 5, 	
+ 		res : 5, 	spd : 4
+	}, 
+	 option : {
+ 		atkMag : 12, 	defMagPer : 5, 	defMagNum : 3, 	resMagPer : 5, 	resMagNum : 3, 	
+ 		rateDodge : 2, 	rateRes : 3, 	rateDodgeLuk : 2
+	}, 
+	  exp : 'Jolteon's leather', 
+	}
+		  IT0000012 : { 
+	  code : 'IT0000012', 
+	  name : 'Thunther Ring', 
+	 category : 'Head', 
+	 type : Circlet', 
+	 health : {
+ 		Mp : 30,
+ 		pHp : 3,pSp : 7,pMp : 3
+	}, 
+	 state : {
+ 		vit : 2, 	int : 5, 	wis : 5, 	dex : 3, 	agi : 5, 	
+ 		res : 5, 	spd : 4
+	}, 
+	 option : {
+ 		atkMag : 12, 	defMagPer : 5, 	defMagNum : 3, 	resMagPer : 5, 	resMagNum : 3, 	
+ 		rateDodge : 2, 	rateRes : 3, 	rateDodgeLuk : 2
+	}, 
+	  exp : 'Jolteon's leather', 
+}
 }
