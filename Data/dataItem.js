@@ -230,5 +230,5 @@ const dataItem = {
  		rateDodge : 2, 	rateRes : 3, 	rateDodgeLuk : 2
 	}, 
 	  exp : 'Jolteon's leather', 
-}
+	}
 }
