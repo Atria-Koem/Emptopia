@@ -316,7 +316,7 @@ const dataItem = {
 		}, 
 		option : {
  			atkPhy : 97, 	atkPhyTrue : 55, 	rateHit : 70, 	rateCrt : 25, 	valCrt : 125, 	
- 		rateHitJust : 50, 	atkRapid : *, 	rateCrtLuk : 20
+ 		rateHitJust : 50, 	atkRapid : 1, 	rateCrtLuk : 20
 		}, 
 		exp : 'Good means of communication', 
 	}
