@@ -376,4 +376,18 @@ const dataItem = {
 		}, 
 		exp : 'A whip covered with sharp thorns. A certain probability leaves an abnormal bleed.', 
 	}
+	IT0000026 : { 
+	 	code : 'IT0000026', 
+	 	name : 'Tarantula', 
+	 	category : 'Weapon', 
+	 	type : SubSword', 
+	 	state : {
+ 			vit : 2, 	dex : 8
+		}, 
+		option : {
+ 			atkPhy : 41, 	atkPhyTrue : 19, 	rateHit : 90, 	rateDis : 20, 	rateCrt : 10, 	
+ 			valCrt : 140, 	rateHitJust : 60, 	atkRapid : 1
+		}, 
+		exp : 'It's a venom dagger. By a certain probability, to onself or the enemy is addicted to conditionally abnormalities.', 
+	}
 }
