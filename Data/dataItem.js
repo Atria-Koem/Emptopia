@@ -160,8 +160,8 @@ const dataItem = {
  			luk : 3
 		}, 
 		option : {
- 			atkPhy : 10, 	resPhyPer : 3, 	resMagPer : 3, 	atkPhyTrue : 3, 	rateHit : 10, 	
- 			rateDodge : 3, 	rateCrt : 3, 	valCrt : 30, 	rateHitJust : 10, 	atkRapid : 5, 	
+ 			atkPhy : 10, 	resPhyPer : 3, 	resMagPer : 3, 	atkPhyTrue : 3, 	rateHit : 90, 	
+ 			rateDodge : 3, 	rateCrt : 30, 	valCrt : 130, 	rateHitJust : 60, 	atkRapid : 5, 	
  			rateCrtLuk : 12, 	rateDodgeLuk : 3
 		}, 
 	  	exp : 'Like FPS weapon', 
@@ -175,10 +175,11 @@ const dataItem = {
  			str : 3, 	vit : 2
 		}, 
 	 	option : {
- 			atkPhy : 41, 	atkPhyTrue : 29, 	rateHit : 5, 	rateHitJust : 5, 	atkRapid : 3
+ 			atkPhy : 41, 	atkPhyTrue : 29, 	rateHit : 75, 	rateHitJust : 55, 	atkRapid : 3
+			rateCrt : 20, 	valCrt : 150,
 		}, 
 	 	exp : 'This item is green', 
-		}
+	}
 	 IT0000011 : { 
 	 	code : 'IT0000011', 
 	 	name : 'Ghost Belt', 
@@ -192,7 +193,7 @@ const dataItem = {
  			dis : 7, 	res : 7, 	spd : 7, 	luk : 7
 		}, 
 	  	exp : 'Ghost belt, not curse', 
-		}
+	}
 	IT0000012 : { 
 	 	code : 'IT0000012', 
 	 	name : 'Thunther Ring', 
@@ -211,33 +212,14 @@ const dataItem = {
  			rateDodge : 2, 	rateRes : 3, 	rateDodgeLuk : 2
 		}, 
 	  	exp : 'Jolteon's leather', 
-		}
-	IT0000012 : { 
-		code : 'IT0000012', 
-	 	name : 'Thunther Ring', 
-	 	category : 'Head', 
-	 	type : Circlet', 
-	 	health : {
- 			Mp : 30,
- 			pHp : 3,pSp : 7,pMp : 3
-		}, 
-	 	state : {
- 			vit : 2, 	int : 5, 	wis : 5, 	dex : 3, 	agi : 5, 	
- 			res : 5, 	spd : 4
-		}, 
-	 	option : {
- 			atkMag : 12, 	defMagPer : 5, 	defMagNum : 3, 	resMagPer : 5, 	resMagNum : 3, 	
- 			rateDodge : 2, 	rateRes : 3, 	rateDodgeLuk : 2
-		}, 
-	  	exp : 'Jolteon's leather', 
-		}
+	}
 	IT0000013 : { 
 	 	code : 'IT0000013', 
 	 	name : 'Silk Bangage', 
 	 	category : 'Other', 
 	 	type : Item', 
 	  	exp : 'It helps you regain your physical strength. It's a secret weapon for thieves. Heals 30% of your total health.', 
-		}
+	}
 	IT0000014 : { 
 	 	code : 'IT0000014', 
 	 	name : 'A Willow Club', 
@@ -248,7 +230,7 @@ const dataItem = {
  			luk : 5
 		}, 
 	 	option : {
- 			atkPhy : 52, 	atkMag : 20, 	rateHit : 60, 	rateCrt : 20, 	valCrt : 20, 	
+ 			atkPhy : 52, 	atkMag : 20, 	rateHit : 60, 	rateCrt : 20, 	valCrt : 120, 	
  			rateHitJust : 40
 		}, 
 	 	exp : 'It's a willow club, but it's definitely a sword.', 
@@ -262,7 +244,8 @@ const dataItem = {
  			str : 4, 	int : 4, 	dex : 4, 	spd : 4, 	luk : 4
 		}, 
 		option : {
- 			atkPhy : 15, 	atkMag : 15, 	atkPhyTrue : 10, 	atkMagTrue : 10
+ 			atkPhy : 15, 	atkMag : 15, 	atkPhyTrue : 10, 	atkMagTrue : 10, 
+			rateCrt : 20, 	valCrt : 150,
 		}, 
 		exp : 'An object that increases your attack if you have it.', 
 	}
@@ -282,8 +265,8 @@ const dataItem = {
  			str : 7, 	vit : 2, 	int : 4, 	dex : 7, 	spd : 5
 	 	}, 
 	 	option : {
- 			atkPhy : 37, 	atkMag : 22, 	atkPhyTrue : 13, 	atkMagTrue : 10, 	rateHit : 30, 	
- 			rateHitJust : 10, 	atkRapid : 3
+ 			atkPhy : 37, 	atkMag : 22, 	atkPhyTrue : 13, 	atkMagTrue : 10, 	rateHit : 70, 	
+ 			rateHitJust : 60, 	atkRapid : 3
 	 	}, 
 	 	exp : 'It's a green dagger with a monkey's magic', 
 	}
@@ -322,5 +305,19 @@ const dataItem = {
  			ratePFD : 20
 		}, 
 		exp : 'A black armor with winghs', 
+	}
+	IT0000020 : { 
+	 	code : 'IT0000020', 
+	 	name : 'Chain Saw ', 
+	 	category : 'Weapon', 
+	 	type : TwoHandSword', 
+	 	state : {
+ 			str : 12, 	vit : 15, 	dex : 10, 	spd : 10, 	luk : 7
+		}, 
+		option : {
+ 			atkPhy : 97, 	atkPhyTrue : 55, 	rateHit : 70, 	rateCrt : 25, 	valCrt : 125, 	
+ 		rateHitJust : 50, 	atkRapid : *, 	rateCrtLuk : 20
+		}, 
+		exp : 'Good means of communication', 
 	}
 }
