@@ -362,4 +362,18 @@ const dataItem = {
 	 	type : Item', 
 	 	exp : 'Make that the magic damage is applied as a general damage.', 
 	}
+	IT0000025 : { 
+	 	code : 'IT0000025', 
+	 	name : 'Rose Whip', 
+	 	category : 'Weapon', 
+	 	type : Whip', 
+	 	state : {
+ 			str : 5, 	dex : 5, 	spd : 5
+		}, 
+		option : {
+ 			atkPhy : 31, 	atkPhyTrue : 11, 	rateHit : 70, 	rateDis : 30, 	rateCrt : 10, 	
+ 			valCrt : 300, 	rateHitJust : 30, 	atkRapid : 2
+		}, 
+		exp : 'A whip covered with sharp thorns. A certain probability leaves an abnormal bleed.', 
+	}
 }
