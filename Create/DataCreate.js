@@ -99,7 +99,7 @@ class CreateData{
         txt += "\t  code : '" + this.code + "', \n"
         txt += "\t  name : '" + this.name + "', \n"
         txt += "\t category : '" + this.category  + "', \n"
-        txt += "\t type : " + this.itemType + "', \n"
+        txt += "\t type : '" + this.itemType + "', \n"
         if(this.health.length > 10   ){
         txt += "\t health : {" + this.health + "}, \n"
         }
