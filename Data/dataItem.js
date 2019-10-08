@@ -127,12 +127,12 @@ const dataItem = {
 			}
 		},
 		exp : 'Simple Case / (30)' 
-	}
+	},
 	IT0000008 : { 
 	 	code : 'IT0000008', 
 	 	name : 'Bon Helm', 
 	 	category : 'Head', 
-	 	type : Helmet', 
+	 	type : 'Helmet', 
 	 	health : {
  			Hp : 10,Mp : 15,
  			pHp : 3,pMp : 5
@@ -145,12 +145,12 @@ const dataItem = {
  			resPhyPer : 3, 	resMagPer : 3
 		}, 
 	  	exp : 'Just bone helm', 
-		}
+		},
 	IT0000009 : { 
 	  	code : 'IT0000009', 
 		name : '56-Type', 
 	 	category : 'Weapon', 
-	 	type : Gun', 
+	 	type : 'Gun', 
 	 	health : {
  		
  			pSp : 12
@@ -165,26 +165,26 @@ const dataItem = {
  			rateCrtLuk : 12, 	rateDodgeLuk : 3
 		}, 
 	  	exp : 'Like FPS weapon', 
-		}
+		},
 	 IT0000010 : { 
 	 	code : 'IT0000010', 
-	 	name : 'Bear's Viking', 
+	 	name : 'Bears Viking', 
 	 	category : 'Weapon', 
-	 	type : Sword', 
+	 	type : 'Sword', 
 	 	state : {
  			str : 3, 	vit : 2
 		}, 
 	 	option : {
- 			atkPhy : 41, 	atkPhyTrue : 29, 	rateHit : 75, 	rateHitJust : 55, 	atkRapid : 3
+ 			atkPhy : 41, 	atkPhyTrue : 29, 	rateHit : 75, 	rateHitJust : 55, 	atkRapid : 3,
 			rateCrt : 20, 	valCrt : 150,
 		}, 
 	 	exp : 'This item is green', 
-	}
+	},
 	 IT0000011 : { 
 	 	code : 'IT0000011', 
 	 	name : 'Ghost Belt', 
 	 	category : 'Ammor', 
-	 	type : Ammor', 
+	 	type : 'Ammor', 
 	 	health : {
  		
  			pHp : 7,pSp : 7,pMp : 7
@@ -193,12 +193,12 @@ const dataItem = {
  			dis : 7, 	res : 7, 	spd : 7, 	luk : 7
 		}, 
 	  	exp : 'Ghost belt, not curse', 
-	}
+	},
 	IT0000012 : { 
 	 	code : 'IT0000012', 
 	 	name : 'Thunther Ring', 
 	 	category : 'Head', 
-	 	type : Circlet', 
+	 	type : 'Circlet', 
 	 	health : {
  			Mp : 30,
  			pHp : 3,pSp : 7,pMp : 3
@@ -211,20 +211,20 @@ const dataItem = {
  			atkMag : 12, 	defMagPer : 5, 	defMagNum : 3, 	resMagPer : 5, 	resMagNum : 3, 	
  			rateDodge : 2, 	rateRes : 3, 	rateDodgeLuk : 2
 		}, 
-	  	exp : 'Jolteon's leather', 
-	}
+	  	exp : 'Jolteons leather', 
+	},
 	IT0000013 : { 
 	 	code : 'IT0000013', 
 	 	name : 'Silk Bangage', 
 	 	category : 'Other', 
-	 	type : Item', 
-	  	exp : 'It helps you regain your physical strength. It's a secret weapon for thieves. Heals 30% of your total health.', 
-	}
+	 	type : 'Item', 
+	  	exp : 'It helps you regain your physical strength. Its a secret weapon for thieves. Heals 30% of your total health.', 
+	},
 	IT0000014 : { 
 	 	code : 'IT0000014', 
 	 	name : 'A Willow Club', 
 	 	category : 'Weapon', 
-	 	type : Sword', 
+	 	type : 'Sword', 
 	 	state : {
  			str : 13, 	vit : 12, 	dex : 5, 	res : 5, 	spd : 7, 	
  			luk : 5
@@ -233,13 +233,13 @@ const dataItem = {
  			atkPhy : 52, 	atkMag : 20, 	rateHit : 60, 	rateCrt : 20, 	valCrt : 120, 	
  			rateHitJust : 40
 		}, 
-	 	exp : 'It's a willow club, but it's definitely a sword.', 
-		}
+	 	exp : 'Its a willow club, but its definitely a sword.', 
+		},
 	IT0000015 : { 
 		code : 'IT0000015', 
 	 	name : 'Damaging Charm', 
 	 	category : 'Other', 
-		type : Item', 
+		type : 'Item', 
 	 	state : {
  			str : 4, 	int : 4, 	dex : 4, 	spd : 4, 	luk : 4
 		}, 
@@ -248,19 +248,19 @@ const dataItem = {
 			rateCrt : 20, 	valCrt : 150,
 		}, 
 		exp : 'An object that increases your attack if you have it.', 
-	}
+	},
 	IT0000016 : { 
 	 	code : 'IT0000016', 
 	 	name : 'Peace Maker', 
 		category : 'Item', 
-	 	type : Item', 
+	 	type : 'Item', 
 	 	exp : 'We wish for peace. All the objects are restored to health.', 
-	}
+	},
 	IT0000017 : { 
 	 	code : 'IT0000017', 
-		name : 'Monkey's Dagger', 
+		name : 'Monkeys Dagger', 
 	 	category : 'Weapon', 
-	 	type : SubSword', 
+	 	type : 'SubSword', 
 	 	state : {
  			str : 7, 	vit : 2, 	int : 4, 	dex : 7, 	spd : 5
 	 	}, 
@@ -268,13 +268,13 @@ const dataItem = {
  			atkPhy : 37, 	atkMag : 22, 	atkPhyTrue : 13, 	atkMagTrue : 10, 	rateHit : 70, 	
  			rateHitJust : 60, 	atkRapid : 3
 	 	}, 
-	 	exp : 'It's a green dagger with a monkey's magic', 
-	}
+	 	exp : 'Its a green dagger with a monkeys magic', 
+	},
 	IT0000018 : { 
 	 	code : 'IT0000018', 
 	 	name : 'Long live the sun', 
 	 	category : 'Weapon', 
-	 	type : Shield', 
+	 	type : 'Shield', 
 	 	health : {
  			Hp : 150
 		}, 
@@ -286,12 +286,12 @@ const dataItem = {
  			defMagNum : 5, 	resMagPer : 10, 	resMagNum : 5, 	rateRes : 10, 	ratePFD : 15
 	 	}, 
 	 	exp : 'Long live the sun.', 
-	}
+	},
 	IT0000019 : { 
 	 	code : 'IT0000019', 
 	 	name : 'Blackwing Male', 
 	 	category : 'Ammor', 
-	 	type : Ammor', 
+	 	type : 'Ammor', 
 	 	health : {
  			Hp : 300,
  			pHp : 10
@@ -305,12 +305,12 @@ const dataItem = {
  			ratePFD : 20
 		}, 
 		exp : 'A black armor with winghs', 
-	}
+	},
 	IT0000020 : { 
 	 	code : 'IT0000020', 
 	 	name : 'Chain Saw ', 
 	 	category : 'Weapon', 
-	 	type : TwoHandSword', 
+	 	type : 'TwoHandSword', 
 	 	state : {
  			str : 12, 	vit : 15, 	dex : 10, 	spd : 10, 	luk : 7
 		}, 
@@ -319,12 +319,12 @@ const dataItem = {
  		rateHitJust : 50, 	atkRapid : 1, 	rateCrtLuk : 20
 		}, 
 		exp : 'Good means of communication', 
-	}
+	},
 	IT0000021 : { 
 		code : 'IT0000021', 
 		name : 'Retirbution', 
 	 	category : 'Weapon', 
-	 	type : BowGun', 
+	 	type : 'BowGun', 
 	 	state : {
  			str : 12, 	dex : 25
 	 	}, 
@@ -333,12 +333,12 @@ const dataItem = {
  			rateHitJust : 60, 	atkRapid : 2, 	rateCrtLuk : 20
 	 	}, 
 	 	exp : 'Looking for a chance to get revenge on someone.', 
-	}
+	},
 	IT0000022 : { 
 	 	code : 'IT0000022', 
 	 	name : 'Anxiety', 
 	 	category : 'Weapon', 
-	 	type : BowGun', 
+	 	type : 'BowGun', 
 	 	state : {
  			str : 12, 	dex : 27
 		}, 
@@ -347,26 +347,26 @@ const dataItem = {
  			rateHitJust : 60, 	atkRapid : 2, 	rateCrtLuk : 20
 		}, 
 		exp : 'Looking for a chance to get revenge on someone.', 
-	}
+	},
 	IT0000023 : { 
 	 	code : 'IT0000023', 
 	 	name : 'Attack Type Changer(N)', 
 	 	category : 'Item', 
-	 	type : Item', 
+	 	type : 'Item', 
 	 	exp : 'Make that the general damage is applied as a magic damage.', 
-	}
+	},
 	IT0000024 : { 
 	 	code : 'IT0000024', 
 	 	name : 'Attack Type Changer(M)', 
 	 	category : 'Item', 
-	 	type : Item', 
+	 	type : 'Item', 
 	 	exp : 'Make that the magic damage is applied as a general damage.', 
-	}
+	},
 	IT0000025 : { 
 	 	code : 'IT0000025', 
 	 	name : 'Rose Whip', 
 	 	category : 'Weapon', 
-	 	type : Whip', 
+	 	type : 'Whip', 
 	 	state : {
  			str : 5, 	dex : 5, 	spd : 5
 		}, 
@@ -375,12 +375,12 @@ const dataItem = {
  			valCrt : 300, 	rateHitJust : 30, 	atkRapid : 2
 		}, 
 		exp : 'A whip covered with sharp thorns. A certain probability leaves an abnormal bleed.', 
-	}
+	},
 	IT0000026 : { 
 	 	code : 'IT0000026', 
 	 	name : 'Tarantula', 
 	 	category : 'Weapon', 
-	 	type : SubSword', 
+	 	type : 'SubSword', 
 	 	state : {
  			vit : 2, 	dex : 8
 		}, 
@@ -388,6 +388,6 @@ const dataItem = {
  			atkPhy : 41, 	atkPhyTrue : 19, 	rateHit : 90, 	rateDis : 20, 	rateCrt : 10, 	
  			valCrt : 140, 	rateHitJust : 60, 	atkRapid : 1
 		}, 
-		exp : 'It's a venom dagger. By a certain probability, to onself or the enemy is addicted to conditionally abnormalities.', 
+		exp : 'Its a venom dagger. By a certain probability, to onself or the enemy is addicted to conditionally abnormalities.', 
 	}
 }
