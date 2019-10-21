@@ -389,5 +389,162 @@ const dataItem = {
  			valCrt : 140, 	rateHitJust : 60, 	atkRapid : 1
 		}, 
 		exp : 'Its a venom dagger. By a certain probability, to onself or the enemy is addicted to conditionally abnormalities.', 
+	},
+	IT0000027 : { 
+	  code : 'IT0000027', 
+	  name : '불의 기도', 
+	 category : 'Weapon', 
+	 type : 'Pike', 
+	 state : {
+ 		str : 15, 	vit : 8, 	res : 5
+	}, 
+	 option : {
+ 		atkPhy : 97, 	atkPhyTrue : 62, 	rateHit : 85, 	rateDis : 15, 	rateRes : 5, 	
+ 		rateCrt : 3, 	valCrt : 140, 	rateHitJust : 70, 	atkRapid : 3
+	}, 
+	  exp : '불의 힘이 담긴 창으로 15% 확률로 적에게 화상을 입힌다.', 
+	},
+	IT0000028 : { 
+		  code : 'IT0000028', 
+		  name : '강철 심장', 
+		 category : 'Weapon', 
+		 type : 'SubPike', 
+		 health : {
+			Hp : 75
+		}, 
+		 state : {
+			str : 3, 	vit : 12
+		}, 
+		 option : {
+			atkPhy : 16, 	atkPhyTrue : 7, 	rateHit : 85, 	rateDis : 15, 	rateRes : 5, 	
+			rateCrt : 2, 	valCrt : 120, 	rateHitJust : 70, 	atkRapid : 1.4
+		}, 
+		  exp : '강철 골렘의 심장을 담았다고 하는 짧은 창. 전투 당 한번씩 강철의 가호 시전을 가능하도록 해준다.', 
+	},
+	IT0000029 : { 
+		  code : 'IT0000029', 
+		  name : '가죽 팔 보호대', 
+		 category : 'Ammor', 
+		 type : 'ArmGaurd', 
+		 option : {
+			defPhyPer : 13, 	defPhyNum : 4, 	defMagPer : 10, 	defMagNum : 4
+		}, 
+		  exp : '가볍게 팔을 감싸는 보호대. 부가적인 능력은 존재하지 않는다.', 
+	},
+	IT0000030 : { 
+		  code : 'IT0000030', 
+		  name : '가죽 채찍', 
+		 category : 'Weapon', 
+		 type : 'Whip', 
+		 state : {
+			str : 3, 	dex : 7
+		}, 
+		 option : {
+			atkPhy : 55, 	atkPhyTrue : 32, 	rateHit : 65, 	rateCrt : 2, 	valCrt : 240, 	
+			rateHitJust : 60, 	atkRapid : 2.5
+		}, 
+		  exp : '두꺼운 가죽으로 만들어진 채찍', 
+	},
+	IT0000031 : { 
+		  code : 'IT0000031', 
+		  name : '강철 방패', 
+		 category : 'Weapon', 
+		 type : 'Shield', 
+		 state : {
+			str : 3, 	dis : 5, 	res : 7
+		}, 
+		 option : {
+			defPhyPer : 61, 	defPhyNum : 20, 	resPhyPer : 10, 	resPhyNum : 5, 	defMagPer : 54, 	
+			defMagNum : 18, 	resMagPer : 10, 	resMagNum : 5, 	rateRes : 5, 	ratePFD : 7
+		}, 
+		  exp : '강철로 제작된 일반적인 방패.', 
+	},
+	IT0000032 : { 
+		  code : 'IT0000032', 
+		  name : '죽음의 숨결', 
+		 category : 'Head', 
+		 type : 'Helmet', 
+		 health : {
+			Hp : 140,Sp : 50,
+			pMp : 15
+		}, 
+		 state : {
+			int : 17, 	dis : 12
+		}, 
+		 option : {
+			defPhyPer : 55, 	defPhyNum : 20, 	resPhyPer : 12, 	resPhyNum : 5, 	atkMag : 20, 	
+			defMagPer : 71, 	defMagNum : 24, 	resMagPer : 20, 	resMagNum : 5, 	rateRes : 6
+		}, 
+		  exp : '많은 마법사의 죽음과 함께 했고 마법사의 죽음을 기다리는 투구, 마법사로써의 능력을 향상시켜준다.', 
+	},
+	IT0000033 : { 
+		  code : 'IT0000033', 
+		  name : '자연의 기운', 
+		 category : 'Ammor', 
+		 type : 'Robe', 
+		 health : {
+			Hp : 110,Sp : 20,Mp : 130,
+			pMp : 10
+		}, 
+		 state : {
+			vit : 4, 	int : 12
+		}, 
+		 option : {
+			defPhyPer : 21, 	defPhyNum : 6, 	defMagPer : 33, 	defMagNum : 11, 	rateDodge : 4
+		}, 
+		  exp : '마나 회복력이 상승하는 것만 같은 로브.', 
+	},
+	IT0000034 : { 
+		  code : 'IT0000034', 
+		  name : '선장의 외교', 
+		 category : 'Weapon', 
+		 type : 'Pistol', 
+		 state : {
+			vit : 28, 	dex : 26
+		}, 
+		 option : {
+			atkPhy : 317, 	atkPhyTrue : 112, 	rateHit : 82, 	rateCrt : 7, 	valCrt : 220, 	
+			rateHitJust : 70, 	atkRapid : 3
+		}, 
+		  exp : '전설적인 해적 구드루가 썼다고 전해지는 총이지만 사실 여부는 확인 할 수 없다.', 
+	},
+	IT0000035 : { 
+		  code : 'IT0000035', 
+		  name : '뱀의 독샘', 
+		 category : 'Weapon', 
+		 type : 'Pistol', 
+		 state : {
+			dex : 32
+		}, 
+		 option : {
+			atkPhy : 144, 	atkPhyTrue : 59, 	rateHit : 88, 	rateDis : 6, 	rateCrt : 8, 	
+			valCrt : 130, 	rateHitJust : 62, 	atkRapid : 3
+		}, 
+		  exp : '일정 확률로 중독 상태를 발생시키는 총알을 발사하는 총. 맞은 상대가 중독되는 이유는 알 수 없다.', 
+	},
+	IT0000036 : { 
+		  code : 'IT0000036', 
+		  name : '산탄 권총', 
+		 category : 'Weapon', 
+		 type : 'SubPistol', 
+		 state : {
+			vit : 14, 	dex : 17
+		}, 
+		 option : {
+			atkPhy : 400, 	atkPhyTrue : 1, 	rateHit : 100, 	rateHitJust : 100, 	atkRapid : 8
+		}, 
+		  exp : '넓은 범위의 산탄을 발사 하는 권총. 살살 맞으면 아프지 않은 탄을 발사하는 것으로 유명하다.', 
+	},
+	IT0000037 : { 
+		  code : 'IT0000037', 
+		  name : '사마귀 비수', 
+		 category : 'Weapon', 
+		 type : 'SubSword', 
+		 option : {
+			atkPhy : 70, 	atkPhyTrue : 22, 	rateDis : 20, 	rateCrt : 12, 	valCrt : 120, 	
+			atkRapid : 1.8
+		}, 
+		  exp : '톱날 같은 칼날은 살점을 뜯어낸다. 일정 확률로 출혈 상태를 발생시킨다.', 
 	}
+
 }
