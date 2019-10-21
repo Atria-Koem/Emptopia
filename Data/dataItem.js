@@ -259,7 +259,7 @@ const dataItem = {
 	IT0000017 : { 
 	 	code : 'IT0000017', 
 		name : 'Monkeys Dagger', 
-	 	category : 'Weapon', 
+		category : 'Weapon', 
 	 	type : 'SubSword', 
 	 	state : {
  			str : 7, 	vit : 2, 	int : 4, 	dex : 7, 	spd : 5
@@ -269,6 +269,7 @@ const dataItem = {
  			rateHitJust : 60, 	atkRapid : 3
 	 	}, 
 	 	exp : 'Its a green dagger with a monkeys magic', 
+		}
 	},
 	IT0000018 : { 
 	 	code : 'IT0000018', 
@@ -286,6 +287,7 @@ const dataItem = {
  			defMagNum : 5, 	resMagPer : 10, 	resMagNum : 5, 	rateRes : 10, 	ratePFD : 15
 	 	}, 
 	 	exp : 'Long live the sun.', 
+		}
 	},
 	IT0000019 : { 
 	 	code : 'IT0000019', 
@@ -545,6 +547,47 @@ const dataItem = {
 			atkRapid : 1.8
 		}, 
 		  exp : '톱날 같은 칼날은 살점을 뜯어낸다. 일정 확률로 출혈 상태를 발생시킨다.', 
+	},
+	IT0000038 : { 
+		  code : 'IT0000038', 
+		  name : '햇날', 
+		 category : 'Weapon', 
+		 type : 'SubSword', 
+		 state : {
+			str : 12, 	vit : 12, 	int : 12, 	dex : 12, 	spd : 12, 	
+			luk : 12
+		}, 
+		 option : {
+			atkPhy : 11, 	atkPhyTrue : 6, 	rateCrt : 30, 	valCrt : 120, 	atkRapid : 1.4
+		}, 
+		  exp : '태양 빛을 담아 재련한 단검. 착용자의 능력치를 상승시킨다.', 
+	},
+	IT0000039 : { 
+		  code : 'IT0000039', 
+		  name : '심해물고기', 
+		 category : 'Weapon', 
+		 type : 'TwoHandSword', 
+		 state : {
+			str : 45, 	vit : 38
+		}, 
+		 option : {
+			atkPhy : 320, 	atkPhyTrue : 165, 	rateCrt : 4, 	valCrt : 320, 	atkRapid : 3.8
+		}, 
+		  exp : '깊은 바다에서 건져올린 물고기. ', 
+	},
+	IT0000040 : { 
+		  code : 'IT0000040', 
+		  name : '서리불꽃', 
+		 category : 'Weapon', 
+		 type : 'Sword', 
+		 state : {
+			str : 12, 	dex : 8
+		}, 
+		 option : {
+			atkPhy : 46, 	atkPhyTrue : 25, 	rateDis : 15, 	rateCrt : 7, 	valCrt : 138, 	
+			atkRapid : 2.6
+		}, 
+		  exp : '두가지 기운을 가지고 있는 검. 적중당한 적을 일정 확률로 화상이나 동상 상태로 만듬.', 
 	}
 
 }
