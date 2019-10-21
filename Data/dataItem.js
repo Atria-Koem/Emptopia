@@ -646,6 +646,65 @@ const dataItem = {
 		}, 
 		},
 		  exp : '두가지 기운을 가지고 있는 검. 적중당한 적을 일정 확률로 화상이나 동상 상태로 만듬.', 
+	},
+	IT0000041 : { 
+		  code : 'IT0000041', 
+		  name : '나무꾼 도끼', 
+		 category : 'Weapon', 
+		 type : 'Axe', 
+		 state : {
+			str : 16, 	vit : 22
+		}, 
+		 option : {
+			atkPhy : 52, 	atkPhyTrue : 24, 	rateHit : 72, 	rateHitJust : 68, 	atkRapid : 2.6,
+			rateCrt : 5, 	valCrt : 152,
+		}, 
+		  exp : '평범한 벌목용 도끼로 마을 사람들에게 구매할 수 있다.', 
+	},
+	IT0000042 : { 
+		  code : 'IT0000042', 
+		  name : '황천의 나무꾼 도끼', 
+		 category : 'Weapon', 
+		 type : 'Axe', 
+		 health : {
+			Hp : 1244,Sp : 224
+		}, 
+		 state : {
+			str : 48, 	vit : 56
+		}, 
+		 option : {
+			atkPhy : 167, 	atkMag : 25, 	atkPhyTrue : 88, 	atkMagTrue : 10, 	rateHit : 82, 	
+			rateHitJust : 67, 	atkRapid : 2.4,		rateCrt : 5, 	valCrt : 157
+		}, 
+		  exp : '벌목을 하던 나무꾼은 황천까지 다녀왔다고 한다. 황천의 기운을 흡수한 도끼는 마법적 기운을 가지게 되었다. 도끼는 나무꾼에게 살 수 있다.', 
+	},
+	IT0000043 : { 
+		  code : 'IT0000043', 
+		  name : '두개골 절단 돌격 도끼', 
+		 category : 'Weapon', 
+		 type : 'Axe', 
+		 health : {
+			Hp : 400,Sp : 130
+		}, 
+		 state : {
+			str : 25, 	vit : 44
+		}, 
+		 option : {
+			atkPhy : 132, 	defPhyPer : 40, 	defPhyNum : 22, 	atkPhyTrue : 67, 	rateHit : 91, 	
+			rateRes : 4, 	rateCrt : 3, 	valCrt : 167, 	rateHitJust : 87, 	atkRapid : 3.7
+		}, 
+		  exp : '거대한 돌격 도끼로 방어 성능이 우수 하다.', 
+	},
+	IT0000044 : { 
+		  code : 'IT0000044', 
+		  name : '광선검', 
+		 category : 'Weapon', 
+		 type : 'Sword', 
+		 option : {
+			atkPhy : 33, 	atkPhyTrue : 11, 	rateHit : 88, 	rateCrt : 17, 	valCrt : 800, 	
+			rateHitJust : 76, 	atkRapid : 1.2
+		}, 
+		  exp : '탑에서 발견된 외계 문명의 무기. 가볍고 높은 절삭력을 가지고 있다.', 
 	}
 
 }
