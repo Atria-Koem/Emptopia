@@ -641,8 +641,8 @@ const dataItem = {
 			str : 12, 	dex : 8
 		}, 
 		 option : {
-			atkPhy : 46, 	atkPhyTrue : 25, 	rateDis : 15, 	rateCrt : 7, 	valCrt : 138, 	
-			atkRapid : 2.6
+			atkPhy : 46, 	atkPhyTrue : 25,  atkMag : 25, 	atkMagTrue : 10,
+			rateDis : 15, 	rateCrt : 7, 	valCrt : 138, 	atkRapid : 2.6
 		}, 
 		},
 		  exp : '두가지 기운을 가지고 있는 검. 적중당한 적을 일정 확률로 화상이나 동상 상태로 만듬.', 
