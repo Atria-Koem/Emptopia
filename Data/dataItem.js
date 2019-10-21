@@ -24,7 +24,7 @@ const dataItem = {
 	}*/
 	IT0000000 : {
 		code : 'IT0000000',
-		name : 'Short Sword',
+		name : '숏 소드',
 		category : 'Weapon',
 		type : 'Sword',
 		spec : {
@@ -35,11 +35,11 @@ const dataItem = {
 				atkPhy: 10
 			}
 		},
-		exp : 'Simple Sword' 
+		exp : '기본적인 검. 품질은 좋지 않다.' 
 	},
 	IT0000001 : {
 		code : 'IT0000001',
-		name : 'Wooden Shield',
+		name : '우든 실드',
 		category : 'Ammor',
 		type : 'Shield',
 		spec : {
@@ -47,11 +47,11 @@ const dataItem = {
 				defPhyPer: 3, defPhyNum: 10
 			}
 		},
-		exp : 'Simple Shield' 
+		exp : '나무로 만들어진 조잡한 방패로 별로 몸을 지켜줄 것 같지는 않다.' 
 	},
 	IT0000002 : {
 		code : 'IT0000002',
-		name : 'Wooden Helmet',
+		name : '우든 헬멧',
 		category : 'Head',
 		type : 'Helmet',
 		spec : {
@@ -59,11 +59,11 @@ const dataItem = {
 				defPhyPer: 1, defPhyNum: 1
 			}
 		},
-		exp : 'Simple Helemt' 
+		exp : '나무로 만들어진 조잡한 헬멧.' 
 	},
 	IT0000003 : {
 		code : 'IT0000003',
-		name : 'Wooden Ammor',
+		name : '우든 아머',
 		category : 'Ammor',
 		type : 'Ammor',
 		spec : {
@@ -71,11 +71,11 @@ const dataItem = {
 				defPhyPer: 8, defPhyNum: 4
 			}
 		},
-		exp : 'Simple Ammor' 
+		exp : '나무로 만들어진 조잡한 갑옷. 큰 충격을 받으면 부서진다.' 
 	},
 	IT0000004 : {
 		code : 'IT0000004',
-		name : 'Short Bow',
+		name : '숏 보우',
 		category : 'Weapon',
 		type : 'Bow',
 		spec : {
@@ -86,11 +86,11 @@ const dataItem = {
 				count : 10, maxCount : 10
 			}
 		},
-		exp : 'Simple Bow' 
+		exp : '조잡하게 만들어진 활.' 
 	},
 	IT0000005 : {
 		code : 'IT0000005',
-		name : 'Dagger',
+		name : '대거',
 		category : 'Weapon',
 		type : 'Dagger',
 		spec : {
@@ -98,11 +98,11 @@ const dataItem = {
 				atkPhy: 8
 			}
 		},
-		exp : 'Simple Bow' 
+		exp : '절삭력이 거의 없는 단검.' 
 	},
 	IT0000006 : {
 		code : 'IT0000006',
-		name : 'TextBook',
+		name : '종이 책',
 		category : 'Ammor',
 		type : 'Book',
 		spec : {
@@ -111,11 +111,11 @@ const dataItem = {
 				defMagPer: 1, defMagNum: 2
 			}
 		},
-		exp : 'Simple Book' 
+		exp : '알수 없는 문자가 가득 쓰여진 책.' 
 	},
 	IT0000007 : {
 		code : 'IT0000007',
-		name : 'ArrowCase',
+		name : '화살 통',
 		category : 'Ammor',
 		type : 'ArrowCase',
 		spec : {
@@ -126,11 +126,11 @@ const dataItem = {
 				count : 30, maxCount : 50
 			}
 		},
-		exp : 'Simple Case / (30)' 
+		exp : '30개의 화살이 들어가는 화살 통.' 
 	},
 	IT0000008 : { 
 	 	code : 'IT0000008', 
-	 	name : 'Bon Helm', 
+	 	name : '뼈 투구', 
 	 	category : 'Head', 
 	 	type : 'Helmet', 
 		spec : {
@@ -146,7 +146,7 @@ const dataItem = {
  				resPhyPer : 3, 	resMagPer : 3
 			}, 
 		},
-	  	exp : 'Just bone helm', 
+	  	exp : '그저 뼈로 이루어진 투구. 여러군데 금이 가 있다.', 
 		},
 	IT0000009 : { 
 	  	code : 'IT0000009', 
@@ -168,11 +168,11 @@ const dataItem = {
  				rateCrtLuk : 12, 	rateDodgeLuk : 3
 			}, 
 		},
-	  	exp : 'Like FPS weapon', 
-		},
+	  	exp : '탑에서 발견된 무기.', 
+	},
 	 IT0000010 : { 
 	 	code : 'IT0000010', 
-	 	name : 'Bears Viking', 
+	 	name : '곰의 바이킹', 
 	 	category : 'Weapon', 
 	 	type : 'Sword', 
 		 spec : {
@@ -184,11 +184,11 @@ const dataItem = {
 			rateCrt : 20, 	valCrt : 150,
 			 }, 
 		 },
-	 	exp : 'This item is green', 
+	 	exp : '이 아이템은 초록색이다.', 
 	},
 	 IT0000011 : { 
 	 	code : 'IT0000011', 
-	 	name : 'Ghost Belt', 
+	 	name : '유령 허리띠', 
 	 	category : 'Ammor', 
 	 	type : 'Ammor', 
 		 spec : {
@@ -200,11 +200,11 @@ const dataItem = {
  			dis : 7, 	res : 7, 	spd : 7, 	luk : 7
 		}, 
 		 },
-	  	exp : 'Ghost belt, not curse', 
+	  	exp : '유령이 가지고 있던 허리띠지만 저주에 걸리거나 하는 일은 아직까지는 없었다.', 
 	},
 	IT0000012 : { 
 	 	code : 'IT0000012', 
-	 	name : 'Thunther Ring', 
+	 	name : '번개고리', 
 	 	category : 'Head', 
 	 	type : 'Circlet', 
 		spec : {
@@ -221,18 +221,18 @@ const dataItem = {
  			rateDodge : 2, 	rateRes : 3, 	rateDodgeLuk : 2
 		}, 
 		},
-	  	exp : 'Jolteons leather', 
+	  	exp : '전기를 내뿜는 개처럼 생긴 짐승의 가죽으로 만들어졌다.', 
 	},
 	IT0000013 : { 
 	 	code : 'IT0000013', 
-	 	name : 'Silk Bangage', 
+	 	name : '비단 붕대', 
 	 	category : 'Other', 
 	 	type : 'Item', 
-	  	exp : 'It helps you regain your physical strength. Its a secret weapon for thieves. Heals 30% of your total health.', 
+	  	exp : '비단 붕대는 감으면 체력을 회복시켜 주는 마법 물품이다. 파티의 비밀무기로 활용될 수 있다. 총 체력의 30%를 회복시켜 준다.', 
 	},
 	IT0000014 : { 
 	 	code : 'IT0000014', 
-	 	name : 'A Willow Club', 
+	 	name : '버드나무 몽둥이', 
 	 	category : 'Weapon', 
 	 	type : 'Sword', 
 		spec : {
@@ -245,11 +245,11 @@ const dataItem = {
  			rateHitJust : 40
 		}, 
 		},
-	 	exp : 'Its a willow club, but its definitely a sword.', 
+	 	exp : '이것은 버드나무로 제작된 몽둥이가 분명하지만 알수 없는 이유로 절삭력을 가지고 있다.', 
 		},
 	IT0000015 : { 
 		code : 'IT0000015', 
-	 	name : 'Damaging Charm', 
+	 	name : '데미지드 참', 
 	 	category : 'Other', 
 		type : 'Item', 
 		spec : {
@@ -258,21 +258,20 @@ const dataItem = {
 		}, 
 		option : {
  			atkPhy : 15, 	atkMag : 15, 	atkPhyTrue : 10, 	atkMagTrue : 10, 
-			rateCrt : 20, 	valCrt : 150,
 		}, 
 		},
-		exp : 'An object that increases your attack if you have it.', 
+		exp : '소지하고 있으면 파티의 공격력을 비롯한 능력을 증가시켜 준다.', 
 	},
 	IT0000016 : { 
 	 	code : 'IT0000016', 
-	 	name : 'Peace Maker', 
+	 	name : '평화제작기', 
 		category : 'Item', 
 	 	type : 'Item', 
-	 	exp : 'We wish for peace. All the objects are restored to health.', 
+	 	exp : '우리의 소원은 평화. 모든 것의 체력을 전부 회복시켜준다.', 
 	},
 	IT0000017 : { 
 	 	code : 'IT0000017', 
-		name : 'Monkeys Dagger', 
+		name : '원숭이의 단검', 
 		category : 'Weapon', 
 	 	type : 'SubSword', 
 		spec : {
@@ -284,12 +283,12 @@ const dataItem = {
  			rateHitJust : 60, 	atkRapid : 3
 	 	}, 
 		},
-	 	exp : 'Its a green dagger with a monkeys magic', 
+	 	exp : '원숭이들의 주술이 가미된 초록색 아이템.', 
 		
 	},
 	IT0000018 : { 
 	 	code : 'IT0000018', 
-	 	name : 'Long live the sun', 
+	 	name : '태양만세', 
 	 	category : 'Weapon', 
 	 	type : 'Shield', 
 		spec : {
@@ -304,12 +303,12 @@ const dataItem = {
  			defMagNum : 5, 	resMagPer : 10, 	resMagNum : 5, 	rateRes : 10, 	ratePFD : 15
 	 	}, 
 		},
-	 	exp : 'Long live the sun.', 
+	 	exp : '태양만세.', 
 		
 	},
 	IT0000019 : { 
 	 	code : 'IT0000019', 
-	 	name : 'Blackwing Male', 
+	 	name : '블랙윙', 
 	 	category : 'Ammor', 
 	 	type : 'Ammor', 
 	 	health : {
@@ -326,11 +325,11 @@ const dataItem = {
  			ratePFD : 20
 		}, 
 		},
-		exp : 'A black armor with winghs', 
+		exp : '날개 문양이 세겨진 갑옷.', 
 	},
 	IT0000020 : { 
 	 	code : 'IT0000020', 
-	 	name : 'Chain Saw ', 
+	 	name : '전기 톱', 
 	 	category : 'Weapon', 
 	 	type : 'TwoHandSword', 
 		spec : {
@@ -342,11 +341,11 @@ const dataItem = {
  		rateHitJust : 50, 	atkRapid : 1, 	rateCrtLuk : 20
 		}, 
 		},
-		exp : 'Good means of communication', 
+		exp : '전기 톱은 예로부터 널리 알려진 좋은 대화 수단이다.', 
 	},
 	IT0000021 : { 
 		code : 'IT0000021', 
-		name : 'Retirbution', 
+		name : '보복', 
 	 	category : 'Weapon', 
 	 	type : 'BowGun', 
 		spec : {
@@ -358,11 +357,11 @@ const dataItem = {
  			rateHitJust : 60, 	atkRapid : 2, 	rateCrtLuk : 20
 	 	}, 
 		},
-	 	exp : 'Looking for a chance to get revenge on someone.', 
+	 	exp : '누군가에게 복수할 기회를 노리고 있는 원혼이 들어가 있다. 염원과 한 세트를 이룬다. 파티 내에 각각의 사용자 존재시 명중률을 5% 증가시켜준다', 
 	},
 	IT0000022 : { 
 	 	code : 'IT0000022', 
-	 	name : 'Anxiety', 
+	 	name : '염원', 
 	 	category : 'Weapon', 
 	 	type : 'BowGun', 
 		spec : {
@@ -374,25 +373,25 @@ const dataItem = {
  			rateHitJust : 60, 	atkRapid : 2, 	rateCrtLuk : 20
 		}, 
 		},
-		exp : 'Looking for a chance to get revenge on someone.', 
+		exp : '누군가에게 복수할 기회를 노리고 있는 원혼이 들어가 있다. 보복과 한 세트를 이룬다. 파티 내에 각각의 사용자 존재시 명중률을 5% 증가시켜준다', ', 
 	},
 	IT0000023 : { 
 	 	code : 'IT0000023', 
-	 	name : 'Attack Type Changer(N)', 
+	 	name : '공격 타입 변경(M)', 
 	 	category : 'Item', 
 	 	type : 'Item', 
-	 	exp : 'Make that the general damage is applied as a magic damage.', 
+	 	exp : '노말 타입 데미지를 마법 데미지로 변경시켜 준다.', 
 	},
 	IT0000024 : { 
 	 	code : 'IT0000024', 
-	 	name : 'Attack Type Changer(M)', 
+	 	name : 'Attack Type Changer(N)', 
 	 	category : 'Item', 
 	 	type : 'Item', 
-	 	exp : 'Make that the magic damage is applied as a general damage.', 
+	 	exp : '마법 데미지를 노말 타입 데미지로 변경시켜 준다.', 
 	},
 	IT0000025 : { 
 	 	code : 'IT0000025', 
-	 	name : 'Rose Whip', 
+	 	name : '가시 장미 채찍', 
 	 	category : 'Weapon', 
 	 	type : 'Whip', 
 		spec : {
@@ -404,11 +403,11 @@ const dataItem = {
  			valCrt : 300, 	rateHitJust : 30, 	atkRapid : 2
 		}, 
 		},
-		exp : 'A whip covered with sharp thorns. A certain probability leaves an abnormal bleed.', 
+		exp : '이 채찍은 날카로운 가시로 뒤덥혀 있다. 일정 적중당한 적을 확률로 출혈 상태로 만든다.', 
 	},
 	IT0000026 : { 
 	 	code : 'IT0000026', 
-	 	name : 'Tarantula', 
+	 	name : '타란튤라', 
 	 	category : 'Weapon', 
 	 	type : 'SubSword', 
 		spec : {
@@ -420,7 +419,7 @@ const dataItem = {
  			valCrt : 140, 	rateHitJust : 60, 	atkRapid : 1
 		}, 
 		},
-		exp : 'Its a venom dagger. By a certain probability, to onself or the enemy is addicted to conditionally abnormalities.', 
+		exp : '강력한 독이 깃든 검으로 공격시 일정 확률로 상대방 혹은 자신에게 중독을 부여한다.', 
 	},
 	IT0000027 : { 
 	  code : 'IT0000027', 
@@ -705,6 +704,16 @@ const dataItem = {
 			rateHitJust : 76, 	atkRapid : 1.2
 		}, 
 		  exp : '탑에서 발견된 외계 문명의 무기. 가볍고 높은 절삭력을 가지고 있다.', 
-	}
-
+	},
+	IT0000045 : { 
+		  code : 'IT0000044', 
+		  name : '독 폭주', 
+		 category : 'Weapon', 
+		 type : 'Sword', 
+		 option : {
+			atkPhy : 133, 	atkPhyTrue : 97, 	rateHit : 90, 	rateCrt : 4.7, 	valCrt : 150, 	
+			atkRapid : 2.1
+		}, 
+		  exp : '중독상태 일때 사용하면 공격력이 150% 상승한다.', 
+	},
 }
