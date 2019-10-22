@@ -682,6 +682,7 @@ const dataItem = {
 		  name : '두개골 절단 돌격 도끼', 
 		 category : 'Weapon', 
 		 type : 'Axe', 
+		spec:{
 		 health : {
 			Hp : 400,Sp : 130
 		}, 
@@ -692,6 +693,7 @@ const dataItem = {
 			atkPhy : 132, 	defPhyPer : 40, 	defPhyNum : 22, 	atkPhyTrue : 67, 	rateHit : 91, 	
 			rateRes : 4, 	rateCrt : 3, 	valCrt : 167, 	rateHitJust : 87, 	atkRapid : 3.7
 		}, 
+		},
 		  exp : '거대한 돌격 도끼로 방어 성능이 우수 하다.', 
 	},
 	IT0000044 : { 
@@ -699,10 +701,12 @@ const dataItem = {
 		  name : '광선검', 
 		 category : 'Weapon', 
 		 type : 'Sword', 
+		spec:{
 		 option : {
 			atkPhy : 33, 	atkPhyTrue : 11, 	rateHit : 88, 	rateCrt : 17, 	valCrt : 800, 	
 			rateHitJust : 76, 	atkRapid : 1.2
 		}, 
+		},
 		  exp : '탑에서 발견된 외계 문명의 무기. 가볍고 높은 절삭력을 가지고 있다.', 
 	},
 	IT0000045 : { 
@@ -710,10 +714,12 @@ const dataItem = {
 		  name : '독 폭주', 
 		 category : 'Weapon', 
 		 type : 'Sword', 
+		spec:{
 		 option : {
 			atkPhy : 133, 	atkPhyTrue : 97, 	rateHit : 90, 	rateCrt : 4.7, 	valCrt : 150, 	
 			atkRapid : 2.1
 		}, 
+		},
 		  exp : '중독상태 일때 사용하면 공격력이 150% 상승한다.', 
 	},
 }
