@@ -1,0 +1,86 @@
+<html>
+    <script type="text/javascript" src="DataCreate.js"></script>
+        <script type="text/javascript" src="dataJob.js"></script>
+        <link rel="stylesheet" href="DataCss.css">
+
+   <div>
+       <div>Code : </div>
+       <input type="text" id="Code" maxlength="7" >
+   </div>
+   <div>
+        <div>Name : </div>
+       <input type="text" id="Name" >  
+   </div>
+    
+   <div>
+       <div>스텟 보정값 </div>
+            <div style="display: flex;">
+            <div>Str        <input type="text" id="str" value="100">   </div>
+            <div>Int        <input type="text" id="int" value="100">   </div>
+            <div>Dex        <input type="text" id="dex" value="100">   </div>
+            <div>Dis        <input type="text" id="dis" value="100">   </div>
+            <div>Spd        <input type="text" id="spd" value="100">   </div>
+       </div>
+           <div style="display: flex;">
+            <div>Vit        <input type="text" id="vit" value="100">   </div>
+            <div>Wis        <input type="text" id="wis" value="100">   </div>
+            <div>Agi        <input type="text" id="agi" value="100">   </div>
+            <div>Res        <input type="text" id="res" value="100">   </div>
+            <div>Luk        <input type="text" id="luk" value="100">   </div>
+        </div>
+   </div>
+   <div>
+       <div>장착 불가 장비 (체크시 장착 불가)</div>
+    
+    		<div class="flexCheckGroup">
+    		<div><input type="checkbox" class="Limit"  value="Sword" >Sword</div>
+			<div><input type="checkbox" class="Limit"  value="TwoHandSword">TwoHandSword</div>
+			<div><input type="checkbox" class="Limit"  value="Dagger">Dagger</div>
+			<div><input type="checkbox" class="Limit"  value="Pike">Pike</div>
+			<div><input type="checkbox" class="Limit"  value="Spear">Spear</div>
+			<div><input type="checkbox" class="Limit"  value="Hatchet">Hatchet</div>
+			<div><input type="checkbox" class="Limit"  value="Axe">Axe</div>
+			</div>
+			<div class="flexCheckGroup">
+			<div><input type="checkbox" class="Limit"  value="Mace">Mace</div>
+			<div><input type="checkbox" class="Limit"  value="Pistol">Pistol</div>
+			<div><input type="checkbox" class="Limit"  value="Gun">Gun</div>
+			<div><input type="checkbox" class="Limit"  value="Wand">Wand</div>
+			<div><input type="checkbox" class="Limit"  value="Staff">Staff</div>
+			<div><input type="checkbox" class="Limit"  value="Bow">Bow</div>
+			<div><input type="checkbox" class="Limit"  value="Whip">Whip</div>
+			</div>
+			<div class="flexCheckGroup">
+			<div><input type="checkbox" class="Limit"  value="MainGauche">MainGauche</div>
+			<div><input type="checkbox" class="Limit"  value="SubSword">SubSword</div>
+			<div><input type="checkbox" class="Limit"  value="SubSword">SubSword</div>
+			<div><input type="checkbox" class="Limit"  value="SubPike">SubPike</div>
+			<div><input type="checkbox" class="Limit"  value="SubHatchet">SubHatchet</div>
+			<div><input type="checkbox" class="Limit"  value="SubMace">SubMace</div>
+			<div><input type="checkbox" class="Limit"  value="SubPistol">SubPistol</div>
+			</div>
+			<div class="flexCheckGroup">
+			<div><input type="checkbox" class="Limit"  value="BowGun">BowGun</div>
+			<div><input type="checkbox" class="Limit"  value="Shield">Shield</div>
+			<div><input type="checkbox" class="Limit"  value="Book">Book</div>
+			<div><input type="checkbox" class="Limit"  value="ArmGaurd">ArmGaurd</div>
+			<div><input type="checkbox" class="Limit"  value="ArrowCase">ArrowCase</div>
+
+			</div>
+			<div class="flexCheckGroup">
+            <div><input type="checkbox" class="Limit"  value="Ammor">Ammor</div>
+			<div><input type="checkbox" class="Limit"  value="Cloth">Cloth</div>
+			<div><input type="checkbox" class="Limit"  value="Robe">Robe</div>
+			<div><input type="checkbox" class="Limit"  value="Helmet">Helmet</div>
+			<div><input type="checkbox" class="Limit"  value="Hat">Hat</div>
+			<div><input type="checkbox" class="Limit"  value="Circlet">Circlet</div>
+            </div>
+   </div>
+    <div>설명  <textarea type="text" id="exp" style="width: 50%; height: 200px;
+"></textarea></div>
+   <button onclick="new CreateJobData()"><div>Code OutPut</div></button>
+    <textarea type="text" id="OutPutData" readonly="readonly" style="
+    width: 100%; height: 200px;
+"></textarea>
+    <div id="OutPutCode"></div>
+    </html>
