@@ -722,4 +722,174 @@ const dataItem = {
 		},
 		  exp : '중독상태 일때 사용하면 공격력이 150% 상승한다.', 
 	},
+	IT1000003 : { 
+	  code : 'IT1000003', 
+	  name : '쌍날 장창', 
+	 category : 'Weapon', 
+	 type : 'Spear', 
+	 health : {
+ 		Hp : 2670
+	}, 
+	 state : {
+ 		str : 60, 	dex : 140
+	}, 
+	 option : {
+ 		atkPhy : 524, 	atkPhyTrue : 282, 	rateHit : 80, 	rateCrt : 5, 	valCrt : 140, 	
+ 		rateHitJust : 64, 	atkRapid : 3.6
+	}, 
+	  exp : '두개의 날이 달린 창. 같은 창을 들고 있는 파티원이 있다면 들고 있는 인원 한명당 공격속도가 0.2 증가한다.', 
+	},
+	IT1000004 : { 
+		  code : 'IT1000004', 
+		  name : '지하고블린 머리장식', 
+		 category : 'Head', 
+		 type : 'Circlet', 
+		 state : {
+			str : 2, 	vit : 6, 	int : 5, 	dex : 2
+		}, 
+		 option : {
+			defPhyPer : 42, 	defPhyNum : 12, 	defMagPer : 26, 	defMagNum : 10
+		}, 
+		  exp : '지하고블린에게 쉽게 얻을 수 있는 머리장식. 지하고블린 머리장식, 지하고블린 천 갑옷, 지하고블린 천 팔보호대와 하나의 세트를 이루며 3가지의 장비를 모두 착용하였을 때 모든 방어력과 저항력이 10상승한다.', 
+	},
+	IT1000005 : { 
+		  code : 'IT1000005', 
+		  name : '지하고블린 천 갑옷', 
+		 category : 'Ammor', 
+		 type : 'Cloth', 
+		 state : {
+			str : 4, 	vit : 8, 	int : 2, 	dex : 1
+		}, 
+		 option : {
+			defPhyPer : 64, 	defPhyNum : 12, 	defMagPer : 27, 	defMagNum : 8
+		}, 
+		  exp : '지하고블린들이 두꺼운 천을 겹쳐 제작한 천 갑옷. 갑옷치고는 가볍지만 방어력이 높지는 않다. 지하고블린 머리장식, 지하고블린 천 갑옷, 지하고블린 천 팔보호대와 하나의 세트를 이루며 3가지의 장비를 모두 착용하였을 때 모든 방어력과 저항력이 10상승한다.', 
+	},
+	IT1000006 : { 
+		  code : 'IT1000006', 
+		  name : '지하고블린 천 팔보호대', 
+		 category : 'Ammor', 
+		 type : 'ArmGaurd', 
+		 state : {
+			str : 3, 	vit : 5, 	int : 1, 	dex : 6
+		}, 
+		 option : {
+			defPhyPer : 22, 	defPhyNum : 6, 	defMagPer : 13, 	defMagNum : 4
+		}, 
+		  exp : '지하고블린들 보편적으로 착용하고 있던 팔보호구. 지하고블린의 역한 침냄새가 난다. 지하고블린 머리장식, 지하고블린 천 갑옷, 지하고블린 천 팔보호대와 하나의 세트를 이루며 3가지의 장비를 모두 착용하였을 때 모든 방어력과 저항력이 10상승한다.', 
+	},
+	IT0000046 : { 
+		  code : 'IT0000046', 
+		  name : '거대칠면조의 다리뼈', 
+		 category : 'Weapon', 
+		 type : 'Spear', 
+		 health : {
+			Hp : 150
+		}, 
+		 state : {
+			str : 13, 	dex : 22
+		}, 
+		 option : {
+			atkPhy : 82, 	atkPhyTrue : 27, 	rateHit : 70,	rateCrt : 10, 	valCrt : 120, 	rateHitJust : 60, 	atkRapid : 2.9
+		}, 
+		  exp : '탑안에 서식하는 거대한 칠면조의 다리뼈의 한쪽 끝을 날카롭게 깍아만든 창. 야수형 적을 상대할 때 추가로 30의 데미지를 준다.', 
+	},
+	IT0000047 : { 
+		  code : 'IT0000047', 
+		  name : '거대칠면조 힘줄', 
+		 category : 'Weapon', 
+		 type : 'Whip', 
+		 health : {
+			Hp : 150
+		}, 
+		 state : {
+			str : 13, 	dex : 22
+		}, 
+		 option : {
+			atkPhy : 72, 	atkPhyTrue : 20, 	rateHit : 80, 	rateCrt : 10, 	valCrt : 200, 	
+			rateHitJust : 30, 	atkRapid : 2
+		}, 
+		  exp : '탑안에 서식하는 거대한 칠면조의 힘줄로 만든 채찍. 야수형 적을 상대할 때 추가로 30의 데미지를 준다.', 
+	},
+	IT0000048 : { 
+		  code : 'IT0000048', 
+		  name : '음속의 창', 
+		 category : 'Weapon', 
+		 type : 'Spear', 
+		 state : {
+			vit : 330, 	dex : 200
+		}, 
+		 option : {
+			atkPhy : 670, 	atkPhyTrue : 360, 	rateHit : 80, 	rateCrt : 2, 	valCrt : 125, 	
+			rateHitJust : 57, 	atkRapid : 0.7
+		}, 
+		  exp : '착용자의 공격을 빠르게 바꿔주는 창. 착용자는 공격시 전체 체력의 3%의 체력을 잃는다.', 
+	},
+	IT0000049 : { 
+		  code : 'IT0000049', 
+		  name : '마을경비병의 장창', 
+		 category : 'Weapon', 
+		 type : 'Spear', 
+		 state : {
+			str : 3, 	vit : 5, 	dex : 9
+		}, 
+		 option : {
+			atkPhy : 89, 	atkPhyTrue : 34, 	rateHit : 95, 	rateCrt : 7, 	valCrt : 125, 	
+			rateHitJust : 70, 	atkRapid : 3.6
+		}, 
+		  exp : '귀사의 제품은 정확한 규격과 높은 품질을 자랑합니다.', 
+	},
+	IT1000006 : { 
+		  code : 'IT1000006', 
+		  name : '골렘파괴자', 
+		 category : 'Weapon', 
+		 type : 'Mace', 
+		 state : {
+			str : 324, 	vit : 355
+		}, 
+		 option : {
+			atkPhy : 890, 	atkPhyTrue : 340, 	rateHit : 88, 	rateCrt : 7, 	valCrt : 148, 	
+			rateHitJust : 70, 	atkRapid : 3.4
+		}, 
+		  exp : '골렘을 부수는데 확실한 효과를 보여주는 둔기. 골렘괭이와 함께 사용한다면 낮은 확률로 골렘에게서 광석을 채취할 수 있다.', 
+	},
+	IT1000007 : { 
+		  code : 'IT1000007', 
+		  name : '골렘파괴자', 
+		 category : 'Weapon', 
+		 type : 'SubMace', 
+		 state : {
+			str : 142, 	vit : 162
+		}, 
+		 option : {
+			atkPhy : 427, 	atkPhyTrue : 121, 	rateHit : 88, 	rateCrt : 5, 	valCrt : 123, 	
+			rateHitJust : 70, 	atkRapid : 3.7
+		}, 
+		  exp : '골렘을 부수는데 확실한 효과를 보여주는 곡괭이. 골렘파괴자와 함께 사용한다면 낮은 확률로 골렘에게서 광석을 채취할 수 있다.', 
+	},
+	IT0000050 : { 
+		  code : 'IT0000050', 
+		  name : '안전모', 
+		 category : 'Head', 
+		 type : 'Helmet', 
+		 health : {
+
+			pHp : 12,pSp : 7
+		}, 
+		 state : {
+			str : 88, 	vit : 96
+		}, 
+		 option : {
+			defPhyPer : 44, 	defPhyNum : 21, 	defMagPer : 30, 	defMagNum : 12
+		}, 
+		  exp : '알 수 없는 글자가 쓰여져 있는 헬멧. 착용자는 알 수 없는 이유로 체력과 스테미너가 증가한다.', 
+	},
+	IT0000051 : { 
+		  code : 'IT0000051', 
+		  name : '동굴탈출용로프', 
+		 category : 'Item', 
+		 type : 'Item', 
+		  exp : '동굴탈출용 로프를 사용하면 어떠한 상황에서도 탑 밖으로 돌아갈 수 있다. 하지만 60%의 확률로 사용에 성공한다.', 
+	},
+
 }
