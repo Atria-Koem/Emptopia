@@ -344,7 +344,7 @@ const dataItem = {
 		exp : '전기 톱은 예로부터 널리 알려진 좋은 대화 수단이다.', 
 	},
 	IT0000021 : { 
-		code : 'IT0000021', 
+		code : 'IT1000021', 
 		name : '보복', 
 	 	category : 'Weapon', 
 	 	type : 'BowGun', 
@@ -360,7 +360,7 @@ const dataItem = {
 	 	exp : '누군가에게 복수할 기회를 노리고 있는 원혼이 들어가 있다. 염원과 한 세트를 이룬다. 파티 내에 각각의 사용자 존재시 명중률을 5% 증가시켜준다', 
 	},
 	IT0000022 : { 
-	 	code : 'IT0000022', 
+	 	code : 'IT1000022', 
 	 	name : '염원', 
 	 	category : 'Weapon', 
 	 	type : 'BowGun', 
