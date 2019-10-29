@@ -855,7 +855,7 @@ const dataItem = {
 	},
 	IT1000007 : { 
 		  code : 'IT1000007', 
-		  name : '골렘파괴자', 
+		  name : '골렘괭이', 
 		 category : 'Weapon', 
 		 type : 'SubMace', 
 		 state : {
@@ -884,10 +884,10 @@ const dataItem = {
 		}, 
 		  exp : '알 수 없는 글자가 쓰여져 있는 헬멧. 착용자는 알 수 없는 이유로 체력과 스테미너가 증가한다.', 
 	},
-	IT0000051 : { 
-		  code : 'IT0000051', 
+	IT9000006 : { 
+		  code : 'IT9000006', 
 		  name : '동굴탈출용로프', 
-		 category : 'Item', 
+		 category : 'Other', 
 		 type : 'Item', 
 		  exp : '동굴탈출용 로프를 사용하면 어떠한 상황에서도 탑 밖으로 돌아갈 수 있다. 하지만 60%의 확률로 사용에 성공한다.', 
 	},
