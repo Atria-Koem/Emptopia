@@ -1,0 +1,53 @@
+<html>
+    <script type="text/javascript" src="DataCreate.js"></script>
+    <script type="text/javascript" src="dataSkill.js"></script>
+        <script type="text/javascript" src="dataTribe.js"></script>
+        <link rel="stylesheet" href="DataCss.css">
+
+   <div>
+       <div>Code : </div>
+       <input type="text" id="Code" >
+   </div>
+   <div>
+    <div>RebirthCount : </div>
+    <input type="number" id="Count" min = 0 value = 0 >
+</div>
+   <div>
+        <div>Name : </div>
+       <input type="text" id="Name" >  
+   </div>
+    
+   <div>
+       <div>스텟 보정값 </div>
+            <div style="display: flex;">
+            <div>Str        <input type="text" id="str" value="100">   </div>
+            <div>Int        <input type="text" id="int" value="100">   </div>
+            <div>Dex        <input type="text" id="dex" value="100">   </div>
+            <div>Dis        <input type="text" id="dis" value="100">   </div>
+            <div>Spd        <input type="text" id="spd" value="100">   </div>
+       </div>
+           <div style="display: flex;">
+            <div>Vit        <input type="text" id="vit" value="100">   </div>
+            <div>Wis        <input type="text" id="wis" value="100">   </div>
+            <div>Agi        <input type="text" id="agi" value="100">   </div>
+            <div>Res        <input type="text" id="res" value="100">   </div>
+            <div>Luk        <input type="text" id="luk" value="100">   </div>
+        </div>
+   </div>
+  <div>
+      <div>Passive</div>
+      <div>maxCount <input type="text" id="maxCount" value="0">   </div>
+      <div id="PassiveSkills">
+
+      </div>
+      <input type="button" value="+" onclick="appendPassiveSkills()">
+    <input type="button" value="-" onclick="removePassiveSkills()">
+  </div>
+    <div>설명  <textarea type="text" id="exp" style="width: 50%; height: 200px;
+"></textarea></div>
+   <button onclick="new CreateTribeData()"><div>Code OutPut</div></button>
+    <textarea type="text" id="OutPutData" readonly="readonly" style="
+    width: 100%; height: 200px;
+"></textarea>
+    <div id="OutPutCode"></div>
+    </html>
