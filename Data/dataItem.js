@@ -821,9 +821,9 @@ const dataItem = {
 		}, 
 		 option : {
 			atkPhy : 670, 	atkPhyTrue : 360, 	rateHit : 80, 	rateCrt : 2, 	valCrt : 125, 	
-			rateHitJust : 57, 	atkRapid : 0.7
+			rateHitJust : 57, 	atkRapid : 57
 		}, 
-		  exp : '착용자의 공격을 빠르게 바꿔주는 창. 착용자는 공격시 전체 체력의 3%의 체력을 잃는다.', 
+		  exp : '착용자의 공격을 빠르게 바꿔주는 창. 착용자는 공격시 전체 체력의 7%의 체력을 잃는다.', 
 	},
 	IT0000049 : { 
 		  code : 'IT0000049', 
