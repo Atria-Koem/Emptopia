@@ -24,7 +24,7 @@ const dataItem = {
 	}*/
 	IT0000000 : {
 		code : 'IT0000000',
-		name : '숏 소드',
+		name : 'Short Sword',
 		category : 'Weapon',
 		type : 'Sword',
 		spec : {
@@ -39,7 +39,7 @@ const dataItem = {
 	},
 	IT0000001 : {
 		code : 'IT0000001',
-		name : '우든 실드',
+		name : 'Wooden Shield',
 		category : 'Ammor',
 		type : 'Shield',
 		spec : {
@@ -51,7 +51,7 @@ const dataItem = {
 	},
 	IT0000002 : {
 		code : 'IT0000002',
-		name : '우든 헬멧',
+		name : 'Wooden Helmet',
 		category : 'Head',
 		type : 'Helmet',
 		spec : {
@@ -63,7 +63,7 @@ const dataItem = {
 	},
 	IT0000003 : {
 		code : 'IT0000003',
-		name : '우든 아머',
+		name : 'Wooden Ammor',
 		category : 'Ammor',
 		type : 'Ammor',
 		spec : {
@@ -75,7 +75,7 @@ const dataItem = {
 	},
 	IT0000004 : {
 		code : 'IT0000004',
-		name : '숏 보우',
+		name : 'Short Bow',
 		category : 'Weapon',
 		type : 'Bow',
 		spec : {
@@ -90,7 +90,7 @@ const dataItem = {
 	},
 	IT0000005 : {
 		code : 'IT0000005',
-		name : '대거',
+		name : 'Dagger',
 		category : 'Weapon',
 		type : 'Dagger',
 		spec : {
@@ -102,7 +102,7 @@ const dataItem = {
 	},
 	IT0000006 : {
 		code : 'IT0000006',
-		name : '종이 책',
+		name : 'Text Book',
 		category : 'Ammor',
 		type : 'Book',
 		spec : {
@@ -115,7 +115,7 @@ const dataItem = {
 	},
 	IT0000007 : {
 		code : 'IT0000007',
-		name : '화살 통',
+		name : 'ArrowCase',
 		category : 'Ammor',
 		type : 'ArrowCase',
 		spec : {
@@ -130,7 +130,7 @@ const dataItem = {
 	},
 	IT0000008 : { 
 	 	code : 'IT0000008', 
-	 	name : '뼈 투구', 
+	 	name : 'Bone Helm', 
 	 	category : 'Head', 
 	 	type : 'Helmet', 
 		spec : {
@@ -172,7 +172,7 @@ const dataItem = {
 	},
 	 IT0000010 : { 
 	 	code : 'IT0000010', 
-	 	name : '곰의 바이킹', 
+	 	name : 'Bears Viking', 
 	 	category : 'Weapon', 
 	 	type : 'Sword', 
 		 spec : {
@@ -188,7 +188,7 @@ const dataItem = {
 	},
 	 IT0000011 : { 
 	 	code : 'IT0000011', 
-	 	name : '유령 허리띠', 
+	 	name : 'Ghost Belt', 
 	 	category : 'Ammor', 
 	 	type : 'Ammor', 
 		 spec : {
@@ -204,7 +204,7 @@ const dataItem = {
 	},
 	IT0000012 : { 
 	 	code : 'IT0000012', 
-	 	name : '번개고리', 
+	 	name : 'Thunder Ring', 
 	 	category : 'Head', 
 	 	type : 'Circlet', 
 		spec : {
@@ -223,9 +223,9 @@ const dataItem = {
 		},
 	  	exp : '전기를 내뿜는 개처럼 생긴 짐승의 가죽으로 만들어졌다.', 
 	},
-	IT0000013 : { 
-	 	code : 'IT0000013', 
-	 	name : '비단 붕대', 
+	IT9000001 : { 
+	 	code : 'IT9000001', 
+	 	name : '비단붕대', 
 	 	category : 'Other', 
 	 	type : 'Item', 
 	  	exp : '비단 붕대는 감으면 체력을 회복시켜 주는 마법 물품이다. 파티의 비밀무기로 활용될 수 있다. 총 체력의 30%를 회복시켜 준다.', 
@@ -247,9 +247,9 @@ const dataItem = {
 		},
 	 	exp : '이것은 버드나무로 제작된 몽둥이가 분명하지만 알수 없는 이유로 절삭력을 가지고 있다.', 
 		},
-	IT0000015 : { 
-		code : 'IT0000015', 
-	 	name : '데미지드 참', 
+	IT9000002 : { 
+		code : 'IT9000002', 
+	 	name : 'Damaged Charm', 
 	 	category : 'Other', 
 		type : 'Item', 
 		spec : {
@@ -262,16 +262,16 @@ const dataItem = {
 		},
 		exp : '소지하고 있으면 파티의 공격력을 비롯한 능력을 증가시켜 준다.', 
 	},
-	IT0000016 : { 
-	 	code : 'IT0000016', 
-	 	name : '평화제작기', 
-		category : 'Item', 
+	IT9000003 : { 
+	 	code : 'IT9000003', 
+	 	name : 'Peacemaker', 
+		category : 'Other', 
 	 	type : 'Item', 
 	 	exp : '우리의 소원은 평화. 모든 것의 체력을 전부 회복시켜준다.', 
 	},
 	IT0000017 : { 
 	 	code : 'IT0000017', 
-		name : '원숭이의 단검', 
+		name : 'Monkeys Dagger', 
 		category : 'Weapon', 
 	 	type : 'SubSword', 
 		spec : {
@@ -308,7 +308,7 @@ const dataItem = {
 	},
 	IT0000019 : { 
 	 	code : 'IT0000019', 
-	 	name : '블랙윙', 
+	 	name : 'BlackwingMale', 
 	 	category : 'Ammor', 
 	 	type : 'Ammor', 
 	 	health : {
@@ -329,7 +329,7 @@ const dataItem = {
 	},
 	IT0000020 : { 
 	 	code : 'IT0000020', 
-	 	name : '전기 톱', 
+	 	name : 'Chain Saw', 
 	 	category : 'Weapon', 
 	 	type : 'TwoHandSword', 
 		spec : {
@@ -375,23 +375,23 @@ const dataItem = {
 		},
 		exp : '누군가에게 복수할 기회를 노리고 있는 원혼이 들어가 있다. 보복과 한 세트를 이룬다. 파티 내에 각각의 사용자 존재시 명중률을 5% 증가시켜준다',
 	},
-	IT0000023 : { 
-	 	code : 'IT0000023', 
+	IT9000004 : { 
+	 	code : 'IT9000004', 
 	 	name : '공격 타입 변경(M)', 
-	 	category : 'Item', 
+	 	category : 'Other', 
 	 	type : 'Item', 
 	 	exp : '노말 타입 데미지를 마법 데미지로 변경시켜 준다.', 
 	},
-	IT0000024 : { 
-	 	code : 'IT0000024', 
-	 	name : 'Attack Type Changer(N)', 
-	 	category : 'Item', 
+	IT9000005 : { 
+	 	code : 'IT9000005', 
+	 	name : '공격 타입 변경(N)', 
+	 	category : 'Other', 
 	 	type : 'Item', 
 	 	exp : '마법 데미지를 노말 타입 데미지로 변경시켜 준다.', 
 	},
 	IT0000025 : { 
 	 	code : 'IT0000025', 
-	 	name : '가시 장미 채찍', 
+	 	name : 'RosethronWhip', 
 	 	category : 'Weapon', 
 	 	type : 'Whip', 
 		spec : {
@@ -407,7 +407,7 @@ const dataItem = {
 	},
 	IT0000026 : { 
 	 	code : 'IT0000026', 
-	 	name : '타란튤라', 
+	 	name : 'Tarantula', 
 	 	category : 'Weapon', 
 	 	type : 'SubSword', 
 		spec : {
@@ -419,7 +419,7 @@ const dataItem = {
  			valCrt : 140, 	rateHitJust : 60, 	atkRapid : 1
 		}, 
 		},
-		exp : '강력한 독이 깃든 검으로 공격시 일정 확률로 상대방 혹은 자신에게 중독을 부여한다.', 
+		exp : '강력한 독이 깃든 검. 자신도 적도 상태이상에 취약해진다. 30% 확률로 상대방 혹은 자신에게 중독을 부여한다.', 
 	},
 	IT0000027 : { 
 	  code : 'IT0000027', 
@@ -569,7 +569,7 @@ const dataItem = {
 			valCrt : 130, 	rateHitJust : 62, 	atkRapid : 3
 		}, 
 		},
-		  exp : '일정 확률로 중독 상태를 발생시키는 총알을 발사하는 총. 맞은 상대가 중독되는 이유는 알 수 없다.', 
+		  exp : '12% 확률로 중독 상태를 발생시키는 총알을 발사하는 총. 맞은 상대가 중독되는 이유는 알 수 없다.', 
 	},
 	IT0000036 : { 
 		  code : 'IT0000036', 
