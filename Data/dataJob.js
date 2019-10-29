@@ -52,5 +52,15 @@ const  dataJob = {
 			vit: 100,				wis: 100,				agi: 103,				res : 100,				luk: 100
 		},
 		limit : []
-	}
+	},
+	J50000000 : { 
+	  code : 'J50000000', 
+	  name : 'Mercenary', 
+	 state : {
+ 		str : 100, 	vit : 102, 	int : 100, 	wis : 100, 	dex : 100, 	
+ 		agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+	  limit : [], 
+	  exp : '누구든 용병이 될 수 있다.' 
+	},
 }
