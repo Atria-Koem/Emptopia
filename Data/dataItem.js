@@ -35,6 +35,7 @@ const dataItem = {
 				atkPhy: 10
 			}
 		},
+		src : 'Image\we_sword038.png',
 		exp : '기본적인 검. 품질은 좋지 않다.' 
 	},
 	IT0000001 : {
@@ -47,6 +48,7 @@ const dataItem = {
 				defPhyPer: 3, defPhyNum: 10
 			}
 		},
+		src : 'Image\shield_002o.png',  
 		exp : '나무로 만들어진 조잡한 방패로 별로 몸을 지켜줄 것 같지는 않다.' 
 	},
 	IT0000002 : {
@@ -59,6 +61,7 @@ const dataItem = {
 				defPhyPer: 1, defPhyNum: 1
 			}
 		},
+		src : 'Image\helm_014.png',
 		exp : '나무로 만들어진 조잡한 헬멧.' 
 	},
 	IT0000003 : {
@@ -71,6 +74,7 @@ const dataItem = {
 				defPhyPer: 8, defPhyNum: 4
 			}
 		},
+		src : 'Image\armor_004.png',
 		exp : '나무로 만들어진 조잡한 갑옷. 큰 충격을 받으면 부서진다.' 
 	},
 	IT0000004 : {
@@ -86,6 +90,7 @@ const dataItem = {
 				count : 10, maxCount : 10
 			}
 		},
+		src : 'Image\we_bow017.png', 
 		exp : '조잡하게 만들어진 활.' 
 	},
 	IT0000005 : {
@@ -98,6 +103,7 @@ const dataItem = {
 				atkPhy: 8
 			}
 		},
+		src : 'Image\we_sword001.png',
 		exp : '절삭력이 거의 없는 단검.' 
 	},
 	IT0000006 : {
@@ -111,6 +117,7 @@ const dataItem = {
 				defMagPer: 1, defMagNum: 2
 			}
 		},
+		src : 'Image\book_002c.png',
 		exp : '알수 없는 문자가 가득 쓰여진 책.' 
 	},
 	IT0000007 : {
@@ -126,6 +133,7 @@ const dataItem = {
 				count : 30, maxCount : 50
 			}
 		},
+		
 		exp : '30개의 화살이 들어가는 화살 통.' 
 	},
 	IT0000008 : { 
@@ -146,6 +154,7 @@ const dataItem = {
  				resPhyPer : 3, 	resMagPer : 3
 			}, 
 		},
+		src : 'Image\helm_001.png',
 	  	exp : '그저 뼈로 이루어진 투구. 여러군데 금이 가 있다.', 
 		},
 	IT0000009 : { 
@@ -168,6 +177,7 @@ const dataItem = {
  				rateCrtLuk : 12, 	rateDodgeLuk : 3
 			}, 
 		},
+		src : 'Image\we_gun011.png',
 	  	exp : '탑에서 발견된 무기.', 
 	},
 	 IT0000010 : { 
@@ -184,6 +194,7 @@ const dataItem = {
 			rateCrt : 20, 	valCrt : 150,
 			 }, 
 		 },
+		 src : 'Image\we_sword036.png',
 	 	exp : '이 아이템은 초록색이다.', 
 	},
 	 IT0000011 : { 
