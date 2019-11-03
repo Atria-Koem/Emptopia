@@ -1328,6 +1328,12 @@ class Sight{
 						}
 
 					inner.fillRect((j)*20,(i)*20,20,20)
+					if(Math.floor(draw[i][j]) == 5){
+						inner.font = "15px consolas";
+						inner.fillStyle = "white";
+						inner.fillText("E", (j)*20 + 10,(i)*20 + 10);
+					}
+
 				}
 			
 		}
