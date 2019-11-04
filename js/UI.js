@@ -949,6 +949,9 @@ class CreateDataView{
 			case 'Skill' :
 				this.data = dataSkill[this.code]
 				break;
+			case 'ShopBuy' :
+				this.data = dataItem[this.code]
+				break;
 		}
 	}
 	createSkillDiv(){
@@ -1253,6 +1256,79 @@ class CreateDataView{
 			selecter.innerText = 'outParty';
 		}
 		return mainDiv
+	}
+	createShopBuyDiv(){
+		const item = this.data
+		const itemElementName = Object.getOwnPropertyNames(item)
+		const optionName = ['atkPhy','atkMag','defPhy','defMag']
+		const optionNameLength = optionName.length;
+		let div = new CreateTag('div')
+		div.className = 'ItemInfoText'
+		let innerItemName = item.name + '(' + item.type + ')'
+		let nameP = new Text(innerItemName , 'ItemName').p
+        if(dataItem[item.code].src){
+            let img = new CreateTag('img');
+            img.src = dataItem[item.baseCode].src;
+            div.appendChild(img);
+        }
+		let slash = new Text(' / ').p;
+		div.appendChild(nameP)
+		div.appendChild(slash)
+		let checkCreate = {defPhy : 0, defMag : 0}
+		if(item.spec){
+		const baseOption = item.spec.option
+		if(baseOption){
+		const baseOptionName = Object.getOwnPropertyNames(baseOption)
+		const itemOptionLength = baseOptionName.length
+		for( let i  = 0 ; i < itemOptionLength; i ++){
+			let checkName = ''
+			if(baseOptionName[i].length != 6 && baseOptionName[i].indexOf("True") == -1){
+				checkName = baseOptionName[i].slice(0,6)
+			}
+			else{
+				checkName = baseOptionName[i]
+			}
+			let index = optionName.indexOf(checkName) 
+			if(index != -1){
+				let textType = optionName[index]
+				let innerText = optionName[index].slice(0,1).toUpperCase() + optionName[index].slice(1,3) + ' : '
+				let slash = new Text(' / ').p;
+				if(index < 2){
+					innerText += baseOption[optionName[index]]
+				}
+				else{
+						let defPer = baseOption[optionName[index] + 'Per']
+						if(!defPer){
+							innerText += '0 + '  
+						}
+						else{
+							innerText += defPer + ' + '
+						}
+						let defNum = baseOption[optionName[index] + 'Num']
+						if(!defNum){
+							innerText += '0'  
+						}
+						else{
+							innerText += defNum
+						}
+						checkCreate[optionName[index]] += 1
+					
+				}
+				if(!checkCreate[optionName[index]] || checkCreate[optionName[index]] == 1){
+					let optionP = new Text(innerText , textType).p
+				div.appendChild(optionP)
+				div.appendChild(slash)
+				}
+			}			
+		}
+		}
+		}
+		if(itemElementName.indexOf('exp') != -1){
+		
+			let optionP = new Text(item.exp , 'ItemOption').p
+			div.appendChild(optionP)
+		}
+		return div
 	}
 }
 class addEventListner{
@@ -1778,6 +1854,48 @@ class AddLog{
 			this.logView.children[checkValue - 1].remove()
 			checkValue = this.logView.children.length
 		}
+		}
+	}
+}
+
+class Shop{
+	constructor(type){
+		this.standBoard = document.getElementsByClassName("Stand")[0];
+		this.standBoard.innerHTML = "";
+		this.createSellData();
+	}
+	createSellData(){
+		const itemList = Object.getOwnPropertyNames(dataItem);
+		const length = itemList.length;
+		for(let i =0 ; i < length ; i++){
+			let div = new CreateTag("div");
+			let checkBox = CreateViewHTML.prototype.createViewCheckBox(itemList[i],"ItemData",itemList[i],"Item");
+
+			div.appendChild(checkBox);
+			div.className="ItemData"
+			let label = new CreateTag("label");
+			label.setAttribute("for", checkBox.id);
+			label.className = "ItemData DataLabel"
+			let checkDiv = new CreateTag("div");
+			checkDiv.className = "ItemSelecter";
+			label.appendChild(checkDiv)
+			let funds = dataItem[itemList[i]].funds;
+			if(!funds){
+				funds = 0
+			}
+			let fundiv = new CreateTag("div")
+			let fundData = new Text("$" + funds).p;
+			fundiv.appendChild(fundData);
+			label.appendChild(fundiv);
+			let numberBox = document.createElement("input");
+			numberBox.setAttribute("type", "number");
+			numberBox.id = "Count" + itemList[i];
+			numberBox.style.width = "5%";
+			label.appendChild(numberBox);
+			let inputLabel = new CreateDataView('ShopBuy',0,0,itemList[i]).div
+			label.appendChild(inputLabel)
+			div.appendChild(label);
+			this.standBoard.appendChild(div);
 		}
 	}
 }
