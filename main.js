@@ -420,6 +420,7 @@ function setLoad(){
 		addEvents()
 		createTeam()
 		document.getElementsByClassName('MenuTabs')[0].children[2].click()
+		new Shop();
 	}
 }
 function addEvents(){
