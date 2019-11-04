@@ -161,7 +161,7 @@ const  dataTribe = {
 	},
 	T121 : { 
 		  code : 'T121', 
-		  name : '고철덩어리', 
+		  name : 'Scrap Iron', 
 		 state : {
 			str : 80, 	vit : 140, 	int : 80, 	wis : 100, 	dex : 80, 	
 			agi : 100, 	dis : 120, 	res : 120, 	spd : 80, 	luk : 100
