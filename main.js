@@ -284,8 +284,16 @@ function calculrateElement(perforemr,situation,element,base){
 	return element;
 }
 
-
-
+let battleMode = 1;
+function battleModeChange(){
+	battleMode *= -1;
+	if(battleMode <0){
+		document.getElementById("modeId").innerText ="Battle Mode (Active Turn => Turn)"
+	}
+	else{
+		document.getElementById("modeId").innerText ="Battle Mode (Turn => Active Turn)"
+	}
+}
 
 class CharacterHire{
 	constructor(){
@@ -357,7 +365,10 @@ function createTeam(){
     let c = Object.getOwnPropertyNames(dataSkill)
     for(let i = 0 ; i < a.length ; i++){
         for(let j = 0 ; j < 3; j++){
-            let skillCode = c[Math.floor(Math.random() * c.length)];
+			let skillCode
+			do{
+				skillCode = c[Math.floor(Math.random() * c.length)];
+			}while(skillCode.indexOf("A")== -1);
             while(playerTeam.character[a[i]].skill.indexOf(skillCode) == -1){
                 playerTeam.character[a[i]].skill.push(skillCode);
             }
@@ -369,12 +380,17 @@ function loadScript(url,folder)
     var head = document.getElementsByTagName('head')[0];
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = folder + "\\" + url + ".js";
-    head.appendChild(script);
+	script.src = folder + "\\" + url + ".js";
+	script.onload = function(){
+		load++;
+		
+	}
+	head.appendChild(script);
+	
 }
 const scriptNames = ["Battle","Item","Maps","Parttern","Skill","Spec","Team","UI"];
 const dataNamse = ["Area","Item","Job","Monster","Skill","SkillTree","Tribe"];
-
+let load = 0;
 window.onload = function(){
 	for(let i = 0 ; i < scriptNames.length; i++){
 		loadScript(scriptNames[i],"js");
@@ -382,20 +398,30 @@ window.onload = function(){
 	for(let i = 0 ; i < dataNamse.length; i++){
 		loadScript( "data"+ dataNamse[i],"data");
 	}
+	
+	//do{
+	//	
+//}while(load < scriptNames.length + dataNamse.length)
 	document.getElementById("AreaSelect").addEventListener('change',
 																												 function(){
 		var area = new Area
 		area.changeLevel()
 	})
-	setTimeout(function(){
-		addEvents()
-		createTeam()
-		document.getElementsByClassName('MenuTabs')[0].children[2].click()
-	},500);
+	test = this.setInterval(setLoad,1)
 	
 
 }
-
+let test;
+function setLoad(){
+	console.log(load);
+	if(load ==  scriptNames.length + dataNamse.length){
+		document.getElementById("wrapper").innerHTML ="";
+		clearInterval(test);
+		addEvents()
+		createTeam()
+		document.getElementsByClassName('MenuTabs')[0].children[2].click()
+	}
+}
 function addEvents(){
 	addEventListner.prototype.addEventTabs()
 }

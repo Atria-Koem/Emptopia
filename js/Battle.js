@@ -672,6 +672,7 @@ class activeAction{
 		var target =targetObject.target
 		if(target.length === 0){
 			new AddLog([{text : 'Not Target'}], 'Battle', turnLog)
+			performer.aria = {};
 			return
 		}
 		new AddLog([{text : performer.name, type : 'Name'},{text : 'Used'},{text : action.name, type : 'SkillName' }], 'Battle', turnLog)
@@ -1481,16 +1482,36 @@ class InstantChangeStatus{
 		const disorder = this.performer.disorder
 		const disorderName = Object.getOwnPropertyNames(disorder)
 		const length = disorderName.length
+		let value ;
 		for(let i = 0 ; i < length ; i++){
 			switch(disorderName[i]){
 				case 'poision' : 
-					let value = -disorder[disorderName[i]].value
+				case 'bleeding' :
+					 value = -disorder[disorderName[i]].value
 					this.change[disorderName[i]] = {
 						value : this.checkDisorderResist(disorderName[i],value),
 						target : 'hp'
 					}
 					break;
-														}
+				case 'weakness' :
+				 value = -disorder[disorderName[i]].value
+				this.change[disorderName[i]] = {
+					value : this.checkDisorderResist(disorderName[i],value),
+					target : 'sp'
+				}
+				break;
+				case 'spilled' :
+				 value = -disorder[disorderName[i]].value
+				this.change[disorderName[i]] = {
+					value : this.checkDisorderResist(disorderName[i],value),
+					target : 'mp'
+				}
+				break;
+				case 'paralyzed' :
+					this.performer.aria = {skill: "KA999900", type: "Charge"}
+					break;
+
+				}
 		}
 	}
 	checkDisorderResist(disorderName,value){
@@ -1552,57 +1573,6 @@ class Performer{
 		this.summaryInBattle(performerNumber)
 			return dataActiveCharacter[performerNumber]
 	}
-	/*checkPerformers(){
-    var length = dataActiveCharacter.length;
-		var lengthE = enemyGroup.length
-		var lengthP = playerGroup.length
-		var pCount = 0;
-		var data = dataActiveCharacter.slice(0)
-		var gauge = gaugeStock.slice(0)
-		var saveStack = []
-		var nowMax = Math.max.apply(null,gaugeStock)
-		var sliceCount = 0;
-		var check= gaugeStock.indexOf(nowMax)
-    while( nowMax <= 100 && data[check].active == 1 ){
-    for(var i = 0; i < length; i++){
-			if(data[i].health.hp > 0 && gauge[i] < 100){
-      gauge[i] += 5000/data[i].option.atkRapid;
-			}
-			else if(gauge[i] >= 100 && data[i].active == 1){
-				gauge.splice(i,1)
-				data.splice(i,1)
-				i--;
-				length--;
-				
-			}
-			else{
-				gauge[i] = 0;
-			}
-    }
-			if(pCount != 0){
-				for(var i = 0; i < pCount; i++){
-					for(var j = 0; j < lengthP; j++){
-						var k = j * 2;
-						nowMax = Math.max.apply(null,gaugeStock)
-						check = gaugeStock.indexOf(nowMax,k)
-						if(dataActiveCharacter[check].active != 1){
-							
-						}
-					}
-				}
-			}
-      nowMax = Math.max.apply(null,gaugeStock)
-			if(check == gaugeStock.indexOf(nowMax)){
-			check = gaugeStock.indexOf(nowMax,check)
-			}
-			else{
-				check = gaugeStock.indexOf(nowMax)
-			}
-		}
-      var returnValue = gaugeStock.indexOf(nowMax)
-    return returnValue
-  }*/
-	//1 + ((((Sqrt[x] - Sqrt[y]) 10)^(1/2^(1/3)))^(1/Sqrt[2])/100) 10 + ((x - y)^(1/2^(1/3)))^(1/Sqrt[2])/100 + ((((x - y)^(2/5) 10)^(3/4)/37)^(1/Sqrt[2])/100) 10
 	createCreateActiveCodeArray(){
 		const array = Object.getOwnPropertyNames(dataActiveCharacter)
 		return array
@@ -1766,12 +1736,6 @@ class Drop{
 				var item = new Item(check[1])
 				var category = item.category
 				var code = item.code
-				/*if(!inventoryData[category][code]){
-					inventoryData[category][code] = item
-				}
-				else{
-					inventoryData[category][code].number += 1;
-				}*/
 				new AddLog([{text : dropper.name},{text : 'drop Item'},{text : item.name}], 'Battle')
 				dropper.dropTable = []
 				break;
@@ -1808,7 +1772,10 @@ class BattleEnd{
 		this.endCheck = 0;
 		this.checkAllyLength()
 		this.checkDeathCount()
+		this.checkTurnOver()
+
 		this.checkWinAlly()
+
 		if(this.endCheck === 1 || type === 'run away'){
 			this.linkageStatus();
 			this.endBattle()
@@ -1843,7 +1810,10 @@ class BattleEnd{
 		}
 	}
 	checkWinAlly(){
-		if(this.pLength === 0){
+		if(this.endCheck === 1){
+			new AddLog( [{text : "Turn Over"}],'Battle')
+		}
+		else if(this.pLength === 0){
 			new AddLog( [{text : playerTeam.name},{text : 'Lose'}],'Battle')
 			this.endCheck = 1
 			
@@ -1857,6 +1827,11 @@ class BattleEnd{
 				mapData.map[poe.y][poe.x] = 0;
 				delete mapData.positionEnemyData[poeIndex]
 			}
+		}
+	}
+	checkTurnOver(){
+		if(battleTurn > 100){
+			this.endCheck = 1;
 		}
 	}
 	endBattle(){
@@ -1908,7 +1883,9 @@ class Battle{
 			else if(performer.type === 'player'){
 				if(document.getElementById('SkillBorder').style.visibility != "visible"){
 					new SkillButtonView(number)
+					if(battleMode > 0){
 					gInterval = clearInterval(gInterval);
+					}
 				}
 		  //this.createSelectSkillButton(performer)
 			}

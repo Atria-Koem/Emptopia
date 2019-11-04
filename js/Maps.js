@@ -659,8 +659,10 @@ class CreateMap extends Area{
 				const item = this.treasureData[treData[i]].item
 				for(let j = 0 ; j < item.length; j++){
 					new Item(item[j]);
+					new AddLog([{text : 'Get Treasure'},{text : dataItem[item[j]].name}], 'Map')
 				}
 				this.map[this.treasureData[treData[i]].y][this.treasureData[treData[i]].x] = 0;
+				
 				delete this.treasureData[treData[i]]
 			}
 		}
@@ -670,6 +672,8 @@ class CreateMap extends Area{
         const length = pOEData.length
         for(let i =0 ; i < length; i++){
             if(this.positionEnemyData[pOEData[i]].x == x && this.positionEnemyData[pOEData[i]].y == y){
+				new AddLog([{text : 'Position of Enemy Join'},], 'Map')
+				battleCheck =  0;
 				this.positionEnemyCount = i;
 				const power = this.positionEnemyData[pOEData[i]].powerValue
                 enemyGroup = new EnemyGroup(this.areaCode,this.areaLevel * power ,'position',this.positionEnemyData[pOEData[i]].dataIndex).returnGroup
@@ -686,6 +690,8 @@ class CreateMap extends Area{
 		var addCount = Math.round(Math.floor(Math.random() * 32550648 + 1017207) / 8137662);
 		count += addCount;
 		if (count >= 126) {
+			new AddLog([{text : 'Enemy Join'},], 'Map')
+			battleCheck =  0;
 			search()
 			console.log('Enemy')
 			count = 0;
@@ -704,7 +710,7 @@ class CreateMap extends Area{
 		const pOEData = Object.getOwnPropertyNames(this.positionEnemyData);
 		const length = pOEData.length
 		for(let i = 0 ; i < length ; i++){
-			new MoveInMap(null,null,'enemy',i);
+			new MoveInMap(null,null,'enemy',pOEData[i]);
 		}
 	}
 	checkTurn(keyCode) {
@@ -1514,10 +1520,19 @@ class MoveInMap{
     }
 	}
 	changeMapData(){
-
-		this.map[this.y][this.x] = 0
+		const exit =mapData.exit
+		const start = mapData.start
+		if(this.y == exit.y && this.x == exit.x){
+			this.map[this.y][this.x] =7
+		}
+		else if(this.y == start.y && this.x == start.x){
+			this.map[this.y][this.x] =10
+		}
+		else{
+			this.map[this.y][this.x] = 0
+		}
 		this.map[this.performer.y][this.performer.x] = this.type;
-		console.log( this.map[this.performer.y][this.performer.x] + " : " + this.performer.x + "," + this.performer.y)
+		
 		
 		
 	}

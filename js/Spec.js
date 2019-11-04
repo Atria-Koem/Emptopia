@@ -755,7 +755,7 @@ class Health{
 	}
 	calculrateHp(vit,wis,str,int){
 		let valueVW = Math.pow( (vit + wis) * 7 , 2.73 / 3) 
-		let valueSI = Math.pow( (str + int) * Math.sqrt(5) , 2.73 / 3)
+		let valueSI = Math.pow( (str + int) * Math.sqrt(5) , 1.73 / 3)
 		let hp = Math.floor(valueVW + valueSI)
 		if(!hp){
 			hp = 1
@@ -763,11 +763,11 @@ class Health{
 		return hp
 	}
 	calculrateMp(wis,int){
-		let mp = Math.floor(Math.pow( wis * 17 + int * Math.PI , 1.3 / Math.PI))
+		let mp = Math.floor(Math.pow( wis * 17 + int * Math.PI , 1.73 / Math.PI))
 		return mp
 	}
 	calculrateSp(vit,str){
-		let sp = Math.floor(Math.pow( vit * 17 + str * Math.PI , 1.3 / Math.PI))
+		let sp = Math.floor(Math.pow( vit * 17 + str * Math.PI , 1.73 / Math.PI))
 		return sp
 	}
 	addBaseValue(base,level){
@@ -1115,8 +1115,27 @@ class StatusView{
 	}
 	checkBoardColor(performer,health){
 		let boardColor = ''
+		const disorder = performer.disorder
+		
 		if(health.hp <= 0 && performer.status === 'Death'){
 			boardColor = "grey"
+		}
+		else if(disorder){
+			
+				const disorderName = Object.getOwnPropertyNames(disorder)
+			for( let i = 0 ; i < disorderName.length ; i ++){
+				switch(disorderName[i]){
+					case 'paralyzed' :
+				
+							boardColor = 'yellow'
+
+						break;
+					case 'bleeding' :
+						boardColor = 'red';
+						break;
+					}
+			
+			}
 		}
 		else{
 			boardColor = '#426842'
@@ -1145,6 +1164,17 @@ class StatusView{
 				case 'poision' :
 					if(healthName === 'HP'){
 						color = 'purple'
+					}
+					break;
+				case 'spilled' :
+					if(healthName === 'MP'){
+						color = 'grey'
+					}
+					break;
+				case 'weakness' :
+					if(healthName === "SP"){
+						color = 'white'
+
 					}
 					break;
 														}

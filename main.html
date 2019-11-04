@@ -1,7 +1,20 @@
 <html>
-        <link rel="stylesheet" href="main.css">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="css/Loading.css">
     <script type="text/javascript" src="main.js"></script>
 <div id="InterPlayer">
+		<div id="wrapper">
+    
+				<div class="profile-main-loader">
+				  <div class="loader">
+					<svg class="circular-loader"viewBox="25 25 50 50" >
+					  <circle class="loader-path" cx="50" cy="50" r="20" fill="none" stroke="#70c542" stroke-width="2" />
+					</svg>
+				  </div>
+				</div>
+					
+				</div>
 	<input type="text" id="InputTeamName" value="Input Name">
 	<button onclick="createTeam()" class="Main">
 		<div class="ButtonOutLine"></div>
@@ -22,7 +35,8 @@
 </ul>
 <div class="MenuContainer Horizontal"style="
     position: absolute;
-    top: 62.5px;
+	top: 62.5px;
+	overflow-y: hidden;
 ">
 
 	<div id="BattleView" class="TabDataView">
@@ -79,6 +93,10 @@
 					<div class="ButtonOutLine"></div>
 					New Character Hire
 				</button></div>
+				<div>
+						<button onclick="battleModeChange()" class="Main"><div class="ButtonOutLine"></div>
+							<a id="modeId">Battle Mode (Turn => Active Turn)</a>
+						</button></div>
 		</div>
 		
 	</div>

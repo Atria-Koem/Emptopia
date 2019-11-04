@@ -1,3 +1,8 @@
+let openCheck = {
+	Equip : 0,
+	GetSkill : 0,
+	LearnSKill : 0
+}
 class CreateTag{
 	constructor(type){
 		let element = document.createElement(type)
@@ -45,9 +50,9 @@ class CharacterDesk{
 		let board = new CreateTag('div')
 		board.className = 'CharacterDeskItemBoard'
 		let equipSlot = this.createViewEquipment()
-		let inventorySlot = new InventoryDataView('Equipment',this.id)//this.createEquipmentInventory()
+
 		board.appendChild(equipSlot)
-		board.appendChild(inventorySlot)
+
 		return board
 	}
 	createSkillBoard(){
@@ -69,8 +74,17 @@ class CharacterDesk{
 		}
 		let div = new CreateTag('div')
 		div.id = 'PlayerSkillData'
-		let title = CreateViewHTML.prototype.createPTag('PlayerSkill','SkillTittle')
-		div.appendChild(title)
+		let tittle = CreateViewHTML.prototype.createPTag('PlayerSkill(ClickOpen)','SkillTittle')
+		let label = CreateViewHTML.prototype.createViewLabel("PlayerSkillDataCheck","CharacterData")
+		let checkBox = CreateViewHTML.prototype.createViewCheckBox("PlayerSkillDataCheck","SimpleSelect",0,"DataLabel",0,openCheck.GetSkill)
+		checkBox.addEventListener("click", function(){
+			openCheck.GetSkill = this.checked
+		})
+		label.appendChild(tittle)
+		div.appendChild(label)
+		div.appendChild(checkBox)
+		let dataTap = new CreateTag("div")
+		dataTap.className = "CharacterData"
 		let skillDataDiv = new CreateTag('div')
 		skillDataDiv.className = 'SkillData'
 		const skillCode = /*Object.getOwnPropertyNames(*/skillData/*)*/
@@ -91,7 +105,8 @@ class CharacterDesk{
 			addDiv.appendChild(label)
 			skillDataDiv.appendChild(addDiv)
 		}
-		div.appendChild(skillDataDiv)
+		dataTap.appendChild(skillDataDiv)
+		div.appendChild(dataTap)
 		return div
 	}
 	checkFavoriteSkill(number){
@@ -127,8 +142,17 @@ class CharacterDesk{
 		}
 		let div = new CreateTag('div')
 		div.id = 'LearnSkillData'
-		let title = CreateViewHTML.prototype.createPTag('Can Learn Skill','SkillTittle')
-		div.appendChild(title)
+		let title = CreateViewHTML.prototype.createPTag('Can Learn Skill(ClickOpen	)','SkillTittle')
+		let label = CreateViewHTML.prototype.createViewLabel("SkillLearnDataCheck","CharacterData")
+		let checkBox = CreateViewHTML.prototype.createViewCheckBox("SkillLearnDataCheck","SimpleSelect",0,"DataLabel",0,openCheck.LearnSKill)
+		checkBox.addEventListener("click", function(){
+			openCheck.LearnSKill = this.checked
+		})
+		label.appendChild(title)
+		div.appendChild(label)
+		div.appendChild(checkBox)
+		let dataTap = new CreateTag("div")
+		dataTap.className = "CharacterData"
 		let skillPointDiv = CreateViewHTML.prototype.createPTag('Skill Point : ' + skillPoint ,'SkillTittle')
 		div.appendChild(skillPointDiv)
 		let learnDiv = new CreateTag('div')
@@ -154,9 +178,10 @@ class CharacterDesk{
 				learnDiv.appendChild(addDiv)
 			}
 		}
-		div.appendChild(learnDiv)
+		dataTap.appendChild(learnDiv)
 		let button = this.createSkillLearnButton()
-		div.appendChild(button)
+		dataTap.appendChild(button)
+		div.appendChild(dataTap)
 		return div
 	}
 	createSkillLearnButton(){
@@ -440,7 +465,7 @@ class CharacterDesk{
 			let performer = playerTeam.character[this.value]
 			performer.protectType[0] = document.getElementById('ProtectSelect').value
 			performer.protectType[1] = document.getElementById('ProtectNumber').value
-			performer.coordinates = (document.getElementById('forwardPosition').checked) ? 'Front': 'Back' ;
+			performer.coordinates = (document.getElementsByName("position")[0].checked) ? 'Front': 'Back' ;
 		}
 													 )
 		return button
@@ -458,11 +483,20 @@ class CharacterDesk{
 		var div = document.createElement('div');
 		div.id = 'EquipSelect'
 		var tittle = document.createElement('p');
+		let label = CreateViewHTML.prototype.createViewLabel("EquipDataCheck","CharacterData")
+		let checkBox = CreateViewHTML.prototype.createViewCheckBox("EquipDataCheck","SimpleSelect",0,"DataLabel",0,openCheck.Equip)
+		checkBox.addEventListener("click", function(){
+			openCheck.Equip = this.checked
+		})
 		tittle.className = "EquipmentTittle"
-		tittle.innerText = 'Equip'
-		div.appendChild(tittle)
+		tittle.innerText = 'Equip(ClickOpen)'
+		label.appendChild(tittle)
+		div.appendChild(label)
+		div.appendChild(checkBox)
+		let dataTap = new CreateTag("div")
+		dataTap.className = "CharacterData"
 		var summaryOption = this.createEquipmentSummaryOption(id)
-		div.appendChild(summaryOption)
+		dataTap.appendChild(summaryOption)
 		var equipSlot = document.createElement('div');
 		equipSlot.className = 'ItemEquip'
 		var type = Object.getOwnPropertyNames(equip)
@@ -480,8 +514,10 @@ class CharacterDesk{
 		button.innerText = 'Remove'
 		button.value = id
 		equipSlot.appendChild(button)
-		div.appendChild(equipSlot)
-		
+		dataTap.appendChild(equipSlot)
+		let inventorySlot = new InventoryDataView('Equipment',this.id)
+		dataTap.appendChild(inventorySlot)
+		div.appendChild(dataTap)
 		return div
 	}
 	summaryEquipSpecView(number) {
@@ -673,15 +709,19 @@ class CreateViewHTML{
 		button.value = value
 		return button
 	}
-	createViewCheckBox(id,name,value,type,disabled){
+	createViewCheckBox(id,name,value,type,disabled,checke){
 		let checkBox = new CreateTag("input")
 		checkBox.setAttribute("type", "checkbox")
 		checkBox.setAttribute("name", name)
 		checkBox.id = id
 		checkBox.value = value
 		checkBox.className = type + "CheckBox"
+		
 		if(disabled){
 			checkBox.disabled = true
+		}
+		if(checke){
+			checkBox.checked = checke
 		}
 		return checkBox
 	}
@@ -1653,6 +1693,7 @@ class Text{
 			case 'all' :
 			case 'SP' :
 			case 'SpRecovery' :
+			case 'paralyzed':
 				color = 'yellow'
 				break;
 			case 'self' :
@@ -1720,6 +1761,10 @@ class AddLog{
 				break;
 			case 'Turn' :
 				this.logView = document.getElementsByClassName('Log')[0]
+				break;
+			case 'Map' :
+				this.logView = document.getElementById('MapLogView')
+				break;
 							 }
 	}
 	clearLogView(type){

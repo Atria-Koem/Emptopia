@@ -37,6 +37,18 @@ const dataSkill = {
 		},
 		point : 0
 	},
+	KPT00000 :{
+		code : 'KPT00000',
+		name : 'TribePassive Type0',
+		passiveEffect : {
+			first : {
+				origin : {
+					PlusMaxHp : {value : 10},			PlusMaxSp : {value : 10},			PlusMaxMp : {value : 10}, PlusStr : {value : 10}
+				}
+			}
+		},
+		point : 0
+	},
 	KPT10000 :{
 		code : 'KPT10000',
 		name : 'OverHeat',
@@ -75,6 +87,78 @@ const dataSkill = {
 		},
 		point : 0,
 		exp : 'PhysicalDefence (-15 + 0)'
+	},
+	KPT30000 :{
+		code : 'KPT30000',
+		name : 'TribePassive Type3',
+		passiveEffect : {
+			first : {
+				origin : {
+					PlusMaxHp : {value : 10},			PlusMaxSp : {value : 10},			PlusMaxMp : {value : 10}, PlusStr : {value : 10}
+				}
+			}
+		},
+		point : 0
+	},
+	KPT40000 :{
+		code : 'KPT40000',
+		name : 'TribePassive Type4',
+		passiveEffect : {
+			first : {
+				origin : {
+					PlusMaxHp : {value : 10},			PlusMaxSp : {value : 10},			PlusMaxMp : {value : 10}, PlusStr : {value : 10}
+				}
+			}
+		},
+		point : 0
+	},
+	KPT50000 :{
+		code : 'KPT50000',
+		name : 'TribePassive Type5',
+		passiveEffect : {
+			first : {
+				origin : {
+					PlusMaxHp : {value : 10},			PlusMaxSp : {value : 10},			PlusMaxMp : {value : 10}, PlusStr : {value : 10}
+				}
+			}
+		},
+		point : 0
+	},
+	KPT60000 :{
+		code : 'KPT60000',
+		name : 'TribePassive Type6',
+		passiveEffect : {
+			first : {
+				origin : {
+					PlusMaxHp : {value : 10},			PlusMaxSp : {value : 10},			PlusMaxMp : {value : 10}, PlusStr : {value : 10}
+				}
+			}
+		},
+		point : 0
+	},
+	KPT70000 :{
+		code : 'KPT70000',
+		name : 'TribePassive Type7',
+		passiveEffect : {
+			first : {
+				origin : {
+					PlusMaxHp : {value : 10},			PlusMaxSp : {value : 10},			PlusMaxMp : {value : 10}, PlusStr : {value : 10}
+				}
+			}
+		},
+		point : 0
+	},
+	KPT80000 :{
+		code : 'KPT80000',
+		name : 'TribePassive Type8',
+		passiveEffect : {
+			first : {
+				origin : {
+					PlusMaxHp : {value : 10},			PlusMaxSp : {value : 10},			PlusMaxMp : {value : 10}, PlusStr : {value : 10}
+				}
+			}
+		},
+		point : 0
 	},
 	KPT90000 :{
 		code : 'KPT90000',
@@ -204,6 +288,20 @@ const dataSkill = {
 		hitCount : 1,
 		exp : 'Recovary Lost Hp 30%',
 	},
+	KA100006 : {
+		code : 'KA100006',
+		name : 'Slash',
+		target : ['enemy','individual'],
+		cost : {sp : 5},
+		delay : {first : 10,last : 40},
+		delayType : 'Charge',
+		skillType : 'Combat', 
+		power : { base : { type : 'Physical', value : 140 } },
+		hitCount : 2,
+		point : 3,
+		defenceType : 'Physical',
+		disorder : { bleeding : {name : 'bleeding',value : 10, turn : 2}}
+	},
 	KA110000 : {
 		code : 'KA110000',
 		name : 'AddStrength',
@@ -309,6 +407,20 @@ const dataSkill = {
 		defenceType : 'Magical',
 		invalid : 'None',
 		
+	},
+	KA240000 : {
+		code : 'KA240000',
+		name : 'MindCrush',
+		target : ['enemy','multi'],
+		cost : {mp : 30},
+		delay : {first : 50,last : 250},
+		delayType : 'Casting',
+		skillType : 'Combat', 
+		power : { base : { type : 'Magical', value : 110 }},
+		hitCount : 5,
+		defenceType : 'Magical',
+		invalid :'invalid',
+		disorder : { spilled : {name : 'spilled',value : 90, turn : 3}}
 	},
 	KA300000 : {
 		code : 'KA300000',
@@ -492,5 +604,43 @@ const dataSkill = {
 		exp : 'BaseSkill',
 		invalid :'invalid',
 		disorder : { poision : {name : 'poision',value : 30, turn : 5}}
+	},
+	KA404002 : {
+		code : 'KA404002',
+		name : 'ParalyzedGas',
+		target : ['enemy','all'],
+		cost : {sp : 5, mp : 15},
+		delay : {first : 100,last : 10},
+		delayType : 'Charge',
+		skillType : 'Combat', 
+		hitCount : 1,
+		defenceType : 'Physical',
+		exp : 'BaseSkill',
+		invalid :'invalid',
+		disorder : { paralyzed : {name : 'paralyzed',value : 0, turn : 2}}
+	},
+	KA404003 : {
+		code : 'KA404003',
+		name : 'Debilitation',
+		target : ['enemy','all'],
+		cost : { mp : 25},
+		delay : {first : 100,last : 10},
+		delayType : 'Charge',
+		skillType : 'Combat', 
+		hitCount : 1,
+		defenceType : 'Physical',
+		exp : 'BaseSkill',
+		invalid :'invalid',
+		disorder : { weakness : {name : 'weakness',value : 20, turn : 3}}
+	},
+	KA999900 : {
+		code : 'KA999900',
+		name : 'paralyzed',
+		target : ['self','individual'],
+		cost : {},
+		delayType : 'Charge',
+		delay : {fisrt : 0, last : 200},
+		point : -10,
+		exp : 'paralyzed',
 	}
 }

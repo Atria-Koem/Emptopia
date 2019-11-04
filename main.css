@@ -178,7 +178,7 @@ input[type='text']{
   height : 150px;
   z-index : 0;
 	position: relative;
-	width : 300px;
+	width : 250px;
 }
 .StateBorder.Party{
   height : 100px;	
@@ -439,6 +439,9 @@ button.Main:hover{
 	overflow: hidden;
 	white-space: nowrap;
 }
+.inParty a , .outParty a{
+  border : none;
+}
 .Job{
   width :50%;
   margin: 0;
@@ -507,7 +510,7 @@ button.Main:hover{
   z-index : 3;
 }
 .CharacterSlot{
-	width: 5%;
+	width: 20%;
 }
 .inParty,.outParty{
 	font-size: 0.9em;
@@ -915,7 +918,17 @@ input[type='radio'].ViewRadio{
 .Inventory{
   margin-left :  10px;
 }
-.SimpleSelectCheckBox,.SkillFavoriteCheckBox,.SkillLearnRadio,.ItemCheckBox,.ItemCaseRadio, .ItemEquipRadio{
+input.DataLabelCheckBox:checked ~ .CharacterData {
+  max-height: 50em;
+}
+.CharacterData {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+.DataLabelCheckBox,.SimpleSelectCheckBox,.SkillFavoriteCheckBox,.SkillLearnRadio,.ItemCheckBox,.ItemCaseRadio, .ItemEquipRadio{
   border: 0; 
   clip: rect(0 0 0 0); 
   height: 1px; 
@@ -1117,7 +1130,9 @@ ul.MenuTabs.Vertical.SkillBoard{
 
 }
 #MapLogView{
-	width : 100%;
+  position: absolute;
+    bottom: 10px;
+	width : 80%;
 	height : 120px;
 }
 .Log{
