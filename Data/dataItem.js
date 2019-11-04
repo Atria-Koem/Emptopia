@@ -902,5 +902,164 @@ const dataItem = {
 		 type : 'Item', 
 		  exp : '동굴탈출용 로프를 사용하면 어떠한 상황에서도 탑 밖으로 돌아갈 수 있다. 하지만 60%의 확률로 사용에 성공한다.', 
 	},
+	IT9000007 : { 
+	  code : 'IT9000007', 
+	  name : '물', 
+	 category : 'Other', 
+	 type : 'Item', 
+	  src : 'Image\food_004.png', 
+	  exp : '깨끗한 정제수. hp, mp 리젠 20%', 
+	},
+	IT0000051 : { 
+		  code : 'IT0000051', 
+		  name : 'Silver Shovel', 
+		 category : 'Weapon', 
+		 type : 'TwoHandSword', 
+		 spec : { 
+			 health : {
+
+			pHp : 3,pSp : 3
+			 }, 
+			 state : {
+			str : 72, 	vit : 44
+			 }, 
+			 option : {
+			atkPhy : 68, 	atkPhyTrue : 21, 	rateHit : 90, 	rateCrt : 4, 	valCrt : 130, 	
+			rateHitJust : 70, 	atkRapid : 4
+			 }, 
+		 }, 
+		  exp : '은으로 만든 삽이다. 언데드 몬스터에게 20% 추가 데미지를 준다.', 
+	},
+	IT0000052 : { 
+		  code : 'IT0000052', 
+		  name : '부지깽이', 
+		 category : 'Weapon', 
+		 type : 'Wand', 
+		 spec : { 
+			 health : {
+			Mp : 254
+			 }, 
+			 state : {
+			int : 37
+			 }, 
+			 option : {
+			atkPhy : 25, 	atkMag : 37, 	atkPhyTrue : 12, 	atkMagTrue : 21, 	rateHit : 87, 	
+			rateDis : 20, 	rateCrt : 4, 	valCrt : 227, 	rateHitJust : 73, 	atkRapid : 8
+			 }, 
+		 }, 
+		  src : 'Image\we_staff001b.png', 
+		  exp : '평범한 부지깽이다. 불속성 데미지를 준다. 불속성 공격을 할 경우 400%의 추가 데미지를 입힌다.', 
+	},
+	IT0000053 : { 
+		  code : 'IT0000053', 
+		  name : 'Wood Staff', 
+		 category : 'Weapon', 
+		 type : 'Staff', 
+		 spec : { 
+			 state : {
+			int : 12
+			 }, 
+			 option : {
+			atkMag : 30, 	atkMagTrue : 8, 	rateHit : 70, 	rateCrt : 3, 	valCrt : 120, 	
+			rateHitJust : 42, 	atkRapid : 2
+			 }, 
+		 }, 
+		  src : 'Image\we_staff010c.png', 
+		  exp : '나무가지를 꺾어서 만든 조잡한 지팡이.', 
+	},
+	IT0000054 : { 
+		  code : 'IT0000054', 
+		  name : '열매달린 가지', 
+		 category : 'Weapon', 
+		 type : 'Staff', 
+		 spec : { 
+			 state : {
+			vit : 16, 	int : 22
+			 }, 
+			 option : {
+			atkMag : 75, 	atkMagTrue : 33, 	rateHit : 50, 	rateCrt : 6, 	valCrt : 220, 	
+			rateHitJust : 50, 	atkRapid : 6
+			 }, 
+		 }, 
+		  src : 'Image\we_staff001.png', 
+		  exp : '열매가 달려있는 나무가지다. 착용자의 치유능력이 30%상승한다.', 
+	},
+	IT9000008 : { 
+		  code : 'IT9000008', 
+		  name : '파야열매', 
+		 category : 'Other', 
+		 type : 'Item', 
+		  src : 'Image\food_035.png', 
+		  exp : '전투시 복용하면 전체 체력의 1/4을 회복하지만 방어력이 25% 하락한다.', 
+	},
+	IT9000009 : { 
+		  code : 'IT9000009', 
+		  name : '날달걀', 
+		 category : 'Other', 
+		 type : 'Item', 
+		  src : 'Image\food_037.png', 
+		  exp : '전투시 복용하면 전체 체력의 1/8을 지속적으로 회복한다.', 
+	},
+	IT9000010 : { 
+		  code : 'IT9000010', 
+		  name : '감자', 
+		 category : 'Other', 
+		 type : 'Item', 
+		  src : 'Image\food_036.png', 
+		  exp : '전투시 복용하면 전체 체력의 1/4을 회복한다. 특정 층에서 아이템을 교환할 때 사용할 수 있다.', 
+	},
+	IT1000007 : { 
+		  code : 'IT1000007', 
+		  name : '초보 마법사 모자', 
+		 category : 'Ammor', 
+		 type : 'Hat', 
+		 spec : { 
+			 state : {
+			vit : 2, 	int : 7
+			 }, 
+			 option : {
+			defPhyPer : 20, 	defMagPer : 22, 	
+	defPhyNum : 5,	defMagNum : 5
+			 }, 
+		 }, 
+		  src : 'Image\helm_005.png', 
+		  exp : '초보 마법사들이 즐겨쓰는 모자다. 초보 마법사 로브와 함께 착용하면 마법 공격력과 방어력이 10% 상승한다.', 
+	},
+	IT1000008 : { 
+		  code : 'IT1000008', 
+		  name : '초보 마법사 로브', 
+		 category : 'Ammor', 
+		 type : 'Robe', 
+		 spec : { 
+			 state : {
+			vit : 12, 	int : 6
+			 }, 
+			 option : {
+			defPhyPer : 31, 	defMagPer : 42, 	defPhyNum : 5,	defMagNum : 5
+			 }, 
+		 }, 
+		  src : 'Image\armor_010b.png', 
+		  exp : '초보 마법사들이 즐겨입는 로브로 초보 마법사 모자와 함께 착용하면 마법 공격력과 방어력이 10% 상승한다.', 
+	},
+	IT0000055 : { 
+		  code : 'IT0000055', 
+		  name : 'Jewel Amplifier', 
+		 category : 'Weapon', 
+		 type : 'Staff', 
+		 spec : { 
+			 health : {
+
+			pMp : 10
+			 }, 
+			 state : {
+			vit : 62, 	int : 131
+			 }, 
+			 option : {
+			atkMag : 265, 	atkMagTrue : 126, 	rateHit : 91, 	rateHitJust : 77, 	atkRapid : 6
+			 }, 
+		 }, 
+		  src : 'Image\we_staff020b.png', 
+		  exp : '보석을 통하여 마력을 증폭시켜주는 지팡이.', 
+	},
 
 }
