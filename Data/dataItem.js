@@ -1061,5 +1061,115 @@ const dataItem = {
 		  src : 'Image\we_staff020b.png', 
 		  exp : '보석을 통하여 마력을 증폭시켜주는 지팡이.', 
 	},
+	IT0000013 : { 
+		  code : 'IT0000013', 
+		  name : '평범한 리본', 
+		 category : 'Item', 
+		 type : 'Item', 
+		 spec : { 
+			 health : {
 
+			pHp : 2,pSp : 2,pMp : 2
+			 }, 
+		 }, 
+		  src : 'Image\acce_010.png', 
+		  exp : '별다른 능력을 가지지 않은 장식품', 
+	},
+	IT0000015 : { 
+		  code : 'IT0000015', 
+		  name : '주시자의 눈', 
+		 category : 'Item', 
+		 type : 'Item', 
+		 spec : { 
+			 health : {
+
+			pMp : 7
+			 }, 
+		 }, 
+		  src : 'Image\acce_003e.png', 
+		  exp : '탑에서 사망한 수도승의 눈. 착용자의 명중률을 12% 상승시킨다.', 
+	},
+	IT0000016 : { 
+		  code : 'IT0000016', 
+		  name : '고무줄', 
+		 category : 'Item', 
+		 type : 'Item', 
+		 spec : { 
+			 state : {
+			luk : 16
+			 }, 
+		 }, 
+		  src : 'Image\acce_004.png', 
+		  exp : '행운을 올려주는 노란색 고무줄.', 
+	},
+	IT0000021 : { 
+		  code : 'IT0000021', 
+		  name : '얼음마법서 -1-', 
+		 category : 'Weapon', 
+		 type : 'Book', 
+		 spec : { 
+			 health : {
+
+			pMp : 17
+			 }, 
+			 state : {
+			str : 22, 	int : 48
+			 }, 
+			 option : {
+			atkMag : 63, 	atkMagTrue : 17, 	rateHit : 78, 	rateDis : 15, 	rateHitJust : 66, 	
+			atkRapid : 3
+			 }, 
+		 }, 
+		  src : 'Image\book_002.png', 
+		  exp : '얼음 마법의 정수가 담긴 책. 시리즈로 출간되었고 기초 얼음마법 패키지가 들어있다. 빙결 확률이 25% 증가한다.', 
+	},
+	IT0000022 : { 
+		  code : 'IT0000022', 
+		  name : '화염마법서 -1-', 
+		 category : 'Weapon', 
+		 type : 'Book', 
+		 spec : { 
+			 health : {
+
+			pMp : 17
+			 }, 
+			 state : {
+			str : 18, 	int : 52
+			 }, 
+			 option : {
+			atkMag : 70, 	atkMagTrue : 24, 	rateHit : 71, 	rateDis : 15, 	rateHitJust : 60, 	
+			atkRapid : 2
+			 }, 
+		 }, 
+		  src : 'Image\book_002c.png', 
+		  exp : '화염 마법의 정수가 담긴 책. 시리즈로 출간된 것으로 알려져 있다. 기초 화염마법 패키지가 들어있다. 화상을 입을 확률이 25% 증가한다.', 
+	},
+	IT0000023 : { 
+		  code : 'IT0000022', 
+		  name : ' Druid', 
+		 category : 'Weapon', 
+		 type : 'Book', 
+		 spec : { 
+			 health : {
+
+			pMp : 4
+			 }, 
+			 state : {
+			vit : 40, 	int : 30
+			 }, 
+			 option : {
+			atkMag : 40, 	atkMagTrue : 7, 	rateHit : 82, 	rateHitJust : 69, 	atkRapid : 5
+			 }, 
+		 }, 
+		  src : 'Image\book_002b.png', 
+		  exp : '영웅 드루이드의 일대기가 담겨있는 책. <만년동안 응어리진 분노를... 222p>', 
+	},
+	IT0000024 : { 
+		  code : 'IT0000024', 
+		  name : '기술머신', 
+		 category : 'Other', 
+		 type : 'Item', 
+		  src : 'Image\item_051.png', 
+		  exp : '익히고 있는 기술중 한가지를 선택하여 랜덤한 다른 기술로 변화시킨다.', 
+	},
 }
