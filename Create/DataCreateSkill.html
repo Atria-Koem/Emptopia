@@ -1,0 +1,245 @@
+<html>
+    <script type="text/javascript" src="DataCreate.js"></script>
+        <script type="text/javascript" src="dataSkill.js"></script>
+        <link rel="stylesheet" href="DataCss.css">
+
+   <div>
+       <div>Code : </div>
+       <input type="text" id="Code" maxlength="6" >
+       <div>Name : </div>
+       <input type="text" id="Name" >  
+   </div>
+   <div>
+       <div>SkillMainTYpe</div>
+        <select id="mainType">
+                <option value="KA" selected="selected" >active</option>
+                <option value="KP">passive</option>
+            </select>  
+   </div>
+   <div>
+    <div>targetType</div>
+    <select id="target0">
+        <option value="self" selected="selected" >self</option>
+        <option value="friend">friend</option>
+        <option value="enemy">enemy</option>
+        <option value="all">all</option>
+    </select>
+    <select id="target1">
+        <option value="individual" selected="selected" >individual</option>
+        <option value="multi">multi</option>
+        <option value="all">all</option>
+    </select>
+   </div>
+   <div>
+   <div>specialTarget </div>
+   <select id="specialTarget">
+        <option value="null" selected="selected" >null</option>
+        <option value="multi">multi</option>
+        <option value="all">all</option>
+    </select>
+    <div>specialTarget </div>
+    <select id="priorityTarget ">
+         <option value="null" selected="selected" >null</option>
+         <option value="multi">multi</option>
+         <option value="all">all</option>
+     </select>
+    </div>
+<div>
+    <div>Cost null = 0</div>
+    <div style="display: flex;">
+            <div>체력</div>
+            <div>Number<input type="text" id="NumberHp" >   </div>
+            <div>Percent<input type="text" id="PercentHp" >  </div>
+        </div>
+               <div style="display: flex;">
+            <div>스테미나</div>
+            <div>Number<input type="text" id="NumberSp" >   </div>
+            <div>Percent<input type="text" id="PercentSp" >  </div>
+        </div>
+               <div style="display: flex;">
+            <div>마나</div>
+            <div>Number <input type="text" id="NumberMp" >   </div>
+            <div>Percent<input type="text" id="PercentMp" >  </div>
+        </div>
+        <div style="display: flex;">
+            <div>Count</div>
+            <div>Number <input type="text" id="Count" >   </div>
+        </div>
+</div>
+<div>
+
+    <div>BaseValue</div>
+    <div id="BaseValueGroup">
+        <div>
+    <select class="BaseValue" id="baseType0">
+            <option value="null" selected="selected" >null</option>
+            <option value="str">str</option>
+            <option value="int">int</option>
+            <option value="dex">dex</option>
+            <option value="dis">dis</option>
+            <option value="spd">spd</option>
+            <option value="vit">vit</option>
+            <option value="wis">wis</option>
+            <option value="agi">agi</option>
+            <option value="res">res</option>
+            <option value="luk">luk</option>
+        </select>  
+        <input type="text" id="baseValue0" value="0">
+    </div>
+    </div>
+    <input type="button" value="+" onclick="appendBaseValue()">
+    <input type="button" value="-" onclick="removeBaseValue()">
+</div>
+<div>
+    <div>
+        DamageHealtType NotCheck = Hp
+    </div>
+    <div class="flexCheckGroup">
+            
+        <div><input type="checkbox" class="Limit"  value="Hp" id="DamageHp"><label for="DamageHp" >Hp</label></div>
+        <div><input type="checkbox" class="Limit"  value="Sp" id="DamageSp"><label for="DamageSp" >Sp</label></div>
+        <div><input type="checkbox" class="Limit"  value="Mp" id="DamageMp"><label for="DamageMp" >Mp</label></div>
+        </div>
+</div>
+   <div>
+    <div>DelayType</div>
+    <select id="delayType">
+        <option value="Charge" selected="selected" >Charge</option>
+        <option value="Cast">Cast</option>
+    </select>
+    <div style="display: flex;">
+            <div>Fistdelay  <input type="text" id="fisrtdelay" value="0">   </div>
+            <div>Lastdelay  <input type="text" id="lastdelay" value="0">   </div>
+            </div>
+    </div>
+    <div>
+        <div>SkillType    </div>
+    <select id="skillType">
+        <option value="Combat" selected="selected" >Combat</option>
+        <option value="Support">Support</option>
+    </select>
+   </div>
+<div>
+<div>Power</div>
+<div>Base 
+    <div>
+    <select class="PowerBase" id="PowerBase">
+        <option value="Physical" selected="selected" >Physical</option>
+        <option value="Magical">Magical</option>
+        <option value="Hybrid">Hybrid</option>
+    </select> 
+    <input type="text" id="PowerValue" value="0">
+    </div>
+</div>
+<div id="OtherPowerGroup">
+    <div>
+    <select id="OtherPowerType0">
+            <option value="target" selected="selected" >target</option>
+            <option value="performer">performer</option>
+        </select> 
+        <select id="OtherPowerAddress0">
+                <option value="lNHp" selected="selected" >현재 잃어버린 체력</option>
+                <option value="lNMp">현재 잃어버린 마나</option>
+                <option value="lNSp">현재 잃어버린 스테미너</option>
+            </select> 
+        <input type="text" id="OtherPowerValue0" value="0">
+        <select id="OtherPowerSuffix0">
+                <option value="Plus" selected="selected" >Plus</option>
+                <option value="Minus">Minus</option>
+                <option value="Up">Up</option>
+                <option value="Down">Down</option>    
+            </select> 
+    </div>
+</div>
+<input type="button" value="+" onclick="appendBaseValue()">
+<input type="button" value="-" onclick="removeBaseValue()">
+</div>
+   <div>
+        <div>hitCount <input type="text" id="hitCount" value="1">    </div>
+        <div><input type="checkbox"  value="Hp" id="JustHit"><label for="JustHit" >JustHit</label></div>
+        <div><input type="checkbox"  value="Hp" id="invalid"><label for="invalid" >invalid </label></div>
+   </div>
+   <div>
+        <div>defenceType   if SupportType have This type  Recovery Value down by Defence Value  </div>
+    <select id="defenceType">
+        <option value="None" selected="selected" >None</option>
+        <option value="Physical"  >Physical</option>
+        <option value="Magical">Magical</option>
+        <option value="Hybrid">Hybrid</option>
+        <option value="Ignore">Ignore</option>
+    </select>
+   </div>
+    
+   <div>
+       <div>사용 조건 장비 (장착시에만 사용 가능))</div>
+    
+    		<div class="flexCheckGroup">
+    		<div><input type="checkbox" class="Limit"  value="Sword" >Sword</div>
+			<div><input type="checkbox" class="Limit"  value="TwoHandSword">TwoHandSword</div>
+			<div><input type="checkbox" class="Limit"  value="Dagger">Dagger</div>
+			<div><input type="checkbox" class="Limit"  value="Pike">Pike</div>
+			<div><input type="checkbox" class="Limit"  value="Spear">Spear</div>
+			<div><input type="checkbox" class="Limit"  value="Hatchet">Hatchet</div>
+			<div><input type="checkbox" class="Limit"  value="Axe">Axe</div>
+			</div>
+			<div class="flexCheckGroup">
+			<div><input type="checkbox" class="Limit"  value="Mace">Mace</div>
+			<div><input type="checkbox" class="Limit"  value="Pistol">Pistol</div>
+			<div><input type="checkbox" class="Limit"  value="Gun">Gun</div>
+			<div><input type="checkbox" class="Limit"  value="Wand">Wand</div>
+			<div><input type="checkbox" class="Limit"  value="Staff">Staff</div>
+			<div><input type="checkbox" class="Limit"  value="Bow">Bow</div>
+			<div><input type="checkbox" class="Limit"  value="Whip">Whip</div>
+			</div>
+			<div class="flexCheckGroup">
+			<div><input type="checkbox" class="Limit"  value="MainGauche">MainGauche</div>
+			<div><input type="checkbox" class="Limit"  value="SubSword">SubSword</div>
+			<div><input type="checkbox" class="Limit"  value="SubSword">SubSword</div>
+			<div><input type="checkbox" class="Limit"  value="SubPike">SubPike</div>
+			<div><input type="checkbox" class="Limit"  value="SubHatchet">SubHatchet</div>
+			<div><input type="checkbox" class="Limit"  value="SubMace">SubMace</div>
+			<div><input type="checkbox" class="Limit"  value="SubPistol">SubPistol</div>
+			</div>
+			<div class="flexCheckGroup">
+			<div><input type="checkbox" class="Limit"  value="BowGun">BowGun</div>
+			<div><input type="checkbox" class="Limit"  value="Shield">Shield</div>
+			<div><input type="checkbox" class="Limit"  value="Book">Book</div>
+			<div><input type="checkbox" class="Limit"  value="ArmGaurd">ArmGaurd</div>
+			<div><input type="checkbox" class="Limit"  value="ArrowCase">ArrowCase</div>
+
+			</div>
+			<div class="flexCheckGroup">
+            <div><input type="checkbox" class="Limit"  value="Ammor">Ammor</div>
+			<div><input type="checkbox" class="Limit"  value="Cloth">Cloth</div>
+			<div><input type="checkbox" class="Limit"  value="Robe">Robe</div>
+			<div><input type="checkbox" class="Limit"  value="Helmet">Helmet</div>
+			<div><input type="checkbox" class="Limit"  value="Hat">Hat</div>
+			<div><input type="checkbox" class="Limit"  value="Circlet">Circlet</div>
+            </div>
+   </div>
+   <div>
+   <div>상태이상</div>
+    <div>
+            <select class="Disorder" id="DisorderType0">
+                    <option value="null" selected="selected" >null</option>
+                    <option value="poision">poision</option>
+                </select>  
+                <div>Value<input type="text" id="DisorderValue0" value="0"></div>
+                <div>Turn<input type="text" id="DisorderTurn0" value="0"></div>
+</div>
+</div>
+<div>
+        <div>추가효과</div>
+        <textarea type="text" id=""style="
+        width: 100%; height: 200px;
+    "></textarea>
+     </div>
+<div>LearPoint <input type="text" id="point" value="0"> </div>
+    <div>설명  <textarea type="text" id="exp" style="width: 50%; height: 200px;
+"></textarea></div>
+   <button onclick="new CreateJobData()"><div>Code OutPut</div></button>
+    <textarea type="text" id="OutPutData" readonly="readonly" style="
+    width: 100%; height: 200px;
+"></textarea>
+    <div id="OutPutCode"></div>
+    </html>

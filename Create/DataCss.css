@@ -1,0 +1,7 @@
+.flexCheckGroup{
+    display: flex;
+}
+.flexCheckGroup > div{
+    width:  13%;
+    font-size: 0.9em;
+}
