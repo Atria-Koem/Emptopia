@@ -136,5 +136,38 @@ const  dataTribe = {
 			max : 1,
 			skillCode : ['KPT90000']
 		}
-	}
+	},
+	T180 : { 
+	  code : 'T180', 
+	  name : 'Human Fringe', 
+	 state : {
+ 		str : 100, 	vit : 120, 	int : 100, 	wis : 90, 	dex : 100, 	
+ 		agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 90
+	}, 
+	 passive : {
+	}, 
+	  exp : '인간언저리는 인간에 가깝지만 인간은 아닌 것으로 판명되었다. 보다 두꺼운 지방을 가지고 있어 화염 속성에 강하다.' 
+	},
+	T140 : { 
+		  code : 'T140', 
+		  name : 'Furry', 
+		 state : {
+			str : 90, 	vit : 110, 	int : 80, 	wis : 100, 	dex : 110, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 110, 	luk : 100
+		}, 
+		 passive : {
+		}, 
+		  exp : '수인으로 지능이 조금 낮지만 지능이 낮은 만큼 육체적 능력이 뛰어나다.' 
+	},
+	T121 : { 
+		  code : 'T121', 
+		  name : '고철덩어리', 
+		 state : {
+			str : 80, 	vit : 140, 	int : 80, 	wis : 100, 	dex : 80, 	
+			agi : 100, 	dis : 120, 	res : 120, 	spd : 80, 	luk : 100
+		}, 
+		 passive : {
+		}, 
+		  exp : '인격체로 대하기보다는 하나의 물건으로 대하는 것이 정신건강에 이롭다.' 
+	},
 }
