@@ -1268,7 +1268,7 @@ class CreateDataView{
 		let nameP = new Text(innerItemName , 'ItemName').p
         if(dataItem[item.code].src){
             let img = new CreateTag('img');
-            img.src = dataItem[item.baseCode].src;
+            img.src = dataItem[item.code].src;
             div.appendChild(img);
         }
 		let slash = new Text(' / ').p;
