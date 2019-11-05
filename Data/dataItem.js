@@ -35,7 +35,7 @@ const dataItem = {
 				atkPhy: 10
 			}
 		},
-		src : 'Image\we_sword038.png',
+		src : 'Image\\we_sword038.png',
 		exp : '기본적인 검. 품질은 좋지 않다.' 
 	},
 	IT0000001 : {
@@ -48,7 +48,7 @@ const dataItem = {
 				defPhyPer: 3, defPhyNum: 10
 			}
 		},
-		src : 'Image\shield_002o.png',  
+		src : 'Image\\shield_002o.png',  
 		exp : '나무로 만들어진 조잡한 방패로 별로 몸을 지켜줄 것 같지는 않다.' 
 	},
 	IT0000002 : {
@@ -61,7 +61,7 @@ const dataItem = {
 				defPhyPer: 1, defPhyNum: 1
 			}
 		},
-		src : 'Image\helm_014.png',
+		src : 'Image\\helm_014.png',
 		exp : '나무로 만들어진 조잡한 헬멧.' 
 	},
 	IT0000003 : {
@@ -74,7 +74,7 @@ const dataItem = {
 				defPhyPer: 8, defPhyNum: 4
 			}
 		},
-		src : 'Image\armor_004.png',
+		src : 'Image\\armor_004.png',
 		exp : '나무로 만들어진 조잡한 갑옷. 큰 충격을 받으면 부서진다.' 
 	},
 	IT0000004 : {
@@ -90,7 +90,7 @@ const dataItem = {
 				count : 10, maxCount : 10
 			}
 		},
-		src : 'Image\we_bow017.png', 
+		src : 'Image\\we_bow017.png', 
 		exp : '조잡하게 만들어진 활.' 
 	},
 	IT0000005 : {
@@ -103,7 +103,7 @@ const dataItem = {
 				atkPhy: 8
 			}
 		},
-		src : 'Image\we_sword001.png',
+		src : 'Image\\we_sword001.png',
 		exp : '절삭력이 거의 없는 단검.' 
 	},
 	IT0000006 : {
@@ -117,7 +117,7 @@ const dataItem = {
 				defMagPer: 1, defMagNum: 2
 			}
 		},
-		src : 'Image\book_002c.png',
+		src : 'Image\\book_002c.png',
 		exp : '알수 없는 문자가 가득 쓰여진 책.' 
 	},
 	IT0000007 : {
@@ -154,7 +154,7 @@ const dataItem = {
  				resPhyPer : 3, 	resMagPer : 3
 			}, 
 		},
-		src : 'Image\helm_001.png',
+		src : 'Image\\helm_001.png',
 	  	exp : '그저 뼈로 이루어진 투구. 여러군데 금이 가 있다.', 
 		},
 	IT0000009 : { 
@@ -177,7 +177,7 @@ const dataItem = {
  				rateCrtLuk : 12, 	rateDodgeLuk : 3
 			}, 
 		},
-		src : 'Image\we_gun011.png',
+		src : 'Image\\we_gun011.png',
 	  	exp : '탑에서 발견된 무기.', 
 	},
 	 IT0000010 : { 
@@ -194,7 +194,7 @@ const dataItem = {
 			rateCrt : 20, 	valCrt : 150,
 			 }, 
 		 },
-		 src : 'Image\we_sword036.png',
+		 src : 'Image\\we_sword036.png',
 	 	exp : '이 아이템은 초록색이다.', 
 	},
 	 IT0000011 : { 
@@ -907,7 +907,7 @@ const dataItem = {
 	  name : '물', 
 	 category : 'Other', 
 	 type : 'Item', 
-	  src : 'Image\food_004.png', 
+	  src : 'Image\\food_004.png', 
 	  exp : '깨끗한 정제수. hp, mp 리젠 20%', 
 	},
 	IT0000051 : { 
@@ -947,7 +947,7 @@ const dataItem = {
 			rateDis : 20, 	rateCrt : 4, 	valCrt : 227, 	rateHitJust : 73, 	atkRapid : 8
 			 }, 
 		 }, 
-		  src : 'Image\we_staff001b.png', 
+		  src : 'Image\\we_staff001b.png', 
 		  exp : '평범한 부지깽이다. 불속성 데미지를 준다. 불속성 공격을 할 경우 400%의 추가 데미지를 입힌다.', 
 	},
 	IT0000053 : { 
@@ -964,7 +964,7 @@ const dataItem = {
 			rateHitJust : 42, 	atkRapid : 2
 			 }, 
 		 }, 
-		  src : 'Image\we_staff010c.png', 
+		  src : 'Image\\we_staff010c.png', 
 		  exp : '나무가지를 꺾어서 만든 조잡한 지팡이.', 
 	},
 	IT0000054 : { 
@@ -981,7 +981,7 @@ const dataItem = {
 			rateHitJust : 50, 	atkRapid : 6
 			 }, 
 		 }, 
-		  src : 'Image\we_staff001.png', 
+		  src : 'Image\\we_staff001.png', 
 		  exp : '열매가 달려있는 나무가지다. 착용자의 치유능력이 30%상승한다.', 
 	},
 	IT9000008 : { 
@@ -989,7 +989,7 @@ const dataItem = {
 		  name : '파야열매', 
 		 category : 'Other', 
 		 type : 'Item', 
-		  src : 'Image\food_035.png', 
+		  src : 'Image\\food_035.png', 
 		  exp : '전투시 복용하면 전체 체력의 1/4을 회복하지만 방어력이 25% 하락한다.', 
 	},
 	IT9000009 : { 
@@ -997,7 +997,7 @@ const dataItem = {
 		  name : '날달걀', 
 		 category : 'Other', 
 		 type : 'Item', 
-		  src : 'Image\food_037.png', 
+		  src : 'Image\\food_037.png', 
 		  exp : '전투시 복용하면 전체 체력의 1/8을 지속적으로 회복한다.', 
 	},
 	IT9000010 : { 
@@ -1005,7 +1005,7 @@ const dataItem = {
 		  name : '감자', 
 		 category : 'Other', 
 		 type : 'Item', 
-		  src : 'Image\food_036.png', 
+		  src : 'Image\\food_036.png', 
 		  exp : '전투시 복용하면 전체 체력의 1/4을 회복한다. 특정 층에서 아이템을 교환할 때 사용할 수 있다.', 
 	},
 	IT1000007 : { 
@@ -1022,7 +1022,7 @@ const dataItem = {
 	defPhyNum : 5,	defMagNum : 5
 			 }, 
 		 }, 
-		  src : 'Image\helm_005.png', 
+		  src : 'Image\\helm_005.png', 
 		  exp : '초보 마법사들이 즐겨쓰는 모자다. 초보 마법사 로브와 함께 착용하면 마법 공격력과 방어력이 10% 상승한다.', 
 	},
 	IT1000008 : { 
@@ -1038,7 +1038,7 @@ const dataItem = {
 			defPhyPer : 31, 	defMagPer : 42, 	defPhyNum : 5,	defMagNum : 5
 			 }, 
 		 }, 
-		  src : 'Image\armor_010b.png', 
+		  src : 'Image\\armor_010b.png', 
 		  exp : '초보 마법사들이 즐겨입는 로브로 초보 마법사 모자와 함께 착용하면 마법 공격력과 방어력이 10% 상승한다.', 
 	},
 	IT0000055 : { 
@@ -1058,7 +1058,7 @@ const dataItem = {
 			atkMag : 265, 	atkMagTrue : 126, 	rateHit : 91, 	rateHitJust : 77, 	atkRapid : 6
 			 }, 
 		 }, 
-		  src : 'Image\we_staff020b.png', 
+		  src : 'Image\\we_staff020b.png', 
 		  exp : '보석을 통하여 마력을 증폭시켜주는 지팡이.', 
 	},
 	IT0000013 : { 
@@ -1072,7 +1072,7 @@ const dataItem = {
 			pHp : 2,pSp : 2,pMp : 2
 			 }, 
 		 }, 
-		  src : 'Image\acce_010.png', 
+		  src : 'Image\\acce_010.png', 
 		  exp : '별다른 능력을 가지지 않은 장식품', 
 	},
 	IT0000015 : { 
@@ -1086,7 +1086,7 @@ const dataItem = {
 			pMp : 7
 			 }, 
 		 }, 
-		  src : 'Image\acce_003e.png', 
+		  src : 'Image\\acce_003e.png', 
 		  exp : '탑에서 사망한 수도승의 눈. 착용자의 명중률을 12% 상승시킨다.', 
 	},
 	IT0000016 : { 
@@ -1099,7 +1099,7 @@ const dataItem = {
 			luk : 16
 			 }, 
 		 }, 
-		  src : 'Image\acce_004.png', 
+		  src : 'Image\\acce_004.png', 
 		  exp : '행운을 올려주는 노란색 고무줄.', 
 	},
 	IT0000021 : { 
@@ -1120,7 +1120,7 @@ const dataItem = {
 			atkRapid : 3
 			 }, 
 		 }, 
-		  src : 'Image\book_002.png', 
+		  src : 'Image\\book_002.png', 
 		  exp : '얼음 마법의 정수가 담긴 책. 시리즈로 출간되었고 기초 얼음마법 패키지가 들어있다. 빙결 확률이 25% 증가한다.', 
 	},
 	IT0000022 : { 
@@ -1141,7 +1141,7 @@ const dataItem = {
 			atkRapid : 2
 			 }, 
 		 }, 
-		  src : 'Image\book_002c.png', 
+		  src : 'Image\\book_002c.png', 
 		  exp : '화염 마법의 정수가 담긴 책. 시리즈로 출간된 것으로 알려져 있다. 기초 화염마법 패키지가 들어있다. 화상을 입을 확률이 25% 증가한다.', 
 	},
 	IT0000023 : { 
@@ -1161,7 +1161,7 @@ const dataItem = {
 			atkMag : 40, 	atkMagTrue : 7, 	rateHit : 82, 	rateHitJust : 69, 	atkRapid : 5
 			 }, 
 		 }, 
-		  src : 'Image\book_002b.png', 
+		  src : 'Image\\book_002b.png', 
 		  exp : '영웅 드루이드의 일대기가 담겨있는 책. <만년동안 응어리진 분노를... 222p>', 
 	},
 	IT0000024 : { 
@@ -1169,7 +1169,7 @@ const dataItem = {
 		  name : '기술머신', 
 		 category : 'Other', 
 		 type : 'Item', 
-		  src : 'Image\item_051.png', 
+		  src : 'Image\\item_051.png', 
 		  exp : '익히고 있는 기술중 한가지를 선택하여 랜덤한 다른 기술로 변화시킨다.', 
 	},
 }
