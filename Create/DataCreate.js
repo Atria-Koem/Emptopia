@@ -164,7 +164,7 @@ getExp(){
     this.exp = document.getElementById("exp").value;
 }
 getSrc(){
-    this.src = "Image\\" + document.getElementById("image").value ;
+    this.src = "Image\\\\" + document.getElementById("image").value ;
 }
 codePrint(){
     let txt ;
