@@ -123,8 +123,8 @@ const  dataJob = {
 		  limit : ['Sword', 'TwoHandSword', 'Axe', 'Bow', 'SubSword', 'SubPike', 'BowGun', 'Shield', 'ArrowCase'], 
 		  exp : '사제 처럼 신의 힘을 빌리지만 사제와 달리 치유마법을 사용하지 못하며 공격적인 마법을 사용한다.' 
 	},
-	J25000000 : { 
-		  code : 'J25000000', 
+	J26000000 : { 
+		  code : 'J26000000', 
 		  name : 'Enchanter', 
 		 state : {
 			str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 100, 	
@@ -133,8 +133,8 @@ const  dataJob = {
 		  limit : [], 
 		  exp : '전투 시 무기에 일시적으로 속성부여를 하거나 비전투 시 영구적으로 무기에 속성을 부여한다.' 
 	},
-	J25000000 : { 
-		  code : 'J25000000', 
+	J27000000 : { 
+		  code : 'J27000000', 
 		  name : 'Conjurer', 
 		 state : {
 			str : 100, 	vit : 102, 	int : 101, 	wis : 100, 	dex : 100, 	
