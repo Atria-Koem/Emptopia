@@ -143,4 +143,124 @@ const  dataJob = {
 		  limit : ['Pistol', 'Gun', 'Bow', 'SubPistol', 'BowGun', 'ArrowCase'], 
 		  exp : '우상 숭배를 통하여 전위에 서는 마법사.' 
 	},
+	J60000000 : { 
+	  code : 'J60000000', 
+	  name : 'Dancer', 
+	 state : {
+ 		str : 100, 	vit : 100, 	int : 101, 	wis : 100, 	dex : 101, 	
+ 		agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+	}, 
+	  limit : ['Sword', 'TwoHandSword', 'Pike', 'Spear', 'Hatchet', 'Axe', 'Mace', 'Pistol', 'Gun', 'Wand', 'Staff', 'Bow', 'MainGauche', 'SubSword', 'SubSword', 'SubPike', 'SubHatchet', 'SubMace', 'SubPistol', 'BowGun', 'Shield', 'Book'], 
+	  exp : '춤으로 적을 현혹시키는 서포터' 
+	},
+	J43000000 : { 
+		  code : 'J43000000', 
+		  name : 'Archer', 
+		 state : {
+			str : 101, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 102, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		  limit : ['Shield', 'Book'], 
+		  exp : '주로 원거리에서 공격하지만 근접 전투 능력도 어느정도 가지고 있다.' 
+	},
+	J31000000 : { 
+		  code : 'J31000000', 
+		  name : 'Monk', 
+		 state : {
+			str : 101, 	vit : 101, 	int : 101, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		  limit : ['Sword', 'TwoHandSword', 'Dagger', 'Pike', 'Spear', 'Hatchet', 'Axe', 'Pistol', 'Gun', 'Wand', 'Bow', 'Whip', 'MainGauche', 'SubSword', 'SubSword', 'SubPike', 'SubHatchet', 'SubMace', 'SubPistol', 'Shield', 'Book', 'ArrowCase', 'Ammor', 'Robe'], 
+		  exp : '치료능력보다는 근접 전투에 특화된 전투사제' 
+	},
+	J11000000 : { 
+		  code : 'J11000000', 
+		  name : 'Berserker', 
+		 state : {
+			str : 103, 	vit : 101, 	int : 98, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		  limit : ['Shield', 'Book', 'Ammor', 'Cloth', 'Robe'], 
+		  exp : '높은 공격력을 가지고 있지만 방어구를 착용하지 못하는 광전사.' 
+	},
+	J12000000 : { 
+		  code : 'J12000000', 
+		  name : 'Squire', 
+		 state : {
+			str : 101, 	vit : 101, 	int : 100, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		  limit : [], 
+		  exp : '기사가 되기 위하여 기사의 밑에서 배우는 종자.' 
+	},
+	J12100000 : { 
+		  code : 'J12100000', 
+		  name : 'Apprentice Knight', 
+		 state : {
+			str : 102, 	vit : 101, 	int : 100, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		  limit : [], 
+		  exp : '종자에서 기사의 인정을 받고 한단계 위로 올라선 견습기사' 
+	},
+	J12110000 : { 
+		  code : 'J12110000', 
+		  name : 'Knight', 
+		 state : {
+			str : 102, 	vit : 102, 	int : 100, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		  limit : [], 
+		  exp : '전투의 선봉에 서는 기사.' 
+	},
+	J51000000 : { 
+		  code : 'J51000000', 
+		  name : 'Mercenary Warrior', 
+		 state : {
+			str : 101, 	vit : 102, 	int : 100, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 90
+		}, 
+		  limit : [], 
+		  exp : '앞장서서 적의 공격을 받아내는 전사' 
+	},
+	J52000000 : { 
+		  code : 'J52000000', 
+		  name : 'Mercenary Sorcerer', 
+		 state : {
+			str : 100, 	vit : 102, 	int : 101, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 90
+		}, 
+		  limit : [], 
+		  exp : '용병으로 떠돌며 기초마법을 배운 소서러' 
+	},
+	J53000000 : { 
+		  code : 'J53000000', 
+		  name : 'Mercenary Priest', 
+		 state : {
+			str : 100, 	vit : 102, 	int : 101, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 90
+		}, 
+		  limit : [], 
+		  exp : '용병으로 떠돌며 신의 권능을 받아들인 사제' 
+	},
+	J54000000 : { 
+		  code : 'J54000000', 
+		  name : 'Mercenary Hunter', 
+		 state : {
+			str : 100, 	vit : 102, 	int : 100, 	wis : 100, 	dex : 101, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 90
+		}, 
+		  limit : [], 
+		  exp : '' 
+	},
+	J56000000 : { 
+		  code : 'J56000000', 
+		  name : 'Mercenary Dancer', 
+		 state : {
+			str : 100, 	vit : 102, 	int : 100, 	wis : 100, 	dex : 101, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 90
+		}, 
+		  limit : ['Sword', 'TwoHandSword', 'Pike', 'Spear', 'Hatchet', 'Axe', 'Mace', 'Pistol', 'Gun', 'Wand', 'Staff', 'Bow', 'MainGauche', 'SubSword', 'SubSword', 'SubPike', 'SubHatchet', 'SubMace', 'SubPistol', 'BowGun', 'Shield', 'Book'],  
+		  exp : '' 
+	},
 }
