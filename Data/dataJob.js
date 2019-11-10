@@ -57,7 +57,7 @@ const  dataJob = {
 	  code : 'J50000000', 
 	  name : 'Mercenary', 
 	 state : {
- 		str : 100, 	vit : 102, 	int : 100, 	wis : 100, 	dex : 100, 	
+ 		str : 100, 	vit : 103, 	int : 100, 	wis : 100, 	dex : 100, 	
  		agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
 		}, 
 	  limit : [], 
