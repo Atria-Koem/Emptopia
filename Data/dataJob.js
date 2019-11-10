@@ -58,7 +58,7 @@ const  dataJob = {
 	  name : 'Mercenary', 
 	 state : {
  		str : 100, 	vit : 102, 	int : 100, 	wis : 100, 	dex : 100, 	
- 		agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+ 		agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 90
 		}, 
 	  limit : [], 
 	  exp : '누구든 용병이 될 수 있다.' 
