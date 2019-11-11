@@ -646,6 +646,113 @@ const dataItem = {
 		}, 
 		},
 		  exp : '두가지 기운을 가지고 있는 검. 적중당한 적을 일정 확률로 화상이나 동상 상태로 만듬.', 
+	},
+	IT9940000 : {
+		code : 'IT9940000', 
+		name : 'Simple NaviMap', 
+		category : 'Other', 
+		type : 'Navigate',
+		useData : 'All',//지도의 경우 해방되는 아이템.
+		exp : '기본적인 지도. 지나간 길이 기록된다. 1회용 아이템'
+		 
+	},
+	IT9950000 : {
+		code : 'IT9950000', 
+		name : 'Rebirth Potion', 
+		category : 'Other', 
+		type : 'Rebirth',
+		useData : 'Random',//지도의 경우 해방되는 아이템.
+		exp : '환생시켜주는 물약. 무엇으로 환생할지 알 수 없다. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
+		 
+	},
+	IT9950010 : {
+		code : 'IT9950010', 
+		name : 'Rebirth Potion(Type Human)', 
+		category : 'Other', 
+		type : 'Rebirth',
+		useData : '0',
+		exp : 'Human 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
+		 
+	},
+	IT9950011 : {
+		code : 'IT9950011', 
+		name : 'Rebirth Potion(Type Machina)', 
+		category : 'Other', 
+		type : 'Rebirth',
+		useData : '1',
+		exp : 'Machina 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
+		 
+	},
+	IT9950012 : {
+		code : 'IT9950012', 
+		name : 'Rebirth Potion(Type Ort)', 
+		category : 'Other', 
+		type : 'Rebirth',
+		useData : '2',
+		exp : 'Ort 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
+		 
+	},
+	IT9950013 : {
+		code : 'IT9950013', 
+		name : 'Rebirth Potion(Type Sprit)', 
+		category : 'Other', 
+		type : 'Rebirth',
+		useData : '3',
+		exp : 'Sprit 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
+		 
+	},
+	IT9950014 : {
+		code : 'IT9950014', 
+		name : 'Rebirth Potion(Type Beast)', 
+		category : 'Other', 
+		type : 'Rebirth',
+		useData : '4',
+		exp : 'Beast 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
+		 
+	},
+	IT9950015 : {
+		code : 'IT9950015', 
+		name : 'Rebirth Potion(Type Kernel)', 
+		category : 'Other', 
+		type : 'Rebirth',
+		useData : '5',
+		exp : 'Kernel 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
+		 
+	},
+	IT9950016 : {
+		code : 'IT9950016', 
+		name : 'Rebirth Potion(Type Dead)', 
+		category : 'Other', 
+		type : 'Rebirth',
+		useData : '6',
+		exp : 'Dead 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
+		 
+	},
+	IT9950017 : {
+		code : 'IT9950017', 
+		name : 'Rebirth Potion(Type Formless)', 
+		category : 'Other', 
+		type : 'Rebirth',
+		useData : '7',
+		exp : 'Formless 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
+		 
+	},
+	IT9950018 : {
+		code : 'IT9950018', 
+		name : 'Rebirth Potion(Type Inorganic)', 
+		category : 'Other', 
+		type : 'Rebirth',
+		useData : '8',
+		exp : 'Inorganic 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
+		 
+	},
+	IT9950019 : {
+		code : 'IT9950019', 
+		name : 'Rebirth Potion(Type Exterior)', 
+		category : 'Other', 
+		type : 'Rebirth',
+		useData : '9',
+		exp : 'Exterior 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
+		 
 	}
-
 }

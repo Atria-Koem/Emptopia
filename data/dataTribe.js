@@ -98,6 +98,19 @@ const  dataTribe = {
 			skillCode : ['KPT10000','KPT10001']
 		}
 	},
+	T067 : {
+		code : 'T067',
+		name : 'Banshee',
+		state : {
+			str: 90,				int: 120,				dex: 100,				dis : 90,				spd: 100,
+			vit: 90,				wis: 110,				agi: 100,				res : 100,				luk: 90
+		},
+		elelemnt : {},
+		passive : {
+			max : 1,
+			skillCode : ['KPT10000','KPT10001']
+		}
+	},
 	T07 : {
 		code : 'T07',
 		name : 'Formless',
@@ -136,5 +149,117 @@ const  dataTribe = {
 			max : 1,
 			skillCode : ['KPT90000']
 		}
-	}
+	},
+	T099 : {
+		code : 'T099',
+		name : 'Exiles',
+		state : {
+			str: 100,				int: 100,				dex: 95,				dis : 110,				spd: 100,
+			vit: 90,				wis: 100,				agi: 105,				res : 110,				luk: 90
+		},
+		elelemnt : {},
+		passive : {
+			max : 1,
+			skillCode : ['KPT90000','KPT90001']
+		}
+	},
+	T0999 : {
+		code : 'T0999',
+		name : 'Purgee',
+		state : {
+			str: 100,				int: 100,				dex: 95,				dis : 120,				spd: 90,
+			vit: 90,				wis: 90,				agi: 105,				res : 120,				luk: 90
+		},
+		elelemnt : {},
+		passive : {
+			max : 1,
+			skillCode : ['KPT90000','KPT90001','KPT90002']
+		}
+	},
+	T09999 : {
+		code : 'T09999',
+		name : 'Banishment',
+		state : {
+			str: 90,				int: 90,				dex: 90,				dis : 140,				spd: 90,
+			vit: 90,				wis: 90,				agi: 90,				res : 140,				luk: 90
+		},
+		elelemnt : {},
+		passive : {
+			max : 3,
+			skillCode : ['KPT90000','KPT90001','KPT90002']
+		}
+	},
+	T180 : { 
+		code : 'T180', 
+		name : 'Human Fringe', 
+	   state : {
+		   str : 100, 	vit : 120, 	int : 100, 	wis : 90, 	dex : 100, 	
+		   agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 90
+	  }, 
+	   passive : {
+	  }, 
+		exp : '인간언저리는 인간에 가깝지만 인간은 아닌 것으로 판명되었다. 보다 두꺼운 지방을 가지고 있어 화염 속성에 강하다.' 
+	  },
+	  T140 : { 
+			code : 'T140', 
+			name : 'Furry', 
+		   state : {
+			  str : 90, 	vit : 110, 	int : 80, 	wis : 100, 	dex : 110, 	
+			  agi : 100, 	dis : 100, 	res : 100, 	spd : 110, 	luk : 100
+		  }, 
+		   passive : {
+		  }, 
+			exp : '수인으로 지능이 조금 낮지만 지능이 낮은 만큼 육체적 능력이 뛰어나다.' 
+	  },
+	  T121 : { 
+			code : 'T121', 
+			name : 'Scrap Iron', 
+		   state : {
+			  str : 80, 	vit : 140, 	int : 80, 	wis : 100, 	dex : 80, 	
+			  agi : 100, 	dis : 120, 	res : 120, 	spd : 80, 	luk : 100
+		  }, 
+		   passive : {
+		  }, 
+			exp : '인격체로 대하기보다는 하나의 물건으로 대하는 것이 정신건강에 이롭다.' 
+	  },
+	  T150 : { 
+		code : 'T150', 
+		name : 'Half-Man(Tree)', 
+	   state : {
+		   str : 100, 	vit : 105, 	int : 95, 	wis : 100, 	dex : 100, 	
+		   agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+	  }, 
+	   passive : {
+		   max : 3,
+		   skillCode : ['KPT00000','KPT00000','KPT00000']
+	  }, 
+		exp : '나무처럼 보이지만 인간과 별로 다를 것이 없다. 1. 자연동화 - 회피율 5% 상승 2. 껍질피부 - 화상, 빙결의 상태이상을 입었을 때 10% 확률로 상태이상에서 회복 3. 성장 - 행동없이 턴 종료시 방어력 1% 상승' 
+	  },
+	  T190 : { 
+			code : 'T190', 
+			name : 'Regressor', 
+		   state : {
+			  str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 100, 	
+			  agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		  }, 
+		   passive : {
+			  max : 1,
+			  skillCode : ['KPT00000']
+		  }, 
+			exp : '기억을 가지고 회귀에 성공한 인물이다. 1. 전투본능 - 공격 성공 확률과 회피 성공 확률 3% 상승' 
+	  },
+	  T118 : { 
+			code : 'T118', 
+			name : 'Golem', 
+		   state : {
+			  str : 105, 	vit : 105, 	int : 90, 	wis : 100, 	dex : 100, 	
+			  agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		  }, 
+		   passive : {
+			  max : 2,
+			  skillCode : ['KPT00000','KPT00000']
+		  }, 
+			exp : '무생물이지만 직접 사고하고 움직인다. 1. 단단함 - 방어력 3% 상승 2. 강력한 한방 - 공격 속도가 10% 감소하지만 공격력이 5% 상승' 
+	  },
+  
 }

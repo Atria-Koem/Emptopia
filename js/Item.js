@@ -33,15 +33,16 @@ class Item{
 		this.spec = {}
 		this.createOption(itemData.spec)
 		}
-		var addCode,randomCode
-			this.code = this.createCode(this.baseCode, refairCode, talentCode, addCode, randomCode);
+		
+	}
+	var addCode,randomCode
+		this.code = this.createCode(this.baseCode, refairCode, talentCode, addCode, randomCode);
 
 		this.number = this.checkOverlap();
 		if(!itemData.exp){}
 		else{
 			this.exp = itemData.exp
 		}
-	}
 		this.inputInventory()
 	}
 	createOption(itemData){
@@ -65,17 +66,20 @@ class Item{
 	createCode(base, refair, talent, add, random){
 		var code = ''
 		var length = base.length
-		//switch(length){
-		//	case 9 : 
+		if(this.category == "Other"){
+			return base;
+		}
+		switch(length){
+			case 9 : 
 				code = base + refair + talent
-		//		break;
-		//	case 11 :
-		//		code = base + talent
-		//		break;
-		//	default : 
-		//		code = base 
-		//		break;
-		//						 }
+				break;
+			case 11 :
+				code = base + talent
+				break;
+			default : 
+				code = base 
+				break;
+								 }
 		return code
 	}
 	inputInventory(){
@@ -191,5 +195,70 @@ class refairItem /*extends Item*/{
 	succesRefair(itemData){
 		var refair = itemData.refair + 1
 		return refair
+	}
+}
+class UseItem{
+	constructor(code){
+		this.check = this.checkUseType(code);
+		if(!this.check){
+			return false;
+		}
+		this.useCanCheck();
+		if(!this.check){
+			return false;
+		}
+		this['useItem' + this.type]();
+		return this.check;
+	}
+	checkUseType(code){
+		const item = this.item = dataItem[code];
+		if(!item){
+			return false;
+		}
+		if(item.category == "Other"){
+			switch(item.type){
+				case "Key":
+				case "Map":
+					this.type = item.type;
+				break;
+				case "Rebirth":
+					this.type = "Rebirth"
+				break;
+				case "Navigate":
+					this.type ="Navi"
+					break;
+			}
+			return true;
+		}
+		return false;
+	}
+	useCanCheck(){
+		const data= inventoryData.Other[this.item.code];
+		if(!data){
+			this.check = false;
+		}else{
+			const count = data.number
+			if(count > 0){
+					this.check=true;
+			}
+			else{
+				this.check = false;
+			}
+		}
+		
+	}
+	useItemNavi(){
+		inventoryData.Other[this.item.code].number -= 1;
+		if(inventoryData.Other[this.item.code].number == 0){
+			delete inventoryData.Other[this.item.code];
+		}
+		
+	}
+	useItemRebirth(){
+		let performer = playerTeam.character[document.getElementById('CharacterDesk').value]
+		let data = (this.item.useData == "Random") ? Math.floor(Math.random() * 10) :  this.item.useData
+		performer.rebirth = new Rebirth("Item",data,document.getElementById('CharacterDesk').value)
+		//performer.rebirth.rebirthTypeInput(data);
+		new Tribe(performer);
 	}
 }

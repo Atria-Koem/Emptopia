@@ -332,14 +332,8 @@ class Player extends CreateSpec{
 		const selectJob = dataJob[job[Math.floor(Math.random() * job.length)]].code
 		this.job = selectJob
 		this.tribe = selectTribe
-		this.nowTribe = selectTribe
-		var baseState = this.createState('player',this.seed, level)
-		this.baseState = baseState
-		var state = new State(0,this.baseState,this.job,this.tribe)
-		var health = new Health('player',state);
-		var option = this.createOption(state);
-		this.battle = this.extendLinkOption('extend',state,option,health);
-		this.origin = this.extendLinkOption('extend',state,option,health);
+		this.rebirth = new Rebirth(-1);
+		this.createBaseData(level);
 		this.stateExp = this.createStateExp()
 		this.levelExp = LevelUp.prototype.calculrateLevelExp(this.level)
 		this.add = {}
@@ -356,7 +350,7 @@ class Player extends CreateSpec{
 			this.skill.push(tribePassive[i])
 		}}
 		this.skillFavorite = []
-		this.rebirth = Rebirth.prototype.createRebirthObject()
+
 		this.code = new CharacterCode(this.ally).code
 		this.protectType = ['HP Percent',50]
 		this.equip = {
@@ -369,6 +363,26 @@ class Player extends CreateSpec{
 		this.bonusState = this.createBonusState()
 		this.skillPoint = Math.round(this.bonusState / 5)
 		this.addPlayerDesk();
+	}
+	createBaseData(level){
+		var baseState = this.createState('player',this.seed, level)
+		this.baseState = baseState
+		this.checkRebirthData();
+		var state = new State(0,this.baseState,this.job,this.tribe)
+		var health = new Health('player',state);
+		var option = this.createOption(state);
+		this.battle = this.extendLinkOption('extend',state,option,health);
+		this.origin = this.extendLinkOption('extend',state,option,health);
+	}
+	checkRebirthData(){
+		if(this.rebirth.state){
+			const stateName = Object.getOwnPropertyNames(this.baseState);
+			const length = stateName.length;
+			for(let i =0 ; i < length ; i++){
+				
+				this.baseState[stateName[i]] += this.rebirth.state[stateName[i]]
+			}
+		}
 	}
 	createStateExp(number){
 		const state = this.baseState
@@ -568,7 +582,7 @@ class State{
 		performer.origin.state = this.state
 		}
 		else{
-			this.baseState = baseState
+		this.baseState = baseState
 		this.job = dataJob[job]
 		this.tribe = dataTribe[tribe]
 		this.bonus = this.summaryBonus()
@@ -641,94 +655,7 @@ class State{
 		}
 	}
 }
-class Tribe{
-	constructor(performer){
-		this.performer = performer
-		this.checkCode = this.performer.nowTribe
-		this.checkRebirthCount()
-		this.checkRebirthStack()
-		this.checkTribeCode()
-		performer.tribe = this.checkTribe
-	}
-	checkRebirthCount(){
-		let count = Math.floor(this.performer.rebirth.count / 10)
-		if(count > 9){
-			count = 9
-		}
-		this.rebirthCount = count
-	}
-	checkRebirthStack(){
-		const array = this.performer.rebirth.stack
-		const length = array.length
-		let stack = ''
-		for( let i = length - 1 ; i > -1 ; i--){
-			stack += array[i]
-		}
-		this.rebirthStack = stack
-	}
-	checkTribeCode(){
-		const tribeData = Object.getOwnPropertyNames(dataTribe)
-		const count = this.rebirthCount
-		const stackLength = this.rebirthStack.length
-		let stackValue = 0
-		let countValue = 0
-		do{
-			let code  = this.createTribeCode(stackValue,countValue)
-			stackValue += 1
-			if(stackValue === stackLength){
-				stackValue = 0;
-				countValue += 1
-			}
-			if(countValue === count && stackValue === stackLength){
-				code = 'P0'
-			}
-			let check = tribeData.indexOf(code)
-		}while( check == -1 )
-			this.checkTribe = code
-	}
-	craeteTribeCode(stackValue,countValue){
-		const stack = this.rebirthStack
-		const count = this.rebirthCount
-		let code = 'T'
-		let countCode = count - countValue
-		let stackCode = stack.slice(0,stackValue)
-		code += countCode + stackCode
-		return code
-		
-	}
-	selectTribePassive(tribeCode){
-		let passiveArray = []
-		const tribeData = dataTribe[tribeCode].passive
-		if(!tribeData){
-			return
-		}
-		const tribePassive = tribeData.skillCode
-		const length = tribePassive.length
-		const max = tribeData.max
-		for( let i = 0 ; i < max ; i++){
-			passiveArray.push(tribePassive[Math.floor(Math.random() * length)])
-		}
-		if(this.performer){
-			for(let i = 0 ; i < max ; i ++){
-				this.performer.push(passiveArray[i])
-			}
-			return
-		}
-		return passiveArray
-	}
-}
-class Rebirth{
-	constructor(performer){
-		
-	}
-	createRebirthObject(){
-		let rebirth = {
-			count : 0,
-			stack : []
-		}
-		return rebirth
-	}
-}
+
 class Job{
 	constructor(performer){
 		

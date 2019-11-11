@@ -713,13 +713,31 @@ class CreateMap extends Area{
 			new MoveInMap(null,null,'enemy',pOEData[i]);
 		}
 	}
+	checkRandomEvent(){
+		const dataN = Object.getOwnPropertyNames(playerGroup);
+		if(Math.random() * 100 < 10){
+			new AddLog([{text : 'Join Trap. hp Dwon'}], 'Map')
+			for(let i =0 ; i<dataN.length; i++){
+				playerGroup[dataN[i]].battle.health.hp *= 0.9;
+				StatusView.prototype.changeStatusView(playerGroup[dataN[i]],'Party')		
+			}
+		}
+		if(Math.random() * 100 < 10){
+			new AddLog([{text : 'Join Heal Field. hp Up'}], 'Map')
+			for(let i =0 ; i<dataN.length; i++){
+				playerGroup[dataN[i]].battle.health.hp *= 1.1;
+				StatusView.prototype.changeStatusView(playerGroup[dataN[i]],'Party')		
+			}
+		}
+		
+	}
 	checkTurn(keyCode) {
 	 
  	this.checkPositionOfEnemyMove();
    
     this.checkBattle()
     this.turn += 1;
-    
+    this.checkRandomEvent();
 	this.checkTreasure(this.party.x,this.party.y)
 		if (this.party.x === this.exit.x && this.party.y === this.exit.y) {
 			this.end()
@@ -1649,4 +1667,36 @@ function moveMap(evt,keyCode) {
     new Sight;
     //document.getElementById('nowTurn').value = turn;
 	mapData.checkTurn(keyCode);
+}
+
+class CreateMapData{
+	constructor(){
+		do{
+			mapData = new CreateMap();
+			var check = new CanClearTest().clear;
+		}while(check === 0);
+		playerGroup = new InMapParty().character;
+		new Sight;
+		this.naviCheck();
+		this.mapDrawCheck();
+	}
+	naviCheck(){
+		const check = document.getElementById('NaviUse').checked;
+		if(check){
+			this.miniMap = new UseItem('IT9940000').check
+		}
+	}
+	mapDrawCheck(){
+		document.getElementById('Map').style.visibility = 'visible';
+		if(this.miniMap){
+			document.getElementById('MiniMap').style.visibility = 'visible';
+	
+		}
+		else{
+			document.getElementById('MiniMap').style.visibility = 'invisible';
+		
+
+		}
+
+	}
 }

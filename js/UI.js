@@ -1145,7 +1145,7 @@ class CreateDataView{
 		let div = new CreateTag('div')
 		div.className = 'ItemInfoText'
 		let innerItemName = ''
-		if(item.refair === 0){
+		if(item.refair === 0 || !item.refair){
 			innerItemName = item.name + '(' + item.type + ')';
 		}
 		else{
@@ -1165,6 +1165,7 @@ class CreateDataView{
 		}
 		div.appendChild(slash)
 		let checkCreate = {defPhy : 0, defMag : 0}
+		if(item.spec){
 		const baseOption = item.spec.option
 		const baseOptionName = Object.getOwnPropertyNames(baseOption)
 		const itemOptionLength = baseOptionName.length
@@ -1209,6 +1210,7 @@ class CreateDataView{
 				}
 			}			
 		}
+	}
 		if(itemElementName.indexOf('exp') != -1){
 			let optionP = new Text(item.exp , 'ItemOption').p
 			div.appendChild(optionP)
@@ -1268,7 +1270,7 @@ class CreateDataView{
 		let nameP = new Text(innerItemName , 'ItemName').p
         if(dataItem[item.code].src){
             let img = new CreateTag('img');
-            img.src = dataItem[item.code].src;
+            img.src = dataItem[item.baseCode].src;
             div.appendChild(img);
         }
 		let slash = new Text(' / ').p;
