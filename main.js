@@ -186,33 +186,7 @@ var dataName = ['Alent', 'Bastie', 'Ceait','Diman','Eginea','Fiwn','Gaoel']
 
 
 
-
-
-
-
-function createMapData(){
-	do{
-	mapData = new CreateMap();
-		var check = new CanClearTest().clear;
-	}while(check === 0);
-	playerGroup = new InMapParty().character;
-	new Sight;
-	document.getElementById('Map').style.visibility = 'visible';
-	document.getElementById('MiniMap').style.visibility = 'visible';
-	//document.getElementById('AreaSelect').disabled = true;
-	//document.getElementById('AreaLevel').disabled = true;
-}
 var inCheck = 0;
-function useItem(){
-	var code = this.value;
-	var item = dataItem[code]
-	var category = item.category
-	var itemType = item.type
-	if(itemType === 'Map' || itemType=='Key'){
-		var create = new Area
-		create.addArea(item.areaCode)
-	}
-}
 
 
 function selectPlayerCharacter(value){
@@ -364,7 +338,7 @@ function createTeam(){
     }
     let c = Object.getOwnPropertyNames(dataSkill)
     for(let i = 0 ; i < a.length ; i++){
-        for(let j = 0 ; j < 3; j++){
+        for(let j = 0 ; j < 6; j++){
 			let skillCode
 			do{
 				skillCode = c[Math.floor(Math.random() * c.length)];
@@ -388,7 +362,7 @@ function loadScript(url,folder)
 	head.appendChild(script);
 	
 }
-const scriptNames = ["Battle","Item","Maps","Parttern","Skill","Spec","Team","UI"];
+const scriptNames = ["Battle","Item","Maps","Parttern","Skill","Spec","Team","Tribe","UI"];
 const dataNamse = ["Area","Item","Job","Monster","Skill","SkillTree","Tribe"];
 let load = 0;
 window.onload = function(){
@@ -421,6 +395,9 @@ function setLoad(){
 		createTeam()
 		document.getElementsByClassName('MenuTabs')[0].children[2].click()
 		new Shop();
+		for(let i =0; i<10 ;i++){
+			new Item("IT9940000");
+		}
 	}
 }
 function addEvents(){

@@ -941,7 +941,8 @@ input.DataLabelCheckBox:checked ~ .CharacterData {
 	width : 100%;
   border: 0;
   padding : 0;
-	display: flex;
+  display: flex;
+  height:1.5em;
 }
 .SimpleSelecter,.SkillFavoriteSelecter,.SkillLearnSelecter,.ItemSelecter{
   background: #333;
