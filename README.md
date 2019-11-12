@@ -112,6 +112,21 @@ world 이고
 
 스킬 0번 공통
 
+스킬계수 확인 Battle( addeffect, skillvalue switch 확인)
+
+special target 특정 조건만족해야 타겟팅
+priority target 조건에 따라 우선적으로 ex LowestHp
+Efficient 음수 일수록 소모 계수 상승
+baseType  누락시 defenceType을 기준으로 피지컬 힘, 매지컬 인트, 하이브리드 반반(힘50 인트50) // ignore 방무 할거면 베이스타입 누락하믄 안댐
+[[적용스텟,배율(100 = 1)]]
+
+invalid 타겟팅을 전열이 못막아줌 후열 강제 공격
+
+스킬 사용 코스트 
+
+point 설정
+
+
 1 전사류
 
 ex 10 전사 공통
