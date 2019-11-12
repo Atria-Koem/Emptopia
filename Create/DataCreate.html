@@ -63,77 +63,82 @@
 			<option value="Item">Item</option>
 			<option value="Key">Key</option>
 			<option value="Material">Material</option>
+            <option value="Rebirth">Rebirth</option>
+            <option value="Navigate">Navigate</option>
+            <option value="Map">Map</option>
+        
        </select>
    </div>
    <div>
        <div>HealthOption</div>
        <div style="display: flex;">
            <div>체력</div>
-           <div>Number        <input type="text" id="NumberHp" >   </div>
-           <div>Percent<input type="text" id="PercentHp" >  </div>
+           <div>Number        <input type="number" id="NumberHp" >   </div>
+           <div>Percent<input type="number" id="PercentHp" >  </div>
        </div>
               <div style="display: flex;">
            <div>스테미나</div>
-           <div>Number        <input type="text" id="NumberSp" >   </div>
-           <div>Percent<input type="text" id="PercentSp" >  </div>
+           <div>Number        <input type="number" id="NumberSp" >   </div>
+           <div>Percent<input type="number" id="PercentSp" >  </div>
        </div>
               <div style="display: flex;">
            <div>마나</div>
-           <div>Number        <input type="text" id="NumberMp" >   </div>
-           <div>Percent<input type="text" id="PercentMp" >  </div>
+           <div>Number        <input type="number" id="NumberMp" >   </div>
+           <div>Percent<input type="number" id="PercentMp" >  </div>
        </div>
    </div>
    <div>
        <div>스텟</div>
             <div style="display: flex;">
-            <div>Str        <input type="text" id="str" >   </div>
-            <div>Int        <input type="text" id="int" >   </div>
-            <div>Dex        <input type="text" id="dex" >   </div>
-            <div>Dis        <input type="text" id="dis" >   </div>
-            <div>Spd        <input type="text" id="spd" >   </div>
+            <div>Str        <input type="number" id="str" >   </div>
+            <div>Int        <input type="number" id="int" >   </div>
+            <div>Dex        <input type="number" id="dex" >   </div>
+            <div>Dis        <input type="number" id="dis" >   </div>
+            <div>Spd        <input type="number" id="spd" >   </div>
        </div>
            <div style="display: flex;">
-            <div>Vit        <input type="text" id="vit" >   </div>
-            <div>Wis        <input type="text" id="wis" >   </div>
-            <div>Agi        <input type="text" id="agi" >   </div>
-            <div>Res        <input type="text" id="res" >   </div>
-            <div>Luk        <input type="text" id="luk" >   </div>
+            <div>Vit        <input type="number" id="vit" >   </div>
+            <div>Wis        <input type="number" id="wis" >   </div>
+            <div>Agi        <input type="number" id="agi" >   </div>
+            <div>Res        <input type="number" id="res" >   </div>
+            <div>Luk        <input type="number" id="luk" >   </div>
         </div>
    </div>
    <div>
        <div>Option</div>
-       <div>물공 <input type="text" id="atkPhy" > </div>
-       <div>마공 <input type="text" id="atkMag" > </div>
-       <div>물방무 <input type="text" id="atkPhyTrue" > </div>
-       <div>마방무 <input type="text" id="atkMagTrue" > </div>
+       <div>물공 <input type="number" id="atkPhy" > </div>
+       <div>마공 <input type="number" id="atkMag" > </div>
+       <div>물방무 <input type="number" id="atkPhyTrue" > </div>
+       <div>마방무 <input type="number" id="atkMagTrue" > </div>
        <div style="display: flex;">물방 
-       <div>퍼감<input type="text" id="defPhyPer" ></div> 
-       <div>절대값<input type="text" id="defPhyNum" > </div>
+       <div>퍼감<input type="number" id="defPhyPer" ></div> 
+       <div>절대값<input type="number" id="defPhyNum" > </div>
        </div>
        <div style="display: flex;">마방 
-       <div>퍼감<input type="text" id="defMagPer" ></div> 
-       <div>절대값<input type="text" id="defMagNum" > </div>
+       <div>퍼감<input type="number" id="defMagPer" ></div> 
+       <div>절대값<input type="number" id="defMagNum" > </div>
        </div>
        <div  style="display: flex;">물리내성 
-       <div>퍼감<input type="text" id="resPhyPer" ></div> 
-       <div>절대값<input type="text" id="resPhyNum" > </div>
+       <div>퍼감<input type="number" id="resPhyPer" ></div> 
+       <div>절대값<input type="number" id="resPhyNum" > </div>
        </div>
        <div style="display: flex;">마법내성 
-       <div>퍼감<input type="text" id="resMagPer" ></div> 
-       <div>절대값<input type="text" id="resMagNum" > </div>
+       <div>퍼감<input type="number" id="resMagPer" ></div> 
+       <div>절대값<input type="number" id="resMagNum" > </div>
        </div>
-       <div>명중률 <input type="text" id="rateHit" ></div>
-       <div>절대명중 <input type="text" id="rateHitJust" ></div>
-       <div>회피율 <input type="text" id="rateDodge" ></div>
-       <div>상태이상확률 <input type="text" id="rateDis" ></div>
-       <div>상태이상내성확률 <input type="text" id="rateRes" ></div>
-       <div>크리확률 <input type="text" id="rateCrt" ></div>
+       <div>명중률 <input type="number" id="rateHit" ></div>
+       <div>절대명중 <input type="number" id="rateHitJust" ></div>
+       <div>회피율 <input type="number" id="rateDodge" ></div>
+       <div>상태이상확률 <input type="number" id="rateDis" ></div>
+       <div>상태이상내성확률 <input type="number" id="rateRes" ></div>
+       <div>크리확률 <input type="number" id="rateCrt" ></div>
        <div>크리배율(100% = base Damage) <input type="text" id="valCrt" ></div>
-       <div>완전방어 <input type="text" id="ratePFD" ></div>       
-       <div>공속 <input type="text" id="atkRapid" ></div>
-       <div>운크리 <input type="text" id="rateCrtLuk" ></div>
-       <div>운회피 <input type="text" id="rateDodgeLuk" ></div>
+       <div>완전방어 <input type="number" id="ratePFD" ></div>       
+       <div>공속 <input type="number" id="atkRapid" ></div>
+       <div>운크리 <input type="number" id="rateCrtLuk" ></div>
+       <div>운회피 <input type="number" id="rateDodgeLuk" ></div>
    </div>
+    <div>Price : <input type="number" id="Price" ></div>
     <div>설명  <textarea type="text" id="exp" style="width: 50%; height: 200px;
 "></textarea></div>
    <button onclick="new CreateItemData()"><div>Code OutPut</div></button>

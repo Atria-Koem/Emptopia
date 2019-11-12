@@ -166,12 +166,15 @@ getExp(){
 getSrc(){
     this.src = "Image\\\\" + document.getElementById("image").value ;
 }
+getPrice(){
+    this.price = document.getElementById("Price").value;
+}
 codePrint(){
     let txt ;
     txt = this.code + " : { \n"
     
-    txt += "\t  code : '" + this.code + "', \n"
-    txt += "\t  name : '" + this.name + "', \n"
+    txt += "\t code : '" + this.code + "', \n"
+    txt += "\t name : '" + this.name + "', \n"
     txt += "\t category : '" + this.category  + "', \n"
     txt += "\t type : '" + this.itemType + "', \n"
     if(this.check == 1){
@@ -188,6 +191,7 @@ codePrint(){
         txt += "\t }, \n"
 
 }
+    txt+="\t  price: '"  + this.price + "', \n"
     txt+="\t  src : '"  + this.src + "', \n"
     txt += "\t  exp : '" + this.exp + "', \n"
     txt = txt + "},";
