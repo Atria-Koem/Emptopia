@@ -205,4 +205,176 @@
 		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
 		parttern: [['NM00010',100,'KA404002'],['NH00010',60,'KA404001'],['DE10100',2,'KA300000'],['NS00010',20,'KA330002']]
 	    },
+	 M10000009: {
+
+		name: 'GoblinConjurer',
+
+	      health:{
+
+		hp : 12, sp: 8, mp : 5
+
+	      },
+
+				state: {
+
+					str: 5,				int: 8,				dex: 7,				dis : 5,				spd: 8,
+
+		vit: 15,				wis: 5,				agi: 5,				res : 5,				luk: 5
+
+		},
+
+				colorType : 'hsv',
+
+				color : {
+
+		  hue  : 50, saturation : 80 , value  : 50
+
+		},
+
+				coordinates : 'Front',
+
+				protectType : ['None',0],
+
+			exp: {str : 30, dex : 10},
+
+			funds : 10,
+
+		job: 'J27000000',
+
+		tribe: 'T04',
+
+		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+
+		parttern: [['NH00210',40,'KA300000'],['NH00110',80,'KA100001'],['NS00200',4,'KA330002'],['NH00210',20,'KA200002']]
+
+	    },
+	M10000010: {
+
+			name: 'GoblinBerserker',
+
+		      health:{
+
+			hp : 12, sp: 13, mp : 0
+
+		      },
+
+					state: {
+
+						str: 13,				int: 0,				dex: 7,				dis : 5,				spd: 8,
+
+			vit: 15,				wis: 5,				agi: 5,				res : 5,				luk: 5
+
+			},
+
+					colorType : 'hsv',
+
+					color : {
+
+			  hue  : 50, saturation : 80 , value  : 50
+
+			},
+
+					coordinates : 'Front',
+
+					protectType : ['None',0],
+
+				exp: {str : 30, dex : 10},
+
+				funds : 10,
+
+			job: 'J11000000',
+
+			tribe: 'T04',
+
+			dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+
+			parttern: [['NH00210',40,'KA100002'],['NH00110',80,'KA100001'],['NS00200',4,'KA330002'],['OT00000',0,'KA110000']]
+
+		    },
+	M10000011: {
+
+			name: 'GoblinKnight',
+
+		      health:{
+
+			hp : 75, sp: 53, mp : 40
+
+		      },
+
+					state: {
+
+						str: 28,				int: 16,				dex: 19,				dis : 5,				spd: 18,
+
+			vit: 25,				wis: 5,				agi: 5,				res : 5,				luk: 5
+
+			},
+
+					colorType : 'hsv',
+
+					color : {
+
+			  hue  : 50, saturation : 80 , value  : 50
+
+			},
+
+					coordinates : 'Front',
+
+					protectType : ['None',0],
+
+				exp: {str : 30, dex : 10},
+
+				funds : 10,
+
+			job: 'J12110000',
+
+			tribe: 'T04',
+
+			dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+
+			parttern: [['NH00210',40,'KA100002'],['NH00110',80,'KA100001'],['NS00200',24,'KA330002'],['OT00000',0,'KA110000'],['OTCOUNT',3,'KA100003'],['NH00010',60,'KA100006']]
+
+		    },
+	M10000012: {
+
+			name: 'GoblinHolyKnight',
+
+		      health:{
+
+			hp : 45, sp: 40, mp : 70
+
+		      },
+
+					state: {
+
+						str: 24,				int: 22,				dex: 19,				dis : 5,				spd: 18,
+
+			vit: 25,				wis: 5,				agi: 5,				res : 5,				luk: 5
+
+			},
+
+					colorType : 'hsv',
+
+					color : {
+
+			  hue  : 50, saturation : 80 , value  : 50
+
+			},
+
+					coordinates : 'Front',
+
+					protectType : ['None',0],
+
+				exp: {str : 30, dex : 10},
+
+				funds : 10,
+
+			job: 'J12110000',
+
+			tribe: 'T04',
+
+			dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+
+			parttern: [['NH00210',40,'KA300000'],['NH00110',80,'KA100001'],['NS00200',16,'KA330002'],['NM00210',60,'KA200001'],['DE10000',2,'KA300099'],['NH00010',60,'KA100006']]
+
+		    },
 }
