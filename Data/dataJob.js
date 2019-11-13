@@ -412,5 +412,35 @@ const  dataJob = {
 		  limit : ['TwoHandSword', 'Pike', 'Spear', 'Staff', 'Whip', 'Ammor', 'Helmet'], 
 		  exp : '이 도둑들은 적이 가지고 있는 아이템을 무료로 훔쳐줍니다.' 
 	},
+	J46000000 : { 
+		  code : 'J46000000', 
+		  name : 'Sniper', 
+		 state : {
+			str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 102, 	
+			agi : 101, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		  limit : ['Sword', 'TwoHandSword', 'Dagger', 'Spear', 'Hatchet', 'Axe', 'Mace', 'Wand', 'Staff', 'Whip', 'MainGauche', 'SubSword', 'SubSword', 'SubPike', 'SubHatchet', 'SubMace', 'Shield', 'Book'], 
+		  exp : '원거리에서 강력한 공격을 통해 후열을 제거한다.' 
+	},
+	J47000000 : { 
+		  code : 'J47000000', 
+		  name : 'Beast Hunter', 
+		 state : {
+			str : 101, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 102, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		  limit : ['Sword', 'TwoHandSword', 'Dagger', 'Spear', 'Hatchet', 'Axe', 'Mace', 'Wand', 'Staff', 'Whip', 'MainGauche', 'SubSword', 'SubSword', 'SubPike', 'SubHatchet', 'SubMace', 'Shield', 'Book'], 
+		  exp : '주로 야수를 통해 공격하며 원거리에서 지원한다.' 
+	},
+	J16100000 : { 
+		  code : 'J16100000', 
+		  name : 'Lancer', 
+		 state : {
+			str : 101, 	vit : 101, 	int : 100, 	wis : 100, 	dex : 102, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		  limit : ['Sword', 'TwoHandSword', 'Dagger', 'Hatchet', 'Axe', 'Mace', 'Pistol', 'Gun', 'Wand', 'Staff', 'Bow', 'Whip', 'MainGauche', 'SubSword', 'SubSword', 'SubHatchet', 'SubMace', 'SubPistol', 'BowGun', 'Shield', 'Book'], 
+		  exp : '창을 들고 적진을 돌파하는 기사, 주로 적의 전열을 파괴한다.' 
+	},
 
 }
