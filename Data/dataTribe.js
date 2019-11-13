@@ -170,8 +170,8 @@ const  dataTribe = {
 		}, 
 		  exp : '인격체로 대하기보다는 하나의 물건으로 대하는 것이 정신건강에 이롭다.' 
 	},
-	T150 : { 
-	  code : 'T150', 
+	T050 : { 
+	  code : '0150', 
 	  name : 'Half-Man(Tree)', 
 	 state : {
  		str : 100, 	vit : 105, 	int : 95, 	wis : 100, 	dex : 100, 	
@@ -183,8 +183,8 @@ const  dataTribe = {
 	}, 
 	  exp : '나무처럼 보이지만 인간과 별로 다를 것이 없다. 1. 자연동화 - 회피율 5% 상승 2. 껍질피부 - 화상, 빙결의 상태이상을 입었을 때 10% 확률로 상태이상에서 회복 3. 성장 - 행동없이 턴 종료시 방어력 1% 상승' 
 	},
-	T190 : { 
-		  code : 'T190', 
+	T090 : { 
+		  code : '0190', 
 		  name : 'Regressor', 
 		 state : {
 			str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 100, 	
@@ -196,8 +196,8 @@ const  dataTribe = {
 		}, 
 		  exp : '기억을 가지고 회귀에 성공한 인물이다. 1. 전투본능 - 공격 성공 확률과 회피 성공 확률 3% 상승' 
 	},
-	T118 : { 
-		  code : 'T118', 
+	T018 : { 
+		  code : 'T018', 
 		  name : 'Golem', 
 		 state : {
 			str : 105, 	vit : 105, 	int : 90, 	wis : 100, 	dex : 100, 	
