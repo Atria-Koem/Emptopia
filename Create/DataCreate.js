@@ -95,6 +95,7 @@ class CreateItemData extends CreateData{
     this.getOption();
     this.getExp();
         this.getSrc();
+      this.getPrice();
     this.codePrint();
     }
 
