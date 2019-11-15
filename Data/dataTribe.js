@@ -209,5 +209,143 @@ const  dataTribe = {
 		}, 
 		  exp : '무생물이지만 직접 사고하고 움직인다. 1. 단단함 - 방어력 3% 상승 2. 강력한 한방 - 공격 속도가 10% 감소하지만 공격력이 5% 상승' 
 	},
+	T064 : { 
+		  code : 'T064', 
+		  name : 'Dead Beast', 
+		 state : {
+			str : 115, 	vit : 110, 	int : 70, 	wis : 100, 	dex : 105, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		 passive : {
+			max : 2,
+			skillCode : ['KPT00000','KPT00000']
+		}, 
+		  exp : '죽음에서 돌아온 짐승. 1. 부패 - 행동시 1%의 체력 감소 3%의 추가 피해, 2. 썩은피부 - 피해를 받았을때 2%의 추가 피해를 입지만 최대 체력의 2%의 피해를 입힌다.' 
+	},
+	T010 : { 
+		  code : 'T010', 
+		  name : 'Humanoid', 
+		 state : {
+			str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 100, 	
+			agi : 90, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		 passive : {
+			max : 1,
+			skillCode : ['KPT00000']
+		}, 
+		  exp : '1. 나노로봇 - 행동이 끝날때 마다 다음 행동이 시작하기 전까지 체력회복' 
+	},
+	T076 : { 
+		  code : 'T076', 
+		  name : 'Ghost', 
+		 state : {
+			str : 100, 	vit : 100, 	int : 110, 	wis : 110, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 90
+		}, 
+		passive : {
+			max : 2,
+			skillCode : ['KPT00000','KPT00000']
+		}, 
+		  exp : '1.불운 - 상태이상에 걸릴 확률 3% 상승, 2.물리면역 - 물리공격에 피해를 입지 않음' 
+	},
+	T034 : { 
+		  code : 'T034', 
+		  name : 'Spirit', 
+		 state : {
+			str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 110
+		}, 
+		passive : {
+			max : 1,
+			skillCode : ['KPT00000']
+		}, 
+		  exp : '1.마법저항 - 마법피해 30% 반감' 
+	},
+	T094 : { 
+		  code : 'T094', 
+		  name : 'Exiled Beast', 
+		 state : {
+			str : 100, 	vit : 70, 	int : 100, 	wis : 100, 	dex : 110, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		passive : {
+			max : 1,
+			skillCode : ['KPT00000']
+		}, 
+		  exp : '1.날카로운 발톱 - 물리공격 10% 상승' 
+	},
+	T023 : { 
+		  code : 'T023', 
+		  name : 'Ruins Elemental', 
+		 state : {
+			str : 100, 	vit : 100, 	int : 110, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		passive : {
+			max : 2,
+			skillCode : ['KPT00000','KPT00000']
+		}, 
+		  exp : '1.고대의 존재 - 저항력 3% 상승, 2.유산 - 전투 후 획득 금액 3% 증가' 
+	},
+	T064 : { 
+		  code : 'T064', 
+		  name : 'Reaper', 
+		 state : {
+			str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		passive : {
+			max : 1,
+			skillCode : ['KPT00000']
+		}, 
+		  exp : '1.사신 - 생명체 상대로 입히는 피해 5% 증가' 
+	},
+	T080 : { 
+		  code : 'T080', 
+		  name : 'Mannequin', 
+		 state : {
+			str : 105, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 105, 	spd : 100, 	luk : 100
+		}, 
+	},
+	T010 : { 
+		  code : 'T010', 
+		  name : 'Reinforcor', 
+		 state : {
+			str : 110, 	vit : 90, 	int : 100, 	wis : 100, 	dex : 110, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		passive : {
+			max : 2,
+			skillCode : ['KPT00000','KPT00000']
+		}, 
+		  exp : '1.불완전한 신체 - 기술 사용시 전체 체력의 2%의 피해를 입음, 2.강화된 신체 - 기술의 피해량 5% 증가' 
+	},
+	T043 : { 
+		  code : 'T043', 
+		  name : 'Adored Animal', 
+		 state : {
+			str : 110, 	vit : 90, 	int : 105, 	wis : 100, 	dex : 105, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+		}, 
+		passive : {
+			max : 1,
+			skillCode : ['KPT00000']
+		}, 
+		  exp : '1.우상 - 입히는 신성피해 2% 증가' 
+	},
+	T067 : { 
+		  code : 'T067', 
+		  name : 'Silent Death', 
+		 state : {
+			str : 1, 	vit : 1, 	int : 1, 	wis : 1, 	dex : 1, 	
+			agi : 1, 	dis : 1, 	res : 1, 	spd : 1, 	luk : 1
+		}, 
+		passive : {
+			max : 1,
+			skillCode : ['KPT00000']
+		}, 
+		  exp : '1.죽음 - 사망시 모든 적을 제거' 
+	},
 
 }
