@@ -492,5 +492,255 @@ const dataSkill = {
 		exp : 'BaseSkill',
 		invalid :'invalid',
 		disorder : { poision : {name : 'poision',value : 30, turn : 5}}
-	}
+	},
+	KA210001 : {
+
+		code : 'KA210001',
+
+		name : 'Surf',
+
+		target : ['enemy','all'],
+
+		cost : {mp : 90},
+
+		delay : {first : 80,last : 250},
+
+		delayType : 'Casting',
+
+		skillType : 'Combat', 
+
+		power : { base : { type : 'Magical', value : 180 }},
+
+		hitCount : 3,
+
+		defenceType : 'Magical',
+
+		invalid : 'None',
+
+		
+
+	},
+	KA210002 : {
+
+			code : 'KA210002',
+
+			name : 'Blizzard',
+
+			target : ['enemy','all'],
+
+			cost : {mp : 110},
+
+			delay : {first : 100,last : 300},
+
+			delayType : 'Casting',
+
+			skillType : 'Combat', 
+
+			power : { base : { type : 'Magical', value : 150 }},
+
+			hitCount : 5,
+
+			defenceType : 'Magical',
+
+			invalid : 'None',
+
+
+
+		},
+	KA210003 : {
+
+			code : 'KA210003',
+
+			name : 'Bubble',
+
+			target : ['enemy','individual'],
+
+			cost : {mp : 30},
+
+			delay : {first : 20,last : 70},
+
+			delayType : 'Casting',
+
+			skillType : 'Combat', 
+
+			power : { base : { type : 'Magical', value : 60 }},
+
+			hitCount : 1,
+
+			defenceType : 'Magical',
+
+			invalid : 'None',
+
+
+
+		},
+	KA280000 : {
+
+			code : 'KA280000',
+
+			name : 'FocusBlast',
+
+			target : ['enemy','individual'],
+
+			cost : {mp : 80},
+
+			delay : {first : 20,last : 270},
+
+			delayType : 'Casting',
+
+			skillType : 'Combat', 
+
+			power : { base : { type : 'Physical', value : 180 }},
+
+			hitCount : 1,
+
+			defenceType : 'Physical',
+
+			invalid : 'None',
+
+
+
+		},
+	KA280001 : {
+
+			code : 'KA280001',
+
+			name : 'Waterfall',
+
+			target : ['enemy','individual'],
+
+			cost : {sp: 20, mp : 50},
+
+			delay : {first : 20,last : 270},
+
+			delayType : 'Charge',
+
+			skillType : 'Combat', 
+
+			power : { base : { type : 'Physical', value : 130 }},
+
+			hitCount : 1,
+
+			defenceType : 'Physical',
+
+			invalid : 'None',
+
+
+
+		},
+	KA100006 : {
+
+			code : 'KA100006',
+
+			name : 'BrickBreak',
+
+			target : ['enemy','individual'],
+
+			cost : {sp : 12},
+
+			delay : {first : 30,last : 20},
+
+			delayType : 'Charge',
+
+			skillType : 'Combat', 
+
+			power : { base : { type : 'Physical', value : 160 } },
+
+			hitCount : 1,
+
+			defenceType : 'Physical',
+
+		},
+	KA100007 : {
+
+			code : 'KA100007',
+
+			name : 'Facade',
+
+			target : ['enemy','individual'],
+
+			cost : {sp : 5},
+
+			delay : {first : 10,last : 12},
+
+			delayType : 'Charge',
+
+			skillType : 'Combat', 
+
+			power : { base : { type : 'Physical', value : 60 } },
+
+			hitCount : 3,
+
+			defenceType : 'Physical',
+
+		},
+	KA100008 : {
+
+			code : 'KA100008',
+
+			name : 'X-Scissor',
+
+			target : ['enemy','individual'],
+
+			cost : {sp : 15},
+
+			delay : {first : 20,last : 50},
+
+			delayType : 'Charge',
+
+			skillType : 'Combat', 
+
+			power : { base : { type : 'Physical', value : 220 } },
+
+			hitCount : 1,
+
+			defenceType : 'Physical',
+
+		},
+	KA100009 : {
+
+			code : 'KA100009',
+
+			name : 'BrutalSwing',
+
+			target : ['enemy','all'],
+
+			cost : {sp : 14},
+
+			delay : {first : 50,last : 70},
+
+			delayType : 'Charge',
+
+			skillType : 'Combat', 
+
+			power : { base : { type : 'Physical', value : 140 } },
+
+			hitCount : 1,
+
+			defenceType : 'Physical',
+
+		},
+	KA300003 : {
+
+			code : 'KA300003',
+
+			name : 'Shield',
+
+			target : ['friend','individual'],
+
+			priorityTarget : {name : 'LowestHp'},
+
+			cost : {mp : 7},
+
+			delayType : 'Casting',
+
+			delay : {first : 10,last : 30},
+
+			skillType : 'Support', 
+
+			power : { base : { type : 'Magical', value : 110 }},
+
+			hitCount : 1,
+
+		},
 }
