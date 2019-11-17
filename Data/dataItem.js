@@ -1395,27 +1395,6 @@ const dataItem = {
 		  src : 'Image\\armor_019b.png', 
 		  exp : '평범한 갑옷에 코볼트의 가죽을 덧댄 갑옷. 별다른 차이는 있지 않은 것으로 알려져 있다.', 
 	},
-	IT0000065 : { 
-		 code : 'IT0000065', 
-		 name : '코볼트 잔해', 
-		 category : 'Ammor', 
-		 type : 'Ammor', 
-		 spec : { 
-			 health : {
-			Hp : 66,Sp : 23,
-			pHp : 3
-			 }, 
-			 state : {
-			str : 26, 	vit : 17
-			 }, 
-			 option : {
-			defPhyPer : 24, 	resPhyPer : 8, 	defMagPer : 12, 	resMagPer : 6
-			 }, 
-		 }, 
-		  price: '3220', 
-		  src : 'Image\\armor_019b.png', 
-		  exp : '평범한 갑옷에 코볼트의 가죽을 덧댄 갑옷. 별다른 차이는 있지 않은 것으로 알려져 있다.', 
-	},
 	IT0000066 : { 
 		 code : 'IT0000066', 
 		 name : '버려진 로브', 
