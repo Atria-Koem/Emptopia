@@ -1172,4 +1172,309 @@ const dataItem = {
 		  src : 'Image\\item_051.png', 
 		  exp : '익히고 있는 기술중 한가지를 선택하여 랜덤한 다른 기술로 변화시킨다.', 
 	},
+	IT0000056 : { 
+	 code : 'IT0000056', 
+	 name : 'Hit Glasses', 
+	 category : 'Item', 
+	 type : 'Item', 
+	 spec : { 
+	 	 option : {
+ 		rateHit : 20
+		 }, 
+	 }, 
+	  price: '', 
+	  src : 'Image\\acce_015.png', 
+	  exp : '착용자의 명중률 30% 상승', 
+	},
+	IT0000057 : { 
+		 code : 'IT0000057', 
+		 name : 'Automatic Gatling', 
+		 category : 'Weapon', 
+		 type : 'Gun', 
+		 spec : { 
+			 state : {
+			str : 32, 	vit : 17, 	dex : 44
+			 }, 
+			 option : {
+			atkPhy : 162, 	atkPhyTrue : 48, 	rateHit : 20, 	rateHitJust : 15,	rateCrt : 4, 	valCrt : 1440, 	
+			atkRapid : 7
+			 }, 
+		 }, 
+		  price: '4500', 
+		  src : 'Image\\we_gun006.png', 
+		  exp : '빠른 공격속도를 가지지만 상대방을 맞추기는 쉽지 않다. 한번 공격시 2회 공격', 
+	},
+	IT0000058 : { 
+		 code : 'IT0000058', 
+		 name : 'X-Critic', 
+		 category : 'Weapon', 
+		 type : 'Gun', 
+		 spec : { 
+			 state : {
+			str : 22, 	vit : 11, 	dex : 55
+			 }, 
+			 option : {
+			atkPhy : 123, 	atkPhyTrue : 44, 	rateHit : 70, 	rateHitJust : 64,	rateCrt : 4, 	valCrt : 142, 	
+			atkRapid : 5
+			 }, 
+		 }, 
+		  price: '6320', 
+		  src : 'Image\\we_gun005.png', 
+		  exp : '동료들의 치명타 확률을 20% 올려준다.', 
+	},
+	IT0000059 : { 
+		 code : 'IT0000059', 
+		 name : 'M-Pistol', 
+		 category : 'Weapon', 
+		 type : 'SubPistol', 
+		 spec : { 
+			 state : {
+			int : 38, 	dex : 47
+			 }, 
+			 option : {
+			atkMag : 149, 	atkMagTrue : 66, 	rateHit : 80, 	rateCrt : 7, 	valCrt : 120, 	
+			rateHitJust : 66, 	atkRapid : 4
+			 }, 
+		 }, 
+		  price: '7746', 
+		  src : 'Image\\we_gun002.png', 
+		  exp : '마법 피해를 입히는 탄환을 발사한다.', 
+	},
+	IT0000060 : { 
+		 code : 'IT0000060', 
+		 name : 'Vampire', 
+		 category : 'Weapon', 
+		 type : 'SubPistol', 
+		 spec : { 
+			 state : {
+			str : 41, 	dex : 47
+			 }, 
+			 option : {
+			atkPhy : 159, 	atkPhyTrue : 61, 	rateHit : 94, 	rateCrt : 6, 	valCrt : 150, 	
+			rateHitJust : 71, 	atkRapid : 6
+			 }, 
+		 }, 
+		  price: '11472', 
+		  src : 'Image\\we_gun003.png', 
+		  exp : '상대방에게 준 피해의 5% 만큼 자신의 체력을 회복한다.', 
+	},
+	IT0000061 : { 
+		 code : 'IT0000061', 
+		 name : 'Combat30', 
+		 category : 'Weapon', 
+		 type : 'SubPistol', 
+		 spec : { 
+			 state : {
+			str : 152, 	dex : 361
+			 }, 
+			 option : {
+			atkPhy : 372, 	atkPhyTrue : 92, 	rateHit : 63, 	rateCrt : 5, 	valCrt : 177, 	
+			rateHitJust : 54, 	atkRapid : 4
+			 }, 
+		 }, 
+		  price: '41555', 
+		  src : 'Image\\we_gun003.png', 
+		  exp : '더블 배럴 샷건. 한번에 두발의 탄환을 발사하는 총.', 
+	},
+	IT9000011 : { 
+		 code : 'IT9000011', 
+		 name : 'Cake in mint', 
+		 category : 'Other', 
+		 type : 'Item', 
+		  price: '420', 
+		  src : 'Image\\food_006.png', 
+		  exp : '빵 안에는 역겨운 초록이 숨어있다. 파티원의 체력을 30% 회복한다.', 
+	},
+	IT9000012 : { 
+		 code : 'IT9000012', 
+		 name : 'Coconut Water', 
+		 category : 'Other', 
+		 type : 'Item', 
+		  price: '620', 
+		  src : 'Image\\food_004.png', 
+		  exp : '이 세상의 맛이 아니다.45%의 MP를 회복하지만 구토를 유발한다.', 
+	},
+	IT9000013 : { 
+		 code : 'IT9000013', 
+		 name : 'Big Meat', 
+		 category : 'Other', 
+		 type : 'Item', 
+		  price: '1304', 
+		  src : 'Image\\food_020.png', 
+		  exp : '흔히 만화고기라 불리는 모양을 가지고 있는 이 음식은 HP와 MP를 40% ~ 60% 회복해준다.', 
+	},
+	IT9000014 : { 
+		 code : 'IT9000014', 
+		 name : '국밥', 
+		 category : 'Other', 
+		 type : 'Item', 
+		  price: '502', 
+		  src : 'Image\\food_028.png', 
+		  exp : '그 가격이면 국밥을 먹는다. HP와 MP를 25% 회복시킨다.', 
+	},
+	IT0000062 : { 
+		 code : 'IT0000062', 
+		 name : '霄白衣', 
+		 category : 'Ammor', 
+		 type : 'Robe', 
+		 spec : { 
+			 health : {
+			Hp : 664,Sp : 124,Mp : 338,
+			pMp : 12
+			 }, 
+			 state : {
+			vit : 51, 	int : 84
+			 }, 
+			 option : {
+			defPhyPer : 54, 	resPhyPer : 12, 	defMagPer : 57, 	resMagPer : 16
+			 }, 
+		 }, 
+		  price: '50292', 
+		  src : 'Image\\armor_027.png', 
+		  exp : '这件衣服使用的字母没有意义，但看起来不错。', 
+	},
+	IT0000063 : { 
+		 code : 'IT0000063', 
+		 name : '翼のドレス', 
+		 category : 'Ammor', 
+		 type : 'Cloth', 
+		 spec : { 
+			 health : {
+			Hp : 224,Sp : 87,Mp : 120
+			 }, 
+			 state : {
+			vit : 52, 	dex : 112
+			 }, 
+			 option : {
+			defPhyPer : 42, 	resPhyPer : 7, 	defMagPer : 33, 	resMagPer : 5
+			 }, 
+		 }, 
+		  price: '30226', 
+		  src : 'Image\\armor_024b.png', 
+		  exp : '물건을 훔칠 확률이 올라가는 특이한 옷.', 
+	},
+	IT0000064 : { 
+		 code : 'IT0000064', 
+		 name : 'नाइटको आर्मर', 
+		 category : 'Ammor', 
+		 type : 'Ammor', 
+		 spec : { 
+			 health : {
+			Hp : 542,Sp : 223,
+			pHp : 7
+			 }, 
+			 state : {
+			str : 87, 	vit : 52
+			 }, 
+			 option : {
+			defPhyPer : 60, 	resPhyPer : 20, 	defMagPer : 28, 	resMagPer : 6
+			 }, 
+		 }, 
+		  price: '44253', 
+		  src : 'Image\\armor_029b.png', 
+		  exp : '알수없는 언어가 쓰여진 갑옷이지만 방어력만큼은 확실한 것으로 알려져 있다.', 
+	},
+	IT0000065 : { 
+		 code : 'IT0000065', 
+		 name : '코볼트 잔해', 
+		 category : 'Ammor', 
+		 type : 'Ammor', 
+		 spec : { 
+			 health : {
+			Hp : 66,Sp : 23,
+			pHp : 3
+			 }, 
+			 state : {
+			str : 26, 	vit : 17
+			 }, 
+			 option : {
+			defPhyPer : 24, 	resPhyPer : 8, 	defMagPer : 12, 	resMagPer : 6
+			 }, 
+		 }, 
+		  price: '3220', 
+		  src : 'Image\\armor_019b.png', 
+		  exp : '평범한 갑옷에 코볼트의 가죽을 덧댄 갑옷. 별다른 차이는 있지 않은 것으로 알려져 있다.', 
+	},
+	IT0000065 : { 
+		 code : 'IT0000065', 
+		 name : '코볼트 잔해', 
+		 category : 'Ammor', 
+		 type : 'Ammor', 
+		 spec : { 
+			 health : {
+			Hp : 66,Sp : 23,
+			pHp : 3
+			 }, 
+			 state : {
+			str : 26, 	vit : 17
+			 }, 
+			 option : {
+			defPhyPer : 24, 	resPhyPer : 8, 	defMagPer : 12, 	resMagPer : 6
+			 }, 
+		 }, 
+		  price: '3220', 
+		  src : 'Image\\armor_019b.png', 
+		  exp : '평범한 갑옷에 코볼트의 가죽을 덧댄 갑옷. 별다른 차이는 있지 않은 것으로 알려져 있다.', 
+	},
+	IT0000066 : { 
+		 code : 'IT0000066', 
+		 name : '버려진 로브', 
+		 category : 'Ammor', 
+		 type : 'Robe', 
+		 spec : { 
+			 health : {
+			Hp : 41,Sp : 12,Mp : 59
+			 }, 
+			 state : {
+			int : 36
+			 }, 
+			 option : {
+			defPhyPer : 16, 	resPhyPer : 4, 	defMagPer : 18, 	resMagPer : 7
+			 }, 
+		 }, 
+		  price: '1402', 
+		  src : 'Image\\armor_018.png', 
+		  exp : '마을 바닥에 떨어져 있던 것 치고는 상태가 괜찮아 보인다.', 
+	},
+	IT0000067 : { 
+		 code : 'IT0000067', 
+		 name : '돌격조끼', 
+		 category : 'Ammor', 
+		 type : 'Ammor', 
+		 spec : { 
+			 health : {
+			Hp : 228,Sp : 140
+			 }, 
+			 state : {
+			str : 97, 	vit : 68
+			 }, 
+			 option : {
+			defPhyPer : 55, 	resPhyPer : 20, 	defMagPer : 55, 	resMagPer : 20
+			 }, 
+		 }, 
+		  price: '37728', 
+		  src : 'Image\\armor_014.png', 
+		  exp : '착용자의 방어력과 마법방어력이 15% 상승한다.', 
+	},
+	IT0000068 : { 
+		 code : 'IT0000068', 
+		 name : '암석방패', 
+		 category : 'Weapon', 
+		 type : 'Shield', 
+		 spec : { 
+			 health : {
+			Hp : 151,Sp : 228,
+			pHp : 5,pSp : 5
+			 }, 
+			 state : {
+			str : 97, 	vit : 68
+			 }, 
+			 option : {
+			defPhyPer : 34, 	resPhyPer : 11, 	defMagPer : 34, 	resMagPer : 11
+			 }, 
+		 }, 
+		  price: '5728', 
+		  src : 'Image\\shield_001n.png', 
+		  exp : '알수 없는 바위 덩어리를 깎아 만든 방패', 
+	},
 }
