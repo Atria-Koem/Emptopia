@@ -308,7 +308,7 @@ const  dataTribe = {
 			agi : 100, 	dis : 100, 	res : 105, 	spd : 100, 	luk : 100
 		}, 
 	},
-	T010 : { 
+	T001 : { 
 		  code : 'T010', 
 		  name : 'Reinforcor', 
 		 state : {
@@ -346,6 +346,19 @@ const  dataTribe = {
 			skillCode : ['KPT00000']
 		}, 
 		  exp : '1.죽음 - 사망시 모든 적을 제거' 
+	},
+	T071 : { 
+	  code : 'T071', 
+	  name : 'A.I', 
+	 state : {
+ 		str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 100, 	
+ 		agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
+	}, 
+	 passive : {
+ 		max : 2,
+ 		skillCode : ['KPT10000','KPT10000']
+	}, 
+	  exp : '1.빠른분석 - 동료들이 치명타를 맞출 확률 2% 상승, 2. 지능상승 - 기계들의 공격 속도 3% 상승' 
 	},
 
 }
