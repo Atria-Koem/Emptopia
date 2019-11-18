@@ -12,7 +12,17 @@
 		color: #fff;
 	}
 }
-
+@keyframes logOpacity {
+  15% {
+  opacity: 90%;
+}
+  65%  {
+    opacity: 70%;
+}
+  100% {
+    opacity: 0%;
+}
+}
 body{
       font-family: consolas;
 	background-color : #103040;
@@ -1143,6 +1153,19 @@ ul.MenuTabs.Vertical.SkillBoard{
     bottom: 10px;
 	width : 80%;
 	height : 120px;
+}
+#SystemLogView{
+  
+  bottom: 0%;
+  position: absolute;
+  width: 100%;
+
+}
+#SystemLogView > .Log{
+  animation-name: logOpacity;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+
 }
 .Log{
     padding: 2px;

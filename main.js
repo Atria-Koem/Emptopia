@@ -383,7 +383,6 @@ window.onload = function(){
 	})
 	test = this.setInterval(setLoad,1)
 	
-
 }
 let test;
 function setLoad(){

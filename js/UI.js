@@ -1276,7 +1276,7 @@ class CreateDataView{
 		let nameP = new Text(innerItemName , 'ItemName').p
         if(dataItem[item.code].src){
             let img = new CreateTag('img');
-            img.src = dataItem[item.baseCode].src;
+            img.src = dataItem[item.code].src;
             div.appendChild(img);
         }
 		let slash = new Text(' / ').p;
@@ -1357,7 +1357,7 @@ class CreateDataView{
 		}
 
 		let nameP = new Text(innerItemName , 'ItemName').p
-        if(dataItem[item.code].src){
+        if(dataItem[item.baseCode].src){
             let img = new CreateTag('img');
             img.src = dataItem[item.baseCode].src;
             div.appendChild(img);
@@ -1828,6 +1828,20 @@ class addEventListner{
 		})
 	}
 	}
+	addSystemLogClickAndLoad(log){
+
+		log.addEventListener('click',function(){
+			//console.log("ClickDESTORY")
+			this.remove();		
+		})
+		
+		setTimeout(
+			function (){
+				//console.log("TEST")
+				log.remove();
+			}
+			, 3000);
+	}
 }
 class Text{
 	constructor(text,type){
@@ -1953,10 +1967,13 @@ class AddLog{
 		//var text = this.createLogText(textArray);
 		var log = new Log(textArray).divLog
 		var children = this.logView.children
-		if(!parent && type != 'Turn'){
+		if(!parent && type != 'Turn' && type !='System'){
 		this.logView.insertBefore(log,children[0])
 		}
 		else{
+			if(type == 'System'){
+				addEventListner.prototype.addSystemLogClickAndLoad(log)
+			}
 			this.logView.appendChild(log)
 		}
 		this.log = log
@@ -1971,6 +1988,9 @@ class AddLog{
 				break;
 			case 'Map' :
 				this.logView = document.getElementById('MapLogView')
+				break;
+			case 'System' :
+				this.logView = document.getElementById('SystemLogView')
 				break;
 							 }
 	}
@@ -2065,7 +2085,7 @@ class Shop{
 			formCheck.appendChild(checkDiv)
 			label.appendChild(formCheck)
 
-			let funds = dataItem[itemList[i]].funds;
+			let funds = dataItem[itemList[i]].price;
 			if(!funds){
 				funds = 10
 			}
@@ -2137,7 +2157,8 @@ class Shop{
 			formCheck.appendChild(checkDiv)
 			label.appendChild(formCheck)
 
-			let funds = dataItem[itemList[i]].funds/2;
+			let funds = dataItem[inventoryData[sort[j]][itemList[i]].baseCode].price;
+			funds = Math.floor(funds/2);
 			if(!funds){
 				funds = 5
 			}
@@ -2210,6 +2231,7 @@ class ShopInter{
 					value = 0;
 				}
 				this.data[check[i].id] =value;
+				
 			}
 		}
 		this.codeData = Object.getOwnPropertyNames(this.data);
@@ -2218,7 +2240,11 @@ class ShopInter{
 		let priceData = 0;
 		let length = this.codeData.length;
 		for(let i =0 ; i <length ; i++){
-			let price = dataItem[this.codeData[i]].price
+			let code = this.codeData[i]
+			if(code.length > 9){
+				code = code.slice(0,9)
+			}
+			let price = dataItem[code].price
 			if(!price){
 				price = 10;
 			}
@@ -2236,8 +2262,9 @@ class ShopInter{
 		return true;
 	}
 	checkFunds(){
-		if(this.price < playerTeam.funds){
+		if(this.price != 0&&this.price < playerTeam.funds){
 			playerTeam.funds -= this.price;
+			new AddLog([{text:"Use Funds"}, {text: this.price}],"System");
 			Team.prototype.refreshTeamData('funds')
 			return true;
 		}
@@ -2248,6 +2275,7 @@ class ShopInter{
 		let length = this.codeData.length;
 		for(let i =0 ; i < length ; i++){
 			const count = this.data[this.codeData[i]];
+			new AddLog([{text:"Buy "},{text:dataItem[this.codeData[i]].name}, {text: count}],"System");
 			for(let j = 0;  j < count ; j++){
 				new Item(this.codeData[i]);
 			}
@@ -2266,9 +2294,9 @@ class ShopInter{
 	checkItem(){
 		let length = this.codeData.length;
 		for(let i = 0 ; i < length; i++){
-			const iData = dataItem[this.codeData[i]];
+			const iData = dataItem[this.codeData[i].slice(0,9)];
 			const count = inventoryData[iData.category][this.codeData[i]].number;
-			if(this.data[this.codeData[i]] < 0|| this.data[this.codeData[i]] > count){
+			if(this.data[this.codeData[i]] <= 0|| this.data[this.codeData[i]] > count){
 				return false;
 			}
 		}
@@ -2278,18 +2306,22 @@ class ShopInter{
 	sellItems(){
 		let length = this.codeData.length;
 		for(let i = 0 ; i < length; i++){
-			const iData = dataItem[this.codeData[i]];
+			const iData = dataItem[this.codeData[i].slice(0,9)];
 			const count = inventoryData[iData.category][this.codeData[i]].number;
 			if(this.data[this.codeData[i]] <= count){
+				new AddLog([{text:"Sell "},{text:inventoryData[iData.category][this.codeData[i]].name}, {text: this.data[this.codeData[i]]}],"System");
+
 				inventoryData[iData.category][this.codeData[i]].number -= this.data[this.codeData[i]]
 				if(inventoryData[iData.category][this.codeData[i]].number == 0){
 					delete inventoryData[iData.category][this.codeData[i]]
 				}
+							
 			}
 		}
 	}
 	getFunds(){
 		playerTeam.funds += Math.floor(this.price / 2);
+		new AddLog([{text:"Get Funds"}, {text: Math.floor(this.price / 2)}],"System");
 		Team.prototype.refreshTeamData('funds')
 		new Shop('Sell');
 	}
