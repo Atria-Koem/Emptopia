@@ -1,4 +1,4 @@
- const dataMonster = {
+const dataMonster = {
     M10000000: {
         name: 'Goblin',
       health:{
@@ -161,48 +161,4 @@
 		dropTable: [[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
 		parttern: [['OT00000',0,'KA000000']]
     },
-	 M10000007: {
-		name: 'GoblinArcher',
-	      health:{
-		hp : 3, sp: 12, mp : 10
-	      },
-				state: {
-					str: 7,				int: 5,				dex: 13,				dis : 5,				spd: 8,
-		vit: 10,				wis: 5,				agi: 5,				res : 5,				luk: 5
-		},
-				colorType : 'hsv',
-				color : {
-		  hue  : 50, saturation : 80 , value  : 50
-		},
-				coordinates : 'Back',
-				protectType : ['None',0],
-			exp: {str : 30, dex : 10},
-			funds : 10,
-		job: 'J43000000',
-		tribe: 'T04',
-		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-		parttern: [['OTRAND0',40,'KA400001'],['NH00010',60,'KA200002'],['NS00010',30,'KA400001']]
-	    },
-	M10000008: {
-		name: 'GoblinDancer',
-	      health:{
-		hp : 3, sp: 10, mp : 12
-	      },
-				state: {
-					str: 5,				int: 7,				dex: 13,				dis : 5,				spd: 8,
-		vit: 10,				wis: 5,				agi: 5,				res : 5,				luk: 5
-		},
-				colorType : 'hsv',
-				color : {
-		  hue  : 50, saturation : 80 , value  : 50
-		},
-				coordinates : 'Back',
-				protectType : ['None',0],
-			exp: {str : 30, dex : 10},
-			funds : 10,
-		job: 'J60000000',
-		tribe: 'T04',
-		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-		parttern: [['NM00010',100,'KA404002'],['NH00010',60,'KA404001'],['DE10100',2,'KA300000'],['NS00010',20,'KA330002']]
-	    },
 }

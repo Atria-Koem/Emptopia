@@ -114,8 +114,8 @@
 		<div class="Town">
 		<ul class="MenuTabs Vertical">
 			<li class="activeTab" data-conectTab="HireMenu"><a>Hire</a></li>
-			<li data-conectTab="BuyMenu"><a>Buy</a></li>
-			<li data-conectTab="SellMenu"><a>Sell</a></li>
+			<li data-conectTab="BuyMenu" id="BuyMenuTabs"><a>Buy</a></li>
+			<li data-conectTab="SellMenu" id="SellMenuTabs"><a>Sell</a></li>
 			<li data-conectTab="RefairMenu"><a>Refair</a></li>
 		</ul>
 		<div class="MenuContainer Vertical">
@@ -139,35 +139,15 @@
 			</div>
 			<div id="BuyMenu" class="TabDataView">
 				<div><p> Good Mer</p></div>
-				<div class="Stand">
-					<div class="ItemData">		
-						<input type="checkbox" id="IT000000000100" class="ItemCheckBox">
-						<label class="ItemLabel" for="IT000000000100">
-							<div><div class="ItemSelecter"></div></div>
-							<div class="Funds"><p>$ 10</p></div>
-							<div class="ItemInfoText"><p class="ItemName">Short Sword(Sword)</p><p class="ItemCount">x1</p><p> / </p><p class="atkPhy">10</p><p> / </p><p class="ItemOption">Simple Sword</p></div>
-						</label>
-					</div>
-					<div class="ItemData">		
-						<input type="checkbox" id="IT000000000101" class="ItemCheckBox">
-						<label class="ItemLabel" for="IT000000000101">
-							<div><div class="ItemSelecter"></div></div>
-							<div class="Funds"><p>$ 10</p></div>
-							<div class="ItemInfoText"><p class="ItemName">Short Sword(Sword)</p><p class="ItemCount">x1</p><p> / </p><p class="atkPhy">10</p><p> / </p><p class="ItemOption">Simple Sword</p></div>
-						</label>
-					</div>
-					<div class="ItemData">		
-						<input type="checkbox" id="IT000000000102" class="ItemCheckBox">
-						<label class="ItemLabel" for="IT000000000102">
-							<div><div class="ItemSelecter"></div></div>
-							<div class="Funds"><p>$ 10</p></div>
-							<div class="ItemInfoText"><p class="ItemName">Short Sword(Sword)</p><p class="ItemCount">x1</p><p> / </p><p class="atkPhy">10</p><p> / </p><p class="ItemOption">Simple Sword</p></div>
-						</label>
-					</div>
+				<div class="Stand" name="Buy">
+
 				</div>
 			</div>
 			<div id="SellMenu" class="TabDataView">
-				Test
+				<div><p> Good Mer</p></div>
+				<div class="Stand" name="Sell">
+
+				</div>
 			</div>
 			<div id="RefairMenu" class="TabDataView">
 				Test

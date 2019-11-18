@@ -713,8 +713,12 @@ text-transform: uppercase;
 	width : 50%;
 }
 
-.CharacteristicView > div,.ItemInfoText{
+.CharacteristicView > div{
   display : flex;
+
+}
+.ItemInfoText{
+  display : inline;
 
 }
 .ItemInfoText p{
@@ -942,7 +946,7 @@ input.DataLabelCheckBox:checked ~ .CharacterData {
   border: 0;
   padding : 0;
   display: flex;
-  height:1.5em;
+ 
 }
 .SimpleSelecter,.SkillFavoriteSelecter,.SkillLearnSelecter,.ItemSelecter{
   background: #333;
@@ -1102,6 +1106,10 @@ ul.MenuTabs.Vertical.SkillBoard{
 	border-left : 1px solid black;
 	border-right : 3px solid black;
 	border-bottom : 3px solid black;
+}
+.Stand > .ItemData > label > *{
+	border-left : 2px solid black;
+	padding : 1px;
 }
 .Stand > .ItemData > .ItemLabel > div{
 	border-left : 2px solid black;

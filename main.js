@@ -397,10 +397,6 @@ function setLoad(){
 		new Shop();
 		for(let i =0; i<10 ;i++){
 			new Item("IT9940000");
-			new Item("IT9950000");
-			for(let j = 0 ; j < 10 ; j++){
-				new Item("IT995001" + j);
-			}
 		}
 	}
 }

@@ -35,8 +35,7 @@ const dataItem = {
 				atkPhy: 10
 			}
 		},
-		src : 'Image\\we_sword038.png',
-		exp : '기본적인 검. 품질은 좋지 않다.' 
+		exp : 'Simple Sword' 
 	},
 	IT0000001 : {
 		code : 'IT0000001',
@@ -48,8 +47,7 @@ const dataItem = {
 				defPhyPer: 3, defPhyNum: 10
 			}
 		},
-		src : 'Image\\shield_002o.png',  
-		exp : '나무로 만들어진 조잡한 방패로 별로 몸을 지켜줄 것 같지는 않다.' 
+		exp : 'Simple Shield' 
 	},
 	IT0000002 : {
 		code : 'IT0000002',
@@ -61,8 +59,7 @@ const dataItem = {
 				defPhyPer: 1, defPhyNum: 1
 			}
 		},
-		src : 'Image\\helm_014.png',
-		exp : '나무로 만들어진 조잡한 헬멧.' 
+		exp : 'Simple Helemt' 
 	},
 	IT0000003 : {
 		code : 'IT0000003',
@@ -74,8 +71,7 @@ const dataItem = {
 				defPhyPer: 8, defPhyNum: 4
 			}
 		},
-		src : 'Image\\armor_004.png',
-		exp : '나무로 만들어진 조잡한 갑옷. 큰 충격을 받으면 부서진다.' 
+		exp : 'Simple Ammor' 
 	},
 	IT0000004 : {
 		code : 'IT0000004',
@@ -90,8 +86,7 @@ const dataItem = {
 				count : 10, maxCount : 10
 			}
 		},
-		src : 'Image\\we_bow017.png', 
-		exp : '조잡하게 만들어진 활.' 
+		exp : 'Simple Bow' 
 	},
 	IT0000005 : {
 		code : 'IT0000005',
@@ -103,12 +98,11 @@ const dataItem = {
 				atkPhy: 8
 			}
 		},
-		src : 'Image\\we_sword001.png',
-		exp : '절삭력이 거의 없는 단검.' 
+		exp : 'Simple Bow' 
 	},
 	IT0000006 : {
 		code : 'IT0000006',
-		name : 'Text Book',
+		name : 'TextBook',
 		category : 'Ammor',
 		type : 'Book',
 		spec : {
@@ -117,8 +111,7 @@ const dataItem = {
 				defMagPer: 1, defMagNum: 2
 			}
 		},
-		src : 'Image\\book_002c.png',
-		exp : '알수 없는 문자가 가득 쓰여진 책.' 
+		exp : 'Simple Book' 
 	},
 	IT0000007 : {
 		code : 'IT0000007',
@@ -133,12 +126,11 @@ const dataItem = {
 				count : 30, maxCount : 50
 			}
 		},
-		
-		exp : '30개의 화살이 들어가는 화살 통.' 
+		exp : 'Simple Case / (30)' 
 	},
 	IT0000008 : { 
 	 	code : 'IT0000008', 
-	 	name : 'Bone Helm', 
+	 	name : 'Bon Helm', 
 	 	category : 'Head', 
 	 	type : 'Helmet', 
 		spec : {
@@ -154,8 +146,7 @@ const dataItem = {
  				resPhyPer : 3, 	resMagPer : 3
 			}, 
 		},
-		src : 'Image\\helm_001.png',
-	  	exp : '그저 뼈로 이루어진 투구. 여러군데 금이 가 있다.', 
+	  	exp : 'Just bone helm', 
 		},
 	IT0000009 : { 
 	  	code : 'IT0000009', 
@@ -177,9 +168,8 @@ const dataItem = {
  				rateCrtLuk : 12, 	rateDodgeLuk : 3
 			}, 
 		},
-		src : 'Image\\we_gun011.png',
-	  	exp : '탑에서 발견된 무기.', 
-	},
+	  	exp : 'Like FPS weapon', 
+		},
 	 IT0000010 : { 
 	 	code : 'IT0000010', 
 	 	name : 'Bears Viking', 
@@ -194,8 +184,7 @@ const dataItem = {
 			rateCrt : 20, 	valCrt : 150,
 			 }, 
 		 },
-		 src : 'Image\\we_sword036.png',
-	 	exp : '이 아이템은 초록색이다.', 
+	 	exp : 'This item is green', 
 	},
 	 IT0000011 : { 
 	 	code : 'IT0000011', 
@@ -211,11 +200,11 @@ const dataItem = {
  			dis : 7, 	res : 7, 	spd : 7, 	luk : 7
 		}, 
 		 },
-	  	exp : '유령이 가지고 있던 허리띠지만 저주에 걸리거나 하는 일은 아직까지는 없었다.', 
+	  	exp : 'Ghost belt, not curse', 
 	},
 	IT0000012 : { 
 	 	code : 'IT0000012', 
-	 	name : 'Thunder Ring', 
+	 	name : 'Thunther Ring', 
 	 	category : 'Head', 
 	 	type : 'Circlet', 
 		spec : {
@@ -232,18 +221,18 @@ const dataItem = {
  			rateDodge : 2, 	rateRes : 3, 	rateDodgeLuk : 2
 		}, 
 		},
-	  	exp : '전기를 내뿜는 개처럼 생긴 짐승의 가죽으로 만들어졌다.', 
+	  	exp : 'Jolteons leather', 
 	},
-	IT9000001 : { 
-	 	code : 'IT9000001', 
-	 	name : '비단붕대', 
+	IT0000013 : { 
+	 	code : 'IT0000013', 
+	 	name : 'Silk Bangage', 
 	 	category : 'Other', 
 	 	type : 'Item', 
-	  	exp : '비단 붕대는 감으면 체력을 회복시켜 주는 마법 물품이다. 파티의 비밀무기로 활용될 수 있다. 총 체력의 30%를 회복시켜 준다.', 
+	  	exp : 'It helps you regain your physical strength. Its a secret weapon for thieves. Heals 30% of your total health.', 
 	},
 	IT0000014 : { 
 	 	code : 'IT0000014', 
-	 	name : '버드나무 몽둥이', 
+	 	name : 'A Willow Club', 
 	 	category : 'Weapon', 
 	 	type : 'Sword', 
 		spec : {
@@ -256,11 +245,11 @@ const dataItem = {
  			rateHitJust : 40
 		}, 
 		},
-	 	exp : '이것은 버드나무로 제작된 몽둥이가 분명하지만 알수 없는 이유로 절삭력을 가지고 있다.', 
+	 	exp : 'Its a willow club, but its definitely a sword.', 
 		},
-	IT9000002 : { 
-		code : 'IT9000002', 
-	 	name : 'Damaged Charm', 
+	IT0000015 : { 
+		code : 'IT0000015', 
+	 	name : 'Damaging Charm', 
 	 	category : 'Other', 
 		type : 'Item', 
 		spec : {
@@ -269,16 +258,17 @@ const dataItem = {
 		}, 
 		option : {
  			atkPhy : 15, 	atkMag : 15, 	atkPhyTrue : 10, 	atkMagTrue : 10, 
+			rateCrt : 20, 	valCrt : 150,
 		}, 
 		},
-		exp : '소지하고 있으면 파티의 공격력을 비롯한 능력을 증가시켜 준다.', 
+		exp : 'An object that increases your attack if you have it.', 
 	},
-	IT9000003 : { 
-	 	code : 'IT9000003', 
-	 	name : 'Peacemaker', 
-		category : 'Other', 
+	IT0000016 : { 
+	 	code : 'IT0000016', 
+	 	name : 'Peace Maker', 
+		category : 'Item', 
 	 	type : 'Item', 
-	 	exp : '우리의 소원은 평화. 모든 것의 체력을 전부 회복시켜준다.', 
+	 	exp : 'We wish for peace. All the objects are restored to health.', 
 	},
 	IT0000017 : { 
 	 	code : 'IT0000017', 
@@ -294,12 +284,12 @@ const dataItem = {
  			rateHitJust : 60, 	atkRapid : 3
 	 	}, 
 		},
-	 	exp : '원숭이들의 주술이 가미된 초록색 아이템.', 
+	 	exp : 'Its a green dagger with a monkeys magic', 
 		
 	},
 	IT0000018 : { 
 	 	code : 'IT0000018', 
-	 	name : '태양만세', 
+	 	name : 'Long live the sun', 
 	 	category : 'Weapon', 
 	 	type : 'Shield', 
 		spec : {
@@ -314,12 +304,12 @@ const dataItem = {
  			defMagNum : 5, 	resMagPer : 10, 	resMagNum : 5, 	rateRes : 10, 	ratePFD : 15
 	 	}, 
 		},
-	 	exp : '태양만세.', 
+	 	exp : 'Long live the sun.', 
 		
 	},
 	IT0000019 : { 
 	 	code : 'IT0000019', 
-	 	name : 'BlackwingMale', 
+	 	name : 'Blackwing Male', 
 	 	category : 'Ammor', 
 	 	type : 'Ammor', 
 	 	health : {
@@ -336,11 +326,11 @@ const dataItem = {
  			ratePFD : 20
 		}, 
 		},
-		exp : '날개 문양이 세겨진 갑옷.', 
+		exp : 'A black armor with winghs', 
 	},
 	IT0000020 : { 
 	 	code : 'IT0000020', 
-	 	name : 'Chain Saw', 
+	 	name : 'Chain Saw ', 
 	 	category : 'Weapon', 
 	 	type : 'TwoHandSword', 
 		spec : {
@@ -352,11 +342,11 @@ const dataItem = {
  		rateHitJust : 50, 	atkRapid : 1, 	rateCrtLuk : 20
 		}, 
 		},
-		exp : '전기 톱은 예로부터 널리 알려진 좋은 대화 수단이다.', 
+		exp : 'Good means of communication', 
 	},
-	IT1000001 : { 
-		code : 'IT1000001', 
-		name : '보복', 
+	IT0000021 : { 
+		code : 'IT0000021', 
+		name : 'Retirbution', 
 	 	category : 'Weapon', 
 	 	type : 'BowGun', 
 		spec : {
@@ -368,11 +358,11 @@ const dataItem = {
  			rateHitJust : 60, 	atkRapid : 2, 	rateCrtLuk : 20
 	 	}, 
 		},
-	 	exp : '누군가에게 복수할 기회를 노리고 있는 원혼이 들어가 있다. 염원과 한 세트를 이룬다. 파티 내에 각각의 사용자 존재시 명중률을 5% 증가시켜준다', 
+	 	exp : 'Looking for a chance to get revenge on someone.', 
 	},
-	IT1000002 : { 
-	 	code : 'IT1000002', 
-	 	name : '염원', 
+	IT0000022 : { 
+	 	code : 'IT0000022', 
+	 	name : 'Anxiety', 
 	 	category : 'Weapon', 
 	 	type : 'BowGun', 
 		spec : {
@@ -384,25 +374,25 @@ const dataItem = {
  			rateHitJust : 60, 	atkRapid : 2, 	rateCrtLuk : 20
 		}, 
 		},
-		exp : '누군가에게 복수할 기회를 노리고 있는 원혼이 들어가 있다. 보복과 한 세트를 이룬다. 파티 내에 각각의 사용자 존재시 명중률을 5% 증가시켜준다',
+		exp : 'Looking for a chance to get revenge on someone.', 
 	},
-	IT9000004 : { 
-	 	code : 'IT9000004', 
-	 	name : '공격 타입 변경(M)', 
-	 	category : 'Other', 
+	IT0000023 : { 
+	 	code : 'IT0000023', 
+	 	name : 'Attack Type Changer(N)', 
+	 	category : 'Item', 
 	 	type : 'Item', 
-	 	exp : '노말 타입 데미지를 마법 데미지로 변경시켜 준다.', 
+	 	exp : 'Make that the general damage is applied as a magic damage.', 
 	},
-	IT9000005 : { 
-	 	code : 'IT9000005', 
-	 	name : '공격 타입 변경(N)', 
-	 	category : 'Other', 
+	IT0000024 : { 
+	 	code : 'IT0000024', 
+	 	name : 'Attack Type Changer(M)', 
+	 	category : 'Item', 
 	 	type : 'Item', 
-	 	exp : '마법 데미지를 노말 타입 데미지로 변경시켜 준다.', 
+	 	exp : 'Make that the magic damage is applied as a general damage.', 
 	},
 	IT0000025 : { 
 	 	code : 'IT0000025', 
-	 	name : 'RosethronWhip', 
+	 	name : 'Rose Whip', 
 	 	category : 'Weapon', 
 	 	type : 'Whip', 
 		spec : {
@@ -414,7 +404,7 @@ const dataItem = {
  			valCrt : 300, 	rateHitJust : 30, 	atkRapid : 2
 		}, 
 		},
-		exp : '이 채찍은 날카로운 가시로 뒤덥혀 있다. 일정 적중당한 적을 확률로 출혈 상태로 만든다.', 
+		exp : 'A whip covered with sharp thorns. A certain probability leaves an abnormal bleed.', 
 	},
 	IT0000026 : { 
 	 	code : 'IT0000026', 
@@ -430,7 +420,7 @@ const dataItem = {
  			valCrt : 140, 	rateHitJust : 60, 	atkRapid : 1
 		}, 
 		},
-		exp : '강력한 독이 깃든 검. 자신도 적도 상태이상에 취약해진다. 30% 확률로 상대방 혹은 자신에게 중독을 부여한다.', 
+		exp : 'Its a venom dagger. By a certain probability, to onself or the enemy is addicted to conditionally abnormalities.', 
 	},
 	IT0000027 : { 
 	  code : 'IT0000027', 
@@ -580,7 +570,7 @@ const dataItem = {
 			valCrt : 130, 	rateHitJust : 62, 	atkRapid : 3
 		}, 
 		},
-		  exp : '12% 확률로 중독 상태를 발생시키는 총알을 발사하는 총. 맞은 상대가 중독되는 이유는 알 수 없다.', 
+		  exp : '일정 확률로 중독 상태를 발생시키는 총알을 발사하는 총. 맞은 상대가 중독되는 이유는 알 수 없다.', 
 	},
 	IT0000036 : { 
 		  code : 'IT0000036', 
@@ -651,526 +641,11 @@ const dataItem = {
 			str : 12, 	dex : 8
 		}, 
 		 option : {
-			atkPhy : 46, 	atkPhyTrue : 25,  atkMag : 25, 	atkMagTrue : 10,
-			rateDis : 15, 	rateCrt : 7, 	valCrt : 138, 	atkRapid : 2.6
+			atkPhy : 46, 	atkPhyTrue : 25, 	rateDis : 15, 	rateCrt : 7, 	valCrt : 138, 	
+			atkRapid : 2.6
 		}, 
 		},
 		  exp : '두가지 기운을 가지고 있는 검. 적중당한 적을 일정 확률로 화상이나 동상 상태로 만듬.', 
-	},
-	IT0000041 : { 
-		  code : 'IT0000041', 
-		  name : '나무꾼 도끼', 
-		 category : 'Weapon', 
-		 type : 'Axe', 
-		 state : {
-			str : 16, 	vit : 22
-		}, 
-		 option : {
-			atkPhy : 52, 	atkPhyTrue : 24, 	rateHit : 72, 	rateHitJust : 68, 	atkRapid : 2.6,
-			rateCrt : 5, 	valCrt : 152,
-		}, 
-		  exp : '평범한 벌목용 도끼로 마을 사람들에게 구매할 수 있다.', 
-	},
-	IT0000042 : { 
-		  code : 'IT0000042', 
-		  name : '황천의 나무꾼 도끼', 
-		 category : 'Weapon', 
-		 type : 'Axe', 
-		 health : {
-			Hp : 1244,Sp : 224
-		}, 
-		 state : {
-			str : 48, 	vit : 56
-		}, 
-		 option : {
-			atkPhy : 167, 	atkMag : 25, 	atkPhyTrue : 88, 	atkMagTrue : 10, 	rateHit : 82, 	
-			rateHitJust : 67, 	atkRapid : 2.4,		rateCrt : 5, 	valCrt : 157
-		}, 
-		  exp : '벌목을 하던 나무꾼은 황천까지 다녀왔다고 한다. 황천의 기운을 흡수한 도끼는 마법적 기운을 가지게 되었다. 도끼는 나무꾼에게 살 수 있다.', 
-	},
-	IT0000043 : { 
-		  code : 'IT0000043', 
-		  name : '두개골 절단 돌격 도끼', 
-		 category : 'Weapon', 
-		 type : 'Axe', 
-		spec:{
-		 health : {
-			Hp : 400,Sp : 130
-		}, 
-		 state : {
-			str : 25, 	vit : 44
-		}, 
-		 option : {
-			atkPhy : 132, 	defPhyPer : 40, 	defPhyNum : 22, 	atkPhyTrue : 67, 	rateHit : 91, 	
-			rateRes : 4, 	rateCrt : 3, 	valCrt : 167, 	rateHitJust : 87, 	atkRapid : 3.7
-		}, 
-		},
-		  exp : '거대한 돌격 도끼로 방어 성능이 우수 하다.', 
-	},
-	IT0000044 : { 
-		  code : 'IT0000044', 
-		  name : '광선검', 
-		 category : 'Weapon', 
-		 type : 'Sword', 
-		spec:{
-		 option : {
-			atkPhy : 33, 	atkPhyTrue : 11, 	rateHit : 88, 	rateCrt : 17, 	valCrt : 800, 	
-			rateHitJust : 76, 	atkRapid : 1.2
-		}, 
-		},
-		  exp : '탑에서 발견된 외계 문명의 무기. 가볍고 높은 절삭력을 가지고 있다.', 
-	},
-	IT0000045 : { 
-		  code : 'IT0000044', 
-		  name : '독 폭주', 
-		 category : 'Weapon', 
-		 type : 'Sword', 
-		spec:{
-		 option : {
-			atkPhy : 133, 	atkPhyTrue : 97, 	rateHit : 90, 	rateCrt : 4.7, 	valCrt : 150, 	
-			atkRapid : 2.1
-		}, 
-		},
-		  exp : '중독상태 일때 사용하면 공격력이 150% 상승한다.', 
-	},
-	IT1000003 : { 
-	  code : 'IT1000003', 
-	  name : '쌍날 장창', 
-	 category : 'Weapon', 
-	 type : 'Spear', 
-	 health : {
- 		Hp : 2670
-	}, 
-	 state : {
- 		str : 60, 	dex : 140
-	}, 
-	 option : {
- 		atkPhy : 524, 	atkPhyTrue : 282, 	rateHit : 80, 	rateCrt : 5, 	valCrt : 140, 	
- 		rateHitJust : 64, 	atkRapid : 3.6
-	}, 
-	  exp : '두개의 날이 달린 창. 같은 창을 들고 있는 파티원이 있다면 들고 있는 인원 한명당 공격속도가 0.2 증가한다.', 
-	},
-	IT1000004 : { 
-		  code : 'IT1000004', 
-		  name : '지하고블린 머리장식', 
-		 category : 'Head', 
-		 type : 'Circlet', 
-		 state : {
-			str : 2, 	vit : 6, 	int : 5, 	dex : 2
-		}, 
-		 option : {
-			defPhyPer : 42, 	defPhyNum : 12, 	defMagPer : 26, 	defMagNum : 10
-		}, 
-		  exp : '지하고블린에게 쉽게 얻을 수 있는 머리장식. 지하고블린 머리장식, 지하고블린 천 갑옷, 지하고블린 천 팔보호대와 하나의 세트를 이루며 3가지의 장비를 모두 착용하였을 때 모든 방어력과 저항력이 10상승한다.', 
-	},
-	IT1000005 : { 
-		  code : 'IT1000005', 
-		  name : '지하고블린 천 갑옷', 
-		 category : 'Ammor', 
-		 type : 'Cloth', 
-		 state : {
-			str : 4, 	vit : 8, 	int : 2, 	dex : 1
-		}, 
-		 option : {
-			defPhyPer : 64, 	defPhyNum : 12, 	defMagPer : 27, 	defMagNum : 8
-		}, 
-		  exp : '지하고블린들이 두꺼운 천을 겹쳐 제작한 천 갑옷. 갑옷치고는 가볍지만 방어력이 높지는 않다. 지하고블린 머리장식, 지하고블린 천 갑옷, 지하고블린 천 팔보호대와 하나의 세트를 이루며 3가지의 장비를 모두 착용하였을 때 모든 방어력과 저항력이 10상승한다.', 
-	},
-	IT1000006 : { 
-		  code : 'IT1000006', 
-		  name : '지하고블린 천 팔보호대', 
-		 category : 'Ammor', 
-		 type : 'ArmGaurd', 
-		 state : {
-			str : 3, 	vit : 5, 	int : 1, 	dex : 6
-		}, 
-		 option : {
-			defPhyPer : 22, 	defPhyNum : 6, 	defMagPer : 13, 	defMagNum : 4
-		}, 
-		  exp : '지하고블린들 보편적으로 착용하고 있던 팔보호구. 지하고블린의 역한 침냄새가 난다. 지하고블린 머리장식, 지하고블린 천 갑옷, 지하고블린 천 팔보호대와 하나의 세트를 이루며 3가지의 장비를 모두 착용하였을 때 모든 방어력과 저항력이 10상승한다.', 
-	},
-	IT0000046 : { 
-		  code : 'IT0000046', 
-		  name : '거대칠면조의 다리뼈', 
-		 category : 'Weapon', 
-		 type : 'Spear', 
-		 health : {
-			Hp : 150
-		}, 
-		 state : {
-			str : 13, 	dex : 22
-		}, 
-		 option : {
-			atkPhy : 82, 	atkPhyTrue : 27, 	rateHit : 70,	rateCrt : 10, 	valCrt : 120, 	rateHitJust : 60, 	atkRapid : 2.9
-		}, 
-		  exp : '탑안에 서식하는 거대한 칠면조의 다리뼈의 한쪽 끝을 날카롭게 깍아만든 창. 야수형 적을 상대할 때 추가로 30의 데미지를 준다.', 
-	},
-	IT0000047 : { 
-		  code : 'IT0000047', 
-		  name : '거대칠면조 힘줄', 
-		 category : 'Weapon', 
-		 type : 'Whip', 
-		 health : {
-			Hp : 150
-		}, 
-		 state : {
-			str : 13, 	dex : 22
-		}, 
-		 option : {
-			atkPhy : 72, 	atkPhyTrue : 20, 	rateHit : 80, 	rateCrt : 10, 	valCrt : 200, 	
-			rateHitJust : 30, 	atkRapid : 2
-		}, 
-		  exp : '탑안에 서식하는 거대한 칠면조의 힘줄로 만든 채찍. 야수형 적을 상대할 때 추가로 30의 데미지를 준다.', 
-	},
-	IT0000048 : { 
-		  code : 'IT0000048', 
-		  name : '음속의 창', 
-		 category : 'Weapon', 
-		 type : 'Spear', 
-		 state : {
-			vit : 330, 	dex : 200
-		}, 
-		 option : {
-			atkPhy : 670, 	atkPhyTrue : 360, 	rateHit : 80, 	rateCrt : 2, 	valCrt : 125, 	
-			rateHitJust : 57, 	atkRapid : 57
-		}, 
-		  exp : '착용자의 공격을 빠르게 바꿔주는 창. 착용자는 공격시 전체 체력의 7%의 체력을 잃는다.', 
-	},
-	IT0000049 : { 
-		  code : 'IT0000049', 
-		  name : '마을경비병의 장창', 
-		 category : 'Weapon', 
-		 type : 'Spear', 
-		 state : {
-			str : 3, 	vit : 5, 	dex : 9
-		}, 
-		 option : {
-			atkPhy : 89, 	atkPhyTrue : 34, 	rateHit : 95, 	rateCrt : 7, 	valCrt : 125, 	
-			rateHitJust : 70, 	atkRapid : 3.6
-		}, 
-		  exp : '귀사의 제품은 정확한 규격과 높은 품질을 자랑합니다.', 
-	},
-	IT1000006 : { 
-		  code : 'IT1000006', 
-		  name : '골렘파괴자', 
-		 category : 'Weapon', 
-		 type : 'Mace', 
-		 state : {
-			str : 324, 	vit : 355
-		}, 
-		 option : {
-			atkPhy : 890, 	atkPhyTrue : 340, 	rateHit : 88, 	rateCrt : 7, 	valCrt : 148, 	
-			rateHitJust : 70, 	atkRapid : 3.4
-		}, 
-		  exp : '골렘을 부수는데 확실한 효과를 보여주는 둔기. 골렘괭이와 함께 사용한다면 낮은 확률로 골렘에게서 광석을 채취할 수 있다.', 
-	},
-	IT1000007 : { 
-		  code : 'IT1000007', 
-		  name : '골렘괭이', 
-		 category : 'Weapon', 
-		 type : 'SubMace', 
-		 state : {
-			str : 142, 	vit : 162
-		}, 
-		 option : {
-			atkPhy : 427, 	atkPhyTrue : 121, 	rateHit : 88, 	rateCrt : 5, 	valCrt : 123, 	
-			rateHitJust : 70, 	atkRapid : 3.7
-		}, 
-		  exp : '골렘을 부수는데 확실한 효과를 보여주는 곡괭이. 골렘파괴자와 함께 사용한다면 낮은 확률로 골렘에게서 광석을 채취할 수 있다.', 
-	},
-	IT0000050 : { 
-		  code : 'IT0000050', 
-		  name : '안전모', 
-		 category : 'Head', 
-		 type : 'Helmet', 
-		 health : {
-
-			pHp : 12,pSp : 7
-		}, 
-		 state : {
-			str : 88, 	vit : 96
-		}, 
-		 option : {
-			defPhyPer : 44, 	defPhyNum : 21, 	defMagPer : 30, 	defMagNum : 12
-		}, 
-		  exp : '알 수 없는 글자가 쓰여져 있는 헬멧. 착용자는 알 수 없는 이유로 체력과 스테미너가 증가한다.', 
-	},
-	IT9000006 : { 
-		  code : 'IT9000006', 
-		  name : '동굴탈출용로프', 
-		 category : 'Other', 
-		 type : 'Item', 
-		  exp : '동굴탈출용 로프를 사용하면 어떠한 상황에서도 탑 밖으로 돌아갈 수 있다. 하지만 60%의 확률로 사용에 성공한다.', 
-	},
-	IT9000007 : { 
-	  code : 'IT9000007', 
-	  name : '물', 
-	 category : 'Other', 
-	 type : 'Item', 
-	  src : 'Image\\food_004.png', 
-	  exp : '깨끗한 정제수. hp, mp 리젠 20%', 
-	},
-	IT0000051 : { 
-		  code : 'IT0000051', 
-		  name : 'Silver Shovel', 
-		 category : 'Weapon', 
-		 type : 'TwoHandSword', 
-		 spec : { 
-			 health : {
-
-			pHp : 3,pSp : 3
-			 }, 
-			 state : {
-			str : 72, 	vit : 44
-			 }, 
-			 option : {
-			atkPhy : 68, 	atkPhyTrue : 21, 	rateHit : 90, 	rateCrt : 4, 	valCrt : 130, 	
-			rateHitJust : 70, 	atkRapid : 4
-			 }, 
-		 }, 
-		  exp : '은으로 만든 삽이다. 언데드 몬스터에게 20% 추가 데미지를 준다.', 
-	},
-	IT0000052 : { 
-		  code : 'IT0000052', 
-		  name : '부지깽이', 
-		 category : 'Weapon', 
-		 type : 'Wand', 
-		 spec : { 
-			 health : {
-			Mp : 254
-			 }, 
-			 state : {
-			int : 37
-			 }, 
-			 option : {
-			atkPhy : 25, 	atkMag : 37, 	atkPhyTrue : 12, 	atkMagTrue : 21, 	rateHit : 87, 	
-			rateDis : 20, 	rateCrt : 4, 	valCrt : 227, 	rateHitJust : 73, 	atkRapid : 8
-			 }, 
-		 }, 
-		  src : 'Image\\we_staff001b.png', 
-		  exp : '평범한 부지깽이다. 불속성 데미지를 준다. 불속성 공격을 할 경우 400%의 추가 데미지를 입힌다.', 
-	},
-	IT0000053 : { 
-		  code : 'IT0000053', 
-		  name : 'Wood Staff', 
-		 category : 'Weapon', 
-		 type : 'Staff', 
-		 spec : { 
-			 state : {
-			int : 12
-			 }, 
-			 option : {
-			atkMag : 30, 	atkMagTrue : 8, 	rateHit : 70, 	rateCrt : 3, 	valCrt : 120, 	
-			rateHitJust : 42, 	atkRapid : 2
-			 }, 
-		 }, 
-		  src : 'Image\\we_staff010c.png', 
-		  exp : '나무가지를 꺾어서 만든 조잡한 지팡이.', 
-	},
-	IT0000054 : { 
-		  code : 'IT0000054', 
-		  name : '열매달린 가지', 
-		 category : 'Weapon', 
-		 type : 'Staff', 
-		 spec : { 
-			 state : {
-			vit : 16, 	int : 22
-			 }, 
-			 option : {
-			atkMag : 75, 	atkMagTrue : 33, 	rateHit : 50, 	rateCrt : 6, 	valCrt : 220, 	
-			rateHitJust : 50, 	atkRapid : 6
-			 }, 
-		 }, 
-		  src : 'Image\\we_staff001.png', 
-		  exp : '열매가 달려있는 나무가지다. 착용자의 치유능력이 30%상승한다.', 
-	},
-	IT9000008 : { 
-		  code : 'IT9000008', 
-		  name : '파야열매', 
-		 category : 'Other', 
-		 type : 'Item', 
-		  src : 'Image\\food_035.png', 
-		  exp : '전투시 복용하면 전체 체력의 1/4을 회복하지만 방어력이 25% 하락한다.', 
-	},
-	IT9000009 : { 
-		  code : 'IT9000009', 
-		  name : '날달걀', 
-		 category : 'Other', 
-		 type : 'Item', 
-		  src : 'Image\\food_037.png', 
-		  exp : '전투시 복용하면 전체 체력의 1/8을 지속적으로 회복한다.', 
-	},
-	IT9000010 : { 
-		  code : 'IT9000010', 
-		  name : '감자', 
-		 category : 'Other', 
-		 type : 'Item', 
-		  src : 'Image\\food_036.png', 
-		  exp : '전투시 복용하면 전체 체력의 1/4을 회복한다. 특정 층에서 아이템을 교환할 때 사용할 수 있다.', 
-	},
-	IT1000007 : { 
-		  code : 'IT1000007', 
-		  name : '초보 마법사 모자', 
-		 category : 'Ammor', 
-		 type : 'Hat', 
-		 spec : { 
-			 state : {
-			vit : 2, 	int : 7
-			 }, 
-			 option : {
-			defPhyPer : 20, 	defMagPer : 22, 	
-	defPhyNum : 5,	defMagNum : 5
-			 }, 
-		 }, 
-		  src : 'Image\\helm_005.png', 
-		  exp : '초보 마법사들이 즐겨쓰는 모자다. 초보 마법사 로브와 함께 착용하면 마법 공격력과 방어력이 10% 상승한다.', 
-	},
-	IT1000008 : { 
-		  code : 'IT1000008', 
-		  name : '초보 마법사 로브', 
-		 category : 'Ammor', 
-		 type : 'Robe', 
-		 spec : { 
-			 state : {
-			vit : 12, 	int : 6
-			 }, 
-			 option : {
-			defPhyPer : 31, 	defMagPer : 42, 	defPhyNum : 5,	defMagNum : 5
-			 }, 
-		 }, 
-		  src : 'Image\\armor_010b.png', 
-		  exp : '초보 마법사들이 즐겨입는 로브로 초보 마법사 모자와 함께 착용하면 마법 공격력과 방어력이 10% 상승한다.', 
-	},
-	IT0000055 : { 
-		  code : 'IT0000055', 
-		  name : 'Jewel Amplifier', 
-		 category : 'Weapon', 
-		 type : 'Staff', 
-		 spec : { 
-			 health : {
-
-			pMp : 10
-			 }, 
-			 state : {
-			vit : 62, 	int : 131
-			 }, 
-			 option : {
-			atkMag : 265, 	atkMagTrue : 126, 	rateHit : 91, 	rateHitJust : 77, 	atkRapid : 6
-			 }, 
-		 }, 
-		  src : 'Image\\we_staff020b.png', 
-		  exp : '보석을 통하여 마력을 증폭시켜주는 지팡이.', 
-	},
-	IT0000013 : { 
-		  code : 'IT0000013', 
-		  name : '평범한 리본', 
-		 category : 'Item', 
-		 type : 'Item', 
-		 spec : { 
-			 health : {
-
-			pHp : 2,pSp : 2,pMp : 2
-			 }, 
-		 }, 
-		  src : 'Image\\acce_010.png', 
-		  exp : '별다른 능력을 가지지 않은 장식품', 
-	},
-	IT0000015 : { 
-		  code : 'IT0000015', 
-		  name : '주시자의 눈', 
-		 category : 'Item', 
-		 type : 'Item', 
-		 spec : { 
-			 health : {
-
-			pMp : 7
-			 }, 
-		 }, 
-		  src : 'Image\\acce_003e.png', 
-		  exp : '탑에서 사망한 수도승의 눈. 착용자의 명중률을 12% 상승시킨다.', 
-	},
-	IT0000016 : { 
-		  code : 'IT0000016', 
-		  name : '고무줄', 
-		 category : 'Item', 
-		 type : 'Item', 
-		 spec : { 
-			 state : {
-			luk : 16
-			 }, 
-		 }, 
-		  src : 'Image\\acce_004.png', 
-		  exp : '행운을 올려주는 노란색 고무줄.', 
-	},
-	IT0000021 : { 
-		  code : 'IT0000021', 
-		  name : '얼음마법서 -1-', 
-		 category : 'Weapon', 
-		 type : 'Book', 
-		 spec : { 
-			 health : {
-
-			pMp : 17
-			 }, 
-			 state : {
-			str : 22, 	int : 48
-			 }, 
-			 option : {
-			atkMag : 63, 	atkMagTrue : 17, 	rateHit : 78, 	rateDis : 15, 	rateHitJust : 66, 	
-			atkRapid : 3
-			 }, 
-		 }, 
-		  src : 'Image\\book_002.png', 
-		  exp : '얼음 마법의 정수가 담긴 책. 시리즈로 출간되었고 기초 얼음마법 패키지가 들어있다. 빙결 확률이 25% 증가한다.', 
-	},
-	IT0000022 : { 
-		  code : 'IT0000022', 
-		  name : '화염마법서 -1-', 
-		 category : 'Weapon', 
-		 type : 'Book', 
-		 spec : { 
-			 health : {
-
-			pMp : 17
-			 }, 
-			 state : {
-			str : 18, 	int : 52
-			 }, 
-			 option : {
-			atkMag : 70, 	atkMagTrue : 24, 	rateHit : 71, 	rateDis : 15, 	rateHitJust : 60, 	
-			atkRapid : 2
-			 }, 
-		 }, 
-		  src : 'Image\\book_002c.png', 
-		  exp : '화염 마법의 정수가 담긴 책. 시리즈로 출간된 것으로 알려져 있다. 기초 화염마법 패키지가 들어있다. 화상을 입을 확률이 25% 증가한다.', 
-	},
-	IT0000023 : { 
-		  code : 'IT0000022', 
-		  name : ' Druid', 
-		 category : 'Weapon', 
-		 type : 'Book', 
-		 spec : { 
-			 health : {
-
-			pMp : 4
-			 }, 
-			 state : {
-			vit : 40, 	int : 30
-			 }, 
-			 option : {
-			atkMag : 40, 	atkMagTrue : 7, 	rateHit : 82, 	rateHitJust : 69, 	atkRapid : 5
-			 }, 
-		 }, 
-		  src : 'Image\\book_002b.png', 
-		  exp : '영웅 드루이드의 일대기가 담겨있는 책. <만년동안 응어리진 분노를... 222p>', 
-	},
-	IT0000024 : { 
-		  code : 'IT0000024', 
-		  name : '기술머신', 
-		 category : 'Other', 
-		 type : 'Item', 
-		  src : 'Image\\item_051.png', 
-		  exp : '익히고 있는 기술중 한가지를 선택하여 랜덤한 다른 기술로 변화시킨다.', 
 	},
 	IT9940000 : {
 		code : 'IT9940000', 
@@ -1178,7 +653,6 @@ const dataItem = {
 		category : 'Other', 
 		type : 'Navigate',
 		useData : 'All',//지도의 경우 해방되는 아이템.
-		src:'Image\\MI_item.png',
 		exp : '기본적인 지도. 지나간 길이 기록된다. 1회용 아이템'
 		 
 	},
@@ -1188,7 +662,6 @@ const dataItem = {
 		category : 'Other', 
 		type : 'Rebirth',
 		useData : 'Random',//지도의 경우 해방되는 아이템.
-		src : 'Image\\item_000.png',
 		exp : '환생시켜주는 물약. 무엇으로 환생할지 알 수 없다. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 		 
 	},
@@ -1198,7 +671,6 @@ const dataItem = {
 		category : 'Other', 
 		type : 'Rebirth',
 		useData : '0',
-		src : 'Image\\item_000.png',
 		exp : 'Human 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 		 
 	},
@@ -1208,7 +680,6 @@ const dataItem = {
 		category : 'Other', 
 		type : 'Rebirth',
 		useData : '1',
-		src : 'Image\\item_001.png',
 		exp : 'Machina 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 		 
 	},
@@ -1218,7 +689,6 @@ const dataItem = {
 		category : 'Other', 
 		type : 'Rebirth',
 		useData : '2',
-		src : 'Image\\item_002.png',
 		exp : 'Ort 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 		 
 	},
@@ -1228,7 +698,6 @@ const dataItem = {
 		category : 'Other', 
 		type : 'Rebirth',
 		useData : '3',
-		src : 'Image\\item_003.png',
 		exp : 'Sprit 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 		 
 	},
@@ -1238,7 +707,6 @@ const dataItem = {
 		category : 'Other', 
 		type : 'Rebirth',
 		useData : '4',
-		src : 'Image\\item_004.png',
 		exp : 'Beast 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 		 
 	},
@@ -1248,7 +716,6 @@ const dataItem = {
 		category : 'Other', 
 		type : 'Rebirth',
 		useData : '5',
-		src : 'Image\\item_005.png',
 		exp : 'Kernel 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 		 
 	},
@@ -1258,7 +725,6 @@ const dataItem = {
 		category : 'Other', 
 		type : 'Rebirth',
 		useData : '6',
-		src : 'Image\\item_006.png',
 		exp : 'Dead 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 		 
 	},
@@ -1268,7 +734,6 @@ const dataItem = {
 		category : 'Other', 
 		type : 'Rebirth',
 		useData : '7',
-		src : 'Image\\item_007.png',
 		exp : 'Formless 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 		 
 	},
@@ -1278,7 +743,6 @@ const dataItem = {
 		category : 'Other', 
 		type : 'Rebirth',
 		useData : '8',
-		src : 'Image\\item_008.png',
 		exp : 'Inorganic 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 		 
 	},
@@ -1288,7 +752,6 @@ const dataItem = {
 		category : 'Other', 
 		type : 'Rebirth',
 		useData : '9',
-		src : 'Image\\item_000.png',
 		exp : 'Exterior 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 		 
 	}

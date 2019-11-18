@@ -952,6 +952,9 @@ class CreateDataView{
 			case 'ShopBuy' :
 				this.data = dataItem[this.code]
 				break;
+			case 'ShopSell' :
+				this.data = dataItem[this.code]
+				break;
 		}
 	}
 	createSkillDiv(){
@@ -1181,6 +1184,9 @@ class CreateDataView{
 			if(index != -1){
 				let textType = optionName[index]
 				let innerText = optionName[index].slice(0,1).toUpperCase() + optionName[index].slice(1,3) + ' : '
+				if(optionName[index].indexOf("Mag")!= -1){
+					innerText = "M" + innerText.toLowerCase();
+				}
 				let slash = new Text(' / ').p;
 				if(index < 2){
 					innerText += baseOption[optionName[index]]
@@ -1270,7 +1276,7 @@ class CreateDataView{
 		let nameP = new Text(innerItemName , 'ItemName').p
         if(dataItem[item.code].src){
             let img = new CreateTag('img');
-            img.src = dataItem[item.code].src;
+            img.src = dataItem[item.baseCode].src;
             div.appendChild(img);
         }
 		let slash = new Text(' / ').p;
@@ -1294,6 +1300,94 @@ class CreateDataView{
 			if(index != -1){
 				let textType = optionName[index]
 				let innerText = optionName[index].slice(0,1).toUpperCase() + optionName[index].slice(1,3) + ' : '
+				if(optionName[index].indexOf("Mag")!= -1){
+					innerText = "M" + innerText.toLowerCase();
+				}
+				let slash = new Text(' / ').p;
+				if(index < 2){
+					innerText += baseOption[optionName[index]]
+				}
+				else{
+						let defPer = baseOption[optionName[index] + 'Per']
+						if(!defPer){
+							innerText += '0 + '  
+						}
+						else{
+							innerText += defPer + ' + '
+						}
+						let defNum = baseOption[optionName[index] + 'Num']
+						if(!defNum){
+							innerText += '0'  
+						}
+						else{
+							innerText += defNum
+						}
+						checkCreate[optionName[index]] += 1
+					
+				}
+				if(!checkCreate[optionName[index]] || checkCreate[optionName[index]] == 1){
+					let optionP = new Text(innerText , textType).p
+				div.appendChild(optionP)
+				div.appendChild(slash)
+				}
+			}			
+		}
+		}
+		}
+		if(itemElementName.indexOf('exp') != -1){
+		
+			let optionP = new Text(item.exp , 'ItemOption').p
+			div.appendChild(optionP)
+		}
+		return div
+	}
+	createShopSellDiv(){
+		const item = this.data
+		const itemElementName = Object.getOwnPropertyNames(item)
+		const optionName = ['atkPhy','atkMag','defPhy','defMag']
+		const optionNameLength = optionName.length;
+		let div = new CreateTag('div')
+		div.className = 'ItemInfoText'
+		let innerItemName = ''
+		if(item.refair === 0 || !item.refair){
+			innerItemName = item.name + '(' + item.type + ')';
+		}
+		else{
+			innerItemName = '+' + item.refair + ' ' + item.name + '(' + item.type + ')';
+		}
+
+		let nameP = new Text(innerItemName , 'ItemName').p
+        if(dataItem[item.code].src){
+            let img = new CreateTag('img');
+            img.src = dataItem[item.baseCode].src;
+            div.appendChild(img);
+        }
+		let slash = new Text(' / ').p;
+		div.appendChild(nameP)
+		let countP = new Text( 'x' + item.number , 'ItemCount').p
+		div.appendChild(countP)
+		div.appendChild(slash)
+		let checkCreate = {defPhy : 0, defMag : 0}
+		if(item.spec){
+		const baseOption = item.spec.option
+		if(baseOption){
+		const baseOptionName = Object.getOwnPropertyNames(baseOption)
+		const itemOptionLength = baseOptionName.length
+		for( let i  = 0 ; i < itemOptionLength; i ++){
+			let checkName = ''
+			if(baseOptionName[i].length != 6 && baseOptionName[i].indexOf("True") == -1){
+				checkName = baseOptionName[i].slice(0,6)
+			}
+			else{
+				checkName = baseOptionName[i]
+			}
+			let index = optionName.indexOf(checkName) 
+			if(index != -1){
+				let textType = optionName[index]
+				let innerText = optionName[index].slice(0,1).toUpperCase() + optionName[index].slice(1,3) + ' : '
+				if(optionName[index].indexOf("Mag")!= -1){
+					innerText = "M" + innerText.toLowerCase();
+				}
 				let slash = new Text(' / ').p;
 				if(index < 2){
 					innerText += baseOption[optionName[index]]
@@ -1668,6 +1762,17 @@ class addEventListner{
 																		)
 		}
 		}
+		this.addEventTownTabs();
+	}
+	addEventTownTabs(){
+		document.getElementById("BuyMenuTabs").addEventListener('click',
+		function(){
+			new Shop("Buy")
+		})
+		document.getElementById("SellMenuTabs").addEventListener('click',
+		function(){
+			new Shop("Sell")
+		})
 	}
 	addInventoryListRefresh(tab){
 		tab.addEventListener('click', function(){
@@ -1698,6 +1803,30 @@ class addEventListner{
 				addEventListner.prototype.addEventSimpleSelectPartyMember()
 			}
 		})
+	}
+	addEventBuyButton(){
+		var buttons = document.getElementsByClassName('BuyButton')
+		for(let i = 0 ; i < buttons.length; i++){
+		buttons[i].addEventListener('click',function(){
+			new ShopInter('Buy');
+		})
+	}
+	}
+	addEventSellButton(){
+		var buttons = document.getElementsByClassName('SellButton')
+		for(let i = 0 ; i < buttons.length; i++){
+		buttons[i].addEventListener('click',function(){
+			new ShopInter('Sell');
+		})
+	}
+	}
+	addEventShopClearButton(){
+		var buttons = document.getElementsByClassName('ClearButton')
+		for(let i = 0 ; i < buttons.length; i++){
+		buttons[i].addEventListener('click',function(){
+			ShopInter.prototype.unChecked();
+		})
+	}
 	}
 }
 class Text{
@@ -1862,46 +1991,309 @@ class AddLog{
 
 class Shop{
 	constructor(type){
-		this.standBoard = document.getElementsByClassName("Stand")[0];
-		this.standBoard.innerHTML = "";
-		this.createSellData();
+		
+		this.boardClear()
+		this.selectBoard(type)
+		switch(type){
+			case 'Buy' :
+			this.createBuyData();
+			addEventListner.prototype.addEventBuyButton();
+			break;
+			case 'Sell':
+			this.createSellData();
+			addEventListner.prototype.addEventSellButton();
+			break;
+		}
+		addEventListner.prototype.addEventShopClearButton();
+		
 	}
-	createSellData(){
+	boardClear(){
+		document.getElementsByName("Buy")[0].innerHTML = "";
+		document.getElementsByName("Sell")[0].innerHTML = "";
+	}
+	selectBoard(type){
+		this.standBoard = document.getElementsByName(type)[0];
+	}
+	createBuyButton(){
+		var div = document.createElement('div');
+		div.className = 'BuyButton Button'
+		div.innerText = 'Buy Apply'
+		return div
+	}
+	createSellButton(){
+		var div = document.createElement('div');
+		div.className = 'SellButton Button'
+		div.innerText = 'Sell Apply'
+		return div
+	}
+	createClearButton(){
+		var div = document.createElement('div');
+		div.className = 'ClearButton Button'
+		div.innerText = 'Reset'
+		return div
+	}
+	createBuyData(){
+		
 		const itemList = Object.getOwnPropertyNames(dataItem);
 		const length = itemList.length;
+
+		let fButtonGroup = new CreateTag('div');
+		fButtonGroup.style.display ="flex";
+		fButtonGroup.style.borderBottom = "1px solid black"
+		let fisrtButton = this.createBuyButton();
+		fisrtButton.style.width = "50%";
+		let fClearButton = this.createClearButton();
+		fClearButton.style.width = "50%";
+		fButtonGroup.appendChild(fisrtButton);
+		fButtonGroup.appendChild(fClearButton);
+		this.standBoard.appendChild(fButtonGroup)
 		for(let i =0 ; i < length ; i++){
 			let div = new CreateTag("div");
 			let checkBox = CreateViewHTML.prototype.createViewCheckBox(itemList[i],"ItemData",itemList[i],"Item");
-
+			
 			div.appendChild(checkBox);
 			div.className="ItemData"
 			let label = new CreateTag("label");
 			label.setAttribute("for", checkBox.id);
 			label.className = "ItemData DataLabel"
+			let formCheck = new CreateTag("div");
+
 			let checkDiv = new CreateTag("div");
 			checkDiv.className = "ItemSelecter";
-			label.appendChild(checkDiv)
+			
+			formCheck.style.width = "5%";
+			formCheck.appendChild(checkDiv)
+			label.appendChild(formCheck)
+
 			let funds = dataItem[itemList[i]].funds;
 			if(!funds){
-				funds = 0
+				funds = 10
 			}
 			let fundiv = new CreateTag("div")
+			fundiv.style.width = "10%";
 			let fundData = new Text("$" + funds).p;
 			fundiv.appendChild(fundData);
 			label.appendChild(fundiv);
+			let numberDiv = new CreateTag("div");
+			numberDiv.style.width = "15%";
 			let numberBox = document.createElement("input");
 			numberBox.setAttribute("type", "number");
 			numberBox.id = "Count" + itemList[i];
-			numberBox.style.width = "5%";
-			label.appendChild(numberBox);
+			numberBox.value = 0;
+			numberBox.style.width = "100%";
+			
+			numberDiv.appendChild(numberBox);
+			label.appendChild(numberDiv);
 			let inputLabel = new CreateDataView('ShopBuy',0,0,itemList[i]).div
+			inputLabel.style.width = "65%";
 			label.appendChild(inputLabel)
 			div.appendChild(label);
 			this.standBoard.appendChild(div);
 		}
+
+		let sfButtonGroup = new CreateTag('div');
+		sfButtonGroup.style.display ="flex";
+		let secondButton = this.createBuyButton();
+		secondButton.style.width = "50%";
+		let sClearButton = this.createClearButton();
+		sClearButton.style.width = "50%";
+		sfButtonGroup.appendChild(secondButton);
+		sfButtonGroup.appendChild(sClearButton);
+		this.standBoard.appendChild(sfButtonGroup)
+	}
+	createSellData(){
+		const sort = Object.getOwnPropertyNames(inventoryData);
+		const sLength = sort.length;
+		let fButtonGroup = new CreateTag('div');
+		fButtonGroup.style.display ="flex";
+		fButtonGroup.style.borderBottom = "1px solid black"
+		let fisrtButton = this.createSellButton();
+		fisrtButton.style.width = "50%";
+		let fClearButton = this.createClearButton();
+		fClearButton.style.width = "50%";
+		fButtonGroup.appendChild(fisrtButton);
+		fButtonGroup.appendChild(fClearButton);
+		this.standBoard.appendChild(fButtonGroup)
+		for(let j = 0 ; j < sLength ; j++){
+			const nList = inventoryData[sort[j]]
+		const itemList = Object.getOwnPropertyNames(nList);
+		const length = itemList.length;
+
+		for(let i =0 ; i < length ; i++){
+			let div = new CreateTag("div");
+			let checkBox = CreateViewHTML.prototype.createViewCheckBox(itemList[i],"ItemData",itemList[i],"Item");
+			
+			div.appendChild(checkBox);
+			div.className="ItemData"
+			let label = new CreateTag("label");
+			label.setAttribute("for", checkBox.id);
+			label.className = "ItemData DataLabel"
+			let formCheck = new CreateTag("div");
+
+			let checkDiv = new CreateTag("div");
+			checkDiv.className = "ItemSelecter";
+			
+			formCheck.style.width = "5%";
+			formCheck.appendChild(checkDiv)
+			label.appendChild(formCheck)
+
+			let funds = dataItem[itemList[i]].funds/2;
+			if(!funds){
+				funds = 5
+			}
+			let fundiv = new CreateTag("div")
+			fundiv.style.width = "10%";
+			let fundData = new Text("$" + funds).p;
+			fundiv.appendChild(fundData);
+			label.appendChild(fundiv);
+			let numberDiv = new CreateTag("div");
+			numberDiv.style.width = "15%";
+			let numberBox = document.createElement("input");
+			numberBox.setAttribute("type", "number");
+			numberBox.id = "Count" + itemList[i];
+			numberBox.value = 0;
+			numberBox.style.width = "100%";
+			
+			numberDiv.appendChild(numberBox);
+			label.appendChild(numberDiv);
+			let inputLabel = new CreateDataView('ShopSell',0,nList[itemList[i]]).div
+			inputLabel.style.width = "65%";
+			label.appendChild(inputLabel)
+			div.appendChild(label);
+			this.standBoard.appendChild(div);
+		}
+		}
+
+		let sfButtonGroup = new CreateTag('div');
+		sfButtonGroup.style.display ="flex";
+		let secondButton = this.createSellButton();
+		secondButton.style.width = "50%";
+		let sClearButton = this.createClearButton();
+		sClearButton.style.width = "50%";
+		sfButtonGroup.appendChild(secondButton);
+		sfButtonGroup.appendChild(sClearButton);
+		this.standBoard.appendChild(sfButtonGroup)
 	}
 }
-
+class ShopInter{
+	constructor(type){
+		this.checkedItemSearch();
+		this.checkedPrice();
+		let check = this.checkDatas(type);
+		if(check){
+			switch(type){
+				case 'Buy':
+				check = this.checkFunds();
+				if(check){
+					this.buyItems();
+				}
+				break;
+				case 'Sell' :
+				check = this.checkItem();
+				if(check){
+					this.sellItems();
+					this.getFunds();
+				}
+				break;
+			}
+		}
+	}
+	checkedItemSearch(){
+		const check = document.getElementsByName("ItemData")
+		const length = check.length;
+		this.data = {}
+		for(let i =0 ; i < length ; i++){
+			if(check[i].checked){
+				let value = parseInt(document.getElementById("Count"+check[i].id).value)
+				if(value == NaN)
+				{
+					value = 0;
+				}
+				this.data[check[i].id] =value;
+			}
+		}
+		this.codeData = Object.getOwnPropertyNames(this.data);
+	}
+	checkedPrice(){
+		let priceData = 0;
+		let length = this.codeData.length;
+		for(let i =0 ; i <length ; i++){
+			let price = dataItem[this.codeData[i]].price
+			if(!price){
+				price = 10;
+			}
+			priceData += price * this.data[this.codeData[i]];
+		}
+		this.price =  priceData;
+	}
+	checkDatas(type){
+		const length = this.codeData.length;
+		for(let i = 0 ; i < length ; i++){
+				if(this.data[this.codeData[i]] < 0){
+					return false;
+			}
+		}
+		return true;
+	}
+	checkFunds(){
+		if(this.price < playerTeam.funds){
+			playerTeam.funds -= this.price;
+			Team.prototype.refreshTeamData('funds')
+			return true;
+		}
+		
+		return false;
+	}
+	buyItems(){
+		let length = this.codeData.length;
+		for(let i =0 ; i < length ; i++){
+			const count = this.data[this.codeData[i]];
+			for(let j = 0;  j < count ; j++){
+				new Item(this.codeData[i]);
+			}
+		}
+	}
+	unChecked(){
+		const check = document.getElementsByName("ItemData")
+		const length = check.length;
+		this.buyData = {}
+		for(let i =0 ; i < length ; i++){
+			if(check[i].checked){
+				check[i].checked = false;
+			}
+		}
+	}
+	checkItem(){
+		let length = this.codeData.length;
+		for(let i = 0 ; i < length; i++){
+			const iData = dataItem[this.codeData[i]];
+			const count = inventoryData[iData.category][this.codeData[i]].number;
+			if(this.data[this.codeData[i]] < 0|| this.data[this.codeData[i]] > count){
+				return false;
+			}
+		}
+		return true;
+		
+	}
+	sellItems(){
+		let length = this.codeData.length;
+		for(let i = 0 ; i < length; i++){
+			const iData = dataItem[this.codeData[i]];
+			const count = inventoryData[iData.category][this.codeData[i]].number;
+			if(this.data[this.codeData[i]] <= count){
+				inventoryData[iData.category][this.codeData[i]].number -= this.data[this.codeData[i]]
+				if(inventoryData[iData.category][this.codeData[i]].number == 0){
+					delete inventoryData[iData.category][this.codeData[i]]
+				}
+			}
+		}
+	}
+	getFunds(){
+		playerTeam.funds += Math.floor(this.price / 2);
+		Team.prototype.refreshTeamData('funds')
+		new Shop('Sell');
+	}
+}
 class SkillButtonView{
 	constructor(number){
 		this.performer = dataActiveCharacter[number]
