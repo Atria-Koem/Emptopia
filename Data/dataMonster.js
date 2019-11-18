@@ -573,4 +573,292 @@
 		parttern: [['DE10000',1,'KA300099'],['NM00110',70,'KA300001'],['NM00110',50,'KA300000'],['NM00210',49,'KA200001'],['OT00000',0,'KA100000']]
 
 	    },
+	 	M20000004: {
+
+
+
+		name: 'Kobold Hunter',
+
+
+
+	      health:{
+
+
+
+		hp : 7, sp: 12, mp : 12
+
+
+
+	      },
+
+
+
+				state: {
+
+
+
+					str: 7,				int: 7,				dex: 12,				dis : 7,				spd: 7,
+
+
+
+		vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
+
+
+
+		},
+
+
+
+				colorType : 'hsv',
+
+
+
+				color : {
+
+
+
+		  hue  : 50, saturation : 80 , value  : 50
+
+
+
+		},
+
+
+
+				coordinates : 0,
+
+
+
+				protectType : ['None',0],
+
+
+
+			exp: {
+
+
+
+				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
+
+
+
+				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
+
+
+
+			},
+
+
+
+			funds : 10,
+
+
+
+		job: 'J40000000',
+
+
+
+		tribe: 'T04',
+
+
+
+		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+
+
+
+		parttern: [['NH00000',7,'KA400000'],['NH00200',4,'KA400001'],['MS00200',6,'KA330002'],['NH00000',2,'KA404001'],['OT00000',0,'KA100000']]
+
+
+	    },
+	M20000005: {
+
+
+
+		name: 'Kobold Rogue',
+
+
+
+	      health:{
+
+
+
+		hp : 10, sp: 15, mp : 12
+
+
+
+	      },
+
+
+
+				state: {
+
+
+
+					str: 7,				int: 7,				dex: 15,				dis : 7,				spd: 7,
+
+
+
+		vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
+
+
+
+		},
+
+
+
+				colorType : 'hsv',
+
+
+
+				color : {
+
+
+
+		  hue  : 50, saturation : 80 , value  : 50
+
+
+
+		},
+
+
+
+				coordinates : 0,
+
+
+
+				protectType : ['None',0],
+
+
+
+			exp: {
+
+
+
+				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
+
+
+
+				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
+
+
+
+			},
+
+
+
+			funds : 10,
+
+
+
+		job: 'J41000000',
+
+
+
+		tribe: 'T04',
+
+
+
+		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+
+
+
+		parttern: [['NH00000',10,'KA401000'],['NH00200',7,'KA400001'],['MS00200',6,'KA330002'],['NH00000',4,'KA400000'],['OT00000',0,'KA100000']]
+
+
+	    },
+	M20000006: {
+
+
+
+		name: 'Kobold Wizard',
+
+
+
+	      health:{
+
+
+
+		hp : 5, sp: 10, mp : 28
+
+
+
+	      },
+
+
+
+				state: {
+
+
+
+					str: 7,				int: 17,				dex: 7,				dis : 7,				spd: 7,
+
+
+
+		vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
+
+
+
+		},
+
+
+
+				colorType : 'hsv',
+
+
+
+				color : {
+
+
+
+		  hue  : 50, saturation : 80 , value  : 50
+
+
+
+		},
+
+
+
+				coordinates : 0,
+
+
+
+				protectType : ['None',0],
+
+
+
+			exp: {
+
+
+
+				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
+
+
+
+				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
+
+
+
+			},
+
+
+
+			funds : 10,
+
+
+
+		job: 'J22000000',
+
+
+
+		tribe: 'T04',
+
+
+
+		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+
+
+
+		parttern: [['MM00000',28,'KA210002'],['MM00200',24,'KA210001'],['NM00200',14,'KA200002'],['NM00210',20,'KA200001'],['OT00000',0,'KA100000']]
+
+
+	    },
 }
