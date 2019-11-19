@@ -6,7 +6,7 @@ item = 악세
 
 특수템 99 
 
-총 count 추가 (탄알 수)
+총, 활, 탄창,화살통 count(전투 시작시 장전되있는 탄알) , max count(최대 탄알) 추가 (탄알 수)
 
 카테고리만 기타 사용품 9/other 
 
@@ -115,6 +115,8 @@ world 이고
 
 
 스킬 0번 공통
+
+스킬 제작시 투사체 count 추가
 
 스킬계수 확인 Battle( addeffect, skillvalue switch 확인)
 
