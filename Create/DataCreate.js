@@ -95,7 +95,6 @@ class CreateItemData extends CreateData{
     this.getOption();
     this.getExp();
         this.getSrc();
-      this.getPrice();
     this.codePrint();
     }
 
@@ -192,7 +191,7 @@ codePrint(){
         txt += "\t }, \n"
 
 }
-    txt+="\t  price: '"  + this.price + "', \n"
+    txt+="\t  price: "  + this.price + ", \n"
     txt+="\t  src : '"  + this.src + "', \n"
     txt += "\t  exp : '" + this.exp + "', \n"
     txt = txt + "},";
