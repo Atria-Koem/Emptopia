@@ -364,7 +364,7 @@ class CreateMap extends Area{
 			for(var j = i + 1 ; j < roomStackLength; j++){
 				var checkPash = Math.random()*(0.45+countRoomPash *0.01)+countPash/100 ;
 				if(checkPash < 1){
-				createRoomPash(roomStack[i],roomStack[j]);
+				this.createRoomPash(roomStack[i],roomStack[j]);
 					countPash += 1
 					countRoomPash +=1
 				}
