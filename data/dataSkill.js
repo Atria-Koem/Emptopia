@@ -668,15 +668,15 @@ const dataSkill = {
 
 	    target : ['enemy','all'],
 
-	    cost : {mp : 110},
+	    cost : {mp : 110, pMp : 40},
 
-	    delay : {first : 100,last : 300},
+	    delay : {first : 600,last : 300},
 
 	    delayType : 'Casting',
 
 	    skillType : 'Combat', 
 
-	    power : { base : { type : 'Magical', value : 150 }},
+	    power : { base : { type : 'Magical', value : 85 }},
 
 	    hitCount : 5,
 
