@@ -223,7 +223,7 @@ const  dataTribe = {
 		  exp : '인격체로 대하기보다는 하나의 물건으로 대하는 것이 정신건강에 이롭다.' 
 	},
 	T050 : { 
-	  code : '050', 
+	  code : 'T050', 
 	  name : 'Half-Man(Tree)', 
 	 state : {
  		str : 100, 	vit : 110, 	int : 100, 	wis : 100, 	dex : 100, 	
@@ -236,7 +236,7 @@ const  dataTribe = {
 	  exp : '나무처럼 보이지만 인간과 별로 다를 것이 없다. 1. 자연동화 - 회피율 5% 상승 2. 껍질피부 - 화상, 빙결의 상태이상을 입었을 때 10% 확률로 상태이상에서 회복 3. 성장 - 행동없이 턴 종료시 방어력 1% 상승' 
 	},
 	T090 : { 
-		  code : '090', 
+		  code : 'T090', 
 		  name : 'Regressor', 
 		 state : {
 			str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 100, 	
