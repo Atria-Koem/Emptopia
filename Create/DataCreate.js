@@ -95,6 +95,7 @@ class CreateItemData extends CreateData{
     this.getOption();
     this.getExp();
         this.getSrc();
+      this.getPrice();
     this.codePrint();
     }
 
@@ -114,9 +115,12 @@ getHealth(){
         for(let j = 0 ; j < type.length ; j++){
             if(document.getElementById(sumType[i] + type[j]).value != ""){
                 if( i == 1){
-                    dataTxt +="p"
+                    dataTxt += "p" + type[j]
                 }
-                dataTxt += type[j] + " : " + document.getElementById(sumType[i] + type[j]).value + ","
+                else {
+                    dataTxt += type[j].slice(0, 1).toLowerCase() + "p"
+                }
+                dataTxt +=   " : " + document.getElementById(sumType[i] + type[j]).value + ","
                 count ++;
                 this.check = 1;
             }
@@ -191,7 +195,7 @@ codePrint(){
         txt += "\t }, \n"
 
 }
-    txt+="\t  price: "  + this.price + ", \n"
+    txt+="\t  price: '"  + this.price + "', \n"
     txt+="\t  src : '"  + this.src + "', \n"
     txt += "\t  exp : '" + this.exp + "', \n"
     txt = txt + "},";
