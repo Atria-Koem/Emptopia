@@ -35,6 +35,7 @@ const dataItem = {
 				atkPhy: 10
 			}
 		},
+		price: 128, 
 		src : 'Image\\we_sword038.png',
 		exp : '기본적인 검. 품질은 좋지 않다.' 
 	},
@@ -48,6 +49,7 @@ const dataItem = {
 				defPhyPer: 3, defPhyNum: 10
 			}
 		},
+		price: 152, 
 		src : 'Image\\shield_002o.png',  
 		exp : '나무로 만들어진 조잡한 방패로 별로 몸을 지켜줄 것 같지는 않다.' 
 	},
@@ -61,6 +63,7 @@ const dataItem = {
 				defPhyPer: 1, defPhyNum: 1
 			}
 		},
+		price: 110, 
 		src : 'Image\\helm_014.png',
 		exp : '나무로 만들어진 조잡한 헬멧.' 
 	},
@@ -74,6 +77,7 @@ const dataItem = {
 				defPhyPer: 8, defPhyNum: 4
 			}
 		},
+		price: 328, 
 		src : 'Image\\armor_004.png',
 		exp : '나무로 만들어진 조잡한 갑옷. 큰 충격을 받으면 부서진다.' 
 	},
@@ -90,6 +94,7 @@ const dataItem = {
 				count : 10, maxCount : 10
 			}
 		},
+		price: 98, 
 		src : 'Image\\we_bow017.png', 
 		exp : '조잡하게 만들어진 활.' 
 	},
@@ -103,6 +108,7 @@ const dataItem = {
 				atkPhy: 8
 			}
 		},
+		price: 57, 
 		src : 'Image\\we_sword001.png',
 		exp : '절삭력이 거의 없는 단검.' 
 	},
@@ -117,6 +123,7 @@ const dataItem = {
 				defMagPer: 1, defMagNum: 2
 			}
 		},
+		price: 528, 
 		src : 'Image\\book_002c.png',
 		exp : '알수 없는 문자가 가득 쓰여진 책.' 
 	},
@@ -133,7 +140,7 @@ const dataItem = {
 				count : 30, maxCount : 50
 			}
 		},
-		
+		price: 66, 
 		exp : '30개의 화살이 들어가는 화살 통.' 
 	},
 	IT0000008 : { 
@@ -154,6 +161,7 @@ const dataItem = {
  				resPhyPer : 3, 	resMagPer : 3
 			}, 
 		},
+		price: 721, 
 		src : 'Image\\helm_001.png',
 	  	exp : '그저 뼈로 이루어진 투구. 여러군데 금이 가 있다.', 
 		},
@@ -176,7 +184,11 @@ const dataItem = {
  				rateDodge : 3, 	rateCrt : 30, 	valCrt : 130, 	rateHitJust : 60, 	atkRapid : 5, 	
  				rateCrtLuk : 12, 	rateDodgeLuk : 3
 			}, 
+			add : {
+				count : 20, maxCount : 20
+			}
 		},
+		price: 528, 
 		src : 'Image\\we_gun011.png',
 	  	exp : '탑에서 발견된 무기.', 
 	},
@@ -194,6 +206,7 @@ const dataItem = {
 			rateCrt : 20, 	valCrt : 150,
 			 }, 
 		 },
+		 price: 728, 
 		 src : 'Image\\we_sword036.png',
 	 	exp : '이 아이템은 초록색이다.', 
 	},
@@ -211,6 +224,7 @@ const dataItem = {
  			dis : 7, 	res : 7, 	spd : 7, 	luk : 7
 		}, 
 		 },
+		 price: 2728, 
 	  	exp : '유령이 가지고 있던 허리띠지만 저주에 걸리거나 하는 일은 아직까지는 없었다.', 
 	},
 	IT0000012 : { 
@@ -232,6 +246,7 @@ const dataItem = {
  			rateDodge : 2, 	rateRes : 3, 	rateDodgeLuk : 2
 		}, 
 		},
+		price: 14728, 
 	  	exp : '전기를 내뿜는 개처럼 생긴 짐승의 가죽으로 만들어졌다.', 
 	},
 	IT9000001 : { 
@@ -239,6 +254,7 @@ const dataItem = {
 	 	name : '비단붕대', 
 	 	category : 'Other', 
 	 	type : 'Item', 
+		price: 162, 
 	  	exp : '비단 붕대는 감으면 체력을 회복시켜 주는 마법 물품이다. 파티의 비밀무기로 활용될 수 있다. 총 체력의 30%를 회복시켜 준다.', 
 	},
 	IT0000014 : { 
@@ -256,6 +272,7 @@ const dataItem = {
  			rateHitJust : 40
 		}, 
 		},
+		price: 1733, 
 	 	exp : '이것은 버드나무로 제작된 몽둥이가 분명하지만 알수 없는 이유로 절삭력을 가지고 있다.', 
 		},
 	IT9000002 : { 
@@ -271,6 +288,7 @@ const dataItem = {
  			atkPhy : 15, 	atkMag : 15, 	atkPhyTrue : 10, 	atkMagTrue : 10, 
 		}, 
 		},
+		price: 2226, 
 		exp : '소지하고 있으면 파티의 공격력을 비롯한 능력을 증가시켜 준다.', 
 	},
 	IT9000003 : { 
@@ -278,6 +296,7 @@ const dataItem = {
 	 	name : 'Peacemaker', 
 		category : 'Other', 
 	 	type : 'Item', 
+		price: 711, 
 	 	exp : '우리의 소원은 평화. 모든 것의 체력을 전부 회복시켜준다.', 
 	},
 	IT0000017 : { 
@@ -294,6 +313,7 @@ const dataItem = {
  			rateHitJust : 60, 	atkRapid : 3
 	 	}, 
 		},
+		price: 3727, 
 	 	exp : '원숭이들의 주술이 가미된 초록색 아이템.', 
 		
 	},
@@ -314,6 +334,7 @@ const dataItem = {
  			defMagNum : 5, 	resMagPer : 10, 	resMagNum : 5, 	rateRes : 10, 	ratePFD : 15
 	 	}, 
 		},
+		price: 4121, 
 	 	exp : '태양만세.', 
 		
 	},
@@ -336,6 +357,7 @@ const dataItem = {
  			ratePFD : 20
 		}, 
 		},
+		price: 1612, 
 		exp : '날개 문양이 세겨진 갑옷.', 
 	},
 	IT0000020 : { 
@@ -352,6 +374,7 @@ const dataItem = {
  		rateHitJust : 50, 	atkRapid : 1, 	rateCrtLuk : 20
 		}, 
 		},
+		price: 4724, 
 		exp : '전기 톱은 예로부터 널리 알려진 좋은 대화 수단이다.', 
 	},
 	IT1000001 : { 
@@ -367,7 +390,11 @@ const dataItem = {
  			atkPhy : 55, 	atkPhyTrue : 21, 	rateHit : 95, 	rateCrt : 20, 	valCrt : 150, 	
  			rateHitJust : 60, 	atkRapid : 2, 	rateCrtLuk : 20
 	 	}, 
+			add : {
+				count : 5, maxCount : 5
+			}
 		},
+		price: 3228, 
 	 	exp : '누군가에게 복수할 기회를 노리고 있는 원혼이 들어가 있다. 염원과 한 세트를 이룬다. 파티 내에 각각의 사용자 존재시 명중률을 5% 증가시켜준다', 
 	},
 	IT1000002 : { 
@@ -383,7 +410,11 @@ const dataItem = {
  			atkPhy : 60, 	atkPhyTrue : 22, 	rateHit : 95, 	rateCrt : 20, 	valCrt : 130, 	
  			rateHitJust : 60, 	atkRapid : 2, 	rateCrtLuk : 20
 		}, 
+			add : {
+				count : 7, maxCount : 7
+			}
 		},
+		price: 5733, 
 		exp : '누군가에게 복수할 기회를 노리고 있는 원혼이 들어가 있다. 보복과 한 세트를 이룬다. 파티 내에 각각의 사용자 존재시 명중률을 5% 증가시켜준다',
 	},
 	IT9000004 : { 
@@ -391,6 +422,7 @@ const dataItem = {
 	 	name : '공격 타입 변경(M)', 
 	 	category : 'Other', 
 	 	type : 'Item', 
+		price: 255, 
 	 	exp : '노말 타입 데미지를 마법 데미지로 변경시켜 준다.', 
 	},
 	IT9000005 : { 
@@ -398,6 +430,7 @@ const dataItem = {
 	 	name : '공격 타입 변경(N)', 
 	 	category : 'Other', 
 	 	type : 'Item', 
+		price: 255, 
 	 	exp : '마법 데미지를 노말 타입 데미지로 변경시켜 준다.', 
 	},
 	IT0000025 : { 
@@ -414,6 +447,7 @@ const dataItem = {
  			valCrt : 300, 	rateHitJust : 30, 	atkRapid : 2
 		}, 
 		},
+		price: 1181, 
 		exp : '이 채찍은 날카로운 가시로 뒤덥혀 있다. 일정 적중당한 적을 확률로 출혈 상태로 만든다.', 
 	},
 	IT0000026 : { 
@@ -430,6 +464,7 @@ const dataItem = {
  			valCrt : 140, 	rateHitJust : 60, 	atkRapid : 1
 		}, 
 		},
+		price: 6529, 
 		exp : '강력한 독이 깃든 검. 자신도 적도 상태이상에 취약해진다. 30% 확률로 상대방 혹은 자신에게 중독을 부여한다.', 
 	},
 	IT0000027 : { 
@@ -446,6 +481,7 @@ const dataItem = {
  		rateCrt : 3, 	valCrt : 140, 	rateHitJust : 70, 	atkRapid : 3
 	}, 
 		},
+	price: 6252, 
 	  exp : '불의 힘이 담긴 창으로 15% 확률로 적에게 화상을 입힌다.', 
 	},
 	IT0000028 : { 
@@ -465,6 +501,7 @@ const dataItem = {
 			rateCrt : 2, 	valCrt : 120, 	rateHitJust : 70, 	atkRapid : 1.4
 		}, 
 		},
+		price: 8227, 
 		  exp : '강철 골렘의 심장을 담았다고 하는 짧은 창. 전투 당 한번씩 강철의 가호 시전을 가능하도록 해준다.', 
 	},
 	IT0000029 : { 
@@ -477,6 +514,7 @@ const dataItem = {
 			defPhyPer : 13, 	defPhyNum : 4, 	defMagPer : 10, 	defMagNum : 4
 		}, 
 		},
+		price: 480, 
 		  exp : '가볍게 팔을 감싸는 보호대. 부가적인 능력은 존재하지 않는다.', 
 	},
 	IT0000030 : { 
@@ -493,6 +531,7 @@ const dataItem = {
 			rateHitJust : 60, 	atkRapid : 2.5
 		}, 
 		},
+		price: 623, 
 		  exp : '두꺼운 가죽으로 만들어진 채찍', 
 	},
 	IT0000031 : { 
@@ -509,6 +548,7 @@ const dataItem = {
 			defMagNum : 18, 	resMagPer : 10, 	resMagNum : 5, 	rateRes : 5, 	ratePFD : 7
 		}, 
 		},
+		price: 724, 
 		  exp : '강철로 제작된 일반적인 방패.', 
 	},
 	IT0000032 : { 
@@ -529,6 +569,7 @@ const dataItem = {
 			defMagPer : 71, 	defMagNum : 24, 	resMagPer : 20, 	resMagNum : 5, 	rateRes : 6
 		}, 
 		},
+		price: 1124, 
 		  exp : '많은 마법사의 죽음과 함께 했고 마법사의 죽음을 기다리는 투구, 마법사로써의 능력을 향상시켜준다.', 
 	},
 	IT0000033 : { 
@@ -548,6 +589,7 @@ const dataItem = {
 			defPhyPer : 21, 	defPhyNum : 6, 	defMagPer : 33, 	defMagNum : 11, 	rateDodge : 4
 		}, 
 		},
+		price: 449, 
 		  exp : '마나 회복력이 상승하는 것만 같은 로브.', 
 	},
 	IT0000034 : { 
@@ -563,7 +605,11 @@ const dataItem = {
 			atkPhy : 317, 	atkPhyTrue : 112, 	rateHit : 82, 	rateCrt : 7, 	valCrt : 220, 	
 			rateHitJust : 70, 	atkRapid : 3
 		}, 
+			add : {
+				count : 12, maxCount : 12
+			}
 		},
+		price: 14449,
 		  exp : '전설적인 해적 구드루가 썼다고 전해지는 총이지만 사실 여부는 확인 할 수 없다.', 
 	},
 	IT0000035 : { 
@@ -579,7 +625,11 @@ const dataItem = {
 			atkPhy : 144, 	atkPhyTrue : 59, 	rateHit : 88, 	rateDis : 6, 	rateCrt : 8, 	
 			valCrt : 130, 	rateHitJust : 62, 	atkRapid : 3
 		}, 
+			add : {
+				count : 15, maxCount : 15
+			}
 		},
+		price: 24449,
 		  exp : '12% 확률로 중독 상태를 발생시키는 총알을 발사하는 총. 맞은 상대가 중독되는 이유는 알 수 없다.', 
 	},
 	IT0000036 : { 
@@ -594,7 +644,11 @@ const dataItem = {
 		 option : {
 			atkPhy : 400, 	atkPhyTrue : 1, 	rateHit : 100, 	rateHitJust : 100, 	atkRapid : 8
 		}, 
+			add : {
+				count : 3, maxCount : 3
+			}
 		},
+		price: 11244,
 		  exp : '넓은 범위의 산탄을 발사 하는 권총. 살살 맞으면 아프지 않은 탄을 발사하는 것으로 유명하다.', 
 	},
 	IT0000037 : { 
@@ -608,6 +662,7 @@ const dataItem = {
 			atkRapid : 1.8
 		},
 		},
+		price: 6447,
 		  exp : '톱날 같은 칼날은 살점을 뜯어낸다. 일정 확률로 출혈 상태를 발생시킨다.', 
 	},
 	IT0000038 : { 
@@ -624,6 +679,7 @@ const dataItem = {
 			atkPhy : 11, 	atkPhyTrue : 6, 	rateCrt : 30, 	valCrt : 120, 	atkRapid : 1.4
 		} 
 		},
+		price: 1212,
 		  exp : '태양 빛을 담아 재련한 단검. 착용자의 능력치를 상승시킨다.', 
 	},
 	IT0000039 : { 
@@ -639,6 +695,7 @@ const dataItem = {
 			atkPhy : 320, 	atkPhyTrue : 165, 	rateCrt : 4, 	valCrt : 320, 	atkRapid : 3.8
 		}, 
 		},
+		price: 54220,
 		  exp : '깊은 바다에서 건져올린 물고기. ', 
 	},
 	IT0000040 : { 
@@ -655,6 +712,7 @@ const dataItem = {
 			rateDis : 15, 	rateCrt : 7, 	valCrt : 138, 	atkRapid : 2.6
 		}, 
 		},
+		price: 4262,
 		  exp : '두가지 기운을 가지고 있는 검. 적중당한 적을 일정 확률로 화상이나 동상 상태로 만듬.', 
 	},
 	IT0000041 : { 
@@ -669,6 +727,7 @@ const dataItem = {
 			atkPhy : 52, 	atkPhyTrue : 24, 	rateHit : 72, 	rateHitJust : 68, 	atkRapid : 2.6,
 			rateCrt : 5, 	valCrt : 152,
 		}, 
+		price: 3322,
 		  exp : '평범한 벌목용 도끼로 마을 사람들에게 구매할 수 있다.', 
 	},
 	IT0000042 : { 
@@ -686,6 +745,7 @@ const dataItem = {
 			atkPhy : 167, 	atkMag : 25, 	atkPhyTrue : 88, 	atkMagTrue : 10, 	rateHit : 82, 	
 			rateHitJust : 67, 	atkRapid : 2.4,		rateCrt : 5, 	valCrt : 157
 		}, 
+		price: 18888,
 		  exp : '벌목을 하던 나무꾼은 황천까지 다녀왔다고 한다. 황천의 기운을 흡수한 도끼는 마법적 기운을 가지게 되었다. 도끼는 나무꾼에게 살 수 있다.', 
 	},
 	IT0000043 : { 
@@ -705,6 +765,7 @@ const dataItem = {
 			rateRes : 4, 	rateCrt : 3, 	valCrt : 167, 	rateHitJust : 87, 	atkRapid : 3.7
 		}, 
 		},
+		price: 6225,
 		  exp : '거대한 돌격 도끼로 방어 성능이 우수 하다.', 
 	},
 	IT0000044 : { 
@@ -715,9 +776,10 @@ const dataItem = {
 		spec:{
 		 option : {
 			atkPhy : 33, 	atkPhyTrue : 11, 	rateHit : 88, 	rateCrt : 17, 	valCrt : 800, 	
-			rateHitJust : 76, 	atkRapid : 1.2
+			rateHitJust : 76, 	atkRapid : 8.2
 		}, 
 		},
+		price: 3372,
 		  exp : '탑에서 발견된 외계 문명의 무기. 가볍고 높은 절삭력을 가지고 있다.', 
 	},
 	IT0000045 : { 
@@ -731,6 +793,7 @@ const dataItem = {
 			atkRapid : 2.1
 		}, 
 		},
+		price: 14449,
 		  exp : '중독상태 일때 사용하면 공격력이 150% 상승한다.', 
 	},
 	IT1000003 : { 
@@ -748,6 +811,7 @@ const dataItem = {
  		atkPhy : 524, 	atkPhyTrue : 282, 	rateHit : 80, 	rateCrt : 5, 	valCrt : 140, 	
  		rateHitJust : 64, 	atkRapid : 3.6
 	}, 
+		price: 88411,
 	  exp : '두개의 날이 달린 창. 같은 창을 들고 있는 파티원이 있다면 들고 있는 인원 한명당 공격속도가 0.2 증가한다.', 
 	},
 	IT1000004 : { 
@@ -761,6 +825,7 @@ const dataItem = {
 		 option : {
 			defPhyPer : 42, 	defPhyNum : 12, 	defMagPer : 26, 	defMagNum : 10
 		}, 
+		price: 3221,
 		  exp : '지하고블린에게 쉽게 얻을 수 있는 머리장식. 지하고블린 머리장식, 지하고블린 천 갑옷, 지하고블린 천 팔보호대와 하나의 세트를 이루며 3가지의 장비를 모두 착용하였을 때 모든 방어력과 저항력이 10상승한다.', 
 	},
 	IT1000005 : { 
@@ -774,6 +839,7 @@ const dataItem = {
 		 option : {
 			defPhyPer : 64, 	defPhyNum : 12, 	defMagPer : 27, 	defMagNum : 8
 		}, 
+		price: 3311,
 		  exp : '지하고블린들이 두꺼운 천을 겹쳐 제작한 천 갑옷. 갑옷치고는 가볍지만 방어력이 높지는 않다. 지하고블린 머리장식, 지하고블린 천 갑옷, 지하고블린 천 팔보호대와 하나의 세트를 이루며 3가지의 장비를 모두 착용하였을 때 모든 방어력과 저항력이 10상승한다.', 
 	},
 	IT1000006 : { 
@@ -787,6 +853,7 @@ const dataItem = {
 		 option : {
 			defPhyPer : 22, 	defPhyNum : 6, 	defMagPer : 13, 	defMagNum : 4
 		}, 
+		price: 2440,
 		  exp : '지하고블린들 보편적으로 착용하고 있던 팔보호구. 지하고블린의 역한 침냄새가 난다. 지하고블린 머리장식, 지하고블린 천 갑옷, 지하고블린 천 팔보호대와 하나의 세트를 이루며 3가지의 장비를 모두 착용하였을 때 모든 방어력과 저항력이 10상승한다.', 
 	},
 	IT0000046 : { 
@@ -803,6 +870,7 @@ const dataItem = {
 		 option : {
 			atkPhy : 82, 	atkPhyTrue : 27, 	rateHit : 70,	rateCrt : 10, 	valCrt : 120, 	rateHitJust : 60, 	atkRapid : 2.9
 		}, 
+		price: 6688,
 		  exp : '탑안에 서식하는 거대한 칠면조의 다리뼈의 한쪽 끝을 날카롭게 깍아만든 창. 야수형 적을 상대할 때 추가로 30의 데미지를 준다.', 
 	},
 	IT0000047 : { 
@@ -820,6 +888,7 @@ const dataItem = {
 			atkPhy : 72, 	atkPhyTrue : 20, 	rateHit : 80, 	rateCrt : 10, 	valCrt : 200, 	
 			rateHitJust : 30, 	atkRapid : 2
 		}, 
+		price: 5557,
 		  exp : '탑안에 서식하는 거대한 칠면조의 힘줄로 만든 채찍. 야수형 적을 상대할 때 추가로 30의 데미지를 준다.', 
 	},
 	IT0000048 : { 
@@ -834,6 +903,7 @@ const dataItem = {
 			atkPhy : 670, 	atkPhyTrue : 360, 	rateHit : 80, 	rateCrt : 2, 	valCrt : 125, 	
 			rateHitJust : 57, 	atkRapid : 57
 		}, 
+		price: 124250,
 		  exp : '착용자의 공격을 빠르게 바꿔주는 창. 착용자는 공격시 전체 체력의 7%의 체력을 잃는다.', 
 	},
 	IT0000049 : { 
@@ -848,6 +918,7 @@ const dataItem = {
 			atkPhy : 89, 	atkPhyTrue : 34, 	rateHit : 95, 	rateCrt : 7, 	valCrt : 125, 	
 			rateHitJust : 70, 	atkRapid : 3.6
 		}, 
+		price: 1449,
 		  exp : '귀사의 제품은 정확한 규격과 높은 품질을 자랑합니다.', 
 	},
 	IT1000006 : { 
@@ -862,6 +933,7 @@ const dataItem = {
 			atkPhy : 890, 	atkPhyTrue : 340, 	rateHit : 88, 	rateCrt : 7, 	valCrt : 148, 	
 			rateHitJust : 70, 	atkRapid : 3.4
 		}, 
+		price: 92449,
 		  exp : '골렘을 부수는데 확실한 효과를 보여주는 둔기. 골렘괭이와 함께 사용한다면 낮은 확률로 골렘에게서 광석을 채취할 수 있다.', 
 	},
 	IT1000007 : { 
@@ -876,6 +948,7 @@ const dataItem = {
 			atkPhy : 427, 	atkPhyTrue : 121, 	rateHit : 88, 	rateCrt : 5, 	valCrt : 123, 	
 			rateHitJust : 70, 	atkRapid : 3.7
 		}, 
+		price: 44331,
 		  exp : '골렘을 부수는데 확실한 효과를 보여주는 곡괭이. 골렘파괴자와 함께 사용한다면 낮은 확률로 골렘에게서 광석을 채취할 수 있다.', 
 	},
 	IT0000050 : { 
@@ -893,6 +966,7 @@ const dataItem = {
 		 option : {
 			defPhyPer : 44, 	defPhyNum : 21, 	defMagPer : 30, 	defMagNum : 12
 		}, 
+		price: 1881,
 		  exp : '알 수 없는 글자가 쓰여져 있는 헬멧. 착용자는 알 수 없는 이유로 체력과 스테미너가 증가한다.', 
 	},
 	IT9000006 : { 
@@ -900,6 +974,7 @@ const dataItem = {
 		  name : '동굴탈출용로프', 
 		 category : 'Other', 
 		 type : 'Item', 
+		price: 248,
 		  exp : '동굴탈출용 로프를 사용하면 어떠한 상황에서도 탑 밖으로 돌아갈 수 있다. 하지만 60%의 확률로 사용에 성공한다.', 
 	},
 	IT9000007 : { 
@@ -907,6 +982,7 @@ const dataItem = {
 	  name : '물', 
 	 category : 'Other', 
 	 type : 'Item', 
+		price: 140,
 	  src : 'Image\\food_004.png', 
 	  exp : '깨끗한 정제수. hp, mp 리젠 20%', 
 	},
@@ -928,6 +1004,7 @@ const dataItem = {
 			rateHitJust : 70, 	atkRapid : 4
 			 }, 
 		 }, 
+		price: 7243,
 		  exp : '은으로 만든 삽이다. 언데드 몬스터에게 20% 추가 데미지를 준다.', 
 	},
 	IT0000052 : { 
@@ -947,6 +1024,7 @@ const dataItem = {
 			rateDis : 20, 	rateCrt : 4, 	valCrt : 227, 	rateHitJust : 73, 	atkRapid : 8
 			 }, 
 		 }, 
+		price: 16557,
 		  src : 'Image\\we_staff001b.png', 
 		  exp : '평범한 부지깽이다. 불속성 데미지를 준다. 불속성 공격을 할 경우 400%의 추가 데미지를 입힌다.', 
 	},
@@ -964,6 +1042,7 @@ const dataItem = {
 			rateHitJust : 42, 	atkRapid : 2
 			 }, 
 		 }, 
+		price: 1542,
 		  src : 'Image\\we_staff010c.png', 
 		  exp : '나무가지를 꺾어서 만든 조잡한 지팡이.', 
 	},
@@ -981,6 +1060,7 @@ const dataItem = {
 			rateHitJust : 50, 	atkRapid : 6
 			 }, 
 		 }, 
+		price: 9488,
 		  src : 'Image\\we_staff001.png', 
 		  exp : '열매가 달려있는 나무가지다. 착용자의 치유능력이 30%상승한다.', 
 	},
@@ -989,6 +1069,7 @@ const dataItem = {
 		  name : '파야열매', 
 		 category : 'Other', 
 		 type : 'Item', 
+		price: 172,
 		  src : 'Image\\food_035.png', 
 		  exp : '전투시 복용하면 전체 체력의 1/4을 회복하지만 방어력이 25% 하락한다.', 
 	},
@@ -997,6 +1078,7 @@ const dataItem = {
 		  name : '날달걀', 
 		 category : 'Other', 
 		 type : 'Item', 
+		price: 149,
 		  src : 'Image\\food_037.png', 
 		  exp : '전투시 복용하면 전체 체력의 1/8을 지속적으로 회복한다.', 
 	},
@@ -1005,6 +1087,7 @@ const dataItem = {
 		  name : '감자', 
 		 category : 'Other', 
 		 type : 'Item', 
+		price: 252,
 		  src : 'Image\\food_036.png', 
 		  exp : '전투시 복용하면 전체 체력의 1/4을 회복한다. 특정 층에서 아이템을 교환할 때 사용할 수 있다.', 
 	},
@@ -1022,6 +1105,7 @@ const dataItem = {
 	defPhyNum : 5,	defMagNum : 5
 			 }, 
 		 }, 
+		price: 654,
 		  src : 'Image\\helm_005.png', 
 		  exp : '초보 마법사들이 즐겨쓰는 모자다. 초보 마법사 로브와 함께 착용하면 마법 공격력과 방어력이 10% 상승한다.', 
 	},
@@ -1038,6 +1122,7 @@ const dataItem = {
 			defPhyPer : 31, 	defMagPer : 42, 	defPhyNum : 5,	defMagNum : 5
 			 }, 
 		 }, 
+		price: 788,
 		  src : 'Image\\armor_010b.png', 
 		  exp : '초보 마법사들이 즐겨입는 로브로 초보 마법사 모자와 함께 착용하면 마법 공격력과 방어력이 10% 상승한다.', 
 	},
@@ -1058,6 +1143,7 @@ const dataItem = {
 			atkMag : 265, 	atkMagTrue : 126, 	rateHit : 91, 	rateHitJust : 77, 	atkRapid : 6
 			 }, 
 		 }, 
+		price: 34777,
 		  src : 'Image\\we_staff020b.png', 
 		  exp : '보석을 통하여 마력을 증폭시켜주는 지팡이.', 
 	},
@@ -1072,6 +1158,7 @@ const dataItem = {
 			pHp : 2,pSp : 2,pMp : 2
 			 }, 
 		 }, 
+		price: 311,
 		  src : 'Image\\acce_010.png', 
 		  exp : '별다른 능력을 가지지 않은 장식품', 
 	},
@@ -1086,6 +1173,7 @@ const dataItem = {
 			pMp : 7
 			 }, 
 		 }, 
+		price: 8006,
 		  src : 'Image\\acce_003e.png', 
 		  exp : '탑에서 사망한 수도승의 눈. 착용자의 명중률을 12% 상승시킨다.', 
 	},
@@ -1099,6 +1187,7 @@ const dataItem = {
 			luk : 16
 			 }, 
 		 }, 
+		price: 444,
 		  src : 'Image\\acce_004.png', 
 		  exp : '행운을 올려주는 노란색 고무줄.', 
 	},
@@ -1120,6 +1209,7 @@ const dataItem = {
 			atkRapid : 3
 			 }, 
 		 }, 
+		price: 1227,
 		  src : 'Image\\book_002.png', 
 		  exp : '얼음 마법의 정수가 담긴 책. 시리즈로 출간되었고 기초 얼음마법 패키지가 들어있다. 빙결 확률이 25% 증가한다.', 
 	},
@@ -1141,6 +1231,7 @@ const dataItem = {
 			atkRapid : 2
 			 }, 
 		 }, 
+		price: 1227,
 		  src : 'Image\\book_002c.png', 
 		  exp : '화염 마법의 정수가 담긴 책. 시리즈로 출간된 것으로 알려져 있다. 기초 화염마법 패키지가 들어있다. 화상을 입을 확률이 25% 증가한다.', 
 	},
@@ -1161,6 +1252,7 @@ const dataItem = {
 			atkMag : 40, 	atkMagTrue : 7, 	rateHit : 82, 	rateHitJust : 69, 	atkRapid : 5
 			 }, 
 		 }, 
+		price: 1227,
 		  src : 'Image\\book_002b.png', 
 		  exp : '영웅 드루이드의 일대기가 담겨있는 책. <만년동안 응어리진 분노를... 222p>', 
 	},
@@ -1169,6 +1261,7 @@ const dataItem = {
 		  name : '기술머신', 
 		 category : 'Other', 
 		 type : 'Item', 
+		price: 6550,
 		  src : 'Image\\item_051.png', 
 		  exp : '익히고 있는 기술중 한가지를 선택하여 랜덤한 다른 기술로 변화시킨다.', 
 	},
@@ -1182,7 +1275,7 @@ const dataItem = {
  		rateHit : 20
 		 }, 
 	 }, 
-	  price: '', 
+	  price: 4556, 
 	  src : 'Image\\acce_015.png', 
 	  exp : '착용자의 명중률 30% 상승', 
 	},
@@ -1199,8 +1292,11 @@ const dataItem = {
 			atkPhy : 162, 	atkPhyTrue : 48, 	rateHit : 20, 	rateHitJust : 15,	rateCrt : 4, 	valCrt : 1440, 	
 			atkRapid : 7
 			 }, 
+			 add : {
+				count : 125, maxCount : 125
+			}
 		 }, 
-		  price: '4500', 
+		  price: 4500, 
 		  src : 'Image\\we_gun006.png', 
 		  exp : '빠른 공격속도를 가지지만 상대방을 맞추기는 쉽지 않다. 한번 공격시 2회 공격', 
 	},
@@ -1217,8 +1313,11 @@ const dataItem = {
 			atkPhy : 123, 	atkPhyTrue : 44, 	rateHit : 70, 	rateHitJust : 64,	rateCrt : 4, 	valCrt : 142, 	
 			atkRapid : 5
 			 }, 
+			 add : {
+				count : 15, maxCount : 15
+			}
 		 }, 
-		  price: '6320', 
+		  price: 6320, 
 		  src : 'Image\\we_gun005.png', 
 		  exp : '동료들의 치명타 확률을 20% 올려준다.', 
 	},
@@ -1235,8 +1334,11 @@ const dataItem = {
 			atkMag : 149, 	atkMagTrue : 66, 	rateHit : 80, 	rateCrt : 7, 	valCrt : 120, 	
 			rateHitJust : 66, 	atkRapid : 4
 			 }, 
+			 add : {
+				count : 10, maxCount : 10
+			}
 		 }, 
-		  price: '7746', 
+		  price: 7746, 
 		  src : 'Image\\we_gun002.png', 
 		  exp : '마법 피해를 입히는 탄환을 발사한다.', 
 	},
@@ -1253,8 +1355,11 @@ const dataItem = {
 			atkPhy : 159, 	atkPhyTrue : 61, 	rateHit : 94, 	rateCrt : 6, 	valCrt : 150, 	
 			rateHitJust : 71, 	atkRapid : 6
 			 }, 
+			 add : {
+				count : 12, maxCount : 12
+			}
 		 }, 
-		  price: '11472', 
+		  price: 11472, 
 		  src : 'Image\\we_gun003.png', 
 		  exp : '상대방에게 준 피해의 5% 만큼 자신의 체력을 회복한다.', 
 	},
@@ -1271,8 +1376,11 @@ const dataItem = {
 			atkPhy : 372, 	atkPhyTrue : 92, 	rateHit : 63, 	rateCrt : 5, 	valCrt : 177, 	
 			rateHitJust : 54, 	atkRapid : 4
 			 }, 
+			 add : {
+				count : 7, maxCount : 7
+			}
 		 }, 
-		  price: '41555', 
+		  price: 41555, 
 		  src : 'Image\\we_gun003.png', 
 		  exp : '더블 배럴 샷건. 한번에 두발의 탄환을 발사하는 총.', 
 	},
@@ -1281,7 +1389,7 @@ const dataItem = {
 		 name : 'Cake in mint', 
 		 category : 'Other', 
 		 type : 'Item', 
-		  price: '420', 
+		  price: 420, 
 		  src : 'Image\\food_006.png', 
 		  exp : '빵 안에는 역겨운 초록이 숨어있다. 파티원의 체력을 30% 회복한다.', 
 	},
@@ -1290,7 +1398,7 @@ const dataItem = {
 		 name : 'Coconut Water', 
 		 category : 'Other', 
 		 type : 'Item', 
-		  price: '620', 
+		  price: 620, 
 		  src : 'Image\\food_004.png', 
 		  exp : '이 세상의 맛이 아니다.45%의 MP를 회복하지만 구토를 유발한다.', 
 	},
@@ -1299,7 +1407,7 @@ const dataItem = {
 		 name : 'Big Meat', 
 		 category : 'Other', 
 		 type : 'Item', 
-		  price: '1304', 
+		  price: 1304, 
 		  src : 'Image\\food_020.png', 
 		  exp : '흔히 만화고기라 불리는 모양을 가지고 있는 이 음식은 HP와 MP를 40% ~ 60% 회복해준다.', 
 	},
@@ -1308,7 +1416,7 @@ const dataItem = {
 		 name : '국밥', 
 		 category : 'Other', 
 		 type : 'Item', 
-		  price: '502', 
+		  price: 502, 
 		  src : 'Image\\food_028.png', 
 		  exp : '그 가격이면 국밥을 먹는다. HP와 MP를 25% 회복시킨다.', 
 	},
@@ -1329,7 +1437,7 @@ const dataItem = {
 			defPhyPer : 54, 	resPhyPer : 12, 	defMagPer : 57, 	resMagPer : 16
 			 }, 
 		 }, 
-		  price: '50292', 
+		  price: 50292, 
 		  src : 'Image\\armor_027.png', 
 		  exp : '这件衣服使用的字母没有意义，但看起来不错。', 
 	},
@@ -1349,7 +1457,7 @@ const dataItem = {
 			defPhyPer : 42, 	resPhyPer : 7, 	defMagPer : 33, 	resMagPer : 5
 			 }, 
 		 }, 
-		  price: '30226', 
+		  price: 30226, 
 		  src : 'Image\\armor_024b.png', 
 		  exp : '물건을 훔칠 확률이 올라가는 특이한 옷.', 
 	},
@@ -1370,7 +1478,7 @@ const dataItem = {
 			defPhyPer : 60, 	resPhyPer : 20, 	defMagPer : 28, 	resMagPer : 6
 			 }, 
 		 }, 
-		  price: '44253', 
+		  price: 44253, 
 		  src : 'Image\\armor_029b.png', 
 		  exp : '알수없는 언어가 쓰여진 갑옷이지만 방어력만큼은 확실한 것으로 알려져 있다.', 
 	},
@@ -1391,7 +1499,7 @@ const dataItem = {
 			defPhyPer : 24, 	resPhyPer : 8, 	defMagPer : 12, 	resMagPer : 6
 			 }, 
 		 }, 
-		  price: '3220', 
+		  price: 3220, 
 		  src : 'Image\\armor_019b.png', 
 		  exp : '평범한 갑옷에 코볼트의 가죽을 덧댄 갑옷. 별다른 차이는 있지 않은 것으로 알려져 있다.', 
 	},
@@ -1411,7 +1519,7 @@ const dataItem = {
 			defPhyPer : 16, 	resPhyPer : 4, 	defMagPer : 18, 	resMagPer : 7
 			 }, 
 		 }, 
-		  price: '1402', 
+		  price: 1402, 
 		  src : 'Image\\armor_018.png', 
 		  exp : '마을 바닥에 떨어져 있던 것 치고는 상태가 괜찮아 보인다.', 
 	},
@@ -1431,7 +1539,7 @@ const dataItem = {
 			defPhyPer : 55, 	resPhyPer : 20, 	defMagPer : 55, 	resMagPer : 20
 			 }, 
 		 }, 
-		  price: '37728', 
+		  price: 37728, 
 		  src : 'Image\\armor_014.png', 
 		  exp : '착용자의 방어력과 마법방어력이 15% 상승한다.', 
 	},
@@ -1452,7 +1560,7 @@ const dataItem = {
 			defPhyPer : 34, 	resPhyPer : 11, 	defMagPer : 34, 	resMagPer : 11
 			 }, 
 		 }, 
-		  price: '5728', 
+		  price: 5728, 
 		  src : 'Image\\shield_001n.png', 
 		  exp : '알수 없는 바위 덩어리를 깎아 만든 방패', 
 	},
@@ -1462,6 +1570,7 @@ const dataItem = {
 	    category: 'Other',
 	    type: 'Navigate',
 	    useData: 'All',//지도의 경우 해방되는 아이템.
+		price: 100,
 	    src: 'Image\\MI_item.png',
 	    exp: '기본적인 지도. 지나간 길이 기록된다. 1회용 아이템'
 
