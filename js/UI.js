@@ -1842,6 +1842,12 @@ class addEventListner{
 			}
 			, 3000);
 	}
+	addEventBattleRunAway(){
+		document.getElementById("RunAwayButton").addEventListener('click',function(){
+			new BattleEnd("runAway")
+			document.getElementsByClassName('MenuTabs')[0].children[1].click()
+		})
+	}
 }
 class Text{
 	constructor(text,type){
@@ -2337,6 +2343,7 @@ class SkillButtonView{
 		this.clearBoard()
 		//favorite , action , item , far away
 		//action sort combat , support
+		this.createFarAwayData();
 		this.createTabData()
 		this.createTabData('Favorite')
 	}
@@ -2347,6 +2354,7 @@ class SkillButtonView{
 		this.board.appendChild(this.createPerformerData())
 		this.board.appendChild(this.createSelectTabs())
 		addEventListner.prototype.addEventTabs('MenuTabs Vertical SkillBoard')
+		
 	}
 	createPerformerData(){
 		let div = new CreateTag('div')
@@ -2365,7 +2373,7 @@ class SkillButtonView{
 		tabs.className = 'MenuTabs Vertical SkillBoard'
 		let containers = new CreateTag('div')
 		containers.className = 'MenuContainer Vertical SkillBoard'
-		const connectTab = ['Favorite','Action','Item','Far Away']
+		const connectTab = ['Favorite','Action','Item','FarAway']
 		for( let i = 0 ; i < 4 ; i ++){
 			let tab = new CreateTag('li')
 			let tabA = new CreateTag('a')
@@ -2391,6 +2399,19 @@ class SkillButtonView{
 		board.appendChild(tabs)
 		board.appendChild(containers)
 		return board
+	}
+	createFarAwayData(){
+		let container = document.getElementById('FarAwayMenu')
+		
+
+	
+		var apply = document.createElement('div');
+		apply.id="RunAwayButton"
+		apply.className = 'Button'
+		apply.innerText = 'RunAway'
+		container.appendChild(apply)
+		addEventListner.prototype.addEventBattleRunAway();
+
 	}
 	createTabData(type){
 		if(!type){

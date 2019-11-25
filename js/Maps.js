@@ -69,8 +69,14 @@ class Area{
 }
 class CreateMap extends Area{
 	// 0 = road , 1 = wall , 5 = enemy , 7 = exit ,10 = start , 15 = fog
-	constructor(){
-		super()
+	constructor(areaCode,level){
+		if(!areaCode && !level && level != 0){
+			super()
+		}
+		else{
+			this.areaCode = areaCode
+			this.areaLevel = level
+		}
 		//this.map.party.sigth = party.sigth;
 		var random = Math.floor(Math.random()*17)+5
 		this.start = {
@@ -364,7 +370,7 @@ class CreateMap extends Area{
 			for(var j = i + 1 ; j < roomStackLength; j++){
 				var checkPash = Math.random()*(0.45+countRoomPash *0.01)+countPash/100 ;
 				if(checkPash < 1){
-				this.createRoomPash(roomStack[i],roomStack[j]);
+				createRoomPash(roomStack[i],roomStack[j]);
 					countPash += 1
 					countRoomPash +=1
 				}
@@ -807,7 +813,7 @@ class CanClearTest{
 			marker[y -1 ][x + 1] = 1
 			stack.push({x : x + 1, y : y - 1})
 		}
-		if(map[y][x - 1] != 1 && marker[y][x] == 0){
+		if(map[y][x - 1] != 1 && marker[y][x - 1] == 0){
 			marker[y][x -1] = 1
 			stack.push({x : x - 1, y : y })
 		}
@@ -1698,5 +1704,33 @@ class CreateMapData{
 
 		}
 
+	}
+}
+
+class AreaControll{
+	constructor(type, code){
+		this.data = areaData;
+		this.code = code;
+		this.type = type;
+		let check = false;
+		switch(type){
+			case "open" :
+			check = this.areaCheck(this.code);
+			if(check){
+				this.areaOpen();
+			}
+		}
+	}
+	areaOpen(){
+		areaData[this.code] = 0;
+	}
+	areaCheck(code){
+		const datas = Object.getOwnPropertyNames(this.data);
+		if(datas.indexOf(code) != -1){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 }

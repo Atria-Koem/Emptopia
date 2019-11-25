@@ -41,6 +41,7 @@ class BattleCharacter{
 			this.funds = performer.funds
 		}
 		else{
+			this.autoCheck = 1;
 			this.skill = performer.skill
 			//const favorite = performer.skillFavorite
 			this.skillFavorite = performer.extendLinkOption('copy', 0, 0, 0,performer.skillFavorite)
@@ -1737,6 +1738,8 @@ class Drop{
 				var category = item.category
 				var code = item.code
 				new AddLog([{text : dropper.name},{text : 'drop Item'},{text : item.name}], 'Battle')
+				new AddLog([{text : dropper.name},{text : 'drop Item'},{text : item.name}],"System");
+
 				dropper.dropTable = []
 				break;
 			}
@@ -1776,7 +1779,7 @@ class BattleEnd{
 
 		this.checkWinAlly()
 
-		if(this.endCheck === 1 || type === 'run away'){
+		if(this.endCheck === 1 || type === 'runAway'){
 			this.linkageStatus();
 			this.endBattle()
 		}
@@ -1881,7 +1884,13 @@ class Battle{
 			  new activeAction(action,performer,-1,'first')
 				}
 			else if(performer.type === 'player'){
-				if(document.getElementById('SkillBorder').style.visibility != "visible"){
+				if(performer.autoCheck == 1){
+					const length = performer.skill.length;
+
+					var action = performer.skill[Math.floor(Math.random() * length)];
+					new activeAction(action,performer,-1,'first')
+				}
+				else if(document.getElementById('SkillBorder').style.visibility != "visible"){
 					new SkillButtonView(number)
 					if(battleMode > 0){
 					gInterval = clearInterval(gInterval);

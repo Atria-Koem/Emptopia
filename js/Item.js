@@ -218,9 +218,11 @@ class UseItem{
 		if(item.category == "Other"){
 			switch(item.type){
 				case "Key":
+					this.type ="OneTimeArea";
+					break;
 				case "Map":
-					this.type = item.type;
-				break;
+					this.type = "Area";
+					break;
 				case "Rebirth":
 					this.type = "Rebirth"
 				break;
@@ -259,6 +261,16 @@ class UseItem{
 		let data = (this.item.useData == "Random") ? Math.floor(Math.random() * 10) :  this.item.useData
 		performer.rebirth = new Rebirth("Item",data,document.getElementById('CharacterDesk').value)
 		//performer.rebirth.rebirthTypeInput(data);
-		
+		inventoryData.Other[this.item.code].number -= 1;
+		if(inventoryData.Other[this.item.code].number == 0){
+			delete inventoryData.Other[this.item.code];
+		}
+	}
+	useItemArea(){
+		new AreaControll('open',this.item.useData)
+
+	}
+	useITemOneTimeArea(){
+
 	}
 }

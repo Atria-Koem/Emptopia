@@ -268,9 +268,27 @@ function battleModeChange(){
 		document.getElementById("modeId").innerText ="Battle Mode (Turn => Active Turn)"
 	}
 }
-
-class CharacterHire{
+let hireTimer ={};
+let timerInterval;
+class Timer{
 	constructor(){
+		console.log("TEST");
+		this.timerHireControll();
+	}
+	timerHireControll(){
+		const data = Object.getOwnPropertyNames(hireTimer)
+		const length = data.length;
+		for(let i = 0 ; i < length ; i++){
+			hireTimer[data[i]].time -= 1;
+			if(hireTimer[data[i]].time  <= 0){
+				CharacterHire.prototype.hireCharacter(hireTimer[data[i]].data)
+				delete hireTimer[data[i]];
+			}
+		}
+	}
+}
+class CharacterHire{
+	constructor(type){
 		var name = document.getElementById('HireName').value
 		if(!name){
 			document.getElementById('HireName').value = 'Input Name'
@@ -279,12 +297,13 @@ class CharacterHire{
 		if(name ==='Input Name'){
 			name = dataName[Math.floor(dataName.length * Math.random)]
 		}
-		var checkHire = this.hirePayment();
+		this.type=type;
+		var checkHire = this.hirePayment(this.type);
+
+		this.name = name;
+		this.timeValue = this.hireTimeValeu(this.type);
 		if(checkHire != 0){
-			var createCharacter = new Player(name)
-		playerTeam.character[createCharacter.code] = createCharacter
-			new BattleSpec(createCharacter,'passive')
-			playerTeam.refreshTeamData('funds')
+			this.hireSetTimer();
 		}
 		else{
 			document.getElementById('HireName').value = 'Less Funds'
@@ -299,6 +318,9 @@ class CharacterHire{
 	hirePayment(type){
 		var value = 0;
 		switch(type){
+			case 'base':
+			value = 0;
+			break;
 			case 'normal' : 
 			break;
 			default :
@@ -316,7 +338,11 @@ class CharacterHire{
 	hireTimeValeu(type){
 		var timeValue = 0;
 		switch(type){
+			case 'base':
+			timeValue = 0;
+			break;
 			case 'normal' :
+			default:
 			timeValue = 100
 		}
 		return timeValue
@@ -324,29 +350,54 @@ class CharacterHire{
 	hireJobType(){
 		const job = this.job =  document.getElementById('').value
 	}
+	hireSetTimer(){
+		var createCharacter = new Player(name)
+		this.hireBaseSkill(createCharacter)
+		hireTimer[createCharacter.code]={
+			code : createCharacter.code,
+			time : this.timeValue,
+			hireName :this.name,
+			data : createCharacter
+		}
+	
+		
+	}
+	hireCharacter(createCharacter){
+	
+		playerTeam.character[createCharacter.code] = createCharacter
+		new BattleSpec(createCharacter,'passive')
+		playerTeam.refreshTeamData('funds')
+		new AddLog([{text:"Hire "}, {text: createCharacter.name}],"System");
+
+	}
+	hireBaseSkill(createCharacter){
+		let dS = Object.getOwnPropertyNames(dataSkill)
+		for(let j = 0 ; j < 6; j++){
+			let skillCode
+			do{
+				skillCode = dS[Math.floor(Math.random() * dS.length)];
+			}while(skillCode.indexOf("A")== -1);
+            while(createCharacter.skill.indexOf(skillCode) == -1){
+                createCharacter.skill.push(skillCode);
+			}
+		}
+	}
 }
 let playerTeam = {}
 function createTeam(){
 	playerTeam = new Team
 	playerTeam.refreshTeamData()
     for(let i =0 ; i < 10; i++){
-        new CharacterHire();
+        new CharacterHire('base');
     }
     let a = Object.getOwnPropertyNames(playerTeam.character)
     for(let i = 0 ; i < 5; i++){
-        playerTeam.character[a[i]].selected = 1;
+    //    playerTeam.character[a[i]].selected = 1;
     }
     let c = Object.getOwnPropertyNames(dataSkill)
     for(let i = 0 ; i < a.length ; i++){
-        for(let j = 0 ; j < 6; j++){
-			let skillCode
-			do{
-				skillCode = c[Math.floor(Math.random() * c.length)];
-			}while(skillCode.indexOf("A")== -1);
-            while(playerTeam.character[a[i]].skill.indexOf(skillCode) == -1){
-                playerTeam.character[a[i]].skill.push(skillCode);
-            }
-        }
+        
+        
     }
 }
 function loadScript(url,folder)
@@ -382,7 +433,7 @@ window.onload = function(){
 		area.changeLevel()
 	})
 	test = this.setInterval(setLoad,1)
-	
+	timerInterval = this.setInterval(function(){new Timer()},1000);
 }
 let test;
 function setLoad(){
