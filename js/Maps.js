@@ -1723,6 +1723,7 @@ class AreaControll{
 	}
 	areaOpen(){
 		areaData[this.code] = 0;
+		Area.prototype.addArea(this.code);
 	}
 	areaCheck(code){
 		const datas = Object.getOwnPropertyNames(this.data);

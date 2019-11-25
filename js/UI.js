@@ -27,11 +27,13 @@ class CharacterDesk{
 		let mainBoard = this.createMainBoard()
 		let close = this.createCloseButton()
 		let protectAndPositionBoard = this.createPAPBoard()
+		let parttern = this.createPartternView(this.id = id)
 		let itemBoard = this.createItemBoard()
 		let skillBoard = this.createSkillBoard()
 		desk.appendChild(close)
 		desk.appendChild(mainBoard)
 		desk.appendChild(protectAndPositionBoard)
+		desk.appendChild(parttern)
 		desk.appendChild(itemBoard)
 		desk.appendChild(skillBoard)
 		this.checkFavoriteSkill()
@@ -199,6 +201,8 @@ class CharacterDesk{
 		board.appendChild(protectPosition)
 		let changeButton = this.createProtectAndPositionChangeButton()
 		board.appendChild(changeButton)
+		let auto = 	this.createActionType()
+		board.appendChild(auto)
 		return board
 	}
 	createSelectedButton(){
@@ -432,6 +436,33 @@ class CharacterDesk{
 		div.appendChild(positionSelect)
 		return div
 	}
+	createActionType(){
+		var div = new CreateTag("div")
+		div.className = 'Action'
+		var txt = new CreateTag("p")
+		txt.innerText = 'Action Type'
+		div.appendChild(txt)
+		var select = document.createElement('select')
+		select.id = 'ActionSelect'
+		var optionValue = ['Select','PartternAuto','RandomAuto']
+		for(var i = 0 ; i < 3; i ++){
+			var option = document.createElement('option')
+			option.value = i
+			option.innerText = optionValue[i]
+			select.appendChild(option)
+		}
+		select.selectedIndex = this.performer.autoType
+		div.appendChild(select)
+		let button = CreateViewHTML.prototype.createViewButton(0,'ChangeProtectPosition',this.id,'Change')
+		button.addEventListener('click',
+													 function(){
+			let performer = playerTeam.character[this.value]
+			performer.autoType = document.getElementById('ActionSelect').value
+
+		})
+		div.appendChild(button)
+		return div;
+	}
 	createProtectMenu(){
 		var div = document.createElement('div');
 		div.className = 'Protect'
@@ -518,6 +549,64 @@ class CharacterDesk{
 		let inventorySlot = new InventoryDataView('Equipment',this.id)
 		dataTap.appendChild(inventorySlot)
 		div.appendChild(dataTap)
+		return div
+	}
+	createPartternView(number){
+		const performer = playerTeam.character[number]
+		const pData = performer.parttern
+		const intwis = (performer.origin.state.int + performer.origin.state.wis)/121
+		var div = new CreateTag("div")
+		div.id = 'PartternSelect'
+		var tittle = document.createElement('p');
+		let label = CreateViewHTML.prototype.createViewLabel("PartternDataCheck","CharacterData")
+		let checkBox = CreateViewHTML.prototype.createViewCheckBox("PartternDataCheck","SimpleSelect",0,"DataLabel",0,openCheck.Equip)
+		checkBox.addEventListener("click", function(){
+			openCheck.Parttern = this.checked
+		})
+		tittle.className = "PartternTittle"
+		tittle.innerText = 'Parttern(ClickOpen)'
+		label.appendChild(tittle)
+		div.appendChild(label)
+		div.appendChild(checkBox)
+		let dataTap = new CreateTag("div")
+		dataTap.className = "CharacterData"
+		let partternTab  = new CreateTag("div");
+		partternTab.className = "PartternTab"
+		for(let i = 0 ; i < intwis + 1; i++){
+			let partDiv = new CreateTag('div');
+			partDiv.style.display="flex"
+			let numberDiv = new CreateTag('div');
+			let numberText = new Text(i + 1).p;
+			numberDiv.style.width = "30px"
+			let judge = new CreateDataView('Parttern',i).div
+			let jValue = document.createElement("input")
+			jValue.setAttribute("type", "number")
+			jValue.setAttribute("min", 0)
+			jValue.className ="PartternSkillValue"
+			let skill = new CreateDataView('CharacterSkill',0,0,number).div
+			numberDiv.appendChild(numberText);
+			partDiv.appendChild(numberDiv);
+			partDiv.appendChild(judge);
+			partDiv.appendChild(jValue);
+			partDiv.appendChild(skill);
+			partternTab.appendChild(partDiv);
+			if(i < pData.length){
+				judge.value = pData[i][0];
+				jValue.value = pData[i][1];
+				skill.value = pData[i][2];
+			}
+		}
+		dataTap.appendChild(partternTab);
+		div.appendChild(dataTap);
+	
+		let button = CreateViewHTML.prototype.createViewButton(0,'Parttern Apply',this.id,'Apply')
+		button.addEventListener('click',
+													 function(){
+			new PartternInput(this.value);
+			
+		} )
+		button.style.width= "250px"
+		dataTap.appendChild(button);
 		return div
 	}
 	summaryEquipSpecView(number) {
@@ -678,6 +767,31 @@ class CharacterDesk{
 		return [head,numbering]
 	}
 
+}
+class PartternInput{
+    constructor(value){
+		this.performer = playerTeam.character[value]
+		this.tab = document.getElementsByClassName("PartternTab")[0].children
+        this.loadInputData()
+        this.inputData()
+    }
+    loadInputData(){
+		this.parttern = []
+        const length = this.tab.length;
+        for(let i = 0 ; i < length; i++){
+			const data = this.tab[i]
+			let jud = data.children[1].value
+			let value = data.children[2].value;
+			if(!value || value==NaN){
+                value = 0;
+            }
+			let skill = data.children[3].value;
+			this.parttern[i] = [jud,value,skill];
+        }
+    }
+    inputData(){
+        this.performer.parttern = this.parttern;
+    }
 }
 class CreateViewHTML{
 	constructor(){}
@@ -946,6 +1060,9 @@ class CreateDataView{
 			case 'Character' :
 				this.data = playerTeam.character[this.code]
 				break;
+			case 'CharacterSkill':
+				this.data = playerTeam.character[this.code].skill
+				break;
 			case 'Skill' :
 				this.data = dataSkill[this.code]
 				break;
@@ -954,6 +1071,9 @@ class CreateDataView{
 				break;
 			case 'ShopSell' :
 				this.data = dataItem[this.code]
+				break;
+			case 'Parttern':
+				this.data = dataPartternType;
 				break;
 		}
 	}
@@ -997,6 +1117,9 @@ class CreateDataView{
 				break;
 			case 'P' :
 				typeDiv = new Text('Passive').p
+				break;
+			default:
+				typeDiv = new Text(' ').p;
 				break;
 										}
 		mainDiv.appendChild(typeDiv)
@@ -1425,6 +1548,35 @@ class CreateDataView{
 			div.appendChild(optionP)
 		}
 		return div
+	}
+	createPartternDiv(){
+		const judgeCode = Object.getOwnPropertyNames(this.data)
+		let jSelect = document.createElement("select");
+		jSelect.id = "JudgeType" + this.type2;
+		jSelect.className = 'PartternSkillJudge'
+		for(let i = 0 ; i < judgeCode.length; i++){
+			let option = document.createElement("option");
+			option.value = judgeCode[i]
+			option.innerText = dataPartternType[judgeCode[i]].text;
+			jSelect.appendChild(option);
+		}
+		return jSelect;
+	}
+	createCharacterSkillDiv(){
+
+		const skillCode = this.data;
+		let kselect = document.createElement("select");
+		kselect.className = 'PartternSkillOption'
+		for(let i =0 ; i < skillCode.length; i++){
+			if(skillCode[i].indexOf("KPT") == -1){
+			let option = document.createElement("option");
+			option.value = skillCode[i]
+			option.innerText = dataSkill[skillCode[i]].name;
+			kselect.appendChild(option);
+			}
+	
+		}
+		return kselect;
 	}
 }
 class addEventListner{
@@ -2496,4 +2648,66 @@ class SkillButtonView{
 		skillSlot.appendChild(skillButton)
 		return skillSlot
 	}	
+}
+
+class HireList{
+	constructor(){
+		this.listDOM = document.getElementById("HireList")
+		this.listData = hireTimer;
+		this.clearList();
+		this.createListAll();
+	}
+	clearList(){
+		this.listDOM.innerHTML = "";
+	}
+	createListAll(){
+		const name = Object.getOwnPropertyNames(this.listData)
+		const length = name.length;
+		for(let i = 0 ; i < length; i++){
+			let div = this.createData(this.listData[name[i]],i);
+			this.listDOM.appendChild(div);
+		}
+	}
+	createData(data,count){
+
+		let partDiv = new CreateTag('div');
+		partDiv.style.display="flex"
+		partDiv.value = data.code;
+		partDiv.id = "Hire"+data.code;
+		let numberDiv = new CreateTag('div');
+		let numberText = new Text(count + 1).p;
+		numberDiv.style.width = "30px"
+		numberDiv.appendChild(numberText);
+		let name = new CreateTag("div");
+		name.innerText =data.hireName;
+
+		let timeDiv = new CreateTag("div");
+		let time = this.calculrateTimeText(data.time);
+		let timeTxt = new Text(time).p;
+		timeTxt.id = "HireTime"+data.code
+		timeDiv.appendChild(timeTxt);
+
+		partDiv.appendChild(numberDiv);
+		partDiv.appendChild(name);
+		partDiv.appendChild(timeDiv);
+
+		return partDiv
+	}
+	calculrateTimeText(time){
+		let txt = '';
+		let hour = Math.floor( time / 3600);
+		let minut = Math.floor( (time % 3600) / 60);
+		let second = time % 60
+		if(hour.length < 3){
+			hour = '0' + hour
+		}
+		if(minut.length < 3){
+			minut =  '0' + minut
+		}
+		if(second.length < 3){
+			second = '0' + second
+		}
+		txt = hour + " : " + minut + " : " + second;
+		return txt;
+	}
 }

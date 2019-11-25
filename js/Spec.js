@@ -360,6 +360,7 @@ class Player extends CreateSpec{
 			Head : {},
 			Other : {}
 		}
+		this.autoType = 0;
 		this.bonusState = this.createBonusState()
 		this.skillPoint = Math.round(this.bonusState / 5)
 		this.addPlayerDesk();

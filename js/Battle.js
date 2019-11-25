@@ -41,7 +41,7 @@ class BattleCharacter{
 			this.funds = performer.funds
 		}
 		else{
-			this.autoCheck = 1;
+			this.autoType = performer.autoType;
 			this.skill = performer.skill
 			//const favorite = performer.skillFavorite
 			this.skillFavorite = performer.extendLinkOption('copy', 0, 0, 0,performer.skillFavorite)
@@ -1884,11 +1884,20 @@ class Battle{
 			  new activeAction(action,performer,-1,'first')
 				}
 			else if(performer.type === 'player'){
-				if(performer.autoCheck == 1){
-					const length = performer.skill.length;
+				if(performer.autoType != 0){
+					var action;
+					switch(performer.autoType ){
+						case '2':
+						const length = performer.skill.length;
+						action = performer.skill[Math.floor(Math.random() * length)];
+						new activeAction(action,performer,-1,'first')
+						break;
+						case '1':
+						action = new Parttern(performer,performer.parttern).action//this.checkParttern(performer,performer.parttern)
+						new activeAction(action,performer,-1,'first')
+						break;
+					}
 
-					var action = performer.skill[Math.floor(Math.random() * length)];
-					new activeAction(action,performer,-1,'first')
 				}
 				else if(document.getElementById('SkillBorder').style.visibility != "visible"){
 					new SkillButtonView(number)
