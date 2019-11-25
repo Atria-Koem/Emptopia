@@ -1,4 +1,4 @@
- const dataMonster = {
+const dataMonster = {
     M10000000: {
         name: 'Goblin',
       health:{
@@ -206,659 +206,267 @@
 		parttern: [['NM00010',100,'KA404002'],['NH00010',60,'KA404001'],['DE10100',2,'KA300000'],['NS00010',20,'KA330002'],['OT00000',0,'KA100000']]
 	    },
 	 M10000009: {
-
-		name: 'GoblinConjurer',
-
-	      health:{
-
-		hp : 12, sp: 8, mp : 5
-
-	      },
-
-				state: {
-
-					str: 5,				int: 8,				dex: 7,				dis : 5,				spd: 8,
-
-		vit: 15,				wis: 5,				agi: 5,				res : 5,				luk: 5
-
-		},
-
-				colorType : 'hsv',
-
-				color : {
-
-		  hue  : 50, saturation : 80 , value  : 50
-
-		},
-
-				coordinates : 'Front',
-
-				protectType : ['None',0],
-
-			exp: {str : 30, dex : 10},
-
-			funds : 10,
-
-		job: 'J27000000',
-
-		tribe: 'T04',
-
-		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-
-		parttern: [['NH00210',40,'KA300000'],['NH00110',80,'KA100001'],['NS00200',4,'KA330002'],['NH00210',20,'KA200002'],['OT00000',0,'KA100000']]
-
-	    },
+ 		name: 'GoblinConjurer',
+ 	      health:{
+ 		hp : 12, sp: 8, mp : 5
+ 	      },
+ 				state: {
+ 					str: 5,				int: 8,				dex: 7,				dis : 5,				spd: 8,
+ 		vit: 15,				wis: 5,				agi: 5,				res : 5,				luk: 5
+ 		},
+ 				colorType : 'hsv',
+ 				color : {
+ 		  hue  : 50, saturation : 80 , value  : 50
+ 		},
+ 				coordinates : 'Front',
+ 				protectType : ['None',0],
+ 			exp: {str : 30, dex : 10},
+ 			funds : 10,
+ 		job: 'J27000000',
+ 		tribe: 'T04',
+ 		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+ 		parttern: [['NH00210',40,'KA300000'],['NH00110',80,'KA100001'],['NS00200',4,'KA330002'],['NH00210',20,'KA200002'],['OT00000',0,'KA100000']]
+ 	    },
 	M10000010: {
-
-			name: 'GoblinBerserker',
-
-		      health:{
-
-			hp : 12, sp: 13, mp : 0
-
-		      },
-
-					state: {
-
-						str: 13,				int: 0,				dex: 7,				dis : 5,				spd: 8,
-
-			vit: 15,				wis: 5,				agi: 5,				res : 5,				luk: 5
-
-			},
-
-					colorType : 'hsv',
-
-					color : {
-
-			  hue  : 50, saturation : 80 , value  : 50
-
-			},
-
-					coordinates : 'Front',
-
-					protectType : ['None',0],
-
-				exp: {str : 30, dex : 10},
-
-				funds : 10,
-
-			job: 'J11000000',
-
-			tribe: 'T04',
-
-			dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-
-			parttern: [['NH00210',40,'KA100002'],['NH00110',80,'KA100001'],['NS00200',4,'KA330002'],['OT00000',0,'KA110000']]
-
-		    },
+ 			name: 'GoblinBerserker',
+ 		      health:{
+ 			hp : 12, sp: 13, mp : 0
+ 		      },
+ 					state: {
+ 						str: 13,				int: 0,				dex: 7,				dis : 5,				spd: 8,
+ 			vit: 15,				wis: 5,				agi: 5,				res : 5,				luk: 5
+ 			},
+ 					colorType : 'hsv',
+ 					color : {
+ 			  hue  : 50, saturation : 80 , value  : 50
+ 			},
+ 					coordinates : 'Front',
+ 					protectType : ['None',0],
+ 				exp: {str : 30, dex : 10},
+ 				funds : 10,
+ 			job: 'J11000000',
+ 			tribe: 'T04',
+ 			dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+ 			parttern: [['NH00210',40,'KA100002'],['NH00110',80,'KA100001'],['NS00200',4,'KA330002'],['OT00000',0,'KA110000']]
+ 		    },
 	M10000011: {
-
-			name: 'GoblinKnight',
-
-		      health:{
-
-			hp : 75, sp: 53, mp : 40
-
-		      },
-
-					state: {
-
-						str: 28,				int: 16,				dex: 19,				dis : 5,				spd: 18,
-
-			vit: 25,				wis: 5,				agi: 5,				res : 5,				luk: 5
-
-			},
-
-					colorType : 'hsv',
-
-					color : {
-
-			  hue  : 50, saturation : 80 , value  : 50
-
-			},
-
-					coordinates : 'Front',
-
-					protectType : ['None',0],
-
-				exp: {str : 30, dex : 10},
-
-				funds : 10,
-
-			job: 'J12110000',
-
-			tribe: 'T04',
-
-			dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-
-			parttern: [['NH00210',40,'KA100002'],['NH00110',80,'KA100001'],['NS00200',24,'KA330002'],['OTCOUNT',3,'KA100003'],['NH00010',60,'KA100006'],['OT00000',0,'KA100000']]
-
-		    },
+ 			name: 'GoblinKnight',
+ 		      health:{
+ 			hp : 75, sp: 53, mp : 40
+ 		      },
+ 					state: {
+ 						str: 28,				int: 16,				dex: 19,				dis : 5,				spd: 18,
+ 			vit: 25,				wis: 5,				agi: 5,				res : 5,				luk: 5
+ 			},
+ 					colorType : 'hsv',
+ 					color : {
+ 			  hue  : 50, saturation : 80 , value  : 50
+ 			},
+ 					coordinates : 'Front',
+ 					protectType : ['None',0],
+ 				exp: {str : 30, dex : 10},
+ 				funds : 10,
+ 			job: 'J12110000',
+ 			tribe: 'T04',
+ 			dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+ 			parttern: [['NH00210',40,'KA100002'],['NH00110',80,'KA100001'],['NS00200',24,'KA330002'],['OTCOUNT',3,'KA100003'],['NH00010',60,'KA100006'],['OT00000',0,'KA100000']]
+ 		    },
 	M10000012: {
-
-			name: 'GoblinHolyKnight',
-
-		      health:{
-
-			hp : 45, sp: 40, mp : 70
-
-		      },
-
-					state: {
-
-						str: 24,				int: 22,				dex: 19,				dis : 5,				spd: 18,
-
-			vit: 25,				wis: 5,				agi: 5,				res : 5,				luk: 5
-
-			},
-
-					colorType : 'hsv',
-
-					color : {
-
-			  hue  : 50, saturation : 80 , value  : 50
-
-			},
-
-					coordinates : 'Front',
-
-					protectType : ['None',0],
-
-				exp: {str : 30, dex : 10},
-
-				funds : 10,
-
-			job: 'J12110000',
-
-			tribe: 'T04',
-
-			dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-
-			parttern: [['NH00210',40,'KA300000'],['NH00110',80,'KA100001'],['NS00200',16,'KA330002'],['NM00210',60,'KA200001'],['DE10000',2,'KA300099'],['NH00010',60,'KA100006'],['OT00000',0,'KA100000']]
-
-		    },
+ 			name: 'GoblinHolyKnight',
+ 		      health:{
+ 			hp : 45, sp: 40, mp : 70
+ 		      },
+ 					state: {
+ 						str: 24,				int: 22,				dex: 19,				dis : 5,				spd: 18,
+ 			vit: 25,				wis: 5,				agi: 5,				res : 5,				luk: 5
+ 			},
+ 					colorType : 'hsv',
+ 					color : {
+ 			  hue  : 50, saturation : 80 , value  : 50
+ 			},
+ 					coordinates : 'Front',
+ 					protectType : ['None',0],
+ 				exp: {str : 30, dex : 10},
+ 				funds : 10,
+ 			job: 'J12110000',
+ 			tribe: 'T04',
+ 			dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000000' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+ 			parttern: [['NH00210',40,'KA300000'],['NH00110',80,'KA100001'],['NS00200',16,'KA330002'],['NM00210',60,'KA200001'],['DE10000',2,'KA300099'],['NH00010',60,'KA100006'],['OT00000',0,'KA100000']]
+ 		    },
 	  M20000000: {
-
-        name: 'Kobold',
-
-      health:{
-
-        hp : 7, sp: 7, mp : 4
-
-      },
-
-			state: {
-
-				str: 7,				int: 7,				dex: 7,				dis : 7,				spd: 7,
-
-        vit: 7,				wis: 7,				agi: 7,				res : 7,				luk: 7
-
-        },
-
-			colorType : 'hsv',
-
-			color : {
-
-          hue  : 50, saturation : 80 , value  : 50
-
-        },
-
-			coordinates : 0,
-
-			protectType : ['None',0],
-
-		exp: {
-
-			str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
-
-			vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
-
-		},
-
-		funds : 10,
-
-        job: 'J00000000',
-
-        tribe: 'T04',
-
-        dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-
-        parttern: [['NH00010',50,'KA100002'],['NH00210',49,'KA000000'],['OT00000',0,'KA100000']]
-
-    },
+         name: 'Kobold',
+       health:{
+         hp : 7, sp: 7, mp : 4
+       },
+ 			state: {
+ 				str: 7,				int: 7,				dex: 7,				dis : 7,				spd: 7,
+         vit: 7,				wis: 7,				agi: 7,				res : 7,				luk: 7
+         },
+ 			colorType : 'hsv',
+ 			color : {
+           hue  : 50, saturation : 80 , value  : 50
+         },
+ 			coordinates : 0,
+ 			protectType : ['None',0],
+ 		exp: {
+ 			str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
+ 			vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
+ 		},
+ 		funds : 10,
+         job: 'J00000000',
+         tribe: 'T04',
+         dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+         parttern: [['NH00010',50,'KA100002'],['NH00210',49,'KA000000'],['OT00000',0,'KA100000']]
+     },
 	 M20000001: {
-
-		name: 'Kobold Warrior',
-
-	      health:{
-
-		hp : 15, sp: 12, mp : 4
-
-	      },
-
-				state: {
-
-					str: 12,				int: 7,				dex: 7,				dis : 7,				spd: 7,
-
-		vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
-
-		},
-
-				colorType : 'hsv',
-
-				color : {
-
-		  hue  : 50, saturation : 80 , value  : 50
-
-		},
-
-				coordinates : 0,
-
-				protectType : ['None',0],
-
-			exp: {
-
-				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
-
-				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
-
-			},
-
-			funds : 10,
-
-		job: 'J10000000',
-
-		tribe: 'T04',
-
-		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-
-		parttern: [['NH00100',70,'KA100002'],['NH00110',50,'KA100001'],['NH00210',49,'KA100002'],['OT00000',0,'KA100000']]
-
-	    },
+ 		name: 'Kobold Warrior',
+ 	      health:{
+			hp : 15, sp: 12, mp : 4
+ 	      },
+ 				state: {
+ 					str: 12,				int: 7,				dex: 7,				dis : 7,				spd: 7,
+			vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
+ 		},
+ 				colorType : 'hsv',
+ 				color : {
+ 		  hue  : 50, saturation : 80 , value  : 50
+ 		},
+ 				coordinates : 0,
+ 				protectType : ['None',0],
+ 			exp: {
+ 				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
+ 				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
+ 			},
+ 			funds : 10,
+ 		job: 'J10000000',
+ 		tribe: 'T04',
+ 		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+ 		parttern: [['NH00100',70,'KA100002'],['NH00110',50,'KA100001'],['NH00210',49,'KA100002'],['OT00000',0,'KA100000']]
+ 	    },
 	M20000002: {
-
-		name: 'Kobold Sorcerer',
-
-	      health:{
-
-		hp : 15, sp: 4, mp : 12
-
-	      },
-
-				state: {
-
-					str: 7,				int: 12,				dex: 7,				dis : 7,				spd: 7,
-
-		vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
-
-		},
-
-				colorType : 'hsv',
-
-				color : {
-
-		  hue  : 50, saturation : 80 , value  : 50
-
-		},
-
-				coordinates : 0,
-
-				protectType : ['None',0],
-
-			exp: {
-
-				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
-
-				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
-
-			},
-
-			funds : 10,
-
-		job: 'J20000000',
-
-		tribe: 'T04',
-
-		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-
-		parttern: [['NM00110',70,'KA200000'],['NM00110',50,'KA200002'],['NM00210',49,'KA200001'],['OT00000',0,'KA100000']]
-
-	    },
+ 		name: 'Kobold Sorcerer',
+ 	      health:{
+ 		hp : 15, sp: 4, mp : 12
+ 	      },
+ 				state: {
+ 					str: 7,				int: 12,				dex: 7,				dis : 7,				spd: 7,
+			vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
+ 		},
+ 				colorType : 'hsv',
+ 				color : {
+ 		  hue  : 50, saturation : 80 , value  : 50
+ 		},
+ 				coordinates : 0,
+ 				protectType : ['None',0],
+ 			exp: {
+ 				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
+ 				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
+ 			},
+ 			funds : 10,
+ 		job: 'J20000000',
+ 		tribe: 'T04',
+ 		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+ 		parttern: [['NM00110',70,'KA200000'],['NM00110',50,'KA200002'],['NM00210',49,'KA200001'],['OT00000',0,'KA100000']]
+ 	    },
 	M20000003: {
-
-		name: 'Kobold Priest',
-
-	      health:{
-
-		hp : 15, sp: 4, mp : 12
-
-	      },
-
-				state: {
-
-					str: 7,				int: 12,				dex: 7,				dis : 7,				spd: 7,
-
-		vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
-
-		},
-
-				colorType : 'hsv',
-
-				color : {
-
-		  hue  : 50, saturation : 80 , value  : 50
-
-		},
-
-				coordinates : 0,
-
-				protectType : ['None',0],
-
-			exp: {
-
-				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
-
-				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
-
-			},
-
-			funds : 10,
-
-		job: 'J30000000',
-
-		tribe: 'T04',
-
-		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-
-		parttern: [['DE10000',1,'KA300099'],['NM00110',70,'KA300001'],['NM00110',50,'KA300000'],['NM00210',49,'KA200001'],['OT00000',0,'KA100000']]
-
-	    },
+ 		name: 'Kobold Priest',
+ 	      health:{
+ 		hp : 15, sp: 4, mp : 12
+ 	      },
+ 				state: {
+ 					str: 7,				int: 12,				dex: 7,				dis : 7,				spd: 7,
+ 		vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
+ 		},
+ 				colorType : 'hsv',
+ 				color : {
+ 		  hue  : 50, saturation : 80 , value  : 50
+ 		},
+ 				coordinates : 0,
+ 				protectType : ['None',0],
+ 			exp: {
+ 				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
+ 				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
+ 			},
+ 			funds : 10,
+ 		job: 'J30000000',
+ 		tribe: 'T04',
+ 		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+ 		parttern: [['DE10000',1,'KA300099'],['NM00110',70,'KA300001'],['NM00110',50,'KA300000'],['NM00210',49,'KA200001'],['OT00000',0,'KA100000']]
+ 	    },
 	 	M20000004: {
-
-
-
-		name: 'Kobold Hunter',
-
-
-
-	      health:{
-
-
-
-		hp : 7, sp: 12, mp : 12
-
-
-
-	      },
-
-
-
-				state: {
-
-
-
-					str: 7,				int: 7,				dex: 12,				dis : 7,				spd: 7,
-
-
-
-		vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
-
-
-
-		},
-
-
-
-				colorType : 'hsv',
-
-
-
-				color : {
-
-
-
-		  hue  : 50, saturation : 80 , value  : 50
-
-
-
-		},
-
-
-
-				coordinates : 0,
-
-
-
-				protectType : ['None',0],
-
-
-
-			exp: {
-
-
-
-				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
-
-
-
-				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
-
-
-
-			},
-
-
-
-			funds : 10,
-
-
-
-		job: 'J40000000',
-
-
-
-		tribe: 'T04',
-
-
-
-		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-
-
-
-		parttern: [['NH00000',7,'KA400000'],['NH00200',4,'KA400001'],['MS00200',6,'KA330002'],['NH00000',2,'KA404001'],['OT00000',0,'KA100000']]
-
-
+ 		name: 'Kobold Hunter',
+ 	      health:{
+ 		hp : 7, sp: 12, mp : 12
+ 	      },
+			state: {
+ 					str: 7,				int: 7,				dex: 12,				dis : 7,				spd: 7,
+ 		vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
+ 		},
+ 				colorType : 'hsv',
+ 				color : {
+ 		  hue  : 50, saturation : 80 , value  : 50
+ 		},
+ 				coordinates : 0,
+ 				protectType : ['None',0],
+ 			exp: {
+ 				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
+ 				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
+ 			},
+ 			funds : 10,
+			job: 'J40000000',
+ 		tribe: 'T04',
+ 		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+ 		parttern: [['NH00000',7,'KA400000'],['NH00200',4,'KA400001'],['MS00200',6,'KA330002'],['NH00000',2,'KA404001'],['OT00000',0,'KA100000']]
 	    },
 	M20000005: {
-
-
-
-		name: 'Kobold Rogue',
-
-
-
-	      health:{
-
-
-
-		hp : 10, sp: 15, mp : 12
-
-
-
-	      },
-
-
-
-				state: {
-
-
-
-					str: 7,				int: 7,				dex: 15,				dis : 7,				spd: 7,
-
-
-
-		vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
-
-
-
-		},
-
-
-
-				colorType : 'hsv',
-
-
-
-				color : {
-
-
-
-		  hue  : 50, saturation : 80 , value  : 50
-
-
-
-		},
-
-
-
-				coordinates : 0,
-
-
-
-				protectType : ['None',0],
-
-
-
-			exp: {
-
-
-
-				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
-
-
-
-				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
-
-
-
-			},
-
-
-
-			funds : 10,
-
-
-
-		job: 'J41000000',
-
-
-
-		tribe: 'T04',
-
-
-
-		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-
-
-
-		parttern: [['NH00000',10,'KA401000'],['NH00200',7,'KA400001'],['MS00200',6,'KA330002'],['NH00000',4,'KA400000'],['OT00000',0,'KA100000']]
-
-
+ 		name: 'Kobold Rogue',
+ 	      health:{
+ 		hp : 10, sp: 15, mp : 12
+ 	      },
+ 				state: {
+				str: 7,				int: 7,				dex: 15,				dis : 7,				spd: 7,
+ 		vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
+ 		},
+ 				colorType : 'hsv',
+ 				color : {
+ 		  hue  : 50, saturation : 80 , value  : 50
+ 		},
+ 				coordinates : 0,
+ 				protectType : ['None',0],
+ 			exp: {
+ 				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
+ 				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5 
+ 			},
+ 			funds : 10,
+ 		job: 'J41000000',
+ 		tribe: 'T04',
+ 		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
+ 		parttern: [['NH00000',10,'KA401000'],['NH00200',7,'KA400001'],['MS00200',6,'KA330002'],['NH00000',4,'KA400000'],['OT00000',0,'KA100000']]
+ 
 	    },
 	M20000006: {
-
-
-
 		name: 'Kobold Wizard',
-
-
-
 	      health:{
-
-
-
 		hp : 5, sp: 10, mp : 28
-
-
-
 	      },
-
-
-
-				state: {
-
-
-
+		state: {
 					str: 7,				int: 17,				dex: 7,				dis : 7,				spd: 7,
-
-
-
 		vit: 10,				wis: 7,				agi: 7,				res : 7,				luk: 7
-
-
-
 		},
-
-
-
 				colorType : 'hsv',
-
-
-
 				color : {
-
-
-
 		  hue  : 50, saturation : 80 , value  : 50
-
-
-
 		},
-
-
-
 				coordinates : 0,
-
-
-
 				protectType : ['None',0],
-
-
-
 			exp: {
-
-
-
 				str: 5,				int: 5,				dex: 5,				dis : 5,				spd: 5,
-
-
-
 				vit: 5,				wis: 5,				agi: 5,				res : 5,				luk: 5
-
-
-
 			},
-
-
-
-			funds : 10,
-
-
-
+		funds : 10,
 		job: 'J22000000',
-
-
-
 		tribe: 'T04',
-
-
-
 		dropTable: [[3000000 , 'IT0000007' ],[1000000 , 'IT0000001' ],[1000000 , 'IT0000002' ],[1000000 , 'IT0000003' ],[1000000 , 'IT0000004' ],[1000000 , 'IT0000005' ]],
-
-
-
 		parttern: [['MM00000',28,'KA210002'],['MM00200',24,'KA210001'],['NM00200',14,'KA200002'],['NM00210',20,'KA200001'],['OT00000',0,'KA100000']]
-
-
-	    },
+ 	    },
 }

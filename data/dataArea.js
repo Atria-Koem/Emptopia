@@ -18,9 +18,19 @@ const dataArea = {
 			maxRandomEncount : 7,
 			minRandomEncount : 1,
 			randomMonster: [['M10000006', 150000],['M10000000', 650000]],
-			// [['EnemyType','Random(100% = 1000000)']] last
 			positionMonster: [[['M10000000', 3]]],
-			// [[['EnemyType','EnemyNumber'],[]],]
-			bossMonster: [[[['M10000000',3],['M10000000',3]],950000]]//[[[['EnemyType',count]....]'Random(100% = 1000000)']]
-		}
+			bossMonster: [[[['M10000000',3],['M10000000',3]],950000]]
+		},
+	20000: {
+			name: '-Forest',
+			type: 'sort'
+		},
+	20001: {
+				name: '--Forest Entry',
+				maxRandomEncount : 3,
+				minRandomEncount : 2,
+				randomMonster: [['M10000006', 150000],['M10000000', 650000]],
+				positionMonster: [[['M10000000', 3]]],
+				bossMonster: [[[['M10000000',3],['M10000000',3]],950000]]
+		}	
 };

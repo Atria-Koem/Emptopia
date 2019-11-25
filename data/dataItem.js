@@ -1564,6 +1564,28 @@ const dataItem = {
 		  src : 'Image\\shield_001n.png', 
 		  exp : '알수 없는 바위 덩어리를 깎아 만든 방패', 
 	},
+	IT9910000: {
+	    code: 'IT9910000',
+	    name: 'Branch',
+	    category: 'Other',
+	    type: 'Map',
+	    useData: '20001',//지도의 경우 해방되는 아이템.
+		price: 100,
+	    src: 'Image\\MI_item.png',
+	    exp: '끝이 꺽여 있는 나뭇가지. 어째선지 가리키고 있는 방향이 있는 것 같다.'
+
+	},
+	IT9920000: {
+	    code: 'IT9920000',
+	    name: 'BrokeBranch',
+	    category: 'Other',
+	    type: 'Key',
+	    useData: '20001',//지도의 경우 해방되는 아이템.
+		price: 100,
+	    src: 'Image\\MI_item.png',
+	    exp: '부러진 나뭇가지. 어째선지 가리키고 있는 방향이 있는 것 같다(1 회용).'
+
+	},
 	IT9940000: {
 	    code: 'IT9940000',
 	    name: 'Simple NaviMap',
