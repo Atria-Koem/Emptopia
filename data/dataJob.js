@@ -446,30 +446,30 @@ const  dataJob = {
 		  code : 'J61000000', 
 		  name : 'Delusion Dancer', 
 		 state : {
-			str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 101, 	
-			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 102
+			str : 100, 	vit : 100, 	int : 101, 	wis : 100, 	dex : 101, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 101
 		}, 
 		  limit : ['Pistol', 'Gun', 'Bow', 'SubPistol', 'BowGun', 'Shield', 'ArrowCase', 'Ammor'], 
-		  exp : '' 
+		  exp : '현혹에 특화된 무희.' 
 	},
 	J62000000 : { 
 		  code : 'J62000000', 
 		  name : 'Clown', 
 		 state : {
-			str : 100, 	vit : 100, 	int : 101, 	wis : 100, 	dex : 101, 	
-			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 101
+			str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 100, 	
+			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 103
 		}, 
 		  limit : ['Pistol', 'Gun', 'Bow', 'SubPistol', 'BowGun', 'Shield', 'ArrowCase', 'Ammor'], 
-		  exp : '' 
+		  exp : '언변으로 적을 혼란스럽게 만든다.' 
 	},
 	J63000000 : { 
 		  code : 'J63000000', 
 		  name : 'Combat Dancer', 
 		 state : {
-			str : 100, 	vit : 100, 	int : 101, 	wis : 100, 	dex : 101, 	
+			str : 101, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 101, 	
 			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 101
 		}, 
 		  limit : ['Pistol', 'Gun', 'Bow', 'SubPistol', 'BowGun', 'Shield', 'ArrowCase', 'Ammor'], 
-		  exp : '' 
+		  exp : '근접 전투 능력에 특화된 무희로 큰 피해를 주지는 못하지만 주로 상태이상 피해를 준다.' 
 	},
 }
