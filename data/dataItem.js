@@ -1515,7 +1515,7 @@ const dataItem = {
 			 state : {
 			int : 36
 			 }, 
-			 option : {
+			  option : {
 			defPhyPer : 16, 	resPhyPer : 4, 	defMagPer : 18, 	resMagPer : 7
 			 }, 
 		 }, 
@@ -1585,6 +1585,149 @@ const dataItem = {
 	    src: 'Image\\MI_item.png',
 	    exp: '부러진 나뭇가지. 어째선지 가리키고 있는 방향이 있는 것 같다(1 회용).'
 
+	},
+	IT0000069 : { 
+	 code : 'IT0000069', 
+	 name : '驛川之鏡', 
+	 category : 'Weapon', 
+	 type : 'Shield', 
+	 spec : { 
+	 	 health : {
+ 		hp : 554,sp : 288
+		 }, 
+	 	 state : {
+ 		vit : 75, 	res : 10
+		 }, 
+	 	 option : {
+ 		defPhyPer : 14, 	defMagPer : 14
+		 }, 
+	 }, 
+	  price: '5254', 
+	  src : 'Image\\acce_016.png', 
+	  exp : '가공된 수정으로 만들어진 방패.', 
+	},
+	IT0000070 : { 
+		 code : 'IT0000070', 
+		 name : '猫耳', 
+		 category : 'Ammor', 
+		 type : 'Hat', 
+		 spec : { 
+			 health : {
+
+			pHp : 10,pSp : 10,pMp : 10
+			 }, 
+			 state : {
+			str : 10, 	vit : 10, 	int : 10, 	wis : 10, 	dex : 10, 	
+			agi : 10, 	dis : 10, 	res : 10, 	spd : 10, 	luk : 10
+			 }, 
+		 }, 
+		  price: '5254', 
+		  src : 'Image\\acce_020.png', 
+		  exp : '모든 능력치를 10 상승시켜주는 장식용 악세사리.', 
+	},
+	IT0000071 : { 
+		 code : 'IT0000071', 
+		 name : 'Lollipops', 
+		 category : 'Weapon', 
+		 type : 'Staff', 
+		 spec : { 
+			 health : {
+			mp : 442,
+			pMp : 10
+			 }, 
+			 state : {
+			int : 109
+			 }, 
+			 option : {
+			atkPhy : 54, 	atkMag : 167, 	atkPhyTrue : 22, 	atkMagTrue : 84, 	rateCrt : 6, 	valCrt : 123,	rateHit : 82, 	rateHitJust : 66,	
+			 }, 
+		 }, 
+		  price: '8254', 
+		  src : 'Image\\acce_025.png', 
+		  exp : '비상식량으로 사용이 가능하며 체력을 15% 회복시킬 수 있다.', 
+	},
+	IT0000072 : { 
+		 code : 'IT0000072', 
+		 name : 'Rad Leather', 
+		 category : 'Ammor', 
+		 type : 'Ammor', 
+		 spec : { 
+			 health : {
+			hp : 244,sp : 97
+			 }, 
+			 state : {
+			str : 48, 	vit : 29, 	dex : 52
+			 }, 
+			 option : {
+			defPhyPer : 17, 	defMagPer : 16
+			 }, 
+		 }, 
+		  price: '1438', 
+		  src : 'Image\\armor_005f.png', 
+		  exp : '붉게 물들인 가죽으로 만든 갑옷. 별다른 효과는 가지고 있지 않다.', 
+	},
+	IT0000073 : { 
+		 code : 'IT0000073', 
+		 name : 'ডিভাইন ভেটেরিনারি', 
+		 category : 'Ammor', 
+		 type : 'Robe', 
+		 spec : { 
+			 health : {
+			hp : 244,sp : 97,mp : 433
+			 }, 
+			 state : {
+			vit : 42, 	int : 237
+			 }, 
+			 option : {
+			defPhyPer : 23, 	defMagPer : 23
+			 }, 
+		 }, 
+		  price: '11376', 
+		  src : 'Image\\armor_011e.png', 
+		  exp : '', 
+	},
+	IT0000074 : { 
+		 code : 'IT0000074', 
+		 name : 'Combat Vest', 
+		 category : 'Ammor', 
+		 type : 'Ammor', 
+		 spec : { 
+			 health : {
+			sp : 266,
+			pHp : 30
+			 }, 
+			 state : {
+			vit : 244, 	res : 55
+			 }, 
+			 option : {
+			defPhyPer : 23, 	defMagPer : 23, 	rateDodge : 22
+			 }, 
+		 }, 
+		  price: '15284', 
+		  src : 'Image\\armor_014e.png', 
+		  exp : '전투시에 회피율이 추가로 15% 올라가는 조끼.', 
+	},
+	IT0000075 : { 
+		 code : 'IT0000075', 
+		 name : 'Curved Memorial Bar', 
+		 category : 'Weapon', 
+		 type : 'Staff', 
+		 spec : { 
+			 health : {
+			hp : 177,mp : 347,
+			pMp : 5
+			 }, 
+			 state : {
+			vit : 41, 	int : 110
+			 }, 
+			 option : {
+			atkMag : 142, 	atkMagTrue : 65, 	rateHit : 91, 	rateCrt : 6, 	valCrt : 123, 	
+			rateHitJust : 57, 	atkRapid : 5
+			 }, 
+		 }, 
+		  price: '9384', 
+		  src : 'Image\\food_007.png', 
+		  exp : '정체를 알수없는 누군가의 기억이 담겨 있다.', 
 	},
 	IT9940000: {
 	    code: 'IT9940000',
@@ -1706,5 +1849,5 @@ const dataItem = {
 	    src: 'Image\\item_000.png',
 	    exp: 'Exterior 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 
-	}
+	},
 }
