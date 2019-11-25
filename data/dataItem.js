@@ -150,7 +150,7 @@ const dataItem = {
 	 	type : 'Helmet', 
 		spec : {
 	 		health : {
- 				Hp : 10,Mp : 15,
+ 				hp : 10,mp : 15,
  				pHp : 3,pMp : 5
 			}, 
 		 	state : {
@@ -234,7 +234,7 @@ const dataItem = {
 	 	type : 'Circlet', 
 		spec : {
 		 	health : {
- 			Mp : 30,
+ 			mp : 30,
  			pHp : 3,pSp : 7,pMp : 3
 		}, 
 		state : {
@@ -324,7 +324,7 @@ const dataItem = {
 	 	type : 'Shield', 
 		spec : {
 	 	health : {
- 			Hp : 150
+ 			hp : 150
 		}, 
 	 	state : {
  			str : 7, 	vit : 12, 	dis : 10, 	res : 10
@@ -344,7 +344,7 @@ const dataItem = {
 	 	category : 'Ammor', 
 	 	type : 'Ammor', 
 	 	health : {
- 			Hp : 300,
+ 			hp : 300,
  			pHp : 10
 	 	}, 
 		spec : {
@@ -491,7 +491,7 @@ const dataItem = {
 		 type : 'SubPike', 
 		spec : {
 		 health : {
-			Hp : 75
+			hp : 75
 		}, 
 		 state : {
 			str : 3, 	vit : 12
@@ -558,7 +558,7 @@ const dataItem = {
 		 type : 'Helmet', 
 		spec : {
 		 health : {
-			Hp : 140,Sp : 50,
+			hp : 140,sp : 50,
 			pMp : 15
 		}, 
 		 state : {
@@ -579,7 +579,7 @@ const dataItem = {
 		 type : 'Robe', 
 		spec : {
 		 health : {
-			Hp : 110,Sp : 20,Mp : 130,
+			hp : 110,sp : 20,mp : 130,
 			pMp : 10
 		}, 
 		 state : {
@@ -736,7 +736,7 @@ const dataItem = {
 		 category : 'Weapon', 
 		 type : 'Axe', 
 		 health : {
-			Hp : 1244,Sp : 224
+			hp : 1244,sp : 224
 		}, 
 		 state : {
 			str : 48, 	vit : 56
@@ -755,7 +755,7 @@ const dataItem = {
 		 type : 'Axe', 
 		spec:{
 		 health : {
-			Hp : 400,Sp : 130
+			hp : 400,sp : 130
 		}, 
 		 state : {
 			str : 25, 	vit : 44
@@ -802,7 +802,7 @@ const dataItem = {
 	 category : 'Weapon', 
 	 type : 'Spear', 
 	 health : {
- 		Hp : 2670
+ 		hp : 2670
 	}, 
 	 state : {
  		str : 60, 	dex : 140
@@ -862,7 +862,7 @@ const dataItem = {
 		 category : 'Weapon', 
 		 type : 'Spear', 
 		 health : {
-			Hp : 150
+			hp : 150
 		}, 
 		 state : {
 			str : 13, 	dex : 22
@@ -879,7 +879,7 @@ const dataItem = {
 		 category : 'Weapon', 
 		 type : 'Whip', 
 		 health : {
-			Hp : 150
+			hp : 150
 		}, 
 		 state : {
 			str : 13, 	dex : 22
@@ -1014,7 +1014,7 @@ const dataItem = {
 		 type : 'Wand', 
 		 spec : { 
 			 health : {
-			Mp : 254
+			mp : 254
 			 }, 
 			 state : {
 			int : 37
@@ -1427,7 +1427,7 @@ const dataItem = {
 		 type : 'Robe', 
 		 spec : { 
 			 health : {
-			Hp : 664,Sp : 124,Mp : 338,
+			hp : 664,sp : 124,mp : 338,
 			pMp : 12
 			 }, 
 			 state : {
@@ -1448,7 +1448,7 @@ const dataItem = {
 		 type : 'Cloth', 
 		 spec : { 
 			 health : {
-			Hp : 224,Sp : 87,Mp : 120
+			hp : 224,sp : 87,mp : 120
 			 }, 
 			 state : {
 			vit : 52, 	dex : 112
@@ -1468,7 +1468,7 @@ const dataItem = {
 		 type : 'Ammor', 
 		 spec : { 
 			 health : {
-			Hp : 542,Sp : 223,
+			hp : 542,sp : 223,
 			pHp : 7
 			 }, 
 			 state : {
@@ -1489,7 +1489,7 @@ const dataItem = {
 		 type : 'Ammor', 
 		 spec : { 
 			 health : {
-			Hp : 66,Sp : 23,
+			hp : 66,sp : 23,
 			pHp : 3
 			 }, 
 			 state : {
@@ -1510,7 +1510,7 @@ const dataItem = {
 		 type : 'Robe', 
 		 spec : { 
 			 health : {
-			Hp : 41,Sp : 12,Mp : 59
+			hp : 41,sp : 12,mp : 59
 			 }, 
 			 state : {
 			int : 36
@@ -1530,7 +1530,7 @@ const dataItem = {
 		 type : 'Ammor', 
 		 spec : { 
 			 health : {
-			Hp : 228,Sp : 140
+			hp : 228,sp : 140
 			 }, 
 			 state : {
 			str : 97, 	vit : 68
@@ -1550,7 +1550,7 @@ const dataItem = {
 		 type : 'Shield', 
 		 spec : { 
 			 health : {
-			Hp : 151,Sp : 228,
+			hp : 151,sp : 228,
 			pHp : 5,pSp : 5
 			 }, 
 			 state : {
