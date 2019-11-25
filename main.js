@@ -285,6 +285,9 @@ class Timer{
 				delete hireTimer[data[i]];
 			}
 		}
+		if(length > 0){
+			new HireList();
+		}
 	}
 }
 class CharacterHire{

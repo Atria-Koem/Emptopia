@@ -753,7 +753,7 @@ p.ItemOption{
   color : gray;
 	font-variant: small-caps;
 }
-.PositionBoard p,.ProtectBoard div,.Protect input[type="number" i],.Protect select, .Protect p, button.ChangeProtectPosition{
+.PositionBoard p,.ProtectBoard div,.Protect input[type="number" i],.Protect select, .Protect p,.Action select, .Action p, button.ChangeProtectPosition{
   width : 200px;
   height : 20px;
   background-color: #10b090;
@@ -771,7 +771,7 @@ button.ChangeProtectPosition {
       display: block;
   width : 410px;
 }
-.Protect select{
+.Action select, .Protect select{
   width : 165px;
   margin-right : 2px;
 }
@@ -877,7 +877,7 @@ input[type='radio'].ViewRadio{
 .SkillLearn.Button{
 	width : 25%;
 }
-.EquipmentTittle,.InventoryTittle,.SkillTittle{
+.PartternTittle,.EquipmentTittle,.InventoryTittle,.SkillTittle{
   background-color: #10b090;
     color: #fff;
     border: 0;
@@ -1181,4 +1181,31 @@ ul.MenuTabs.Vertical.SkillBoard{
 #inPlayedCharacter{
 	width : 20%;
 	height : 600px;
+}
+.PartternSkillValue{
+  height: 1.5em;
+  background-color: #10b090;
+	color: #FFF;
+	width: 15%;
+	border: 1px solid gray;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	border-radius: 8px 8px 8px 8px;
+	transition: background-color 0.3s ease;
+}
+.PartternSkillJudge,.PartternSkillOption{
+  height: 1.5em;
+  background-color: #10b090;
+  color: #FFF;
+  width: 25%;
+  border: 1px solid gray;
+  margin: 0;
+  text-align: center;
+  border-radius: 8px 8px 8px 8px;
+  transition: background-color 0.3s ease;
+  letter-spacing :0.1em;
+}
+.PartternTab{
+  padding: 3px;
 }
