@@ -792,7 +792,7 @@ const dataSkill = {
 		skillType : 'Support', 
 		hitCount : 1,
 		defenceType : 'Physical',
-		addEffect : {performer : { PlusStr : {value : 20}}
+		addEffect : {performer : { PlusStr : {value : 20}}}
 	},
 	KA200003 : {
 		code : 'KA200003',
