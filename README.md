@@ -177,3 +177,24 @@ up/down 곱연산
 몬스터 패턴 수정 필
 패턴 판정 위에서 아래
 반드시 맨 아래 고정
+
+중첩 - 적용상태시 값증가 
+갱신 - 적용상태시 최근의 것으로 변경
+독 poision - value 중첩  턴 갱신 =hp
+마비 paralyzed - value 의미없음 , 턴제 / 행동을 마비로 강제로 바꿈
+출혈 bleeding value 중첩 턴 갱신= hp
+상실 spilled value 중첩 턴 갱신 =mp
+쇠약 weakness value 중첩 턴 갱신 = sp
+
+new 클래스명
+클래스명.prototype.함수명(매개변수있으면쓰고)
+let = 변경가능한 변수 범위는 {} 내
+const = 변경불가능한 상수 범위는 {} 내
+var = 변경가능한 변수 범위는 해당 함수 내
+
+
+dataActiveCharacter = 전투시 올려진 아군 적군 데이터
+playerTeam = 현재 플레이어의 캐릭터/돈/이름 데이터
+platerTema.character.~~~
+
+imsi
