@@ -160,17 +160,26 @@ class refairItem /*extends Item*/{
 		if(itemData === 0){
 			return
 		}
+		const chekF = this.checkFunds(itemData)
+		if(!chekF){
+			new AddLog([{text:"Less Funds "}],"System");
+			return;
+		}
 		var talent = itemData.talent
 		var refair = itemData.refair
 		var check = this.checkRefair(refair)
 		if(check === 1){
 			var refairValue = this.succesRefair(itemData)
 			//super(code,refairValue)
-			new Item(code,refairValue,'refair')
+			let item = new Item(code,refairValue,'refair')
+			new AddLog([{text:"Refair Success "}, {text:" +" + refair + "-> +" + refairValue +"  " + item.name}],"System");
+
 			console.log('S')
 			this.resultRefair(itemData)
 		}
 		else{
+			new AddLog([{text:"Refair Fail "}, {text:" +" + refair +"  " + itemData.name}],"System");
+
 			this.resultRefair(itemData)
 			console.log('F')
 		}
@@ -195,6 +204,22 @@ class refairItem /*extends Item*/{
 	succesRefair(itemData){
 		var refair = itemData.refair + 1
 		return refair
+	}
+	checkFunds(itemData){
+		let cost = dataItem[itemData.baseCode].price
+		if(!cost){
+			cost = 0
+		}
+		cost *=5;
+
+		if(playerTeam.funds > cost){
+			playerTeam.funds -=cost;
+			Team.prototype.refreshTeamData('funds')
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 }
 class UseItem{

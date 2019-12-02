@@ -31,13 +31,21 @@ class CharacterDesk{
 		let itemBoard = this.createItemBoard()
 		let skillBoard = this.createSkillBoard()
 		desk.appendChild(close)
+		let useItems = new CharacterUseItem()
+		if(useItems.div){
+			desk.appendChild(useItems.div);
+		}
 		desk.appendChild(mainBoard)
+
 		desk.appendChild(protectAndPositionBoard)
 		desk.appendChild(parttern)
 		desk.appendChild(itemBoard)
 		desk.appendChild(skillBoard)
 		this.checkFavoriteSkill()
 		addEventListner.prototype.addEvent()
+		if(useItems.div){
+			addEventListner.prototype.addEventUseItemButton();
+		}
 	}
 	createMainBoard(){
 		let board = new CreateTag('div');
@@ -205,7 +213,7 @@ class CharacterDesk{
 		board.appendChild(auto)
 		return board
 	}
-	createSelectedButton(){
+	createSelectedButton(performer){
 		let div = new CreateTag('div');
 		div.className = 'SelectPartyBoard'
 		let pFirst = new CreateTag('p');
@@ -216,7 +224,7 @@ class CharacterDesk{
 		const name = ['inParty' , 'outParty']
 		for( let i = 0 ; i < 2 ; i++){
 		let input = CreateViewHTML.prototype.createViewRadio(name[i]+'SelectParty','select',name[i],'SelectParty View')//new CreateTag("input")
-			if(this.performer.selected != i){
+			if(performer.selected != i){
 				input.checked = true
 			}
 		let label = new CreateTag("label")
@@ -232,13 +240,26 @@ class CharacterDesk{
 		div.appendChild(partySelect)
 		return div
 	}
-	createCharacteristicData(){
-		const name = this.performer.name
-		const level = this.performer.level
-		const job = dataJob[this.performer.job].name
-		const tribe = dataTribe[this.performer.tribe].name
+	createCharacteristicData(number){
+		if(!number && number != 0){
+			var performer = this.performer
+		var name = this.performer.name
+		var level = this.performer.level
+		var job = dataJob[this.performer.job].name
+		var tribe = dataTribe[this.performer.tribe].name
+		var levelExp = LevelUp.prototype.calculrateLevelExp(level) - this.performer.levelExp
+		}
+		else{
+			var performer=playerTeam.character[number];
+			var name = performer.name
+			var level = performer.level
+			var job = dataJob[performer.job].name
+			var tribe = dataTribe[performer.tribe].name
+			var levelExp = LevelUp.prototype.calculrateLevelExp(level) -performer.levelExp
+		}
 		let characteristDiv = new CreateTag('div');
 		characteristDiv.className = 'CharacteristicView'
+		characteristDiv.id = 'CharacteristicView'
 		let nameDiv = new CreateTag('div');
 		let nameP = CreateViewHTML.prototype.createPTag(name)
 		let namePT = CreateViewHTML.prototype.createPTag('Name')
@@ -251,7 +272,7 @@ class CharacterDesk{
 		let levelData = new CreateTag('div')
 		levelData.className = 'StateOptionText'
 		let levelUpExp = LevelUp.prototype.calculrateLevelExp(level)
-		let levelExp = LevelUp.prototype.calculrateLevelExp(level) - this.performer.levelExp
+		
 		let width = levelExp / levelUpExp * 100
 		let tittle = levelExp + '/' + levelUpExp 
 		let levelBar = CreateViewHTML.prototype.createViewBar(width,tittle)
@@ -269,7 +290,7 @@ class CharacterDesk{
 		let tribePT = CreateViewHTML.prototype.createPTag('Tribe')
 		tribeDiv.appendChild(tribePT)
 		tribeDiv.appendChild(tribeP)
-		let selectDiv = this.createSelectedButton()
+		let selectDiv = this.createSelectedButton(performer)
 		characteristDiv.appendChild(nameDiv)
 		characteristDiv.appendChild(levelDiv)
 		characteristDiv.appendChild(jobDiv)
@@ -320,6 +341,24 @@ class CharacterDesk{
 			level[i].style.display = type
 			tribe[i].style.display = type
 		}
+	}
+	refreshUseItemList(){
+		let useItems = document.getElementById('CharacterUseItem');
+		let div = new CharacterUseItem()
+		if(div.div){
+			useItems.innerHTML = div.div.innerHTML
+			addEventListner.prototype.addEventUseItemButton();
+		}
+		else{
+			useItems.remove();
+		}
+
+	}
+	refreshCharacteristicData(){
+		let Characteristic = document.getElementById('CharacteristicView')
+		let number = document.getElementById('CharacterDesk').value
+		let div = CharacterDesk.prototype.createCharacteristicData(number)
+		Characteristic.innerHTML = div.innerHTML
 	}
 	refreshStateView(){
 		let state = document.getElementById('StateView')
@@ -574,6 +613,10 @@ class CharacterDesk{
 		partternTab.className = "PartternTab"
 		for(let i = 0 ; i < intwis + 1; i++){
 			let partDiv = new CreateTag('div');
+			partDiv.setAttribute("partData", i);
+			partDiv.id="Parttern" + i;
+			partDiv.draggable = true;
+			addEventListner.prototype.addPartternDragAndDrop(partDiv);
 			partDiv.style.display="flex"
 			let numberDiv = new CreateTag('div');
 			let numberText = new Text(i + 1).p;
@@ -1055,6 +1098,9 @@ class CreateDataView{
 				this.data = dataAction[this.code];
 				break;
 			case 'Item' :
+			case 'ShopBuy' :
+			case 'ShopRefair':
+			case 'ShopSell' :
 				this.data = dataItem[this.code];
 				break;
 			case 'Character' :
@@ -1066,14 +1112,11 @@ class CreateDataView{
 			case 'Skill' :
 				this.data = dataSkill[this.code]
 				break;
-			case 'ShopBuy' :
-				this.data = dataItem[this.code]
-				break;
-			case 'ShopSell' :
-				this.data = dataItem[this.code]
-				break;
 			case 'Parttern':
 				this.data = dataPartternType;
+				break;
+			case 'CharacterUseItem':
+				this.data = inventoryData.Other
 				break;
 		}
 	}
@@ -1549,6 +1592,91 @@ class CreateDataView{
 		}
 		return div
 	}
+	createShopRefairDiv(){
+		const item = this.data
+		const itemElementName = Object.getOwnPropertyNames(item)
+		const optionName = ['atkPhy','atkMag','defPhy','defMag']
+		const optionNameLength = optionName.length;
+		let div = new CreateTag('div')
+		div.className = 'ItemInfoText'
+		let innerItemName = ''
+		if(item.refair === 0 || !item.refair){
+			innerItemName = item.name + '(' + item.type + ')';
+		}
+		else{
+			innerItemName = '+' + item.refair + ' ' + item.name + '(' + item.type + ')';
+		}
+
+		let nameP = new Text(innerItemName , 'ItemName').p
+        if(dataItem[item.baseCode].src){
+            let img = new CreateTag('img');
+            img.src = dataItem[item.baseCode].src;
+            div.appendChild(img);
+        }
+		let slash = new Text(' / ').p;
+		div.appendChild(nameP)
+		let countP = new Text( 'x' + item.number , 'ItemCount').p
+		div.appendChild(countP)
+		div.appendChild(slash)
+		let checkCreate = {defPhy : 0, defMag : 0}
+		if(item.spec){
+		const baseOption = item.spec.option
+		if(baseOption){
+		const baseOptionName = Object.getOwnPropertyNames(baseOption)
+		const itemOptionLength = baseOptionName.length
+		for( let i  = 0 ; i < itemOptionLength; i ++){
+			let checkName = ''
+			if(baseOptionName[i].length != 6 && baseOptionName[i].indexOf("True") == -1){
+				checkName = baseOptionName[i].slice(0,6)
+			}
+			else{
+				checkName = baseOptionName[i]
+			}
+			let index = optionName.indexOf(checkName) 
+			if(index != -1){
+				let textType = optionName[index]
+				let innerText = optionName[index].slice(0,1).toUpperCase() + optionName[index].slice(1,3) + ' : '
+				if(optionName[index].indexOf("Mag")!= -1){
+					innerText = "M" + innerText.toLowerCase();
+				}
+				let slash = new Text(' / ').p;
+				if(index < 2){
+					innerText += baseOption[optionName[index]]
+				}
+				else{
+						let defPer = baseOption[optionName[index] + 'Per']
+						if(!defPer){
+							innerText += '0 + '  
+						}
+						else{
+							innerText += defPer + ' + '
+						}
+						let defNum = baseOption[optionName[index] + 'Num']
+						if(!defNum){
+							innerText += '0'  
+						}
+						else{
+							innerText += defNum
+						}
+						checkCreate[optionName[index]] += 1
+					
+				}
+				if(!checkCreate[optionName[index]] || checkCreate[optionName[index]] == 1){
+					let optionP = new Text(innerText , textType).p
+				div.appendChild(optionP)
+				div.appendChild(slash)
+				}
+			}			
+		}
+		}
+		}
+		if(itemElementName.indexOf('exp') != -1){
+		
+			let optionP = new Text(item.exp , 'ItemOption').p
+			div.appendChild(optionP)
+		}
+		return div
+	}
 	createPartternDiv(){
 		const judgeCode = Object.getOwnPropertyNames(this.data)
 		let jSelect = document.createElement("select");
@@ -1578,6 +1706,23 @@ class CreateDataView{
 		}
 		return kselect;
 	}
+	createCharacterUseItemDiv(){
+		const item= this.data;
+		const code = Object.getOwnPropertyNames(item);
+		const useItems = ['Rebirth']
+		let select = document.createElement("select");
+		select.className = 'CharacterUseItem'
+		for(let i =0 ; i < code.length; i++){
+			if(useItems.indexOf(item[code[i]].type) != -1){
+			let option = document.createElement("option");
+			option.value = code[i]
+			option.innerText = dataItem[code[i]].name +' x' + this.data[code[i]].number;
+			select.appendChild(option);
+			}
+	
+		}
+		return select;
+	}
 }
 class addEventListner{
 	constructor(type){
@@ -1595,6 +1740,7 @@ class addEventListner{
 		this.addEventStateApplyButton()
 		this.addEventSelectPartyMember() 
 		this.addEventFavoriteSkillCheckBox()
+		
 	}
 	addEventSelectPartyMember(){
 		let label = document.getElementsByClassName('SelectParty ViewLabel')
@@ -1712,6 +1858,17 @@ class addEventListner{
 				CharacterDesk.prototype.refreshStateView()	
 				addEventListner.prototype.addEvent()
 			}
+		})
+	}
+	addEventUseItemButton(){
+		var useButton = document.getElementsByClassName('UseItemButton')[0];
+		useButton.addEventListener('click',function(){
+			const value = document.getElementById('UseItemValue').value;
+			new UseItem(value);
+			CharacterDesk.prototype.refreshUseItemList()
+			CharacterDesk.prototype.refreshStateView()	
+			CharacterDesk.prototype.refreshCharacteristicData()
+			addEventListner.prototype.addEvent()
 		})
 	}
 	addEventStateResetButton(){
@@ -1925,6 +2082,10 @@ class addEventListner{
 		function(){
 			new Shop("Sell")
 		})
+		document.getElementById("RefairMenuTabs").addEventListener('click',
+		function(){
+			new Shop("Refair")
+		})
 	}
 	addInventoryListRefresh(tab){
 		tab.addEventListener('click', function(){
@@ -1956,6 +2117,43 @@ class addEventListner{
 			}
 		})
 	}
+	addPartternDragAndDrop(parttern){
+		parttern.addEventListener('dragstart',function(){onDragStart(event)})
+		parttern.addEventListener('drop',function(){onDrop(event)})
+		parttern.addEventListener('dragover',function(){onDragOver(event)})
+		function onDragStart(event) {
+			event.dataTransfer.setData('text/plain', event.target.getAttribute("partData"));
+		  
+			event.currentTarget.style.backgroundColor = 'yellow';
+		  }
+		  function onDragOver(event) {
+			event.preventDefault();
+		  }
+		  function onDrop(event) {
+			const parttern = document.getElementsByClassName("PartternTab")[0]; 
+			const id = event.dataTransfer.getData('text');
+		  
+			const draggableElement = parttern.children[id];
+			let target = event.target
+			let reIndex //Parttern + i;
+			do{
+				reIndex= target.getAttribute("partData");
+				if(reIndex == undefined){
+					target = target.parentNode
+				}
+			}while(reIndex == undefined)
+			draggableElement.style.backgroundColor = '';
+			const saveIndex = draggableElement.getAttribute("partData");
+			draggableElement.setAttribute("partData", reIndex)
+			const dropzone =parttern.children[reIndex];
+			dropzone.setAttribute("partData", saveIndex)
+			const tmp = parttern.replaceChild(dropzone,draggableElement);
+			parttern.insertBefore(tmp,parttern.children[reIndex]);
+		
+			event.dataTransfer.clearData();
+			new PartternInput(document.getElementById('CharacterDesk').value);
+		  }
+	}
 	addEventBuyButton(){
 		var buttons = document.getElementsByClassName('BuyButton')
 		for(let i = 0 ; i < buttons.length; i++){
@@ -1971,6 +2169,14 @@ class addEventListner{
 			new ShopInter('Sell');
 		})
 	}
+	}
+	addEventRefairButton(){
+		var buttons = document.getElementsByClassName('RefairButton')
+		for(let i = 0 ; i < buttons.length; i++){
+			buttons[i].addEventListener('click',function(){
+				new ShopRefair();
+			})
+		}
 	}
 	addEventShopClearButton(){
 		var buttons = document.getElementsByClassName('ClearButton')
@@ -2176,18 +2382,25 @@ class Shop{
 			case 'Buy' :
 			this.createBuyData();
 			addEventListner.prototype.addEventBuyButton();
+			addEventListner.prototype.addEventShopClearButton();
 			break;
 			case 'Sell':
 			this.createSellData();
 			addEventListner.prototype.addEventSellButton();
+			addEventListner.prototype.addEventShopClearButton();
+			break;
+			case 'Refair' :
+			this.createRefairData();
+			addEventListner.prototype.addEventRefairButton();
 			break;
 		}
-		addEventListner.prototype.addEventShopClearButton();
+
 		
 	}
 	boardClear(){
 		document.getElementsByName("Buy")[0].innerHTML = "";
 		document.getElementsByName("Sell")[0].innerHTML = "";
+		document.getElementsByName("Refair")[0].innerHTML = "";
 	}
 	selectBoard(type){
 		this.standBoard = document.getElementsByName(type)[0];
@@ -2202,6 +2415,12 @@ class Shop{
 		var div = document.createElement('div');
 		div.className = 'SellButton Button'
 		div.innerText = 'Sell Apply'
+		return div
+	}
+	createRefairButton(){
+		var div = document.createElement('div');
+		div.className = 'RefairButton Button'
+		div.innerText = 'Refair Apply'
 		return div
 	}
 	createClearButton(){
@@ -2353,6 +2572,95 @@ class Shop{
 		sfButtonGroup.appendChild(sClearButton);
 		this.standBoard.appendChild(sfButtonGroup)
 	}
+	createRefairData(){
+		const sort = Object.getOwnPropertyNames(inventoryData);
+		const sLength = sort.length;
+		let fButtonGroup = new CreateTag('div');
+		fButtonGroup.style.display ="flex";
+		fButtonGroup.style.borderBottom = "1px solid black"
+		let fisrtButton = this.createRefairButton();
+		fisrtButton.style.width = "50%";
+		let fClearButton = this.createClearButton();
+		fClearButton.style.width = "50%";
+		fButtonGroup.appendChild(fisrtButton);
+		fButtonGroup.appendChild(fClearButton);
+		this.standBoard.appendChild(fButtonGroup)
+		for(let j = 0 ; j < sLength - 1 ; j++){
+			const nList = inventoryData[sort[j]]
+		const itemList = Object.getOwnPropertyNames(nList);
+		itemList.sort()
+		const length = itemList.length;
+
+		for(let i =0 ; i < length  ; i++){
+			let div = new CreateTag("div");
+			let Radio = CreateViewHTML.prototype.createViewRadio(itemList[i],"ItemData",itemList[i],"ItemRefair");
+
+			div.appendChild(Radio);
+			div.className="ItemData"
+			let label = new CreateTag("label");
+			label.setAttribute("for", Radio.id);
+			label.className = "ItemData DataLabel"
+			let formCheck = new CreateTag("div");
+
+			let checkDiv = new CreateTag("div");
+			checkDiv.className = "ItemSelecter";
+			
+			formCheck.style.width = "5%";
+			formCheck.appendChild(checkDiv)
+			label.appendChild(formCheck)
+
+			let funds = dataItem[inventoryData[sort[j]][itemList[i]].baseCode].price;
+			funds = funds * 5;
+			if(!funds){
+				funds = 0;
+			}
+			let fundiv = new CreateTag("div")
+			fundiv.style.width = "10%";
+			let fundData = new Text("$" + funds).p;
+			fundiv.appendChild(fundData);
+			label.appendChild(fundiv);
+
+			let inputLabel = new CreateDataView('ShopRefair',0,nList[itemList[i]]).div
+			inputLabel.style.width = "65%";
+			label.appendChild(inputLabel)
+			div.appendChild(label);
+			this.standBoard.appendChild(div);
+		}
+		}
+
+		let sfButtonGroup = new CreateTag('div');
+		sfButtonGroup.style.display ="flex";
+		let secondButton = this.createRefairButton();
+		secondButton.style.width = "50%";
+		let sClearButton = this.createClearButton();
+		sClearButton.style.width = "50%";
+		sfButtonGroup.appendChild(secondButton);
+		sfButtonGroup.appendChild(sClearButton);
+		this.standBoard.appendChild(sfButtonGroup)
+	}
+}
+class ShopRefair{
+	constructor(){
+		this.checkedItemSearch();
+		this.refairItem();
+	}
+	checkedItemSearch(){
+		const check = document.getElementsByName("ItemData")
+		const length = check.length;
+		this.data = {}
+		for(let i =0 ; i < length ; i++){
+			if(check[i].checked){
+				
+				this.codeData =check[i].id;
+				
+			}
+		}
+	
+	}
+	refairItem(){
+		new refairItem(this.codeData);
+		new Shop('Refair');
+	}
 }
 class ShopInter{
 	constructor(type){
@@ -2373,6 +2681,9 @@ class ShopInter{
 					this.sellItems();
 					this.getFunds();
 				}
+				break;
+				case 'Refair':
+
 				break;
 			}
 		}
@@ -2429,6 +2740,7 @@ class ShopInter{
 		
 		return false;
 	}
+
 	buyItems(){
 		let length = this.codeData.length;
 		for(let i =0 ; i < length ; i++){
@@ -2677,14 +2989,16 @@ class HireList{
 		let numberDiv = new CreateTag('div');
 		let numberText = new Text(count + 1).p;
 		numberDiv.style.width = "30px"
+		numberDiv.className = "HireNumber"
 		numberDiv.appendChild(numberText);
 		let name = new CreateTag("div");
 		name.innerText =data.hireName;
-
+		name.className= "HireNameText"
 		let timeDiv = new CreateTag("div");
 		let time = this.calculrateTimeText(data.time);
 		let timeTxt = new Text(time).p;
 		timeTxt.id = "HireTime"+data.code
+		timeDiv.className="HireTimer"
 		timeDiv.appendChild(timeTxt);
 
 		partDiv.appendChild(numberDiv);
@@ -2709,5 +3023,30 @@ class HireList{
 		}
 		txt = hour + " : " + minut + " : " + second;
 		return txt;
+	}
+}
+
+
+class CharacterUseItem{
+	constructor(){
+		this.div = new CreateTag('div');
+		this.div.id="CharacterUseItem"
+		let option = new CreateDataView('CharacterUseItem',0).div
+		if(option.children.length <1){
+			this.div=false;
+			return false;
+		}
+		option.id = 'UseItemValue'
+		let button = this.createApplyButton();
+		this.div.appendChild(option);
+		this.div.appendChild(button);
+		
+	
+	}
+	createApplyButton(){
+		var div = document.createElement('div');
+		div.className = 'UseItemButton Button'
+		div.innerText = 'Apply'
+		return div
 	}
 }

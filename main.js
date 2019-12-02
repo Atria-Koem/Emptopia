@@ -359,7 +359,7 @@ class CharacterHire{
 		hireTimer[createCharacter.code]={
 			code : createCharacter.code,
 			time : this.timeValue,
-			hireName :this.name,
+			hireName :createCharacter.name,
 			data : createCharacter
 		}
 	
@@ -449,6 +449,8 @@ function setLoad(){
 		document.getElementsByClassName('MenuTabs')[0].children[2].click()
 		new Shop();
 		for(let i =0; i<10 ;i++){
+			new Item("IT9950000");
+			new Item("IT9950010");
 			new Item("IT9940000");
 		}
 	}
@@ -465,3 +467,7 @@ function enemyKill() {
 		}
 	}
 }
+
+
+
+
