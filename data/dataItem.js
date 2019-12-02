@@ -1729,6 +1729,542 @@ const dataItem = {
 		  src : 'Image\\food_007.png', 
 		  exp : '정체를 알수없는 누군가의 기억이 담겨 있다.', 
 	},
+	IT0000075 : { 
+	 code : 'IT0000075', 
+	 name : 'Gown', 
+	 category : 'Ammor', 
+	 type : 'Cloth', 
+	 spec : { 
+	 	 health : {
+ 		mp : 362,
+ 		pHp : 5,pSp : 5,pMp : 5
+		 }, 
+	 	 state : {
+ 		vit : 61, 	int : 77
+		 }, 
+	 	 option : {
+ 		defPhyPer : 15, 	defMagPer : 17
+		 }, 
+	 }, 
+	  price: '5654', 
+	  src : 'Image\\armor_015e.png', 
+	  exp : '흰색 일색으로 이루어진 가운.', 
+	},
+	IT0000076 : { 
+		 code : 'IT0000076', 
+		 name : '秘密', 
+		 category : 'Ammor', 
+		 type : 'ArmGaurd', 
+		 spec : { 
+			 health : {
+			sp : 122
+			 }, 
+			 state : {
+			str : 51, 	dex : 72
+			 }, 
+			 option : {
+			atkPhy : 66, 	defPhyPer : 15, 	defMagPer : 12, 	atkPhyTrue : 15
+			 }, 
+		 }, 
+		  price: '13658', 
+		  src : 'Image\\gauntlet_009.png', 
+		  exp : '칼날이 달려있는 방어구. 주의하지 않는다면 자신에게 피해를 줄 수도 있다.', 
+	},
+	IT0000077 : { 
+		 code : 'IT0000076', 
+		 name : 'Trumpet', 
+		 category : 'Item', 
+		 type : 'Item', 
+		 spec : { 
+			 health : {
+
+			pHp : 15,pSp : 15,pMp : 15
+			 }, 
+			 state : {
+			vit : 66, 	luk : 25
+			 }, 
+		 }, 
+		  price: '63658', 
+		  src : 'Image\\inst_002.png', 
+		  exp : '행운을 올려주는 나팔.', 
+	},
+	IT0000078 : { 
+		 code : 'IT0000078', 
+		 name : 'Face Protector', 
+		 category : 'Ammor', 
+		 type : 'Helmet', 
+		 spec : { 
+			 health : {
+			hp : 661,sp : 244
+			 }, 
+			 state : {
+			vit : 98
+			 }, 
+			 option : {
+			defPhyPer : 41, 	defMagPer : 27
+			 }, 
+		 }, 
+		  price: '5667', 
+		  src : 'Image\\helm_009.png', 
+		  exp : '값싼 보급형 방어구. 눈먼 화살로 부터 안면을 보호해준다.', 
+	},
+	IT0000079 : { 
+		 code : 'IT0000079', 
+		 name : 'Goblin Mask', 
+		 category : 'Ammor', 
+		 type : 'Helmet', 
+		 spec : { 
+			 health : {
+			sp : 255
+			 }, 
+			 state : {
+			dex : 68, 	spd : 101
+			 }, 
+			 option : {
+			atkPhy : 132, 	defPhyPer : 11, 	defMagPer : 7, 	atkPhyTrue : 70
+			 }, 
+		 }, 
+		  price: '21110', 
+		  src : 'Image\\helm_013.png', 
+		  exp : '민첩성과 속도를 올려주는 가면.', 
+	},
+	IT0000080 : { 
+		 code : 'IT0000080', 
+		 name : 'Burning Wand', 
+		 category : 'Weapon', 
+		 type : 'Wand', 
+		 spec : { 
+			 health : {
+			mp : 314,
+			pMp : 7
+			 }, 
+			 state : {
+			int : 102
+			 }, 
+			 option : {
+			atkMag : 161, 	atkMagTrue : 81, 	rateHit : 92, 	rateCrt : 5, 	valCrt : 140, 	
+			rateHitJust : 71, 	atkRapid : 3
+			 }, 
+		 }, 
+		  price: '16999', 
+		  src : 'Image\\item_024.png', 
+		  exp : '공격시 화염 속성 피해를 입힌다. 화속성 추가 피해 10%', 
+	},
+	IT0000081 : { 
+		 code : 'IT0000081', 
+		 name : '명필가의 붓', 
+		 category : 'Weapon', 
+		 type : 'Staff', 
+		 spec : { 
+			 health : {
+			mp : 327,
+			pMp : 8
+			 }, 
+			 state : {
+			vit : 88, 	int : 162
+			 }, 
+			 option : {
+			atkMag : 331, 	atkMagTrue : 124, 	rateHit : 99, 	rateCrt : 5, 	valCrt : 140, 	
+			rateHitJust : 65, 	atkRapid : 2
+			 }, 
+		 }, 
+		  price: '146991', 
+		  src : 'Image\\item_038.png', 
+		  exp : '다른 세계의 명필가가 글씨를 쓸때 사용했다고 알려졌다.', 
+	},
+	IT0000082 : { 
+		 code : 'IT0000082', 
+		 name : '녹색베일', 
+		 category : 'Ammor', 
+		 type : 'Robe', 
+		 spec : { 
+			 health : {
+			hp : 117,sp : 85,mp : 261
+			 }, 
+			 state : {
+			vit : 39, 	int : 62
+			 }, 
+			 option : {
+			defPhyPer : 11, 	defMagPer : 15
+			 }, 
+		 }, 
+		  price: '2412', 
+		  src : 'Image\\armor_001.png', 
+		  exp : '녹색천으로 만들어진 베일. 천의 재료는 알 수 없다.', 
+	},
+	IT0000083 : { 
+		 code : 'IT0000083', 
+		 name : 'Fluffy Coat', 
+		 category : 'Ammor', 
+		 type : 'Cloth', 
+		 spec : { 
+			 health : {
+			hp : 265,sp : 110,mp : 447
+			 }, 
+			 state : {
+			vit : 44, 	int : 89, 	luk : 12
+			 }, 
+			 option : {
+			defPhyPer : 23, 	defMagPer : 19
+			 }, 
+		 }, 
+		  price: '15121', 
+		  src : 'Image\\armor_015.png', 
+		  exp : '푹신한 재질로 만들어진 옷. 입으면 방어력이 올라갈 것만 같다.', 
+	},
+	IT0000084 : { 
+		 code : 'IT0000084', 
+		 name : 'Grass Dress', 
+		 category : 'Ammor', 
+		 type : 'Cloth', 
+		 spec : { 
+			 health : {
+			hp : 77,sp : 46,mp : 128
+			 }, 
+			 state : {
+			vit : 27, 	int : 55
+			 }, 
+			 option : {
+			defPhyPer : 10, 	defMagPer : 10
+			 }, 
+		 }, 
+		  price: '2112', 
+		  src : 'Image\\armor_013c.png', 
+		  exp : '식물의 잎과 줄기로 제작된 옷이다. 매 턴마다 체력을 1/16 회복하지만 화염피해를 입을 경우 체력의 2%만큼의 추가 데미지를 입는다.', 
+	},
+	IT0000085 : { 
+		 code : 'IT0000085', 
+		 name : 'Clothing of Monastics', 
+		 category : 'Ammor', 
+		 type : 'Cloth', 
+		 spec : { 
+			 health : {
+			hp : 82,sp : 51,mp : 64
+			 }, 
+			 state : {
+			str : 14, 	vit : 25, 	int : 28, 	dex : 51
+			 }, 
+			 option : {
+			defPhyPer : 15, 	defMagPer : 12
+			 }, 
+		 }, 
+		  price: '4142', 
+		  src : 'Image\\armor_022d.png', 
+		  exp : '알 수 없는 기운으로 보호받고 있는 오래된 수도복. 냄새가 나는 것만 같이 느껴진다.', 
+	},
+	IT0000086 : { 
+		 code : 'IT0000086', 
+		 name : 'ゲダ', 
+		 category : 'Item', 
+		 type : 'Item', 
+		 spec : { 
+			 health : {
+			hp : 207
+			 }, 
+			 state : {
+			str : 5, 	vit : 5, 	int : 5, 	wis : 5, 	dex : 5, 	
+			agi : 5, 	dis : 5, 	res : 5, 	spd : 5, 	luk : 5
+			 }, 
+			 option : {
+			atkPhy : 5, 	atkMag : 5
+			 }, 
+		 }, 
+		  price: '0', 
+		  src : 'Image\\boots_007.png', 
+		  exp : '탑에서 발견된 다른 세계의 신발. 모든 능력치를 상승시켜 준다.', 
+	},
+	IT0000087 : { 
+		 code : 'IT0000087', 
+		 name : 'ArrowCase', 
+		 category : 'Weapon', 
+		 type : 'ArrowCase', 
+		 spec : { 
+			 state : {
+			dex : 17, 	spd : 7
+			 }, 
+		 }, 
+		  price: '0', 
+		  src : 'Image\\item_043.png', 
+		  exp : '가죽으로 만들어진 화살통.', 
+	},
+	IT0000088 : { 
+		 code : 'IT0000088', 
+		 name : 'Light Quiver', 
+		 category : 'Weapon', 
+		 type : 'ArrowCase', 
+		 spec : { 
+			 state : {
+			dex : 24, 	spd : 7
+			 }, 
+		 }, 
+		  price: '0', 
+		  src : 'Image\\item_043.png', 
+		  exp : '경량화 마법이 걸린 것으로 추정되는 화살통.', 
+	},
+	IT0000089 : { 
+		 code : 'IT0000089', 
+		 name : 'Escape Button', 
+		 category : 'Item', 
+		 type : 'Item', 
+		  price: '0', 
+		  src : 'Image\\MI_error.png', 
+		  exp : '도망칠 확률을 높여주는 악세사리.', 
+	},
+	IT0000090 : { 
+		 code : 'IT0000090', 
+		 name : 'Angel Ring', 
+		 category : 'Item', 
+		 type : 'Item', 
+		 spec : { 
+			 state : {
+			luk : 38
+			 }, 
+			 option : {
+			resPhyPer : 4, 	resMagPer : 4, 	rateDodge : 12
+			 }, 
+		 }, 
+		  price: '0', 
+		  src : 'Image\\mat_026.png', 
+		  exp : '행운을 높여주는 아이템. 소지하고 있는 것만으로도 파티 전원의 행운이 높아진다.', 
+	},
+	IT9000024 : { 
+		 code : 'IT9000024', 
+		 name : '민트를 뿌린 고기', 
+		 category : 'Other', 
+		 type : 'Item', 
+		  price: '0', 
+		  src : 'Image\\item_012.png', 
+		  exp : '4턴동안 체력이 10% 감소하지만 방어력이 40% 상승한다.', 
+	},
+	IT9000025 : { 
+		 code : 'IT9000025', 
+		 name : '각얼음', 
+		 category : 'Other', 
+		 type : 'Item', 
+		  price: '0', 
+		  src : 'Image\\item_014.png', 
+		  exp : '3턴 동안 얼음 속성 마법의 데미지가 15% 증가된다.', 
+	},
+	IT0000091 : { 
+		 code : 'IT0000091', 
+		 name : '신속의 장화', 
+		 category : 'Item', 
+		 type : 'Item', 
+		 spec : { 
+			 state : {
+			dex : 44, 	spd : 27
+			 }, 
+		 }, 
+		  price: '7721', 
+		  src : 'Image\\boots_003c.png', 
+		  exp : '공격속도를 10% 증가시켜주는 장화.', 
+	},
+	IT0000092 : { 
+		 code : 'IT0000092', 
+		 name : '빨간장화', 
+		 category : 'Item', 
+		 type : 'Item', 
+		 spec : { 
+			 state : {
+			dex : 33, 	spd : 27
+			 }, 
+			 option : {
+			atkPhy : 33, 	defPhyPer : 3, 	atkMag : 33, 	defMagPer : 3, 	rateDodge : 3
+			 }, 
+		 }, 
+		  price: '3333', 
+		  src : 'Image\\boots_003b.png', 
+		  exp : '3배 빨라지는 붉은색의 장화. 공격속도가 30% 상승한다.', 
+	},
+	IT0000093 : { 
+		 code : 'IT0000093', 
+		 name : '태도', 
+		 category : 'Weapon', 
+		 type : 'Sword', 
+		 spec : { 
+			 health : {
+			hp : 247,sp : 121
+			 }, 
+			 state : {
+			str : 99, 	vit : 25, 	dex : 68
+			 }, 
+			 option : {
+			atkPhy : 233, 	atkPhyTrue : 89, 	rateHit : 87, 	rateDodge : 5, 	rateCrt : 12, 	
+			valCrt : 128, 	rateHitJust : 80, 	atkRapid : 11
+			 }, 
+		 }, 
+		  price: '43211', 
+		  src : 'Image\\we_sword021.png', 
+		  exp : 'અજાણી ભાષા લખેલી છે.', 
+	},
+	IT0000094 : { 
+		 code : 'IT0000094', 
+		 name : '불편한 무기', 
+		 category : 'Weapon', 
+		 type : 'Sword', 
+		 spec : { 
+			 health : {
+			hp : 252,sp : 117
+			 }, 
+			 state : {
+			str : 168, 	vit : 108, 	int : -101
+			 }, 
+			 option : {
+			atkPhy : 433, 	atkPhyTrue : 189, 	rateHit : 50, 	rateCrt : 5, 	valCrt : 132, 	
+			rateHitJust : 50, 	atkRapid : 6
+			 }, 
+		 }, 
+		  price: '16651', 
+		  src : 'Image\\we_sword015.png', 
+		  exp : '멍청해지는 듯한 느낌이 드는 무기. 사용시 무기 사용에 불편함을 느끼게 된다.', 
+	},
+	IT0000095 : { 
+		 code : 'IT0000095', 
+		 name : 'Scimeter', 
+		 category : 'Weapon', 
+		 type : 'Sword', 
+		 spec : { 
+			 health : {
+			hp : 104,sp : 59
+			 }, 
+			 state : {
+			str : 67, 	vit : 42
+			 }, 
+			 option : {
+			atkPhy : 86, 	atkPhyTrue : 51, 	rateHit : 72, 	rateCrt : 6, 	valCrt : 117, 	
+			rateHitJust : 45, 	atkRapid : 8
+			 }, 
+		 }, 
+		  price: '5548', 
+		  src : 'Image\\we_sword003.png', 
+		  exp : '사막의 전사들이 즐겨 사용했다고 알려진 곡도. 받는 화염피해가 3% 감소한다.', 
+	},
+	IT0000096 : { 
+		 code : 'IT0000096', 
+		 name : 'Heal Spanner', 
+		 category : 'Weapon', 
+		 type : 'Staff', 
+		 spec : { 
+			 health : {
+			hp : 104,mp : 161
+			 }, 
+			 state : {
+			vit : 21, 	int : 49
+			 }, 
+			 option : {
+			atkMag : 59, 	atkMagTrue : 32, 	rateHit : 95, 	rateCrt : 4, 	valCrt : 116, 	
+			rateHitJust : 80, 	atkRapid : 4
+			 }, 
+		 }, 
+		  price: '1228', 
+		  src : 'Image\\we_staff014c.png', 
+		  exp : '기계 종족의 체력을 추가로 12% 회복시켜주는 공구형태의 지팡이.', 
+	},
+	IT0000096 : { 
+		 code : 'IT0000096', 
+		 name : '숨통끊기', 
+		 category : 'Weapon', 
+		 type : 'Spear', 
+		 spec : { 
+			 health : {
+			hp : 521,sp : 317
+			 }, 
+			 state : {
+			str : 121, 	vit : 81, 	dex : 111
+			 }, 
+			 option : {
+			atkPhy : 544, 	atkPhyTrue : 312, 	rateHit : 96, 	rateCrt : 4, 	valCrt : 142, 	
+			rateHitJust : 74, 	atkRapid : 5
+			 }, 
+		 }, 
+		  price: '124216', 
+		  src : 'Image\\we_spear017b.png', 
+		  exp : '40% 이하의 체력을 가진 상대에게 30%의 추가 피해를 입힘.', 
+	},
+	IT0000097 : { 
+		 code : 'IT0000097', 
+		 name : '기다란 국자', 
+		 category : 'Weapon', 
+		 type : 'Spear', 
+		 spec : { 
+			 health : {
+			hp : 126,sp : 98
+			 }, 
+			 state : {
+			str : 48, 	vit : 55, 	dex : 31
+			 }, 
+			 option : {
+			atkPhy : 121, 	atkPhyTrue : 75, 	rateHit : 77, 	rateCrt : 6, 	valCrt : 123, 	
+			rateHitJust : 68, 	atkRapid : 3
+			 }, 
+		 }, 
+		  price: '4478', 
+		  src : 'Image\\we_other011.png', 
+		  exp : '주로 군대에서 사용되는 국자. 음식을 먹을 때 받는 효과 5% 상승.', 
+	},
+	IT0000098 : { 
+		 code : 'IT0000098', 
+		 name : '용사냥활', 
+		 category : 'Weapon', 
+		 type : 'Bow', 
+		 spec : { 
+			 health : {
+			hp : 77,sp : 181
+			 }, 
+			 state : {
+			str : 67, 	dex : 221, 	luk : 40
+			 }, 
+			 option : {
+			atkPhy : 472, 	atkPhyTrue : 212, 	rateHit : 76, 	rateCrt : 3, 	valCrt : 227, 	
+			rateHitJust : 66, 	atkRapid : 1
+			 }, 
+		 }, 
+		  price: '0', 
+		  src : 'Image\\we_bow009b.png', 
+		  exp : '전설적인 사냥꾼이 사용했다고 전해지는 활', 
+	},
+	IT0000099 : { 
+		 code : 'IT0000099', 
+		 name : 'Little Ballista', 
+		 category : 'Weapon', 
+		 type : 'BowGun', 
+		 spec : { 
+			 health : {
+			sp : 181
+			 }, 
+			 state : {
+			str : 44, 	vit : 35, 	dex : 109
+			 }, 
+			 option : {
+			atkPhy : 227, 	atkPhyTrue : 99, 	rateHit : 69, 	rateCrt : 9, 	valCrt : 267, 	
+			rateHitJust : 42, 	atkRapid : 1
+			 }, 
+		 }, 
+		  price: '34124', 
+		  src : 'Image\\we_bow015b.png', 
+		  exp : '.', 
+	},
+	IT0000100 : { 
+		 code : 'IT0000100', 
+		 name : '징박힌 몽둥이', 
+		 category : 'Weapon', 
+		 type : 'Axe', 
+		 spec : { 
+			 health : {
+			hp : 65,sp : 20
+			 }, 
+			 state : {
+			str : 17, 	vit : 12
+			 }, 
+			 option : {
+			atkPhy : 61, 	atkPhyTrue : 30, 	rateHit : 86, 	rateCrt : 4, 	valCrt : 116, 	
+			rateHitJust : 77, 	atkRapid : 5
+			 }, 
+		 }, 
+		  price: '1712', 
+		  src : 'Image\\we_axe022.png', 
+		  exp : '몽둥이에 박힌 못은 상대방을 기죽게 만든다. 7% 확률로 공포에 걸리게 만듬.', 
+	},
 	IT9000016 : { 
 	 code : 'IT9000016', 
 	 name : 'Spicy Pepper', 
