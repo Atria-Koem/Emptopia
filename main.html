@@ -53,57 +53,184 @@
 	</div>
 	<div id="MapView" class="TabDataView">Map</div>	
 	<div id="ActiveView" class="TabDataView">
-		<div style="display : flex">
+		<div>
 			<div class="containerMap">
 				<div id="Map"><canvas id="MapDraw"></canvas></div>
+				<div id="MapMoveButton">
+						<div class="ButtonSet">
+							<button onclick="moveMap(event,55)" class="MoveMap">
+								<div class="ButtonOutLine"></div>↖</button>
+							<button onclick="moveMap(event,56)" class="MoveMap">
+								<div class="ButtonOutLine"></div>↑</button>
+							<button onclick="moveMap(event,57)" class="MoveMap">
+								<div class="ButtonOutLine"></div>↗</button>
+						</div>
+						<div class="ButtonSet">
+							<button onclick="moveMap(event,52)" class="MoveMap">
+								<div class="ButtonOutLine"></div>←</button>
+							<button onclick="moveMap(event,53)" class="MoveMap">
+								<div class="ButtonOutLine"></div>□</button>
+							<button onclick="moveMap(event,54)" class="MoveMap">
+								<div class="ButtonOutLine"></div>→</button>
+						</div>
+						<div class="ButtonSet">
+							<button onclick="moveMap(event,49)" class="MoveMap">
+								<div class="ButtonOutLine"></div>↙</button>
+							<button onclick="moveMap(event,50)" class="MoveMap">
+								<div class="ButtonOutLine"></div>↓</button>
+							<button onclick="moveMap(event,51)" class="MoveMap">
+								<div class="ButtonOutLine"></div>↘</button>
+						</div>
+					</div>
 				<div id="MiniMap"><canvas id="MiniMapDraw"></canvas></div>
 			</div>		
 			<div id="inPlayedCharacter">
 			</div>
 			<div id="MapLogView" class="LogView"></div>
+
 		</div>	
 	</div>
 	<div id="MainView" class="TabDataView">
 		<div id="Area">
-			<div class="Select"><div class="Text">Map</div>
-				<select id="AreaSelect">
-					<option value="10000">-Goblin Field</option>
-					<option value="10001" selected>--Goblin to Asobi</option >
-					<option value="10002">--Stronger Goblin </option>
-					<option value="Infinity"
-			  style="display:none;">Infinity</option>
-				</select>
-				<select id="AreaLevel">
-					<option value="0">0</option>
-				</select>
-				<div  class="Text">Level</div>
+				<div class="Select"><div class="Text">Map</div>
+					<select id="AreaSelect">
+						<option value="10000">-Goblin Field</option>
+						<option value="10001" selected="">--Goblin to Asobi</option>
+						<option value="10002">--Stronger Goblin </option>
+						<option value="Infinity" style="display:none;">Infinity</option>
+					</select>
+					<select id="AreaLevel">
+						<option value="0">0</option>
+					</select>
+					<div class="Text">Level</div>
+				</div>	
+			<div class="Select"><div class="Text">Navi</div>
+					<select id="NavigaterType">
+						<option value="0">none</option>
+						<option value="IT9940000">Simple NaviMap</option>
+
+						<option value="Infinity" style="display:none;">Infinity</option>
+					</select>
+					
+					
+				</div>
+				<div class="Select"><div class="Text">Sigth</div>
+					<select id="SigthType">
+						<option value="0">None</option>
+						<option value="Infinity" style="display:none;">Infinity</option>
+					</select>
+				</div>
+			<div>
+			<button onclick="new CreateMapData()" class="Main"><div class="ButtonOutLine"></div>
+				MapCreate</button>
 			</div>
-  <div>
-		<button onclick="new CreateMapData()"  class="Main"><div class="ButtonOutLine"></div>
-			MapCreate</button></div>
-			<div>
-				<button onclick="search()" class="Main"><div class="ButtonOutLine" ></div>
-					EnemySearch
-				</button></div>
-			<div>
-				<button onclick="new BattleData" class="Main"><div class="ButtonOutLine"></div>
-					Battle
-				</button></div>
-							<div><button onclick="new CharacterHire" class="Main">
-					<div class="ButtonOutLine"></div>
-					New Character Hire
-				</button></div>
-				<div>
-						<button onclick="battleModeChange()" class="Main"><div class="ButtonOutLine"></div>
-							<a id="modeId">Battle Mode (Turn => Active Turn)</a>
-						</button></div>
-		</div>
-		<div style="
-    color: white;
+			</div>
+<div id="PartyPreset" style="
+float: left;
+padding-left: 3%;
+width: 20%;
 ">
-        <input type="checkBox" id="NaviUse">
-    <a>NavigatorUseSelect</a>
-</div>	
+				<div class="Select"><div class="Text">MemberGroup</div>
+					<select id="GroupLoad">
+						<option value="10000"></option>
+						<option value="10001" selected=""></option>
+						<option value="10002"></option>
+						<option value="Infinity" style="display:none;">Infinity</option>
+					</select>
+					
+					
+				</div>	
+			<div class="Select"><div class="Text">Member</div>
+					<select class="MemberSelect">
+						<option value="0">None</option>
+						<option value="PT">Cest</option>
+
+						<option value="Infinity" style="display:none;">Infinity</option>
+					</select>
+					
+					
+				</div>
+				
+			<div class="Select"><div class="Text">Member</div>
+					<select class="MemberSelect">
+						<option value="0">None</option>
+						<option value="PT">Cest</option>
+
+						<option value="Infinity" style="display:none;">Infinity</option>
+					</select>
+					
+					
+				</div><div class="Select"><div class="Text">Member</div>
+					<select class="MemberSelect">
+						<option value="0">None</option>
+						<option value="PT">Cest</option>
+
+						<option value="Infinity" style="display:none;">Infinity</option>
+					</select>
+					
+					
+				</div><div class="Select"><div class="Text">Member</div>
+					<select class="MemberSelect">
+						<option value="0">None</option>
+						<option value="PT">Cest</option>
+
+						<option value="Infinity" style="display:none;">Infinity</option>
+					</select>
+					
+					
+				</div><div class="Select"><div class="Text">Member</div>
+					<select class="MemberSelect">
+						<option value="0">None</option>
+						<option value="PT">Cest</option>
+
+						<option value="Infinity" style="display:none;">Infinity</option>
+					</select>
+					
+					
+				</div>
+			</div>
+	<div id="MainMenuGroupRight">
+		<div style="    display: flex;">
+			<button onclick="clickMenu()" class="Main">
+				<div class="ButtonOutLine"></div>Characters</button>
+			<button onclick="clickMenu()" class="Main">
+				<div class="ButtonOutLine"></div>organize</button>
+		</div>
+		<div>
+			<button onclick="clickMenu('Hire')" class="Main">
+				<div class="ButtonOutLine"></div>Hire</button>
+		</div>
+		<div style="    display: flex;">
+			<button onclick="clickMenu( 'Buy')" class="Main">
+				<div class="ButtonOutLine"></div>Buy</button>
+			<button onclick="clickMenu( 'Sell')" class="Main">
+				<div class="ButtonOutLine"></div>Sell</button>
+		</div>
+		<div>
+			<button onclick="clickMenu('Inventory')" class="Main">
+				<div class="ButtonOutLine"></div>Inventory</button></div>
+		</div>
+	
+<div style="width: 15%" >
+		<div>
+			<button onclick="search()" class="Main"><div class="ButtonOutLine" ></div>
+				EnemySearch
+			</button></div>
+		<div>
+			<button onclick="new BattleData" class="Main"><div class="ButtonOutLine"></div>
+				Battle
+			</button></div>
+						<div><button onclick="new CharacterHire" class="Main">
+				<div class="ButtonOutLine"></div>
+				New Character Hire
+			</button></div>
+			<div>
+					<button onclick="battleModeChange()" class="Main"><div class="ButtonOutLine"></div>
+						<a id="modeId">Battle Mode (Turn => Active Turn)</a>
+					</button></div>
+	</div>
+
+
 	</div>
 	<div id="CharacterView" class="TabDataView">
 		<div id="CharacterList">
@@ -112,7 +239,7 @@
 	</div>
 	<div id="TownView" class="TabDataView">
 		<div class="Town">
-		<ul class="MenuTabs Vertical">
+		<ul id="TownTabs" class="MenuTabs Vertical">
 			<li class="activeTab" data-conectTab="HireMenu"><a>Hire</a></li>
 			<li data-conectTab="BuyMenu" id="BuyMenuTabs"><a>Buy</a></li>
 			<li data-conectTab="SellMenu" id="SellMenuTabs"><a>Sell</a></li>

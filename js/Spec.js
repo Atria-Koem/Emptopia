@@ -682,8 +682,8 @@ class Health{
 			}
 	}
 	calculrateHp(vit,wis,str,int){
-		let valueVW = Math.pow( (vit + wis) * 7 , 2.73 / 3) 
-		let valueSI = Math.pow( (str + int) * Math.sqrt(5) , 1.73 / 3)
+		let valueVW = Math.pow( (vit + wis) * 5 , 1.73 / Math.PI) 
+		let valueSI = Math.pow( (str + int) * Math.sqrt(3) , 1.73 / Math.PI)
 		let hp = Math.floor(valueVW + valueSI)
 		if(!hp){
 			hp = 1
@@ -709,8 +709,8 @@ class Health{
 		let length = baseName.length
 		for(let i = 0 ; i < length; i++){
 			let maxName =  'm' + baseName[i].slice(0,1).toUpperCase() + 'p'
-			this[baseName[i]] += Math.floor(base[baseName[i]] * Math.pow(level * 7, 2.73 / 3))
-			this[maxName] += Math.floor(base[baseName[i]] * Math.pow(level * 7, 2.73 / 3))
+			this[baseName[i]] += Math.floor(base[baseName[i]] * Math.pow(level * 5, 2.73 / 3))
+			this[maxName] += Math.floor(base[baseName[i]] * Math.pow(level * 5, 2.73 / 3))
 		}
 	}
 }
@@ -920,13 +920,13 @@ class Option{
 	calculrateRate(target){
 		switch(target){
 			case 'rateHit' :
-				this.option.rateHit = 30 + this.valueRate(this.state.dex,69)
+				this.option.rateHit = 70 + this.valueRate(this.state.dex,69)
 				break;
 			case 'rateDodge' :
 				this.option.rateDodge = 30 + this.valueRate(this.state.agi,69)
 				break;
 			case 'rateDis' :
-				this.option.rateDis = 30 + this.valueRate(this.state.dis,99)
+				this.option.rateDis = 70 + this.valueRate(this.state.dis,99)
 				break;
 			case 'rateRes' :
 				this.option.rateRes = 30 + this.valueRate(this.state.res,99)
@@ -938,9 +938,9 @@ class Option{
 				this.option.rateDodgeLuk = -10 + this.valueRate(this.state.luk,77)
 				break;
 			case 'all' :
-				this.option.rateHit = 30 + this.valueRate(this.state.dex,69)
+				this.option.rateHit = 70 + this.valueRate(this.state.dex,69)
 				this.option.rateDodge = 30 + this.valueRate(this.state.agi,69)
-				this.option.rateDis = 30 + this.valueRate(this.state.dis,99)
+				this.option.rateDis = 70 + this.valueRate(this.state.dis,99)
 				this.option.rateRes = 30 + this.valueRate(this.state.res,99)
 				this.option.rateCrtLuk = 0 + this.valueRate(this.state.luk,77)
 				this.option.rateDodgeLuk = -10 + this.valueRate(this.state.luk,77)

@@ -2159,6 +2159,7 @@ class addEventListner{
 		for(let i = 0 ; i < buttons.length; i++){
 		buttons[i].addEventListener('click',function(){
 			new ShopInter('Buy');
+			saveItem();
 		})
 	}
 	}
@@ -2167,6 +2168,7 @@ class addEventListner{
 		for(let i = 0 ; i < buttons.length; i++){
 		buttons[i].addEventListener('click',function(){
 			new ShopInter('Sell');
+			saveItem();
 		})
 	}
 	}
@@ -2175,6 +2177,7 @@ class addEventListner{
 		for(let i = 0 ; i < buttons.length; i++){
 			buttons[i].addEventListener('click',function(){
 				new ShopRefair();
+				saveItem();
 			})
 		}
 	}
@@ -2822,6 +2825,7 @@ class SkillButtonView{
 	}
 	createPerformerData(){
 		let div = new CreateTag('div')
+		div.style.color="White"
 		let base = new CreateTag('a')
 		base.innerText = 'Action Selected By '
 		let name = new CreateTag('a')

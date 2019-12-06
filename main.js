@@ -419,6 +419,7 @@ function loadScript(url,folder)
 const scriptNames = ["Battle","Item","Maps","Parttern","Skill","Spec","Team","Tribe","UI"];
 const dataNamse = ["Area","Item","Job","Monster","Skill","SkillTree","Tribe"];
 let load = 0;
+
 window.onload = function(){
 	for(let i = 0 ; i < scriptNames.length; i++){
 		loadScript(scriptNames[i],"js");
@@ -448,6 +449,7 @@ function setLoad(){
 		createTeam()
 		document.getElementsByClassName('MenuTabs')[0].children[2].click()
 		new Shop();
+		loadItem();
 		for(let i =0; i<10 ;i++){
 			new Item("IT9950000");
 			new Item("IT9950010");
@@ -470,4 +472,61 @@ function enemyKill() {
 
 
 
+function clickMenu(value){
+	switch(value){
+		case 'Hire':
+			document.getElementById('MainTab').children[4].click()
+			document.getElementById('TownTabs').children[0].click()
+		break;
+		case 'Buy':
+			document.getElementById('MainTab').children[4].click()
+			document.getElementById('TownTabs').children[1].click()
+		break;
+		case 'Sell':
+			document.getElementById('MainTab').children[4].click()
+			document.getElementById('TownTabs').children[2].click()
+		break;
+		case 'Inventory':
+			document.getElementById('MainTab').children[5].click()
+		break;
+	}
+}
+function saveItem(){
+	if(localStorage.Item){
+		localStorage.removeItem("Item")
+	}
+	const inv = Object.getOwnPropertyNames(inventoryData);
+	const invLength = inv.length;
+	let inputText = ''
+	for(let i = 0 ; i < invLength; i++){
+		const data = inventoryData[inv[i]]
+		const itData = Object.getOwnPropertyNames(data);
+		const itLength = itData.length;
+		for(let j = 0; j< itLength ; j++){
+			inputText+= itData[j] + "%" + data[itData[j]].number + "^";
+		}
 
+	}
+
+	localStorage.setItem("Item",inputText);
+}
+function loadItem(){
+	const data = localStorage.Item;
+	if(!data){
+		console.log("NOT DATA");
+		return
+	}
+	const spData = data.split("^");
+	const spLength = spData.length;
+	for(let i = 0 ;i < spLength-1;i++){
+		const cdData = spData[i].split("%");
+		const code = cdData[0];
+		let count = parseInt(cdData[1]);
+		if(count == NaN){
+			count = 1;
+		}
+		for(let j = 0 ; j < count; j++){
+			new Item(code,0,'load');
+		}
+	}
+}

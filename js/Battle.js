@@ -1833,14 +1833,14 @@ class BattleEnd{
 		}
 	}
 	checkTurnOver(){
-		if(battleTurn > 100){
+		if(battleTurn > 50){
 			this.endCheck = 1;
 		}
 	}
 	endBattle(){
 		dataActiveCharacter = {}
-		document.getElementById('Map').style.visibility = 'visible';
-		document.getElementById('MiniMap').style.visibility = 'visible';
+		//document.getElementById('Map').style.visibility = 'visible';
+		//document.getElementById('MiniMap').style.visibility = 'visible';
 		document.getElementById('playerBorder').innerHTML = ''
 		document.getElementById('enemyBorder').innerHTML = ''			
 		CreateMap.prototype.changeOnPress(1)

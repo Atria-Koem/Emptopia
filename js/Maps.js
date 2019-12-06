@@ -451,7 +451,7 @@ class CreateMap extends Area{
 				this.map[y][x] = 5;
 				this.positionEnemyData[createCount] = {
 					x : x, y: y,
-					dataIndex : index,
+					dataIndex : createCount,
 					powerValue : Math.floor(Math.random() * 5 + 2),
 					sigth : Math.floor(Math.random() * 4 + 1)
 				}
@@ -743,7 +743,7 @@ class CreateMap extends Area{
    
     this.checkBattle()
     this.turn += 1;
-    this.checkRandomEvent();
+   // this.checkRandomEvent();
 	this.checkTreasure(this.party.x,this.party.y)
 		if (this.party.x === this.exit.x && this.party.y === this.exit.y) {
 			this.end()
@@ -1670,9 +1670,10 @@ function moveMap(evt,keyCode) {
     default:
         return;
     }
-    new Sight;
+
     //document.getElementById('nowTurn').value = turn;
 	mapData.checkTurn(keyCode);
+	new Sight;
 }
 
 class CreateMapData{
@@ -1687,8 +1688,8 @@ class CreateMapData{
 		this.mapDrawCheck();
 	}
 	naviCheck(){
-		const check = document.getElementById('NaviUse').checked;
-		if(check){
+		const check = document.getElementById('NavigaterType').value;//false//document.getElementById('NaviUse').checked;
+		if(check != 0){
 			this.miniMap = new UseItem('IT9940000').check
 		}
 	}

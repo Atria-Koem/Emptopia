@@ -105,20 +105,20 @@ input[type='text']{
     letter-spacing: 0.1em;
 }
 .containerMap{
-	width : 800px;
-	height : 800px;
+  float: left;
+
 	position: relative;
-	display: block;
+	display: flex;
 	width: 75%;
 }
 #Map{
     visibility: hidden;
     background-color : black;
     border : 2px ridge gray;
-    top: 50%;
-    left: 50%;
+
+  /*  left: 50%;
 		position: relative;
-	transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) ;*/
 }
 #inPlayerCharacter{
 	
@@ -132,11 +132,12 @@ input[type='text']{
 	width : 0;
 	height : 0;
 	background-color : black;
-	border : 2px ridge gray;
+  border : 2px ridge gray;
+  /*
+  position: relative;
 	bottom: 10%;
 	left: 90%;
-	position: relative;
-	transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) ;*/
 }
 #GameDesk{
   z-index : 0;
@@ -208,45 +209,48 @@ div.Text{
   text-align: center;
 }
 .Select{
+  
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 10px;
     background-color: #10b090;
     color: #fff;
     border: 2px solid gray;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
     border-radius: 8px 8px 8px 8px;
 }
+select, button.Main, button.MoveMap{
+  color: #fff;
+
+  width: 100%;
+  font-variant: small-caps;
+  background: none;
+  background-color: #10b090;
+  border: none;
+  position: relative;
+  text-align: center;
+}
 select{
-    position: relative;
     margin: 0 auto;
-    width: 100%;
     max-width: 325px;
-    color: #fff;
-    background-color: #10b090;
     vertical-align: middle;
-    text-align: center;
-    border: 0;
-    font-variant: small-caps;
     letter-spacing: 0.3em;
 }
-button.Main {
-    color: #FFF;
-    font-variant: small-caps;
+button.Main, button.MoveMap {
+    margin-bottom: 3px;
+    margin-top: 3px;
     padding: 0;
-    position: relative;
-    width: 100%;
     height: 50px;
     font-weight: bold;
-    background: none;
-    background-color: #10b090;
-    border: none;
     letter-spacing: 0.1em;
-    text-align: center;
     outline: none;
     cursor: pointer;
     transition: all 0.2s;
 }
-button.Main::before {
+button.MoveMap{
+  margin: 2%;
+}
+button.Main::before, button.MoveMap::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -255,11 +259,11 @@ button.Main::before {
 	background-color: rgba(16, 176, 14,0.1);
 	transition: all 0.2s;
 }
-button.Main:hover::before {
+button.Main:hover::before, button.MoveMap::before {
 	opacity: 0 ;
 	transform: scale(0.5,0.5);
 }
-button.Main::after {
+button.Main::after,button.MoveMap::after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -269,11 +273,11 @@ button.Main::after {
 	transition: all 0.3s;
 	transform: scale(1.2,1.2);
 }
-button.Main:hover::after {
+button.Main:hover::after,button.MoveMap:hover::after  {
 	opacity: 1;
 	transform: scale(1,1);
 }
-button.Main:hover{
+button.Main:hover,button.MoveMap:hover{
     text-align: center;
     background-color: #FFF;
     color: #10b090;
@@ -287,26 +291,34 @@ button.Main:hover{
   height: 100%;
   border: 2px ridge gray;
 }
+.ButtonSet{
+  display: flex;
+
+}
 #Area{
-  width : 20%;
+  float: left;
+  width: 30%;
   top : 5%;
   left : 40%;
 }
+.Exp,.MaxExp{
+  top : 0%;
+}
 
 .Exp{
-  top : 0%;
+ 
   padding: 3px;
-  border: 2px ridge green;
-  margin-left: 2px;
+  border:1px ridge #49484D;
   background-color:green;
-  height : 4px;
+  height : 5px;
   text-align: center;
   z-index : 0;
+  height : 5px;
+  border-radius:3px;
   width : 97.5%;
-      position: absolute;
+  position : relative;
 }
 .MaxExp{
-  top : 0%;
   width : 97.5%;
   margin-left : 2px;
   border : 2px ridge black ;
@@ -506,7 +518,12 @@ button.Main:hover{
     overflow: visible;
    white-space:  normal;
 }
-
+#MainMenuGroupRight{
+  position: relative;    
+  float: right;    
+  width: 40%;    
+  max-width: 40%;
+}
 #Item{
   display : inline-block;
   position : fixed;
@@ -617,14 +634,7 @@ text-transform: uppercase;
 		z-index: 10;
 }
 
-.EXP{
-  position : relative;
-  top : 0%;
-  background-color:green;
-  height : 5px;
-  border-radius:3px;
-  border:1px ridge #49484D;
-}
+
 .HealthOption{
 	color : honeydew;
   text-transform: uppercase;
@@ -1175,6 +1185,12 @@ ul.MenuTabs.Vertical.SkillBoard{
 	width : 80%;
 	height : 120px;
 }
+#MapMoveButton{
+  float: left;
+  bottom: 30px;
+  width: 80%;
+}
+
 #SystemLogView{
   
   bottom: 0%;
@@ -1201,7 +1217,9 @@ ul.MenuTabs.Vertical.SkillBoard{
 }
 #inPlayedCharacter{
 	width : 20%;
-	height : 600px;
+  height : 600px;
+  float: right;
+  position: relative;
 }
 .PartternSkillValue{
   height: 1.5em;

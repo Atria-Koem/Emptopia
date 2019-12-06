@@ -1,6 +1,12 @@
 class Item{
 	constructor(code,refair,type){
-		if(type != 'refair'){
+		if(type == "load"){
+			var dCode = code.slice(0,9)
+			var itemData  = dataItem[dCode]
+			this.baseCode = itemData.code
+			refair =  parseInt(code.slice(9,11));
+		}
+		else if(type != 'refair'){
 			var itemData  = dataItem[code]
 			this.baseCode = itemData.code
 		}
@@ -22,6 +28,7 @@ class Item{
 		if(!(!refair)){
 			this.refair = refair
 		}
+
 		else if(!itemData.refair){
 			this.refair = 0;
 		}
