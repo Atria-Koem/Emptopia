@@ -410,6 +410,7 @@ class Player extends CreateSpec{
 		desk.appendChild(newCharacter);
 	}
 	loadPlayerCharacter(data){
+		this.add={}
 		this.autoType = 0;
 		this.selected = 0;
 		const splitData = data.split("^")
