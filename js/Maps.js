@@ -856,13 +856,20 @@ class InMapParty{
 				player[characterName[i]]  = character[characterName[i]]
 			}
 
-	}
+		}
 		const checkLength =  Object.getOwnPropertyNames(player).length
 		if(checkLength <= 5 && checkLength >= 1){
 			this.character = player
 		}
 		else{
 			console.log('Error')
+			for(let i = 0 ; i < 5;  i++){
+				character[characterName[i]].selected = 1
+				player[characterName[i]]  = character[characterName[i]]
+				
+	
+			}
+			this.character = player
 		}
 	}
 	createPartyDesk(){
@@ -1686,6 +1693,7 @@ class CreateMapData{
 		new Sight;
 		this.naviCheck();
 		this.mapDrawCheck();
+		document.getElementById('MainTab').children[1].click();
 	}
 	naviCheck(){
 		const check = document.getElementById('NavigaterType').value;//false//document.getElementById('NaviUse').checked;
