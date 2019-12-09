@@ -451,7 +451,7 @@ class CreateMap extends Area{
 				this.map[y][x] = 5;
 				this.positionEnemyData[createCount] = {
 					x : x, y: y,
-					dataIndex : createCount,
+					dataIndex : index,
 					powerValue : Math.floor(Math.random() * 5 + 2),
 					sigth : Math.floor(Math.random() * 4 + 1)
 				}
@@ -680,7 +680,7 @@ class CreateMap extends Area{
             if(this.positionEnemyData[pOEData[i]].x == x && this.positionEnemyData[pOEData[i]].y == y){
 				new AddLog([{text : 'Position of Enemy Join'},], 'Map')
 				battleCheck =  0;
-				this.positionEnemyCount = i;
+				this.positionEnemyCount = pOEData[i];
 				const power = this.positionEnemyData[pOEData[i]].powerValue
                 enemyGroup = new EnemyGroup(this.areaCode,this.areaLevel * power ,'position',this.positionEnemyData[pOEData[i]].dataIndex).returnGroup
                 new BattleData

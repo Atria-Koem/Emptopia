@@ -31,10 +31,9 @@ class CharacterDesk{
 		let itemBoard = this.createItemBoard()
 		let skillBoard = this.createSkillBoard()
 		desk.appendChild(close)
-		let useItems = new CharacterUseItem()
-		if(useItems.div){
-			desk.appendChild(useItems.div);
-		}
+		let buttonGroup = this.createCharacterAction();
+		desk.appendChild(buttonGroup)
+
 		desk.appendChild(mainBoard)
 
 		desk.appendChild(protectAndPositionBoard)
@@ -43,7 +42,7 @@ class CharacterDesk{
 		desk.appendChild(skillBoard)
 		this.checkFavoriteSkill()
 		addEventListner.prototype.addEvent()
-		if(useItems.div){
+		if(this.useItems.div){
 			addEventListner.prototype.addEventUseItemButton();
 		}
 	}
@@ -55,6 +54,26 @@ class CharacterDesk{
 		board.appendChild(character)
 		board.appendChild(stateView)
 		return board
+	}
+	createCharacterAction(){
+		let div = new CreateTag("div")
+		div.className = "CharacterButtonGroup"
+		let group = new CreateTag("div")
+		group.style.width = "30%"
+		let fire = new CreateTag("div")
+		fire.className = 'FireButton Button'
+		fire.innerText = 'Fire'
+		let save = new CreateTag("div")
+		save.className = 'SaveButton Button'
+		save.innerText = 'Save'
+		group.appendChild(fire)
+		group.appendChild(save)
+		div.appendChild(group);
+		this.useItems = new CharacterUseItem()
+		if(this.useItems.div){
+			div.appendChild(this.useItems.div);
+		}
+		return div;
 	}
 	createItemBoard(){
 		let board = new CreateTag('div')
@@ -961,8 +980,8 @@ class InventoryDataView{
 			type = this.type
 		}
 		let index = this.sortValue = 0
-		if(document.getElementById('InventorySelecter'+ type)){
-			 index = this.sortValue = document.getElementById('InventorySelecter'+ type).value
+		if(document.getElementById('InventoryTypeSelecter'+ type)){
+			 index = this.sortValue = document.getElementById('InventoryTypeSelecter'+ type).value
 		}
 		let inventory = this.inventory
 		if(!inventory){
@@ -1740,6 +1759,7 @@ class addEventListner{
 		this.addEventStateApplyButton()
 		this.addEventSelectPartyMember() 
 		this.addEventFavoriteSkillCheckBox()
+		this.addEventHireFireButton()
 		
 	}
 	addEventSelectPartyMember(){
@@ -1860,6 +1880,28 @@ class addEventListner{
 			}
 		})
 	}
+	addEventHireFireButton(){
+		let fire = document.getElementsByClassName('FireButton')[0]
+		fire.addEventListener('click',function(){
+			let value = document.getElementById('CharacterDesk').value
+			var answer = confirm('fire'+  playerTeam.character[value].name +'?');
+			if(answer){
+			delete playerTeam.character[value];
+			document.getElementById(value).parentElement.remove();
+			if(localStorage[value]){
+				localStorage.removeItem(value);
+			}
+			document.getElementById('MainTab').children[3].click()
+
+			}
+		})
+		let save = document.getElementsByClassName('SaveButton')[0]
+		save.addEventListener('click',function(){
+			let value = document.getElementById('CharacterDesk').value
+
+			saveCharacter(playerTeam.character[value]);
+		})
+	}
 	addEventUseItemButton(){
 		var useButton = document.getElementsByClassName('UseItemButton')[0];
 		useButton.addEventListener('click',function(){
@@ -1922,7 +1964,7 @@ class addEventListner{
 		var itemButton = document.getElementsByClassName('RemoveButton')[0]
 		itemButton.addEventListener('click',
 														 function(){
-			var nowSelect = parseInt(document.getElementById('InventorySelecter').selectedIndex)
+			var nowSelect = parseInt(document.getElementById('InventoryTypeSelecterEquipment').selectedIndex)
 			var value = document.getElementById('CharacterDesk').value
 				var performer = playerTeam.character[this.value]
 				var target = document.getElementById('EquipSelect').value
@@ -1930,9 +1972,9 @@ class addEventListner{
 				var parent = document.getElementById('EquipSelect')
 				var div = CharacterDesk.prototype.createViewEquipment(value)
 				parent.innerHTML = div.innerHTML
-			document.getElementById('InventorySelecter').selectedIndex = document.getElementById('InventoryTittle').value = nowSelect 
+			document.getElementById('InventoryTypeSelecterEquipment').selectedIndex = document.getElementById('InventoryTittle').value = nowSelect 
 			var parent =  document.getElementById('InventoryView')
-				var div = CharacterDesk.prototype.createEquipmentInventory()
+				var div = new InventoryDataView('Equipment',value)//CharacterDesk.prototype.createEquipmentInventory()
 				parent.innerHTML = div.innerHTML
 
 			CharacterDesk.prototype.refreshStateView()

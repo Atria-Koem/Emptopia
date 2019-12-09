@@ -1,6 +1,6 @@
 class Item{
 	constructor(code,refair,type){
-		if(type == "load"){
+		if(type == "load" || type == "loadChar"){
 			var dCode = code.slice(0,9)
 			var itemData  = dataItem[dCode]
 			this.baseCode = itemData.code
@@ -42,9 +42,11 @@ class Item{
 		}
 		
 	}
-	var addCode,randomCode
+		var addCode,randomCode
 		this.code = this.createCode(this.baseCode, refairCode, talentCode, addCode, randomCode);
-
+		if(type == "loadChar"){
+			return this;
+		}
 		this.number = this.checkOverlap();
 		if(!itemData.exp){}
 		else{

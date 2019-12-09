@@ -1251,3 +1251,17 @@ ul.MenuTabs.Vertical.SkillBoard{
 .PartternTab{
   padding: 3px;
 }
+
+.CharacterButtonGroup{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.FireButton,.SaveButton{
+  width: 80%;
+}
+#CharacterUseItem{
+  width: 100%;
+  float: left;
+}

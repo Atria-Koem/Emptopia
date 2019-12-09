@@ -1829,6 +1829,7 @@ class BattleEnd{
 				const poe = mapData.positionEnemyData[poeIndex]
 				mapData.map[poe.y][poe.x] = 0;
 				delete mapData.positionEnemyData[poeIndex]
+				mapData.positionEnemyCount = null;
 			}
 		}
 	}

@@ -315,15 +315,24 @@ class CharacterCode{
 		return code
 	}
 }
+
 class Player extends CreateSpec{
-	constructor(name,grade){
+	constructor(data,type,grade){
+
 		super('player');
-		if(!name){
+		if(type =="Load"){
+			this.loadPlayerCharacter(data);
+			return;
+		}
+		this.code = new CharacterCode('player').code
+		this.ally = 'player'
+		if(!data){
 			this.name = dataName[Math.floor(Math.random() * dataName.length)]
 		}
 		else{
-			this.name = name
+			this.name = data
 		}
+	
 		var level = 1;
 		this.level = level;
 		const tribe = Object.getOwnPropertyNames(dataTribe)
@@ -339,7 +348,7 @@ class Player extends CreateSpec{
 		this.add = {}
 		var coordinates = (Math.round(Math.random())) ? 'Back' : 'Front'
 		this.coordinates = coordinates
-		this.ally = 'player'
+
 		this.selected = 0;
 		this.parttern = [['OT00000',0,'KA100000']]
 		this.status = 'Live'
@@ -351,7 +360,7 @@ class Player extends CreateSpec{
 		}}
 		this.skillFavorite = []
 
-		this.code = new CharacterCode(this.ally).code
+
 		this.protectType = ['HP Percent',50]
 		this.equip = {
 			LeftHand : {},
@@ -399,6 +408,82 @@ class Player extends CreateSpec{
 		var desk = document.getElementById('CharacterList');
 		var newCharacter = new CreateDataView('Character',0,this).div
 		desk.appendChild(newCharacter);
+	}
+	loadPlayerCharacter(data){
+		this.autoType = 0;
+		this.selected = 0;
+		const splitData = data.split("^")
+		this.code = splitData[0]
+		this.seed = splitData[1]
+		this.name = splitData[2]
+		this.ally = splitData[3]
+		this.status = splitData[4]
+		this.coordinates = splitData[5]
+		this.level = parseInt(splitData[6])
+		this.levelExp = parseInt(splitData[7])
+		this.job = splitData[8]
+		this.tribe = splitData[9]
+		const protectTypeData = splitData[10].split("%")
+		this.protectType = [protectTypeData[0],protectTypeData[1]]
+		const stateData = splitData[11].split("%")
+		const stateExpData = splitData[12].split("%")
+		this.baseState = {};
+		this.stateExp = {}
+		
+		for(let i = 0 ; i < nameState.length; i++){
+			this.baseState[nameState[i]] = stateData[i];
+			this.stateExp[nameState[i]] = stateExpData[i];
+		}
+
+		var state = new State(0,this.baseState,this.job,this.tribe)
+		var health = new Health('player',state);
+		var option = this.createOption(state);
+		this.battle = this.extendLinkOption('extend',state,option,health);
+		this.origin = this.extendLinkOption('extend',state,option,health);
+
+
+		this.skill = splitData[13].split("%")
+		this.skillFavorite = []
+		const rebirthData =splitData[14].split("%")
+		this.rebirth = new Rebirth(-1);
+		this.rebirth.count = rebirthData[0]
+	
+		if(rebirthData[1].length > 0){
+			const rebirthStack =  rebirthData[1].split("/")
+			this.rebirth.stack =rebirthStack
+		}
+
+		if(rebirthData[2].length > 0){
+			this.rebirth.state = {}
+			const rebirthStateData = rebirthData[2].split("/")
+			for(let i = 0 ; i < nameState.length; i++){
+				this.rebirth.state[nameState[i]] = rebirthStateData[i];
+			}
+		}
+		const equipData = splitData[15].split("%")
+		this.equip = {
+			LeftHand : {},
+			RigthHand : {},
+			Body : {},
+			Head : {},
+			Other : {}
+		}
+		for(let i =0 ; i < equipData.length; i++){
+			if(equipData[i].length > 0){
+			const item = new Item(equipData[i],0,'loadChar');
+			this.equip[EquipItem.prototype.checkSlot(item.type)] = item
+			}
+		}
+
+		this.parttern = []
+		const partternData = splitData[16].split("%")
+		for(let i = 0 ; i <partternData.length ; i++){
+			const nPD = partternData[i].split("/")
+			this.parttern.push([nPD[0],nPD[1],nPD[2]])
+		}
+		this.bonusState = parseInt( splitData[17])
+		this.skillPoint = parseInt( splitData[18])
+		this.addPlayerDesk();
 	}
 }
 class BattleSpec{
