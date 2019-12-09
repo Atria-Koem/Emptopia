@@ -452,7 +452,7 @@ button.Main:hover,button.MoveMap:hover{
   border: 2px ridge;
   margin: 3px;
   text-align: center;
-  text-shadow: 0.05em 0.05em antiquewhite;
+  /*text-shadow: 0.05em 0.05em antiquewhite;*/
 	font-size: 1vw;
   letter-spacing: 0.3em;
   text-size-adjust: auto;
@@ -943,7 +943,7 @@ input[type='radio'].ViewRadio{
   margin-left :  10px;
 }
 input.DataLabelCheckBox:checked ~ .CharacterData {
-  max-height: 50em;
+  max-height: 250em;
 }
 .CharacterData {
   max-height: 0;
@@ -952,7 +952,7 @@ input.DataLabelCheckBox:checked ~ .CharacterData {
   -o-transition: max-height .35s;
   transition: max-height .35s;
 }
-.ItemRefairRadio,.DataLabelCheckBox,.SimpleSelectCheckBox,.SkillFavoriteCheckBox,.SkillLearnRadio,.ItemCheckBox,.ItemCaseRadio, .ItemEquipRadio{
+.ItemRefineRadio,.DataLabelCheckBox,.SimpleSelectCheckBox,.SkillFavoriteCheckBox,.SkillLearnRadio,.ItemCheckBox,.ItemCaseRadio, .ItemEquipRadio{
   border: 0; 
   clip: rect(0 0 0 0); 
   height: 1px; 
@@ -988,7 +988,7 @@ input.DataLabelCheckBox:checked ~ .CharacterData {
 .SkillLearnRadio:checked + label div.SkillLearnSelecter,
 .ItemCheckBox:checked + label div.ItemSelecter,
 .ItemEquipRadio:checked + label div.ItemSelecter,
-.ItemRefairRadio:checked + label div.ItemSelecter  {
+.ItemRefineRadio:checked + label div.ItemSelecter  {
   transform : scale(1.2);
   background-color: #10b090;
 	border-radius: 5px;

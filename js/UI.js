@@ -1118,7 +1118,7 @@ class CreateDataView{
 				break;
 			case 'Item' :
 			case 'ShopBuy' :
-			case 'ShopRefair':
+			case 'ShopRefine':
 			case 'ShopSell' :
 				this.data = dataItem[this.code];
 				break;
@@ -1333,11 +1333,11 @@ class CreateDataView{
 		let div = new CreateTag('div')
 		div.className = 'ItemInfoText'
 		let innerItemName = ''
-		if(item.refair === 0 || !item.refair){
+		if(item.refine === 0 || !item.refine){
 			innerItemName = item.name + '(' + item.type + ')';
 		}
 		else{
-			innerItemName = '+' + item.refair + ' ' + item.name + '(' + item.type + ')';
+			innerItemName = '+' + item.refine + ' ' + item.name + '(' + item.type + ')';
 		}
 		let nameP = new Text(innerItemName , 'ItemName').p
         if(dataItem[item.baseCode].src){
@@ -1442,11 +1442,11 @@ class CreateDataView{
 		if(selected === 1){
 			dataDiv.className = 'inParty';
 			checkBox.checked = 'checked'
-			selecter.innerText = 'inParty';
+			//selecter.innerText = 'inParty';
 		}
 		else if(selected === 0){
 			dataDiv.className = 'outParty';
-			selecter.innerText = 'outParty';
+			//selecter.innerText = 'outParty';
 		}
 		return mainDiv
 	}
@@ -1534,11 +1534,11 @@ class CreateDataView{
 		let div = new CreateTag('div')
 		div.className = 'ItemInfoText'
 		let innerItemName = ''
-		if(item.refair === 0 || !item.refair){
+		if(item.refine === 0 || !item.refine){
 			innerItemName = item.name + '(' + item.type + ')';
 		}
 		else{
-			innerItemName = '+' + item.refair + ' ' + item.name + '(' + item.type + ')';
+			innerItemName = '+' + item.refine + ' ' + item.name + '(' + item.type + ')';
 		}
 
 		let nameP = new Text(innerItemName , 'ItemName').p
@@ -1611,7 +1611,7 @@ class CreateDataView{
 		}
 		return div
 	}
-	createShopRefairDiv(){
+	createShopRefineDiv(){
 		const item = this.data
 		const itemElementName = Object.getOwnPropertyNames(item)
 		const optionName = ['atkPhy','atkMag','defPhy','defMag']
@@ -1619,11 +1619,11 @@ class CreateDataView{
 		let div = new CreateTag('div')
 		div.className = 'ItemInfoText'
 		let innerItemName = ''
-		if(item.refair === 0 || !item.refair){
+		if(item.refine === 0 || !item.refine){
 			innerItemName = item.name + '(' + item.type + ')';
 		}
 		else{
-			innerItemName = '+' + item.refair + ' ' + item.name + '(' + item.type + ')';
+			innerItemName = '+' + item.refine + ' ' + item.name + '(' + item.type + ')';
 		}
 
 		let nameP = new Text(innerItemName , 'ItemName').p
@@ -1795,23 +1795,23 @@ class addEventListner{
 			label[i].addEventListener('click', function(){
 				const id = this.parentElement.firstChild.value
 				let character = playerTeam.character[id]
-				const type = this.firstChild.innerText
+				
 				let desk = ''
 				const deskId = document.getElementById('CharacterDesk').value
-				switch(type){
-					case 'inParty' :
+				switch(character.selected){
+					case 1 :
 						character.selected = 0
 						document.getElementById(id).className = 'outParty'
-						this.firstChild.innerText = 'outParty';
+						//this.firstChild.innerText = 'outParty';
 						desk = document.getElementById('outPartySelectParty')
 						if(desk && deskId === id){
 							desk.checked = true
 						}
 						break;
-					case 'outParty' :
+					case 0 :
 						character.selected = 1
 						document.getElementById(id).className = 'inParty'
-						this.firstChild.innerText = 'inParty';
+						//this.firstChild.innerText = 'inParty';
 						desk = document.getElementById('inPartySelectParty')
 						if(desk && deskId === id){
 							desk.checked = true
@@ -2124,9 +2124,9 @@ class addEventListner{
 		function(){
 			new Shop("Sell")
 		})
-		document.getElementById("RefairMenuTabs").addEventListener('click',
+		document.getElementById("RefineMenuTabs").addEventListener('click',
 		function(){
-			new Shop("Refair")
+			new Shop("Refine")
 		})
 	}
 	addInventoryListRefresh(tab){
@@ -2214,11 +2214,11 @@ class addEventListner{
 		})
 	}
 	}
-	addEventRefairButton(){
-		var buttons = document.getElementsByClassName('RefairButton')
+	addEventRefineButton(){
+		var buttons = document.getElementsByClassName('RefineButton')
 		for(let i = 0 ; i < buttons.length; i++){
 			buttons[i].addEventListener('click',function(){
-				new ShopRefair();
+				new ShopRefine();
 				saveItem();
 			})
 		}
@@ -2434,9 +2434,9 @@ class Shop{
 			addEventListner.prototype.addEventSellButton();
 			addEventListner.prototype.addEventShopClearButton();
 			break;
-			case 'Refair' :
-			this.createRefairData();
-			addEventListner.prototype.addEventRefairButton();
+			case 'Refine' :
+			this.createRefineData();
+			addEventListner.prototype.addEventRefineButton();
 			break;
 		}
 
@@ -2445,7 +2445,7 @@ class Shop{
 	boardClear(){
 		document.getElementsByName("Buy")[0].innerHTML = "";
 		document.getElementsByName("Sell")[0].innerHTML = "";
-		document.getElementsByName("Refair")[0].innerHTML = "";
+		document.getElementsByName("Refine")[0].innerHTML = "";
 	}
 	selectBoard(type){
 		this.standBoard = document.getElementsByName(type)[0];
@@ -2462,10 +2462,10 @@ class Shop{
 		div.innerText = 'Sell Apply'
 		return div
 	}
-	createRefairButton(){
+	createRefineButton(){
 		var div = document.createElement('div');
-		div.className = 'RefairButton Button'
-		div.innerText = 'Refair Apply'
+		div.className = 'RefineButton Button'
+		div.innerText = 'Refine Apply'
 		return div
 	}
 	createClearButton(){
@@ -2617,13 +2617,13 @@ class Shop{
 		sfButtonGroup.appendChild(sClearButton);
 		this.standBoard.appendChild(sfButtonGroup)
 	}
-	createRefairData(){
+	createRefineData(){
 		const sort = Object.getOwnPropertyNames(inventoryData);
 		const sLength = sort.length;
 		let fButtonGroup = new CreateTag('div');
 		fButtonGroup.style.display ="flex";
 		fButtonGroup.style.borderBottom = "1px solid black"
-		let fisrtButton = this.createRefairButton();
+		let fisrtButton = this.createRefineButton();
 		fisrtButton.style.width = "50%";
 		let fClearButton = this.createClearButton();
 		fClearButton.style.width = "50%";
@@ -2638,7 +2638,7 @@ class Shop{
 
 		for(let i =0 ; i < length  ; i++){
 			let div = new CreateTag("div");
-			let Radio = CreateViewHTML.prototype.createViewRadio(itemList[i],"ItemData",itemList[i],"ItemRefair");
+			let Radio = CreateViewHTML.prototype.createViewRadio(itemList[i],"ItemData",itemList[i],"ItemRefine");
 
 			div.appendChild(Radio);
 			div.className="ItemData"
@@ -2665,7 +2665,7 @@ class Shop{
 			fundiv.appendChild(fundData);
 			label.appendChild(fundiv);
 
-			let inputLabel = new CreateDataView('ShopRefair',0,nList[itemList[i]]).div
+			let inputLabel = new CreateDataView('ShopRefine',0,nList[itemList[i]]).div
 			inputLabel.style.width = "65%";
 			label.appendChild(inputLabel)
 			div.appendChild(label);
@@ -2675,7 +2675,7 @@ class Shop{
 
 		let sfButtonGroup = new CreateTag('div');
 		sfButtonGroup.style.display ="flex";
-		let secondButton = this.createRefairButton();
+		let secondButton = this.createRefineButton();
 		secondButton.style.width = "50%";
 		let sClearButton = this.createClearButton();
 		sClearButton.style.width = "50%";
@@ -2684,10 +2684,10 @@ class Shop{
 		this.standBoard.appendChild(sfButtonGroup)
 	}
 }
-class ShopRefair{
+class ShopRefine{
 	constructor(){
 		this.checkedItemSearch();
-		this.refairItem();
+		this.refineItem();
 	}
 	checkedItemSearch(){
 		const check = document.getElementsByName("ItemData")
@@ -2702,9 +2702,9 @@ class ShopRefair{
 		}
 	
 	}
-	refairItem(){
-		new refairItem(this.codeData);
-		new Shop('Refair');
+	refineItem(){
+		new refineItem(this.codeData);
+		new Shop('Refine');
 	}
 }
 class ShopInter{
@@ -2727,7 +2727,7 @@ class ShopInter{
 					this.getFunds();
 				}
 				break;
-				case 'Refair':
+				case 'Refine':
 
 				break;
 			}

@@ -1,20 +1,20 @@
 class Item{
-	constructor(code,refair,type){
+	constructor(code,refine,type){
 		if(type == "load" || type == "loadChar"){
 			var dCode = code.slice(0,9)
 			var itemData  = dataItem[dCode]
 			this.baseCode = itemData.code
-			refair =  parseInt(code.slice(9,11));
+			refine =  parseInt(code.slice(9,11));
 		}
-		else if(type != 'refair'){
+		else if(type != 'refine'){
 			var itemData  = dataItem[code]
 			this.baseCode = itemData.code
 		}
 		else{
-			var refairItem = this.checkInventory(code)
-			var baseCode = refairItem.baseCode 
+			var refineItem = this.checkInventory(code)
+			var baseCode = refineItem.baseCode 
 			var itemData = dataItem[baseCode]
-					this.baseCode = refairItem.baseCode
+					this.baseCode = refineItem.baseCode
 		}
 		this.name = itemData.name;
 		this.category = itemData.category;
@@ -25,17 +25,17 @@ class Item{
 		if(talentCode.toString().length != 3 ){
 			talentCode = '0' + talentCode
 		} 
-		if(!(!refair)){
-			this.refair = refair
+		if(!(!refine)){
+			this.refine = refine
 		}
 
-		else if(!itemData.refair){
-			this.refair = 0;
+		else if(!itemData.refine){
+			this.refine = 0;
 		}
 		else{
-			this.refair = itemData.refair
+			this.refine = itemData.refine
 		}
-		var refairCode = (this.refair.toString().length === 2 ) ? this.refair : '0' + this.refair
+		var refineCode = (this.refine.toString().length === 2 ) ? this.refine : '0' + this.refine
 		if(itemData.spec){
 		this.spec = {}
 		this.createOption(itemData.spec)
@@ -43,7 +43,7 @@ class Item{
 		
 	}
 		var addCode,randomCode
-		this.code = this.createCode(this.baseCode, refairCode, talentCode, addCode, randomCode);
+		this.code = this.createCode(this.baseCode, refineCode, talentCode, addCode, randomCode);
 		if(type == "loadChar"){
 			return this;
 		}
@@ -72,7 +72,7 @@ class Item{
 			this.spec.add = this.calculrate(itemData.add)
 		}
 	}
-	createCode(base, refair, talent, add, random){
+	createCode(base, refine, talent, add, random){
 		var code = ''
 		var length = base.length
 		if(this.category == "Other"){
@@ -80,7 +80,7 @@ class Item{
 		}
 		switch(length){
 			case 9 : 
-				code = base + refair + talent
+				code = base + refine + talent
 				break;
 			case 11 :
 				code = base + talent
@@ -149,10 +149,10 @@ class Item{
 			var index = talentEffect.indexOf(name[i])
 			if(index != -1){
 				if(index % 3 === 0){
-				returnObject[name[i]] = Math.round(type[name[i]] * ( this.talent / 100) * (1 + Math.pow(this.refair,2) / 100))
+				returnObject[name[i]] = Math.round(type[name[i]] * ( this.talent / 100) * (1 + Math.pow(this.refine,2) / 100))
 				}
 				else{
-				returnObject[name[i]] = Math.round(type[name[i]] * ( this.talent / 100) * (1 + this.refair * 3 / 100))
+				returnObject[name[i]] = Math.round(type[name[i]] * ( this.talent / 100) * (1 + this.refine * 3 / 100))
 				}
 			}
 			else{
@@ -163,7 +163,7 @@ class Item{
 	}
 }
 
-class refairItem /*extends Item*/{
+class refineItem /*extends Item*/{
 	constructor(code){
 		var itemData = Item.prototype.checkInventory(code)
 		if(itemData === 0){
@@ -175,34 +175,34 @@ class refairItem /*extends Item*/{
 			return;
 		}
 		var talent = itemData.talent
-		var refair = itemData.refair
-		var check = this.checkRefair(refair)
+		var refine = itemData.refine
+		var check = this.checkRefine(refine)
 		if(check === 1){
-			var refairValue = this.succesRefair(itemData)
-			//super(code,refairValue)
-			let item = new Item(code,refairValue,'refair')
-			new AddLog([{text:"Refair Success "}, {text:" +" + refair + "-> +" + refairValue +"  " + item.name}],"System");
+			var refineValue = this.succesRefine(itemData)
+			//super(code,refineValue)
+			let item = new Item(code,refineValue,'refine')
+			new AddLog([{text:"Refine Success "}, {text:" +" + refine + "-> +" + refineValue +"  " + item.name}],"System");
 
 			console.log('S')
-			this.resultRefair(itemData)
+			this.resultRefine(itemData)
 		}
 		else{
-			new AddLog([{text:"Refair Fail "}, {text:" +" + refair +"  " + itemData.name}],"System");
+			new AddLog([{text:"Refine Fail "}, {text:" +" + refine +"  " + itemData.name}],"System");
 
-			this.resultRefair(itemData)
+			this.resultRefine(itemData)
 			console.log('F')
 		}
 	}
-	checkRefair(refair){
-		var refairRate = 100 - Math.pow(refair / Math.E, Math.PI)
-		var refairDice = Math.random() * 100
+	checkRefine(refine){
+		var refineRate = 100 - Math.pow(refine / Math.E, Math.PI)
+		var refineDice = Math.random() * 100
 		var returnValue = 0
-		if(refairDice < refairRate){
+		if(refineDice < refineRate){
 			returnValue = 1
 		}
 		return returnValue
 	}
-	resultRefair(itemData){
+	resultRefine(itemData){
 		if(itemData.number > 1){
 				itemData.number -= 1;
 			}
@@ -210,9 +210,9 @@ class refairItem /*extends Item*/{
 				delete inventoryData[itemData.category][itemData.code];
 			}
 	}
-	succesRefair(itemData){
-		var refair = itemData.refair + 1
-		return refair
+	succesRefine(itemData){
+		var refine = itemData.refine + 1
+		return refine
 	}
 	checkFunds(itemData){
 		let cost = dataItem[itemData.baseCode].price
