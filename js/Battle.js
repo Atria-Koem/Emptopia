@@ -62,7 +62,7 @@ class BattleData{
 		}
 		else if(battleCheck === -1){
 			new AddLog([{text : 'new Enemy Search'}],'Battle')
-			document.getElementsByClassName('MenuTabs')[0].children[1].click()
+			new DOMSearch( 'class','MenuTabs')[0].children[1].click()
 		}
 		else if(battleCheck === 1){
 			if(type != 'player'){
@@ -1608,7 +1608,7 @@ class Performer{
 		let nowMax = 0 
 		let maxCode = ''
     for(var i = 0; i < length; i++){
-			if(gaugeStock[code[i]] >= 100 && ((document.getElementById('SkillBorder').style.visibility == "visible" && dataActiveCharacter[code[i]].ally == "player" && !dataActiveCharacter[code[i]].aria.skill) )){
+			if(gaugeStock[code[i]] >= 100 && ((new DOMSearch( 'id','SkillBorder').style.visibility == "visible" && dataActiveCharacter[code[i]].ally == "player" && !dataActiveCharacter[code[i]].aria.skill) )){
 				code.splice(i,1)
 				i--
 			}
@@ -1657,7 +1657,7 @@ class Performer{
 	}
 	changeGaugeView(performer){
 	const performerCode = performer.code
-	let gauge = document.getElementById(performerCode + 'Gauge')
+	let gauge = new DOMSearch( 'id',performerCode + 'Gauge')
 	const stock = performer.gauge
 	let width = Math.abs(stock)
 
@@ -1840,10 +1840,10 @@ class BattleEnd{
 	}
 	endBattle(){
 		dataActiveCharacter = {}
-		//document.getElementById('Map').style.visibility = 'visible';
-		//document.getElementById('MiniMap').style.visibility = 'visible';
-		document.getElementById('playerBorder').innerHTML = ''
-		document.getElementById('enemyBorder').innerHTML = ''			
+		//new DOMSearch( 'id','Map').style.visibility = 'visible';
+		//new DOMSearch( 'id','MiniMap').style.visibility = 'visible';
+		new DOMSearch( 'id','playerBorder').innerHTML = ''
+		new DOMSearch( 'id','enemyBorder').innerHTML = ''			
 		CreateMap.prototype.changeOnPress(1)
 		battleCheck = -1;
 	}
@@ -1900,7 +1900,7 @@ class Battle{
 					}
 
 				}
-				else if(document.getElementById('SkillBorder').style.visibility != "visible"){
+				else if(new DOMSearch( 'id','SkillBorder').style.visibility != "visible"){
 					new SkillButtonView(number)
 					if(battleMode > 0){
 					gInterval = clearInterval(gInterval);

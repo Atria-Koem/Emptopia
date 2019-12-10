@@ -209,10 +209,10 @@ function search(){
 	if(Object.getOwnPropertyNames(playerTeam.character).length < 5){
 	new CharacterHire()
 	}
-	//document.getElementById('MiniMap').style.visibility = 'hidden';
-	//document.getElementById('Map').style.visibility = 'hidden';
-	var code = document.getElementById("AreaSelect").value
-	var level = document.getElementById("AreaLevel").value
+	//new DOMSearch( 'id','MiniMap').style.visibility = 'hidden';
+	//new DOMSearch( 'id','Map').style.visibility = 'hidden';
+	var code = new DOMSearch( 'id',"AreaSelect").value
+	var level = new DOMSearch( 'id',"AreaLevel").value
 	enemyGroup = new EnemyGroup(code,level,'random').returnGroup
 	new BattleData
 	CreateMap.prototype.changeOnPress(1)
@@ -262,10 +262,10 @@ let battleMode = 1;
 function battleModeChange(){
 	battleMode *= -1;
 	if(battleMode <0){
-		document.getElementById("modeId").innerText ="Battle Mode (Active Turn => Turn)"
+		new DOMSearch( 'id',"modeId").innerText ="Battle Mode (Active Turn => Turn)"
 	}
 	else{
-		document.getElementById("modeId").innerText ="Battle Mode (Turn => Active Turn)"
+		new DOMSearch( 'id',"modeId").innerText ="Battle Mode (Turn => Active Turn)"
 	}
 }
 let hireTimer ={};
@@ -292,9 +292,9 @@ class Timer{
 }
 class CharacterHire{
 	constructor(type){
-		var name = document.getElementById('HireName').value
+		var name = new DOMSearch( 'id','HireName').value
 		if(!name){
-			document.getElementById('HireName').value = 'Input Name'
+			new DOMSearch( 'id','HireName').value = 'Input Name'
 			return
 		}
 		if(name ==='Input Name'){
@@ -309,11 +309,11 @@ class CharacterHire{
 			this.hireSetTimer();
 		}
 		else{
-			document.getElementById('HireName').value = 'Less Funds'
-			document.getElementById('HireName').style.backgroundColor = '#6e0906'
-			document.getElementById('HireName').addEventListener('focus',
+			new DOMSearch( 'id','HireName').value = 'Less Funds'
+			new DOMSearch( 'id','HireName').style.backgroundColor = '#6e0906'
+			new DOMSearch( 'id','HireName').addEventListener('focus',
 																													 function(){
-				document.getElementById('HireName').style.backgroundColor = '#10b090'
+				new DOMSearch( 'id','HireName').style.backgroundColor = '#10b090'
 			}
 																													)
 		}
@@ -351,7 +351,7 @@ class CharacterHire{
 		return timeValue
 	}
 	hireJobType(){
-		const job = this.job =  document.getElementById('').value
+		const job = this.job =  new DOMSearch( 'id','').value
 	}
 	hireSetTimer(){
 		var createCharacter = new Player(name)
@@ -431,11 +431,8 @@ window.onload = function(){
 	//do{
 	//	
 //}while(load < scriptNames.length + dataNamse.length)
-	document.getElementById("AreaSelect").addEventListener('change',
-																												 function(){
-		var area = new Area
-		area.changeLevel()
-	})
+
+
 	test = this.setInterval(setLoad,1)
 	timerInterval = this.setInterval(function(){new Timer()},1000);
 }
@@ -443,7 +440,15 @@ let test;
 function setLoad(){
 	console.log(load);
 	if(load ==  scriptNames.length + dataNamse.length){
-		document.getElementById("wrapper").innerHTML ="";
+		new DOMSearch( 'id',"AreaSelect").addEventListener('change',
+		function(){
+			var area = new Area
+			area.changeLevel()
+		})
+		var area = new Area
+		area.changeLevel()
+		new DOMSearch( 'id',"AreaLevel").children[1].selected = true
+		new DOMSearch( 'id',"wrapper").innerHTML ="";
 		clearInterval(test);
 		addEvents()
 		createTeam()
@@ -476,22 +481,22 @@ function enemyKill() {
 function clickMenu(value){
 	switch(value){
 		case'Character':
-		document.getElementById('MainTab').children[3].click()
+		new DOMSearch( 'id','MainTab').children[3].click()
 		break;
 		case 'Hire':
-			document.getElementById('MainTab').children[4].click()
-			document.getElementById('TownTabs').children[0].click()
+			new DOMSearch( 'id','MainTab').children[4].click()
+			new DOMSearch( 'id','TownTabs').children[0].click()
 		break;
 		case 'Buy':
-			document.getElementById('MainTab').children[4].click()
-			document.getElementById('TownTabs').children[1].click()
+			new DOMSearch( 'id','MainTab').children[4].click()
+			new DOMSearch( 'id','TownTabs').children[1].click()
 		break;
 		case 'Sell':
-			document.getElementById('MainTab').children[4].click()
-			document.getElementById('TownTabs').children[2].click()
+			new DOMSearch( 'id','MainTab').children[4].click()
+			new DOMSearch( 'id','TownTabs').children[2].click()
 		break;
 		case 'Inventory':
-			document.getElementById('MainTab').children[5].click()
+			new DOMSearch( 'id','MainTab').children[5].click()
 		break;
 	}
 }
@@ -560,10 +565,17 @@ function saveCharacter(data){
 	let expState =""
 	let rebirthState=""
 	for(let i = 0; i < nameState.length; i++){
-		originState += data.baseState[nameState[i]] + "%"
-		expState += data.stateExp[nameState[i]] + "%"
+		if(i!=0){
+			originState +=  "%"
+		expState += "%"
+		}
+		originState += data.baseState[nameState[i]]
+		expState += data.stateExp[nameState[i]] 
 		if(data.rebirth.state){
-			rebirthState +=data.rebirth.state[nameState[i]]+"/"
+			if(i!=0){
+				rebirthState +="/"
+			}
+			rebirthState +=data.rebirth.state[nameState[i]]
 		}
 	}
 	saveData += originState + "^"
@@ -575,8 +587,11 @@ function saveCharacter(data){
 
 	saveData += skill + "^"
 	let rebirthData = data.rebirth.count +"%"
-	for(let i = 0 ; i < data.rebirth.stack; i++){
-		rebirthData += data.rebirth.stack[i] + "/"
+	for(let i = 0 ; i < data.rebirth.stack.length; i++){
+		if(i!=0){
+			rebirthData	+= "/"
+		}
+		rebirthData += data.rebirth.stack[i] 
 	}
 	rebirthData += "%" + rebirthState
 	saveData+= rebirthData +"^" ;
@@ -591,7 +606,10 @@ function saveCharacter(data){
 	saveData+=equipData +"^"
 	let partternData =""
 	for(let i = 0 ; i < data.parttern.length; i++){
-		partternData += data.parttern[i][0] +"/" + data.parttern[i][1] +"/" + data.parttern[i][2] +"%"
+		if(i!=0){
+			partternData	+= "%"
+		}
+		partternData += data.parttern[i][0] +"/" + data.parttern[i][1] +"/" + data.parttern[i][2]
 	}
 
 

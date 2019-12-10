@@ -1,7 +1,7 @@
 class Area{
 	constructor(){
-        this.areaCode = document.getElementById("AreaSelect").value
-        this.areaLevel = document.getElementById("AreaLevel").value
+        this.areaCode = new DOMSearch( 'id',"AreaSelect").value
+        this.areaLevel = new DOMSearch( 'id',"AreaLevel").value
 	}
 	addLevel() {
     areaData[this.areaCode] += 1;
@@ -13,7 +13,7 @@ class Area{
     if (areaSort.length === 1) {
         areaSort = '0000';
     }
-    var area = document.getElementById('AreaSelect');
+    var area = new DOMSearch( 'id','AreaSelect');
     var length = area.length
     var newAreaData = dataArea[areaType]
     for (var j = 0; j < length; j++) {
@@ -47,7 +47,7 @@ class Area{
     if (!areaData[this.areaCode]) {
         areaData[this.areaCode] = 0;
     }
-    var levelOption = document.getElementById('AreaLevel')
+    var levelOption = new DOMSearch( 'id','AreaLevel')
     levelOption.innerHTML = ''
     if (this.areaCode % 1000 != 0) {
         var level = areaData[this.areaCode]
@@ -107,14 +107,14 @@ class CreateMap extends Area{
 		this.creatFog();
 		this.turn = 0;
 		this.changeOnPress(1)
-		//document.getElementById('Area').style.visibility = 'hidden';
+		//new DOMSearch( 'id','Area').style.visibility = 'hidden';
 	}
 	calculrateLength(level){
 		var length = Math.round(Math.random() * Math.pow(2, 1 + level / 20) * 10 + 12 * (1 + level / 10) )+2
 		return length
 	}
 	checkArea(){
-		var area = document.getElementById("AreaSelect").value
+		var area = new DOMSearch( 'id',"AreaSelect").value
         if (area % 1000 === 0) {
             return 0;
         } else {
@@ -308,7 +308,7 @@ class CreateMap extends Area{
     }
     inCheck = 1;
 		var map = this.map
-    var level = parseInt(document.getElementById('AreaLevel').value);
+    var level = parseInt(new DOMSearch( 'id','AreaLevel').value);
     var x = this.calculrateLength(level)
     var y = this.calculrateLength(level)
 		if(x > 400){
@@ -618,13 +618,13 @@ class CreateMap extends Area{
 				this.turn = 0;
 				inCheck = 0;
 				this.changeOnPress(1);
-				document.getElementById('AreaSelect').disabled = false;
-				document.getElementById('AreaLevel').disabled = false;
-				document.getElementById('Area').style.visibility = 'visible';
-				if (document.getElementById('AreaLevel').value === areaData[document.getElementById('AreaSelect').value]) {
+				new DOMSearch( 'id','AreaSelect').disabled = false;
+				new DOMSearch( 'id','AreaLevel').disabled = false;
+				new DOMSearch( 'id','Area').style.visibility = 'visible';
+				if (new DOMSearch( 'id','AreaLevel').value === areaData[new DOMSearch( 'id','AreaSelect').value]) {
 					super.addLevel();
 				}
-				document.getElementsByClassName('MenuTabs')[0].children[2].click()
+				new DOMSearch( 'class','MenuTabs')[0].children[2].click()
 			}
 		}
 	}
@@ -637,10 +637,10 @@ class CreateMap extends Area{
 				inCheck = 0;
 				this.changeOnPress(1);
 				console.log('reStart');
-				document.getElementById('AreaSelect').disabled = false;
-				document.getElementById('AreaLevel').disabled = false;
-				document.getElementById('Area').style.visibility = 'visible';
-				document.getElementsByClassName('MenuTabs')[0].children[2].click()
+				new DOMSearch( 'id','AreaSelect').disabled = false;
+				new DOMSearch( 'id','AreaLevel').disabled = false;
+				new DOMSearch( 'id','Area').style.visibility = 'visible';
+				new DOMSearch( 'class','MenuTabs')[0].children[2].click()
         }
     }
 		
@@ -686,7 +686,7 @@ class CreateMap extends Area{
                 new BattleData
                 CreateMap.prototype.changeOnPress(1)
                 new BattleData
-                document.getElementsByClassName('MenuTabs')[0].children[0].click()
+                new DOMSearch( 'class','MenuTabs')[0].children[0].click()
                 return true;
             }
 		}
@@ -701,7 +701,7 @@ class CreateMap extends Area{
 			search()
 			console.log('Enemy')
 			count = 0;
-			document.getElementsByClassName('MenuTabs')[0].children[0].click()//.className = 'eventTab'//.click()
+			new DOMSearch( 'class','MenuTabs')[0].children[0].click()//.className = 'eventTab'//.click()
 		} else {
 		}
 		return count
@@ -838,7 +838,7 @@ class CanClearTest{
 }
 class InMapParty{
 	constructor(){
-		let inPartyDesk = document.getElementById('inPlayedCharacter')
+		let inPartyDesk = new DOMSearch( 'id','inPlayedCharacter')
 		this.charcter = {}
 		StatusView.prototype.clearPartyStatusView()
 		this.createPlayerGroup();
@@ -1346,8 +1346,8 @@ class Sight{
 
 	}
 	drawPlayMap(){
-		var canvas = document.getElementById('MapDraw');
-		var Map = document.getElementById('Map');
+		var canvas = new DOMSearch( 'id','MapDraw');
+		var Map = new DOMSearch( 'id','Map');
 		var inner = canvas.getContext('2d');
 		var length = this.sigthMax + this.sigthMin
 		var draw  = this.drawArray
@@ -1376,8 +1376,8 @@ class Sight{
 		}
 	}
 	drawMiniMap(){
-		var canvas = document.getElementById('MiniMapDraw');
-		var Map = document.getElementById('MiniMap');
+		var canvas = new DOMSearch( 'id','MiniMapDraw');
+		var Map = new DOMSearch( 'id','MiniMap');
 		var inner = canvas.getContext('2d');
 		var solve = this.solve
 		var lengthX = this.lengthX
@@ -1678,7 +1678,7 @@ function moveMap(evt,keyCode) {
         return;
     }
 
-    //document.getElementById('nowTurn').value = turn;
+    //new DOMSearch( 'id','nowTurn').value = turn;
 	mapData.checkTurn(keyCode);
 	new Sight;
 }
@@ -1693,22 +1693,22 @@ class CreateMapData{
 		new Sight;
 		this.naviCheck();
 		this.mapDrawCheck();
-		document.getElementById('MainTab').children[1].click();
+		new DOMSearch( 'id','MainTab').children[1].click();
 	}
 	naviCheck(){
-		const check = document.getElementById('NavigaterType').value;//false//document.getElementById('NaviUse').checked;
+		const check = new DOMSearch( 'id','NavigaterType').value;//false//new DOMSearch( 'id','NaviUse').checked;
 		if(check != 0){
 			this.miniMap = new UseItem('IT9940000').check
 		}
 	}
 	mapDrawCheck(){
-		document.getElementById('Map').style.visibility = 'visible';
+		new DOMSearch( 'id','Map').style.visibility = 'visible';
 		if(this.miniMap){
-			document.getElementById('MiniMap').style.visibility = 'visible';
+			new DOMSearch( 'id','MiniMap').style.visibility = 'visible';
 	
 		}
 		else{
-			document.getElementById('MiniMap').style.visibility = 'invisible';
+			new DOMSearch( 'id','MiniMap').style.visibility = 'invisible';
 		
 
 		}

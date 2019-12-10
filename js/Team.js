@@ -1,28 +1,28 @@
 class Team{
 	constructor(){
-		var name = "TEST"//document.getElementById('InputTeamName').value
+		var name = "TEST"//new DOMSearch( 'id','InputTeamName').value
 		if(!name || name === 'Input Name'){
-			document.getElementById('InputTeamName').value = 'Input Name'
+			new DOMSearch( 'id','InputTeamName').value = 'Input Name'
 			return
 		}
 		this.name = name
 		this.funds = Math.round(Math.random() * 1000) + 5000
 		this.character = {}
-		document.getElementById('InterPlayer').remove()
-		document.getElementById('PlayerView').style.display = 'block'
+		new DOMSearch( 'id','InterPlayer').remove()
+		new DOMSearch( 'id','PlayerView').style.display = 'block'
 	}
 	refreshTeamData(type){
 		var team = playerTeam
 		switch(type){
 			case 'name' :
-				document.getElementById('TeamName').innerText = team.name
+				new DOMSearch( 'id','TeamName').innerText = team.name
 				break;
 			case 'funds' :				
-				document.getElementById('TeamFunds').innerText = 'Funds : ' + team.funds
+				new DOMSearch( 'id','TeamFunds').innerText = 'Funds : ' + team.funds
 				break;
 			default : 
-				document.getElementById('TeamName').innerText = team.name
-				document.getElementById('TeamFunds').innerText = 'Funds : '  + team.funds
+				new DOMSearch( 'id','TeamName').innerText = team.name
+				new DOMSearch( 'id','TeamFunds').innerText = 'Funds : '  + team.funds
 				break;
 							 }
 	}

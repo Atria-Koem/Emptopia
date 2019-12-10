@@ -405,7 +405,7 @@ class Player extends CreateSpec{
 		return exp
 	}
 	addPlayerDesk(){
-		var desk = document.getElementById('CharacterList');
+		var desk = new DOMSearch( 'id','CharacterList');
 		var newCharacter = new CreateDataView('Character',0,this).div
 		desk.appendChild(newCharacter);
 	}
@@ -415,7 +415,7 @@ class Player extends CreateSpec{
 		this.selected = 0;
 		const splitData = data.split("^")
 		this.code = splitData[0]
-		this.seed = splitData[1]
+		this.seed = parseInt(splitData[1])
 		this.name = splitData[2]
 		this.ally = splitData[3]
 		this.status = splitData[4]
@@ -1076,11 +1076,11 @@ class StatusView{
 		this.createStatusView(performer,type)
 	}
 	clearPartyStatusView(){
-	let div = document.getElementById('inPlayedCharacter')
+	let div = new DOMSearch( 'id','inPlayedCharacter')
 	div.innerHTML = ''
 	}
 	clearBattleStatusView(){
-		var player = document.getElementById('playerBorder')
+		var player = new DOMSearch( 'id','playerBorder')
 		var front = document.createElement('div');
 		var back = document.createElement('div');
 		front.className = 'PFront'
@@ -1088,7 +1088,7 @@ class StatusView{
 		player.innerHTML = ''
 		player.appendChild(front)
 		player.appendChild(back)
-		var enemy = document.getElementById('enemyBorder')
+		var enemy = new DOMSearch( 'id','enemyBorder')
 		var front = document.createElement('div');
 		var back = document.createElement('div');
 		front.className = 'EFront'
@@ -1102,7 +1102,7 @@ class StatusView{
 		let health = this.checkHealth(performer,type)
 		const healthName = Object.getOwnPropertyNames(health)
 		for(let i = 0 ; i < 3; i ++){
-			let div = document.getElementById(type + performerCode + healthName[3+i].toString().toUpperCase());
+			let div = new DOMSearch( 'id',type + performerCode + healthName[3+i].toString().toUpperCase());
 			let width =  health[healthName[3+i]] /  health[healthName[i]]
 			if(width < 0){
 				width = 0;
@@ -1110,7 +1110,7 @@ class StatusView{
 			div.style.width = width * 100 + '%'
 			div.style.backgroundColor = this.checkhealthColor(performer,healthName[3+i].toUpperCase())
 			if( i === 0){
-				let board = document.getElementById(type + performerCode + 'Border')
+				let board = new DOMSearch( 'id',type + performerCode + 'Border')
 				board.style.backgroundColor = this.checkBoardColor(performer,health)
 			}
 		}
@@ -1118,7 +1118,7 @@ class StatusView{
 	}
 	checkBordeCoordinates(performer,type){
 		let performerCode = performer.code
-		let performerBoard = document.getElementById(type + performerCode + 'Border')
+		let performerBoard = new DOMSearch( 'id',type + performerCode + 'Border')
 		let boardParentClass = performerBoard.parentNode.className
 		let coordinatesClassName = performerCode.slice(0,1) + performer.coordinates
 		if(boardParentClass != coordinatesClassName){		
@@ -1200,13 +1200,13 @@ class StatusView{
 		let parent = ''
 		switch(type){
 			case 'Party' :
-				parent = document.getElementById('inPlayedCharacter')
+				parent = new DOMSearch( 'id','inPlayedCharacter')
 				break;
 			case 'Battle' :
 				let allyType = code.slice(0,1)
 				switch(allyType){
 					case 'P':
-						parent = document.getElementById('playerBorder')
+						parent = new DOMSearch( 'id','playerBorder')
 						if(coordinates === 'Front'){
 							parent = parent.children[0]
 						}
@@ -1215,7 +1215,7 @@ class StatusView{
 						}
 						break;
 					case 'E':
-						parent = document.getElementById('enemyBorder')
+						parent = new DOMSearch( 'id','enemyBorder')
 						if(coordinates === 'Front'){
 							parent = parent.children[1]
 						}

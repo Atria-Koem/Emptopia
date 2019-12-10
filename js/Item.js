@@ -291,9 +291,9 @@ class UseItem{
 		
 	}
 	useItemRebirth(){
-		let performer = playerTeam.character[document.getElementById('CharacterDesk').value]
+		let performer = playerTeam.character[new DOMSearch( 'id','CharacterDesk').value]
 		let data = (this.item.useData == "Random") ? Math.floor(Math.random() * 10) :  this.item.useData
-		performer.rebirth = new Rebirth("Item",data,document.getElementById('CharacterDesk').value)
+		performer.rebirth = new Rebirth("Item",data,new DOMSearch( 'id','CharacterDesk').value)
 		//performer.rebirth.rebirthTypeInput(data);
 		inventoryData.Other[this.item.code].number -= 1;
 		if(inventoryData.Other[this.item.code].number == 0){

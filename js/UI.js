@@ -21,7 +21,7 @@ class CharacterDesk{
 		else{
 			this.performer = playerTeam.character[id]
 		}
-		let desk = document.getElementById('CharacterDesk')
+		let desk = new DOMSearch('id','CharacterDesk')
 		desk.innerHTML=''
 		desk.value = this.id
 		let mainBoard = this.createMainBoard()
@@ -146,7 +146,7 @@ class CharacterDesk{
 		else{
 			favoriteData = playerTeam.character[number].skillFavorite
 		}
-		let checkBox = document.getElementsByClassName('SkillFavoriteCheckBox')
+		let checkBox = new DOMSearch( 'class','SkillFavoriteCheckBox')
 		const length = checkBox.length
 		for( let i = 0 ; i <length ; i++){
 			if(favoriteData.indexOf(checkBox[i].value) != -1){
@@ -353,8 +353,8 @@ class CharacterDesk{
 	return divHealth	
 	}
 	changeCharacterList(type){
-		var level = document.getElementsByClassName('level')
-		var tribe = document.getElementsByClassName('tribe')
+		var level = new DOMSearch( 'class','level')
+		var tribe = new DOMSearch( 'class','tribe')
 		var length = level.length
 		for(var i = 0 ; i < length; i++){
 			level[i].style.display = type
@@ -362,7 +362,7 @@ class CharacterDesk{
 		}
 	}
 	refreshUseItemList(){
-		let useItems = document.getElementById('CharacterUseItem');
+		let useItems = new DOMSearch( 'id','CharacterUseItem');
 		let div = new CharacterUseItem()
 		if(div.div){
 			useItems.innerHTML = div.div.innerHTML
@@ -374,14 +374,14 @@ class CharacterDesk{
 
 	}
 	refreshCharacteristicData(){
-		let Characteristic = document.getElementById('CharacteristicView')
-		let number = document.getElementById('CharacterDesk').value
+		let Characteristic = new DOMSearch( 'id','CharacteristicView')
+		let number = new DOMSearch( 'id','CharacterDesk').value
 		let div = CharacterDesk.prototype.createCharacteristicData(number)
 		Characteristic.innerHTML = div.innerHTML
 	}
 	refreshStateView(){
-		let state = document.getElementById('StateView')
-		let number = document.getElementById('CharacterDesk').value
+		let state = new DOMSearch( 'id','StateView')
+		let number = new DOMSearch( 'id','CharacterDesk').value
 		let div = CharacterDesk.prototype.createStateView(number)
 		state.innerHTML = div.innerHTML
 	}
@@ -515,7 +515,7 @@ class CharacterDesk{
 		button.addEventListener('click',
 													 function(){
 			let performer = playerTeam.character[this.value]
-			performer.autoType = document.getElementById('ActionSelect').value
+			performer.autoType = new DOMSearch( 'id','ActionSelect').value
 
 		})
 		div.appendChild(button)
@@ -552,9 +552,9 @@ class CharacterDesk{
 		button.addEventListener('click',
 													 function(){
 			let performer = playerTeam.character[this.value]
-			performer.protectType[0] = document.getElementById('ProtectSelect').value
-			performer.protectType[1] = document.getElementById('ProtectNumber').value
-			performer.coordinates = (document.getElementsByName("position")[0].checked) ? 'Front': 'Back' ;
+			performer.protectType[0] = new DOMSearch( 'id','ProtectSelect').value
+			performer.protectType[1] = new DOMSearch( 'id','ProtectNumber').value
+			performer.coordinates = (new DOMSearch( 'name',"position")[0].checked) ? 'Front': 'Back' ;
 		}
 													 )
 		return button
@@ -783,7 +783,7 @@ class CharacterDesk{
 			addState = performer.battle.state[nameState[number]] - originState
 		}
 		else{
-			baseState = parseInt(document.getElementById('StateOption' + nameState[number]).getAttribute("value"))
+			baseState = parseInt(new DOMSearch( 'id','StateOption' + nameState[number]).getAttribute("value"))
 			originState = new State(playerTeam.character[performerNumber],baseState,0,0,number).state
 			addState = performer.battle.state[nameState[number]] - performer.origin.state[nameState[number]]
 		}
@@ -833,7 +833,7 @@ class CharacterDesk{
 class PartternInput{
     constructor(value){
 		this.performer = playerTeam.character[value]
-		this.tab = document.getElementsByClassName("PartternTab")[0].children
+		this.tab = new DOMSearch( 'class',"PartternTab")[0].children
         this.loadInputData()
         this.inputData()
     }
@@ -931,12 +931,13 @@ class InventoryDataView{
 		this.inventory = inventoryData
 		this.selectMainDiv()
 		this.createTittle()
-		let hidden = document.getElementById('InventoryType')
+		let hidden = new DOMSearch( 'id','InventoryType')
 		if(!hidden){
 			hidden = new CreateTag('hidden')
 			hidden.id = 'InventoryType'
-			hidden.value = this.type
+
 		}
+		hidden.value = this.type
 		this.div.appendChild(hidden)
 		let sort = this.createSortDiv(type)
 		this.div.appendChild(sort)
@@ -956,7 +957,7 @@ class InventoryDataView{
 				this.div.id = 'Inventory' + this.type
 				break;
 			case 'List' : 
-				this.div = document.getElementById('InventoryView') 
+				this.div = new DOMSearch( 'id','InventoryView') 
 				break;
 										}
 	}
@@ -980,8 +981,8 @@ class InventoryDataView{
 			type = this.type
 		}
 		let index = this.sortValue = 0
-		if(document.getElementById('InventoryTypeSelecter'+ type)){
-			 index = this.sortValue = document.getElementById('InventoryTypeSelecter'+ type).value
+		if(new DOMSearch( 'id','InventoryTypeSelecter'+ type)){
+			 index = this.sortValue = new DOMSearch( 'id','InventoryTypeSelecter'+ type).value
 		}
 		let inventory = this.inventory
 		if(!inventory){
@@ -1026,7 +1027,7 @@ class InventoryDataView{
 	createItemData(type){
 		let div = this.div
 		if(!div){
-			div = document.getElementById('Inventroy'+this.type)
+			div = new DOMSearch( 'id','Inventroy'+this.type)
 		}
 		if(!type){
 			type = this.type
@@ -1041,8 +1042,8 @@ class InventoryDataView{
 		}
 		const name = Object.getOwnPropertyNames(inventory)
 		let sortValue = name[this.sortValue]
-		if(!sortValue || document.getElementById('InventoryTypeSelecter'+ type)){
-			sortValue = document.getElementById('InventoryTypeSelecter'+ type).value
+		if(!sortValue || new DOMSearch( 'id','InventoryTypeSelecter'+ type)){
+			sortValue = new DOMSearch( 'id','InventoryTypeSelecter'+ type).value
 		}
 		const length = name.length
 		const checkSort = name.indexOf(sortValue)
@@ -1074,7 +1075,7 @@ class InventoryDataView{
 					let radio = CreateViewHTML.prototype.createViewRadio(inventoryName[i],'inventory',inventoryName[i],'ItemEquip')
 					radio.addEventListener('click',
 																 function(){
-						document.getElementById('InventoryView').value = this.id
+						new DOMSearch( 'id','InventoryView').value = this.id
 					})
 					itemDiv.appendChild(radio)
 					let selecter = new CreateTag('div')
@@ -1091,7 +1092,7 @@ class InventoryDataView{
 		let id = this.id
 		let check = 1
 		if(!id){
-			id = document.getElementById('CharacterDesk').value
+			id = new DOMSearch( 'id','CharacterDesk').value
 		}
 		const jobData = dataJob[playerTeam.character[id].job]
 		if(jobData.limit){
@@ -1763,14 +1764,14 @@ class addEventListner{
 		
 	}
 	addEventSelectPartyMember(){
-		let label = document.getElementsByClassName('SelectParty ViewLabel')
+		let label = new DOMSearch( 'class','SelectParty ViewLabel')
 		const length = label.length
 		for(let i = 0 ; i < length ; i++){
 			label[i].addEventListener('click', function(){
-				const id = document.getElementById('CharacterDesk').value
+				const id = new DOMSearch( 'id','CharacterDesk').value
 				let character = playerTeam.character[id]
 				const type = this.innerText
-				let changeDiv = document.getElementById(id)
+				let changeDiv = new DOMSearch( 'id',id)
 				switch(type){
 					case 'inParty' :
 						character.selected = 1
@@ -1789,7 +1790,7 @@ class addEventListner{
 		})}
 	}
 	addEventSimpleSelectPartyMember(){
-		let label = document.getElementsByClassName('SimpleSelectPartyLabel DataLabel')
+		let label = new DOMSearch( 'class','SimpleSelectPartyLabel DataLabel')
 		const length = label.length;
 		for(let i = 0 ; i < length ; i++){
 			label[i].addEventListener('click', function(){
@@ -1797,22 +1798,22 @@ class addEventListner{
 				let character = playerTeam.character[id]
 				
 				let desk = ''
-				const deskId = document.getElementById('CharacterDesk').value
+				const deskId = new DOMSearch( 'id','CharacterDesk').value
 				switch(character.selected){
 					case 1 :
 						character.selected = 0
-						document.getElementById(id).className = 'outParty'
+						new DOMSearch( 'id',id).className = 'outParty'
 						//this.firstChild.innerText = 'outParty';
-						desk = document.getElementById('outPartySelectParty')
+						desk = new DOMSearch( 'id','outPartySelectParty')
 						if(desk && deskId === id){
 							desk.checked = true
 						}
 						break;
 					case 0 :
 						character.selected = 1
-						document.getElementById(id).className = 'inParty'
+						new DOMSearch( 'id',id).className = 'inParty'
 						//this.firstChild.innerText = 'inParty';
-						desk = document.getElementById('inPartySelectParty')
+						desk = new DOMSearch( 'id','inPartySelectParty')
 						if(desk && deskId === id){
 							desk.checked = true
 						}
@@ -1822,31 +1823,31 @@ class addEventListner{
 		})}
 	}
 	addEventInventorySelecter(){
-		let selecter = document.getElementsByClassName('InventoryType')
+		let selecter = new DOMSearch( 'class','InventoryType')
 		const length = selecter.length
 		for( let i = 0 ; i < length ; i ++){
 			selecter[i].addEventListener('change',
 														 function(){
-				let type = document.getElementById('InventoryType').value
+				let type = new DOMSearch( 'id','InventoryType').value
 				let selecter = this
 				let parent = this.parentNode.children[3]
 				let inventory =  InventoryDataView.prototype.createItemData(type)
 				parent.innerHTML  = inventory.innerHTML
 				addEventListner.prototype.addEventItemEquipRadio()
-				document.getElementById('InventoryTittle').value = selecter.selectedIndex
+				new DOMSearch( 'id','InventoryTittle').value = selecter.selectedIndex
 			})}
 	}
 	addEventStateApplyButton(){
-		var applyButton = document.getElementsByClassName('ApplyButton')[0]
+		var applyButton = new DOMSearch( 'class','ApplyButton')[0]
 		applyButton.addEventListener('click',function(){
 			var failCheck = 0
-			var performerNumber = document.getElementById('CharacterDesk').value
+			var performerNumber = new DOMSearch( 'id','CharacterDesk').value
 			var performer = playerTeam.character[performerNumber]
 			var bonusValue = performer.bonusState
 			var state = performer.baseState
 			var bonusSummary = 0
 			for(var i = 0 ; i < 10 ; i++){
-				var checkType = document.getElementById('StateOption' + nameState[i])
+				var checkType = new DOMSearch( 'id','StateOption' + nameState[i])
 				var upValue = parseInt(checkType.getAttribute("value"))
 				var addValue = parseInt(checkType.getAttribute("addValue"))
 				if(state[nameState[i]] !=  upValue - addValue){
@@ -1866,7 +1867,7 @@ class addEventListner{
 			if(failCheck === 0){
 				performer.bonusState -= bonusSummary
 				for(var i = 0 ; i < 10 ; i++){
-					var checkType = document.getElementById('StateOption' + nameState[i])
+					var checkType = new DOMSearch( 'id','StateOption' + nameState[i])
 					var addValue = parseInt(checkType.getAttribute("addValue"))
 					if(addValue != 0){
 					performer.baseState[nameState[i]]  = state[nameState[i]] = parseInt(checkType.getAttribute("value"))						
@@ -1881,31 +1882,31 @@ class addEventListner{
 		})
 	}
 	addEventHireFireButton(){
-		let fire = document.getElementsByClassName('FireButton')[0]
+		let fire = new DOMSearch( 'class','FireButton')[0]
 		fire.addEventListener('click',function(){
-			let value = document.getElementById('CharacterDesk').value
+			let value = new DOMSearch( 'id','CharacterDesk').value
 			var answer = confirm('fire'+  playerTeam.character[value].name +'?');
 			if(answer){
 			delete playerTeam.character[value];
-			document.getElementById(value).parentElement.remove();
+			new DOMSearch( 'id',value).parentElement.remove();
 			if(localStorage[value]){
 				localStorage.removeItem(value);
 			}
-			document.getElementById('MainTab').children[3].click()
+			new DOMSearch( 'id','MainTab').children[3].click()
 
 			}
 		})
-		let save = document.getElementsByClassName('SaveButton')[0]
+		let save = new DOMSearch( 'class','SaveButton')[0]
 		save.addEventListener('click',function(){
-			let value = document.getElementById('CharacterDesk').value
+			let value = new DOMSearch( 'id','CharacterDesk').value
 
 			saveCharacter(playerTeam.character[value]);
 		})
 	}
 	addEventUseItemButton(){
-		var useButton = document.getElementsByClassName('UseItemButton')[0];
+		var useButton = new DOMSearch( 'class','UseItemButton')[0];
 		useButton.addEventListener('click',function(){
-			const value = document.getElementById('UseItemValue').value;
+			const value = new DOMSearch( 'id','UseItemValue').value;
 			new UseItem(value);
 			CharacterDesk.prototype.refreshUseItemList()
 			CharacterDesk.prototype.refreshStateView()	
@@ -1914,45 +1915,48 @@ class addEventListner{
 		})
 	}
 	addEventStateResetButton(){
-		var resetButton = document.getElementsByClassName('ResetButton')[0]
+		var resetButton = new DOMSearch( 'class','ResetButton')[0]
 		resetButton.addEventListener('click',function(){
 			CharacterDesk.prototype.refreshStateView()	
 			addEventListner.prototype.addEvent()
 		})
 	}
 	addEventEquipButton(){
-		var equipButton = document.getElementsByClassName('EquipButton')[0]
+		var equipButton = new DOMSearch( 'class','EquipButton')[0]
 		equipButton.addEventListener('click',
 														 function(){
-			var nowSelect = parseInt(document.getElementById('InventoryTypeSelecterEquipment').selectedIndex)
-			var value = document.getElementById('CharacterDesk').value
-				var target = document.getElementById('InventoryView').value
+				const listType = new DOMSearch( 'id','InventoryType').value
+			var nowSelect = parseInt(new DOMSearch( 'id','InventoryTypeSelecterEquipment').selectedIndex)
+			var value = new DOMSearch( 'id','CharacterDesk').value
+				var target = new DOMSearch( 'id','InventoryView').value
 				new EquipItem(value,target)
-				var parent =  document.getElementById('InventoryEquipment')
+				var parent =  new DOMSearch( 'id','InventoryEquipment')
 				var div = new InventoryDataView('Equipment',value)
 				parent.innerHTML = div.innerHTML
-			document.getElementById('InventoryTypeSelecterEquipment').selectedIndex = document.getElementById('InventoryTittle').value = nowSelect 
+			new DOMSearch( 'id','InventoryTypeSelecterEquipment').selectedIndex = new DOMSearch( 'id','InventoryTittle').value = nowSelect 
 				var divE = CharacterDesk.prototype.createViewEquipment(value)
-				var parentE = document.getElementById('EquipSelect')
+				var parentE = new DOMSearch( 'id','EquipSelect')
 				parentE.innerHTML = divE.innerHTML
+
+				new DOMSearch( 'id','InventoryType').value = listType;
 				CharacterDesk.prototype.refreshStateView()
 			addEventListner.prototype.addEvent()
 			})
 	}
 	addEventSkillLearnButton(){
-		let learnButton = document.getElementsByClassName('SkillLearn Button')[0]
+		let learnButton = new DOMSearch( 'class','SkillLearn Button')[0]
 		learnButton.addEventListener('click',
 														 function(){
-			const id = document.getElementById('CharacterDesk').value
-			const learnSkillCode = document.getElementById('SkillLearnCode').value
+			const id = new DOMSearch( 'id','CharacterDesk').value
+			const learnSkillCode = new DOMSearch( 'id','SkillLearnCode').value
 			new LearnSkill(id,learnSkillCode)
 			if(learnSkillCode.indexOf('P') != -1){
 				new PassiveEffect(id,learnSkillCode,'first')
 			}
-			let playerSkillBoard = document.getElementById('PlayerSkillData')
+			let playerSkillBoard = new DOMSearch( 'id','PlayerSkillData')
 			let newPlayerSkillBoard = CharacterDesk.prototype.createPlayerSkillData(id)
 			playerSkillBoard.innerHTML = newPlayerSkillBoard.innerHTML
-			let learnBoard = document.getElementById('LearnSkillData')
+			let learnBoard = new DOMSearch( 'id','LearnSkillData')
 			let newLearnBoard = CharacterDesk.prototype.createLearnSkillData(id)
 			learnBoard.innerHTML = newLearnBoard.innerHTML
 			CharacterDesk.prototype.checkFavoriteSkill(id)
@@ -1961,64 +1965,68 @@ class addEventListner{
 			})
 	}
 	addEventRemoveButton(){
-		var itemButton = document.getElementsByClassName('RemoveButton')[0]
+		var itemButton = new DOMSearch( 'class','RemoveButton')[0]
 		itemButton.addEventListener('click',
-														 function(){
-			var nowSelect = parseInt(document.getElementById('InventoryTypeSelecterEquipment').selectedIndex)
-			var value = document.getElementById('CharacterDesk').value
+		 function(){
+			const listType = new DOMSearch( 'id','InventoryType').value
+			var nowSelect = parseInt(new DOMSearch( 'id','InventoryTypeSelecterEquipment').selectedIndex)
+			var value = new DOMSearch( 'id','CharacterDesk').value
 				var performer = playerTeam.character[this.value]
-				var target = document.getElementById('EquipSelect').value
+				var target = new DOMSearch( 'id','EquipSelect').value
 				new EquipItem(value,'null',target)
-				var parent = document.getElementById('EquipSelect')
+				var parent = new DOMSearch( 'id','EquipSelect')
 				var div = CharacterDesk.prototype.createViewEquipment(value)
 				parent.innerHTML = div.innerHTML
-			document.getElementById('InventoryTypeSelecterEquipment').selectedIndex = document.getElementById('InventoryTittle').value = nowSelect 
-			var parent =  document.getElementById('InventoryView')
-				var div = new InventoryDataView('Equipment',value)//CharacterDesk.prototype.createEquipmentInventory()
-				parent.innerHTML = div.innerHTML
-
+			new DOMSearch( 'id','InventoryTypeSelecterEquipment').selectedIndex = new DOMSearch( 'id','InventoryTittle').value = nowSelect 
+			// var parent2 =  new DOMSearch( 'id','InventoryView')
+			// 	var div2 = new InventoryDataView('Equipment',value)//CharacterDesk.prototype.createEquipmentInventory()
+			// 	parent2.innerHTML = div2.innerHTML
+			var parent =  new DOMSearch( 'id','InventoryEquipment')
+			var div = new InventoryDataView('Equipment',value)
+			parent.innerHTML = div.innerHTML
+				new DOMSearch( 'id','InventoryType').value = listType;
 			CharacterDesk.prototype.refreshStateView()
 			addEventListner.prototype.addEvent()
 			})
 	}
 	addEventItemCaseRadio(){
-		var itemCase = document.getElementsByClassName('ItemCaseRadio')
+		var itemCase = new DOMSearch( 'class','ItemCaseRadio')
 		var length = itemCase.length;
 		for(var i = 0 ; i< length ; i++){
 			itemCase[i].addEventListener('click',
 													function(){
-			document.getElementById('EquipSelect').value = this.value
+			new DOMSearch( 'id','EquipSelect').value = this.value
 		})
 		}
 	}
 	addEventItemEquipRadio(){
-		var radio = document.getElementsByClassName('ItemEquipRadio')
+		var radio = new DOMSearch( 'class','ItemEquipRadio')
 		var length = radio.length;
 		for(var i = 0 ; i < length; i++){
 			radio[i].addEventListener('click',
 													function(){
-			document.getElementById('InventoryView').value = this.id
+			new DOMSearch( 'id','InventoryView').value = this.id
 			})
 		}
 	}
 	addEventLearnSkillRadio(){
-		let skillLearn = document.getElementsByClassName('SkillLearnRadio')
+		let skillLearn = new DOMSearch( 'class','SkillLearnRadio')
 		const length = skillLearn.length;
 		for(let i = 0 ; i< length ; i++){
 			skillLearn[i].addEventListener('click',
 													function(){
-			document.getElementById('SkillLearnCode').value = this.value
+			new DOMSearch( 'id','SkillLearnCode').value = this.value
 		})
 		}
 	}
 	addEventFavoriteSkillCheckBox(){
-		let favoriteCheckBox = document.getElementsByClassName('SkillFavoriteCheckBox')
+		let favoriteCheckBox = new DOMSearch( 'class','SkillFavoriteCheckBox')
 		const length = favoriteCheckBox.length
 		for(let i = 0 ; i < length ; i++){
 			favoriteCheckBox[i].addEventListener('click',
 																					function(){
 				const skillCode = this.value
-				const id = document.getElementById('CharacterDesk').value
+				const id = new DOMSearch( 'id','CharacterDesk').value
 				let character = playerTeam.character[id]
 				let skillFavorite = character.skillFavorite
 				const checkType = skillFavorite.indexOf(skillCode)
@@ -2035,12 +2043,12 @@ class addEventListner{
 	}
 	addEventStateUp(){
 		for(var i = 0 ; i < 10 ; i ++){
-			var setEventDiv = document.getElementById('StateOption' + nameState[i])
+			var setEventDiv = new DOMSearch( 'id','StateOption' + nameState[i])
 			setEventDiv.addEventListener('click',
 																	 function(){
-				var bonus = document.getElementById('BonusState')
+				var bonus = new DOMSearch( 'id','BonusState')
 				var bonusValue = parseInt(bonus.innerText)
-				var performerNumber = document.getElementById('CharacterDesk').value
+				var performerNumber = new DOMSearch( 'id','CharacterDesk').value
 				var bonusValueMain = playerTeam.character[performerNumber].bonusState
 				if(bonusValue > 0 && bonusValueMain > 0){
 					bonusValue -= 1
@@ -2059,10 +2067,10 @@ class addEventListner{
 	addEventTabs(tabClassName){ 
 		let menu = ''
 		if(tabClassName){
-			menu = document.getElementsByClassName(tabClassName)
+			menu = new DOMSearch( 'class',tabClassName)
 		}
 		else{
-		menu = document.getElementsByClassName('MenuTabs')
+		menu = new DOMSearch( 'class','MenuTabs')
 		}
 		const menuCount = menu.length
 		for( let j = 0 ; j < menuCount; j++){
@@ -2094,21 +2102,21 @@ class addEventListner{
 					}
 					if(activeTab){
 						activeTab.className = ''
-						document.getElementById(aConectTab).style.display = 'none'
+						new DOMSearch( 'id',aConectTab).style.display = 'none'
 					}
 					switch(aConectTab){
 					case 'CharacterView' :
-							let list = document.getElementById('CharacterList')
+							let list = new DOMSearch( 'id','CharacterList')
 							list.innerHTML = ''
-							let desk = document.getElementById('CharacterDesk')
+							let desk = new DOMSearch( 'id','CharacterDesk')
 							desk.innerHTML = ''
 							break;
 					case 'InventoryView' :
-						document.getElementById(aConectTab ).innerHTML = ''
+						new DOMSearch( 'id',aConectTab ).innerHTML = ''
 						break;
 				}					
 					selectTab.className = 'activeTab'
-					document.getElementById(sConectTab).style.display = 'block'
+					new DOMSearch( 'id',sConectTab).style.display = 'block'
 				}
 																		)
 		}
@@ -2116,22 +2124,22 @@ class addEventListner{
 		this.addEventTownTabs();
 	}
 	addEventTownTabs(){
-		document.getElementById("BuyMenuTabs").addEventListener('click',
+		new DOMSearch( 'id',"BuyMenuTabs").addEventListener('click',
 		function(){
 			new Shop("Buy")
 		})
-		document.getElementById("SellMenuTabs").addEventListener('click',
+		new DOMSearch( 'id',"SellMenuTabs").addEventListener('click',
 		function(){
 			new Shop("Sell")
 		})
-		document.getElementById("RefineMenuTabs").addEventListener('click',
+		new DOMSearch( 'id',"RefineMenuTabs").addEventListener('click',
 		function(){
 			new Shop("Refine")
 		})
 	}
 	addInventoryListRefresh(tab){
 		tab.addEventListener('click', function(){
-			let list = document.getElementById('InventoryView')
+			let list = new DOMSearch( 'id','InventoryView')
 			list.innerHTML = ''
 			let newList = new InventoryDataView('List')
 			addEventListner.prototype.addEventInventorySelecter();
@@ -2140,9 +2148,9 @@ class addEventListner{
 	}
 	addCharacterListRefresh(tab){
 		tab.addEventListener('click', function(){
-			let list = document.getElementById('CharacterList')
+			let list = new DOMSearch( 'id','CharacterList')
 			list.innerHTML = ''
-			let desk = document.getElementById('CharacterDesk')
+			let desk = new DOMSearch( 'id','CharacterDesk')
 			desk.innerHTML = ''
 			const character = playerTeam.character
 			const names = Object.getOwnPropertyNames(character)
@@ -2172,7 +2180,7 @@ class addEventListner{
 			event.preventDefault();
 		  }
 		  function onDrop(event) {
-			const parttern = document.getElementsByClassName("PartternTab")[0]; 
+			const parttern = new DOMSearch( 'class',"PartternTab")[0]; 
 			const id = event.dataTransfer.getData('text');
 		  
 			const draggableElement = parttern.children[id];
@@ -2193,11 +2201,11 @@ class addEventListner{
 			parttern.insertBefore(tmp,parttern.children[reIndex]);
 		
 			event.dataTransfer.clearData();
-			new PartternInput(document.getElementById('CharacterDesk').value);
+			new PartternInput(new DOMSearch( 'id','CharacterDesk').value);
 		  }
 	}
 	addEventBuyButton(){
-		var buttons = document.getElementsByClassName('BuyButton')
+		var buttons = new DOMSearch( 'class','BuyButton')
 		for(let i = 0 ; i < buttons.length; i++){
 		buttons[i].addEventListener('click',function(){
 			new ShopInter('Buy');
@@ -2206,7 +2214,7 @@ class addEventListner{
 	}
 	}
 	addEventSellButton(){
-		var buttons = document.getElementsByClassName('SellButton')
+		var buttons = new DOMSearch( 'class','SellButton')
 		for(let i = 0 ; i < buttons.length; i++){
 		buttons[i].addEventListener('click',function(){
 			new ShopInter('Sell');
@@ -2215,7 +2223,7 @@ class addEventListner{
 	}
 	}
 	addEventRefineButton(){
-		var buttons = document.getElementsByClassName('RefineButton')
+		var buttons = new DOMSearch( 'class','RefineButton')
 		for(let i = 0 ; i < buttons.length; i++){
 			buttons[i].addEventListener('click',function(){
 				new ShopRefine();
@@ -2224,7 +2232,7 @@ class addEventListner{
 		}
 	}
 	addEventShopClearButton(){
-		var buttons = document.getElementsByClassName('ClearButton')
+		var buttons = new DOMSearch( 'class','ClearButton')
 		for(let i = 0 ; i < buttons.length; i++){
 		buttons[i].addEventListener('click',function(){
 			ShopInter.prototype.unChecked();
@@ -2246,9 +2254,9 @@ class addEventListner{
 			, 3000);
 	}
 	addEventBattleRunAway(){
-		document.getElementById("RunAwayButton").addEventListener('click',function(){
+		new DOMSearch( 'id',"RunAwayButton").addEventListener('click',function(){
 			new BattleEnd("runAway")
-			document.getElementsByClassName('MenuTabs')[0].children[1].click()
+			new DOMSearch( 'class','MenuTabs')[0].children[1].click()
 		})
 	}
 }
@@ -2390,16 +2398,16 @@ class AddLog{
 	selectLogView(type){
 		switch(type){
 			case 'Battle':
-				this.logView = document.getElementById('BattleLogView')
+				this.logView = new DOMSearch( 'id','BattleLogView')
 				break;
 			case 'Turn' :
-				this.logView = document.getElementsByClassName('Log')[0]
+				this.logView = new DOMSearch( 'class','Log')[0]
 				break;
 			case 'Map' :
-				this.logView = document.getElementById('MapLogView')
+				this.logView = new DOMSearch( 'id','MapLogView')
 				break;
 			case 'System' :
-				this.logView = document.getElementById('SystemLogView')
+				this.logView = new DOMSearch( 'id','SystemLogView')
 				break;
 							 }
 	}
@@ -2443,12 +2451,12 @@ class Shop{
 		
 	}
 	boardClear(){
-		document.getElementsByName("Buy")[0].innerHTML = "";
-		document.getElementsByName("Sell")[0].innerHTML = "";
-		document.getElementsByName("Refine")[0].innerHTML = "";
+		new DOMSearch( 'name',"Buy")[0].innerHTML = "";
+		new DOMSearch( 'name',"Sell")[0].innerHTML = "";
+		new DOMSearch( 'name',"Refine")[0].innerHTML = "";
 	}
 	selectBoard(type){
-		this.standBoard = document.getElementsByName(type)[0];
+		this.standBoard = new DOMSearch( 'name',type)[0];
 	}
 	createBuyButton(){
 		var div = document.createElement('div');
@@ -2690,7 +2698,7 @@ class ShopRefine{
 		this.refineItem();
 	}
 	checkedItemSearch(){
-		const check = document.getElementsByName("ItemData")
+		const check = new DOMSearch( 'name',"ItemData")
 		const length = check.length;
 		this.data = {}
 		for(let i =0 ; i < length ; i++){
@@ -2734,12 +2742,12 @@ class ShopInter{
 		}
 	}
 	checkedItemSearch(){
-		const check = document.getElementsByName("ItemData")
+		const check = new DOMSearch( 'name',"ItemData")
 		const length = check.length;
 		this.data = {}
 		for(let i =0 ; i < length ; i++){
 			if(check[i].checked){
-				let value = parseInt(document.getElementById("Count"+check[i].id).value)
+				let value = parseInt(new DOMSearch( 'id',"Count"+check[i].id).value)
 				if(value == NaN)
 				{
 					value = 0;
@@ -2797,7 +2805,7 @@ class ShopInter{
 		}
 	}
 	unChecked(){
-		const check = document.getElementsByName("ItemData")
+		const check = new DOMSearch( 'name',"ItemData")
 		const length = check.length;
 		this.buyData = {}
 		for(let i =0 ; i < length ; i++){
@@ -2848,7 +2856,7 @@ class SkillButtonView{
 		this.skill = playerGroup[number].skill
 		this.favorite = playerGroup[number].skillFavorite
 		this.favoriteLength = this.favorite.length
-		let board = this.board = document.getElementById('SkillBorder')
+		let board = this.board =  new DOMSearch('id','SkillBorder')
 		this.clearBoard()
 		//favorite , action , item , far away
 		//action sort combat , support
@@ -2911,7 +2919,7 @@ class SkillButtonView{
 		return board
 	}
 	createFarAwayData(){
-		let container = document.getElementById('FarAwayMenu')
+		let container = new DOMSearch( 'id','FarAwayMenu')
 		
 
 	
@@ -2927,7 +2935,7 @@ class SkillButtonView{
 		if(!type){
 			type = 'Action'
 		}
-		let container = document.getElementById(type + 'Menu')
+		let container = new DOMSearch( 'id',type + 'Menu')
 		const skill = this.createSkillData(type.toLowerCase())//Object.getOwnPropertyNames(dataSkill)//this.skill.active
 		const length  = skill.length
 		for(let i = 0 ; i < length ; i ++){
@@ -2979,8 +2987,8 @@ class SkillButtonView{
 		skillButton.addEventListener('click',
 																 function(){
 			const performer = this.parentNode.parentNode.parentNode.parentNode.parentNode.value
-			document.getElementById('Battle' + performer + 'Border').style.backgroundColor = 'rgb(66, 104, 66)'
-			/*this.parentNode.parentNode*/document.getElementById('SkillBorder').style.visibility = 'collapse';
+			new DOMSearch( 'id','Battle' + performer + 'Border').style.backgroundColor = 'rgb(66, 104, 66)'
+			/*this.parentNode.parentNode*/new DOMSearch( 'id','SkillBorder').style.visibility = 'collapse';
 			//this.parentNode.parentNode.innerHTML = ''
 			dataActiveCharacter[performer].active = 0;		
 			if(dataActiveCharacter[performer].skillFavorite.indexOf(this.value) === -1){
@@ -3010,7 +3018,7 @@ class SkillButtonView{
 
 class HireList{
 	constructor(){
-		this.listDOM = document.getElementById("HireList")
+		this.listDOM = new DOMSearch('id',"HireList")
 		this.listData = hireTimer;
 		this.clearList();
 		this.createListAll();
@@ -3090,9 +3098,26 @@ class CharacterUseItem{
 	
 	}
 	createApplyButton(){
-		var div = document.createElement('div');
+		var div = new CreateTag('div');
 		div.className = 'UseItemButton Button'
 		div.innerText = 'Apply'
 		return div
+	}
+}
+class DOMSearch{
+	constructor(type,target){
+		let returnDOM;
+		switch(type){
+			case 'id' :
+			returnDOM = document.getElementById(target)
+			break;
+			case 'class' :
+			returnDOM = document.getElementsByClassName(target)
+			break;
+			case 'name':
+			returnDOM = document.getElementsByName(target)
+			break;
+		}
+		return returnDOM;
 	}
 }
