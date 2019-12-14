@@ -932,7 +932,7 @@ class InventoryDataView{
 		this.selectMainDiv()
 		this.createTittle()
 		let hidden = new DOMSearch( 'id','InventoryType')
-		if(!hidden){
+		if(!hidden.check){
 			hidden = new CreateTag('hidden')
 			hidden.id = 'InventoryType'
 
@@ -981,7 +981,7 @@ class InventoryDataView{
 			type = this.type
 		}
 		let index = this.sortValue = 0
-		if(new DOMSearch( 'id','InventoryTypeSelecter'+ type)){
+		if(new DOMSearch( 'id','InventoryTypeSelecter'+ type).check){
 			 index = this.sortValue = new DOMSearch( 'id','InventoryTypeSelecter'+ type).value
 		}
 		let inventory = this.inventory
@@ -1042,7 +1042,7 @@ class InventoryDataView{
 		}
 		const name = Object.getOwnPropertyNames(inventory)
 		let sortValue = name[this.sortValue]
-		if(!sortValue || new DOMSearch( 'id','InventoryTypeSelecter'+ type)){
+		if(!sortValue || new DOMSearch( 'id','InventoryTypeSelecter'+ type).check){
 			sortValue = new DOMSearch( 'id','InventoryTypeSelecter'+ type).value
 		}
 		const length = name.length
@@ -3107,6 +3107,7 @@ class CharacterUseItem{
 class DOMSearch{
 	constructor(type,target){
 		let returnDOM;
+		this.check =false;
 		switch(type){
 			case 'id' :
 			returnDOM = document.getElementById(target)
@@ -3117,6 +3118,9 @@ class DOMSearch{
 			case 'name':
 			returnDOM = document.getElementsByName(target)
 			break;
+		}
+		if(returnDOM != null){
+			this.check =true;
 		}
 		return returnDOM;
 	}
