@@ -230,6 +230,7 @@ const dataSkill = {
 		hitCount : 1,
 		defenceType : 'Physical',
 		exp : 'BaseSkill',
+		src : 'skill_042.png'
 	},
 		KA100001 : {
 		code : 'KA100001',

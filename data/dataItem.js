@@ -36,13 +36,13 @@ const dataItem = {
 			}
 		},
 		price: 128, 
-		src : 'Image\\we_sword038.png',
+		src : 'we_sword001.png',
 		exp : '기본적인 검. 품질은 좋지 않다.' 
 	},
 	IT0000001 : {
 		code : 'IT0000001',
 		name : 'Wooden Shield',
-		category : 'Ammor',
+		category : 'Armor',
 		type : 'Shield',
 		spec : {
 			option : {
@@ -50,7 +50,7 @@ const dataItem = {
 			}
 		},
 		price: 152, 
-		src : 'Image\\shield_002o.png',  
+		src : 'shield_002o.png',  
 		exp : '나무로 만들어진 조잡한 방패로 별로 몸을 지켜줄 것 같지는 않다.' 
 	},
 	IT0000002 : {
@@ -64,21 +64,21 @@ const dataItem = {
 			}
 		},
 		price: 110, 
-		src : 'Image\\helm_014.png',
+		src : 'helm_014.png',
 		exp : '나무로 만들어진 조잡한 헬멧.' 
 	},
 	IT0000003 : {
 		code : 'IT0000003',
-		name : 'Wooden Ammor',
-		category : 'Ammor',
-		type : 'Ammor',
+		name : 'Wooden Armor',
+		category : 'Armor',
+		type : 'Armor',
 		spec : {
 			option : {
 				defPhyPer: 8, defPhyNum: 4
 			}
 		},
 		price: 328, 
-		src : 'Image\\armor_004.png',
+		src : 'armor_004.png',
 		exp : '나무로 만들어진 조잡한 갑옷. 큰 충격을 받으면 부서진다.' 
 	},
 	IT0000004 : {
@@ -95,7 +95,7 @@ const dataItem = {
 			}
 		},
 		price: 98, 
-		src : 'Image\\we_bow017.png', 
+		src : 'we_bow017.png', 
 		exp : '조잡하게 만들어진 활.' 
 	},
 	IT0000005 : {
@@ -109,13 +109,13 @@ const dataItem = {
 			}
 		},
 		price: 57, 
-		src : 'Image\\we_sword001.png',
+		src : 'we_sword001.png',
 		exp : '절삭력이 거의 없는 단검.' 
 	},
 	IT0000006 : {
 		code : 'IT0000006',
 		name : 'Text Book',
-		category : 'Ammor',
+		category : 'Armor',
 		type : 'Book',
 		spec : {
 			option : {
@@ -124,13 +124,13 @@ const dataItem = {
 			}
 		},
 		price: 528, 
-		src : 'Image\\book_002c.png',
+		src : 'book_002c.png',
 		exp : '알수 없는 문자가 가득 쓰여진 책.' 
 	},
 	IT0000007 : {
 		code : 'IT0000007',
 		name : 'ArrowCase',
-		category : 'Ammor',
+		category : 'Armor',
 		type : 'ArrowCase',
 		spec : {
 			option : {
@@ -162,7 +162,7 @@ const dataItem = {
 			}, 
 		},
 		price: 721, 
-		src : 'Image\\helm_001.png',
+		src : 'helm_001.png',
 	  	exp : '그저 뼈로 이루어진 투구. 여러군데 금이 가 있다.', 
 		},
 	IT0000009 : { 
@@ -189,7 +189,7 @@ const dataItem = {
 			}
 		},
 		price: 528, 
-		src : 'Image\\we_gun011.png',
+		src : 'we_gun011.png',
 	  	exp : '탑에서 발견된 무기.', 
 	},
 	 IT0000010 : { 
@@ -207,14 +207,14 @@ const dataItem = {
 			 }, 
 		 },
 		 price: 728, 
-		 src : 'Image\\we_sword036.png',
+		 src : 'we_sword036.png',
 	 	exp : '이 아이템은 초록색이다.', 
 	},
 	 IT0000011 : { 
 	 	code : 'IT0000011', 
 	 	name : 'Ghost Belt', 
-	 	category : 'Ammor', 
-	 	type : 'Ammor', 
+	 	category : 'Armor', 
+	 	type : 'Armor', 
 		 spec : {
 		 	health : {
  		
@@ -341,8 +341,8 @@ const dataItem = {
 	IT0000019 : { 
 	 	code : 'IT0000019', 
 	 	name : 'BlackwingMale', 
-	 	category : 'Ammor', 
-	 	type : 'Ammor', 
+	 	category : 'Armor', 
+	 	type : 'Armor', 
 	 	health : {
  			hp : 300,
  			pHp : 10
@@ -507,7 +507,7 @@ const dataItem = {
 	IT0000029 : { 
 		  code : 'IT0000029', 
 		  name : '가죽 팔 보호대', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'ArmGaurd', 
 		spec : {
 		 option : {
@@ -575,7 +575,7 @@ const dataItem = {
 	IT0000033 : { 
 		  code : 'IT0000033', 
 		  name : '자연의 기운', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Robe', 
 		spec : {
 		 health : {
@@ -831,7 +831,7 @@ const dataItem = {
 	IT1000005 : { 
 		  code : 'IT1000005', 
 		  name : '지하고블린 천 갑옷', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Cloth', 
 		 state : {
 			str : 4, 	vit : 8, 	int : 2, 	dex : 1
@@ -845,7 +845,7 @@ const dataItem = {
 	IT1000006 : { 
 		  code : 'IT1000006', 
 		  name : '지하고블린 천 팔보호대', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'ArmGaurd', 
 		 state : {
 			str : 3, 	vit : 5, 	int : 1, 	dex : 6
@@ -983,7 +983,7 @@ const dataItem = {
 	 category : 'Other', 
 	 type : 'Item', 
 		price: 140,
-	  src : 'Image\\food_004.png', 
+	  src : 'food_004.png', 
 	  exp : '깨끗한 정제수. hp, mp 리젠 20%', 
 	},
 	IT0000051 : { 
@@ -1025,7 +1025,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		price: 16557,
-		  src : 'Image\\we_staff001b.png', 
+		  src : 'we_staff001b.png', 
 		  exp : '평범한 부지깽이다. 불속성 데미지를 준다. 불속성 공격을 할 경우 400%의 추가 데미지를 입힌다.', 
 	},
 	IT0000053 : { 
@@ -1043,7 +1043,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		price: 1542,
-		  src : 'Image\\we_staff010c.png', 
+		  src : 'we_staff010c.png', 
 		  exp : '나무가지를 꺾어서 만든 조잡한 지팡이.', 
 	},
 	IT0000054 : { 
@@ -1061,7 +1061,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		price: 9488,
-		  src : 'Image\\we_staff001.png', 
+		  src : 'we_staff001.png', 
 		  exp : '열매가 달려있는 나무가지다. 착용자의 치유능력이 30%상승한다.', 
 	},
 	IT9000008 : { 
@@ -1070,7 +1070,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		price: 172,
-		  src : 'Image\\food_035.png', 
+		  src : 'food_035.png', 
 		  exp : '전투시 복용하면 전체 체력의 1/4을 회복하지만 방어력이 25% 하락한다.', 
 	},
 	IT9000009 : { 
@@ -1079,7 +1079,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		price: 149,
-		  src : 'Image\\food_037.png', 
+		  src : 'food_037.png', 
 		  exp : '전투시 복용하면 전체 체력의 1/8을 지속적으로 회복한다.', 
 	},
 	IT9000010 : { 
@@ -1088,13 +1088,13 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		price: 252,
-		  src : 'Image\\food_036.png', 
+		  src : 'food_036.png', 
 		  exp : '전투시 복용하면 전체 체력의 1/4을 회복한다. 특정 층에서 아이템을 교환할 때 사용할 수 있다.', 
 	},
 	IT1000007 : { 
 		  code : 'IT1000007', 
 		  name : '초보 마법사 모자', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Hat', 
 		 spec : { 
 			 state : {
@@ -1106,13 +1106,13 @@ const dataItem = {
 			 }, 
 		 }, 
 		price: 654,
-		  src : 'Image\\helm_005.png', 
+		  src : 'helm_005.png', 
 		  exp : '초보 마법사들이 즐겨쓰는 모자다. 초보 마법사 로브와 함께 착용하면 마법 공격력과 방어력이 10% 상승한다.', 
 	},
 	IT1000008 : { 
 		  code : 'IT1000008', 
 		  name : '초보 마법사 로브', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Robe', 
 		 spec : { 
 			 state : {
@@ -1123,7 +1123,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		price: 788,
-		  src : 'Image\\armor_010b.png', 
+		  src : 'armor_010b.png', 
 		  exp : '초보 마법사들이 즐겨입는 로브로 초보 마법사 모자와 함께 착용하면 마법 공격력과 방어력이 10% 상승한다.', 
 	},
 	IT0000055 : { 
@@ -1144,7 +1144,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		price: 34777,
-		  src : 'Image\\we_staff020b.png', 
+		  src : 'we_staff020b.png', 
 		  exp : '보석을 통하여 마력을 증폭시켜주는 지팡이.', 
 	},
 	IT0000013 : { 
@@ -1159,7 +1159,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		price: 311,
-		  src : 'Image\\acce_010.png', 
+		  src : 'acce_010.png', 
 		  exp : '별다른 능력을 가지지 않은 장식품', 
 	},
 	IT0000015 : { 
@@ -1174,7 +1174,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		price: 8006,
-		  src : 'Image\\acce_003e.png', 
+		  src : 'acce_003e.png', 
 		  exp : '탑에서 사망한 수도승의 눈. 착용자의 명중률을 12% 상승시킨다.', 
 	},
 	IT0000016 : { 
@@ -1188,7 +1188,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		price: 444,
-		  src : 'Image\\acce_004.png', 
+		  src : 'acce_004.png', 
 		  exp : '행운을 올려주는 노란색 고무줄.', 
 	},
 	IT0000021 : { 
@@ -1210,7 +1210,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		price: 1227,
-		  src : 'Image\\book_002.png', 
+		  src : 'book_002.png', 
 		  exp : '얼음 마법의 정수가 담긴 책. 시리즈로 출간되었고 기초 얼음마법 패키지가 들어있다. 빙결 확률이 25% 증가한다.', 
 	},
 	IT0000022 : { 
@@ -1232,7 +1232,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		price: 1227,
-		  src : 'Image\\book_002c.png', 
+		  src : 'book_002c.png', 
 		  exp : '화염 마법의 정수가 담긴 책. 시리즈로 출간된 것으로 알려져 있다. 기초 화염마법 패키지가 들어있다. 화상을 입을 확률이 25% 증가한다.', 
 	},
 	IT0000023 : { 
@@ -1253,7 +1253,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		price: 1227,
-		  src : 'Image\\book_002b.png', 
+		  src : 'book_002b.png', 
 		  exp : '영웅 드루이드의 일대기가 담겨있는 책. <만년동안 응어리진 분노를... 222p>', 
 	},
 	IT0000024 : { 
@@ -1262,7 +1262,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		price: 6550,
-		  src : 'Image\\item_051.png', 
+		  src : 'item_051.png', 
 		  exp : '익히고 있는 기술중 한가지를 선택하여 랜덤한 다른 기술로 변화시킨다.', 
 	},
 	IT0000056 : { 
@@ -1276,7 +1276,7 @@ const dataItem = {
 		 }, 
 	 }, 
 	  price: 4556, 
-	  src : 'Image\\acce_015.png', 
+	  src : 'acce_015.png', 
 	  exp : '착용자의 명중률 30% 상승', 
 	},
 	IT0000057 : { 
@@ -1297,7 +1297,7 @@ const dataItem = {
 			}
 		 }, 
 		  price: 4500, 
-		  src : 'Image\\we_gun006.png', 
+		  src : 'we_gun006.png', 
 		  exp : '빠른 공격속도를 가지지만 상대방을 맞추기는 쉽지 않다. 한번 공격시 2회 공격', 
 	},
 	IT0000058 : { 
@@ -1318,7 +1318,7 @@ const dataItem = {
 			}
 		 }, 
 		  price: 6320, 
-		  src : 'Image\\we_gun005.png', 
+		  src : 'we_gun005.png', 
 		  exp : '동료들의 치명타 확률을 20% 올려준다.', 
 	},
 	IT0000059 : { 
@@ -1339,7 +1339,7 @@ const dataItem = {
 			}
 		 }, 
 		  price: 7746, 
-		  src : 'Image\\we_gun002.png', 
+		  src : 'we_gun002.png', 
 		  exp : '마법 피해를 입히는 탄환을 발사한다.', 
 	},
 	IT0000060 : { 
@@ -1360,7 +1360,7 @@ const dataItem = {
 			}
 		 }, 
 		  price: 11472, 
-		  src : 'Image\\we_gun003.png', 
+		  src : 'we_gun003.png', 
 		  exp : '상대방에게 준 피해의 5% 만큼 자신의 체력을 회복한다.', 
 	},
 	IT0000061 : { 
@@ -1381,7 +1381,7 @@ const dataItem = {
 			}
 		 }, 
 		  price: 41555, 
-		  src : 'Image\\we_gun003.png', 
+		  src : 'we_gun003.png', 
 		  exp : '더블 배럴 샷건. 한번에 두발의 탄환을 발사하는 총.', 
 	},
 	IT9000011 : { 
@@ -1390,7 +1390,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: 420, 
-		  src : 'Image\\food_006.png', 
+		  src : 'food_006.png', 
 		  exp : '빵 안에는 역겨운 초록이 숨어있다. 파티원의 체력을 30% 회복한다.', 
 	},
 	IT9000012 : { 
@@ -1399,7 +1399,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: 620, 
-		  src : 'Image\\food_004.png', 
+		  src : 'food_004.png', 
 		  exp : '이 세상의 맛이 아니다.45%의 MP를 회복하지만 구토를 유발한다.', 
 	},
 	IT9000013 : { 
@@ -1408,7 +1408,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: 1304, 
-		  src : 'Image\\food_020.png', 
+		  src : 'food_020.png', 
 		  exp : '흔히 만화고기라 불리는 모양을 가지고 있는 이 음식은 HP와 MP를 40% ~ 60% 회복해준다.', 
 	},
 	IT9000014 : { 
@@ -1417,13 +1417,13 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: 502, 
-		  src : 'Image\\food_028.png', 
+		  src : 'food_028.png', 
 		  exp : '그 가격이면 국밥을 먹는다. HP와 MP를 25% 회복시킨다.', 
 	},
 	IT0000062 : { 
 		 code : 'IT0000062', 
 		 name : '霄白衣', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Robe', 
 		 spec : { 
 			 health : {
@@ -1438,13 +1438,13 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: 50292, 
-		  src : 'Image\\armor_027.png', 
+		  src : 'armor_027.png', 
 		  exp : '这件衣服使用的字母没有意义，但看起来不错。', 
 	},
 	IT0000063 : { 
 		 code : 'IT0000063', 
 		 name : '翼のドレス', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Cloth', 
 		 spec : { 
 			 health : {
@@ -1458,14 +1458,14 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: 30226, 
-		  src : 'Image\\armor_024b.png', 
+		  src : 'armor_024b.png', 
 		  exp : '물건을 훔칠 확률이 올라가는 특이한 옷.', 
 	},
 	IT0000064 : { 
 		 code : 'IT0000064', 
 		 name : 'नाइटको आर्मर', 
-		 category : 'Ammor', 
-		 type : 'Ammor', 
+		 category : 'Armor', 
+		 type : 'Armor', 
 		 spec : { 
 			 health : {
 			hp : 542,sp : 223,
@@ -1479,14 +1479,14 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: 44253, 
-		  src : 'Image\\armor_029b.png', 
+		  src : 'armor_029b.png', 
 		  exp : '알수없는 언어가 쓰여진 갑옷이지만 방어력만큼은 확실한 것으로 알려져 있다.', 
 	},
 	IT0000065 : { 
 		 code : 'IT0000065', 
 		 name : '코볼트 잔해', 
-		 category : 'Ammor', 
-		 type : 'Ammor', 
+		 category : 'Armor', 
+		 type : 'Armor', 
 		 spec : { 
 			 health : {
 			hp : 66,sp : 23,
@@ -1500,13 +1500,13 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: 3220, 
-		  src : 'Image\\armor_019b.png', 
+		  src : 'armor_019b.png', 
 		  exp : '평범한 갑옷에 코볼트의 가죽을 덧댄 갑옷. 별다른 차이는 있지 않은 것으로 알려져 있다.', 
 	},
 	IT0000066 : { 
 		 code : 'IT0000066', 
 		 name : '버려진 로브', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Robe', 
 		 spec : { 
 			 health : {
@@ -1520,14 +1520,14 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: 1402, 
-		  src : 'Image\\armor_018.png', 
+		  src : 'armor_018.png', 
 		  exp : '마을 바닥에 떨어져 있던 것 치고는 상태가 괜찮아 보인다.', 
 	},
 	IT0000067 : { 
 		 code : 'IT0000067', 
 		 name : '돌격조끼', 
-		 category : 'Ammor', 
-		 type : 'Ammor', 
+		 category : 'Armor', 
+		 type : 'Armor', 
 		 spec : { 
 			 health : {
 			hp : 228,sp : 140
@@ -1540,7 +1540,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: 37728, 
-		  src : 'Image\\armor_014.png', 
+		  src : 'armor_014.png', 
 		  exp : '착용자의 방어력과 마법방어력이 15% 상승한다.', 
 	},
 	IT0000068 : { 
@@ -1561,7 +1561,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: 5728, 
-		  src : 'Image\\shield_001n.png', 
+		  src : 'shield_001n.png', 
 		  exp : '알수 없는 바위 덩어리를 깎아 만든 방패', 
 	},
 	IT9910000: {
@@ -1571,7 +1571,7 @@ const dataItem = {
 	    type: 'Map',
 	    useData: '20001',//지도의 경우 해방되는 아이템.
 		price: 100,
-	    src: 'Image\\MI_item.png',
+	    src: 'MI_item.png',
 	    exp: '끝이 꺽여 있는 나뭇가지. 어째선지 가리키고 있는 방향이 있는 것 같다.'
 
 	},
@@ -1582,7 +1582,7 @@ const dataItem = {
 	    type: 'Key',
 	    useData: '20001',//지도의 경우 해방되는 아이템.
 		price: 100,
-	    src: 'Image\\MI_item.png',
+	    src: 'MI_item.png',
 	    exp: '부러진 나뭇가지. 어째선지 가리키고 있는 방향이 있는 것 같다(1 회용).'
 
 	},
@@ -1603,13 +1603,13 @@ const dataItem = {
 		 }, 
 	 }, 
 	  price: '5254', 
-	  src : 'Image\\acce_016.png', 
+	  src : 'acce_016.png', 
 	  exp : '가공된 수정으로 만들어진 방패.', 
 	},
 	IT0000070 : { 
 		 code : 'IT0000070', 
 		 name : '猫耳', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Hat', 
 		 spec : { 
 			 health : {
@@ -1622,7 +1622,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '5254', 
-		  src : 'Image\\acce_020.png', 
+		  src : 'acce_020.png', 
 		  exp : '모든 능력치를 10 상승시켜주는 장식용 악세사리.', 
 	},
 	IT0000071 : { 
@@ -1643,14 +1643,14 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '8254', 
-		  src : 'Image\\acce_025.png', 
+		  src : 'acce_025.png', 
 		  exp : '비상식량으로 사용이 가능하며 체력을 15% 회복시킬 수 있다.', 
 	},
 	IT0000072 : { 
 		 code : 'IT0000072', 
 		 name : 'Rad Leather', 
-		 category : 'Ammor', 
-		 type : 'Ammor', 
+		 category : 'Armor', 
+		 type : 'Armor', 
 		 spec : { 
 			 health : {
 			hp : 244,sp : 97
@@ -1663,13 +1663,13 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '1438', 
-		  src : 'Image\\armor_005f.png', 
+		  src : 'armor_005f.png', 
 		  exp : '붉게 물들인 가죽으로 만든 갑옷. 별다른 효과는 가지고 있지 않다.', 
 	},
 	IT0000073 : { 
 		 code : 'IT0000073', 
 		 name : 'ডিভাইন ভেটেরিনারি', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Robe', 
 		 spec : { 
 			 health : {
@@ -1683,14 +1683,14 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '11376', 
-		  src : 'Image\\armor_011e.png', 
+		  src : 'armor_011e.png', 
 		  exp : '', 
 	},
 	IT0000074 : { 
 		 code : 'IT0000074', 
 		 name : 'Combat Vest', 
-		 category : 'Ammor', 
-		 type : 'Ammor', 
+		 category : 'Armor', 
+		 type : 'Armor', 
 		 spec : { 
 			 health : {
 			sp : 266,
@@ -1704,7 +1704,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '15284', 
-		  src : 'Image\\armor_014e.png', 
+		  src : 'armor_014e.png', 
 		  exp : '전투시에 회피율이 추가로 15% 올라가는 조끼.', 
 	},
 	IT0000075 : { 
@@ -1726,13 +1726,13 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '9384', 
-		  src : 'Image\\food_007.png', 
+		  src : 'food_007.png', 
 		  exp : '정체를 알수없는 누군가의 기억이 담겨 있다.', 
 	},
 	IT0000075 : { 
 	 code : 'IT0000075', 
 	 name : 'Gown', 
-	 category : 'Ammor', 
+	 category : 'Armor', 
 	 type : 'Cloth', 
 	 spec : { 
 	 	 health : {
@@ -1747,13 +1747,13 @@ const dataItem = {
 		 }, 
 	 }, 
 	  price: '5654', 
-	  src : 'Image\\armor_015e.png', 
+	  src : 'armor_015e.png', 
 	  exp : '흰색 일색으로 이루어진 가운.', 
 	},
 	IT0000076 : { 
 		 code : 'IT0000076', 
 		 name : '秘密', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'ArmGaurd', 
 		 spec : { 
 			 health : {
@@ -1767,7 +1767,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '13658', 
-		  src : 'Image\\gauntlet_009.png', 
+		  src : 'gauntlet_009.png', 
 		  exp : '칼날이 달려있는 방어구. 주의하지 않는다면 자신에게 피해를 줄 수도 있다.', 
 	},
 	IT0000077 : { 
@@ -1785,13 +1785,13 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '63658', 
-		  src : 'Image\\inst_002.png', 
+		  src : 'inst_002.png', 
 		  exp : '행운을 올려주는 나팔.', 
 	},
 	IT0000078 : { 
 		 code : 'IT0000078', 
 		 name : 'Face Protector', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Helmet', 
 		 spec : { 
 			 health : {
@@ -1805,13 +1805,13 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '5667', 
-		  src : 'Image\\helm_009.png', 
+		  src : 'helm_009.png', 
 		  exp : '값싼 보급형 방어구. 눈먼 화살로 부터 안면을 보호해준다.', 
 	},
 	IT0000079 : { 
 		 code : 'IT0000079', 
 		 name : 'Goblin Mask', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Helmet', 
 		 spec : { 
 			 health : {
@@ -1825,7 +1825,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '21110', 
-		  src : 'Image\\helm_013.png', 
+		  src : 'helm_013.png', 
 		  exp : '민첩성과 속도를 올려주는 가면.', 
 	},
 	IT0000080 : { 
@@ -1847,7 +1847,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '16999', 
-		  src : 'Image\\item_024.png', 
+		  src : 'item_024.png', 
 		  exp : '공격시 화염 속성 피해를 입힌다. 화속성 추가 피해 10%', 
 	},
 	IT0000081 : { 
@@ -1869,13 +1869,13 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '146991', 
-		  src : 'Image\\item_038.png', 
+		  src : 'item_038.png', 
 		  exp : '다른 세계의 명필가가 글씨를 쓸때 사용했다고 알려졌다.', 
 	},
 	IT0000082 : { 
 		 code : 'IT0000082', 
 		 name : '녹색베일', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Robe', 
 		 spec : { 
 			 health : {
@@ -1889,13 +1889,13 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '2412', 
-		  src : 'Image\\armor_001.png', 
+		  src : 'armor_001.png', 
 		  exp : '녹색천으로 만들어진 베일. 천의 재료는 알 수 없다.', 
 	},
 	IT0000083 : { 
 		 code : 'IT0000083', 
 		 name : 'Fluffy Coat', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Cloth', 
 		 spec : { 
 			 health : {
@@ -1909,13 +1909,13 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '15121', 
-		  src : 'Image\\armor_015.png', 
+		  src : 'armor_015.png', 
 		  exp : '푹신한 재질로 만들어진 옷. 입으면 방어력이 올라갈 것만 같다.', 
 	},
 	IT0000084 : { 
 		 code : 'IT0000084', 
 		 name : 'Grass Dress', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Cloth', 
 		 spec : { 
 			 health : {
@@ -1929,13 +1929,13 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '2112', 
-		  src : 'Image\\armor_013c.png', 
+		  src : 'armor_013c.png', 
 		  exp : '식물의 잎과 줄기로 제작된 옷이다. 매 턴마다 체력을 1/16 회복하지만 화염피해를 입을 경우 체력의 2%만큼의 추가 데미지를 입는다.', 
 	},
 	IT0000085 : { 
 		 code : 'IT0000085', 
 		 name : 'Clothing of Monastics', 
-		 category : 'Ammor', 
+		 category : 'Armor', 
 		 type : 'Cloth', 
 		 spec : { 
 			 health : {
@@ -1949,7 +1949,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '4142', 
-		  src : 'Image\\armor_022d.png', 
+		  src : 'armor_022d.png', 
 		  exp : '알 수 없는 기운으로 보호받고 있는 오래된 수도복. 냄새가 나는 것만 같이 느껴진다.', 
 	},
 	IT0000086 : { 
@@ -1970,7 +1970,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '0', 
-		  src : 'Image\\boots_007.png', 
+		  src : 'boots_007.png', 
 		  exp : '탑에서 발견된 다른 세계의 신발. 모든 능력치를 상승시켜 준다.', 
 	},
 	IT0000087 : { 
@@ -1984,7 +1984,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '0', 
-		  src : 'Image\\item_043.png', 
+		  src : 'item_043.png', 
 		  exp : '가죽으로 만들어진 화살통.', 
 	},
 	IT0000088 : { 
@@ -1998,7 +1998,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '0', 
-		  src : 'Image\\item_043.png', 
+		  src : 'item_043.png', 
 		  exp : '경량화 마법이 걸린 것으로 추정되는 화살통.', 
 	},
 	IT0000089 : { 
@@ -2007,7 +2007,7 @@ const dataItem = {
 		 category : 'Item', 
 		 type : 'Item', 
 		  price: '0', 
-		  src : 'Image\\MI_error.png', 
+		  src : 'MI_error.png', 
 		  exp : '도망칠 확률을 높여주는 악세사리.', 
 	},
 	IT0000090 : { 
@@ -2024,7 +2024,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '0', 
-		  src : 'Image\\mat_026.png', 
+		  src : 'mat_026.png', 
 		  exp : '행운을 높여주는 아이템. 소지하고 있는 것만으로도 파티 전원의 행운이 높아진다.', 
 	},
 	IT9000024 : { 
@@ -2033,7 +2033,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: '0', 
-		  src : 'Image\\item_012.png', 
+		  src : 'item_012.png', 
 		  exp : '4턴동안 체력이 10% 감소하지만 방어력이 40% 상승한다.', 
 	},
 	IT9000025 : { 
@@ -2042,7 +2042,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: '0', 
-		  src : 'Image\\item_014.png', 
+		  src : 'item_014.png', 
 		  exp : '3턴 동안 얼음 속성 마법의 데미지가 15% 증가된다.', 
 	},
 	IT0000091 : { 
@@ -2056,7 +2056,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '7721', 
-		  src : 'Image\\boots_003c.png', 
+		  src : 'boots_003c.png', 
 		  exp : '공격속도를 10% 증가시켜주는 장화.', 
 	},
 	IT0000092 : { 
@@ -2073,7 +2073,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '3333', 
-		  src : 'Image\\boots_003b.png', 
+		  src : 'boots_003b.png', 
 		  exp : '3배 빨라지는 붉은색의 장화. 공격속도가 30% 상승한다.', 
 	},
 	IT0000093 : { 
@@ -2094,7 +2094,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '43211', 
-		  src : 'Image\\we_sword021.png', 
+		  src : 'we_sword021.png', 
 		  exp : 'અજાણી ભાષા લખેલી છે.', 
 	},
 	IT0000094 : { 
@@ -2115,7 +2115,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '16651', 
-		  src : 'Image\\we_sword015.png', 
+		  src : 'we_sword015.png', 
 		  exp : '멍청해지는 듯한 느낌이 드는 무기. 사용시 무기 사용에 불편함을 느끼게 된다.', 
 	},
 	IT0000095 : { 
@@ -2136,7 +2136,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '5548', 
-		  src : 'Image\\we_sword003.png', 
+		  src : 'we_sword003.png', 
 		  exp : '사막의 전사들이 즐겨 사용했다고 알려진 곡도. 받는 화염피해가 3% 감소한다.', 
 	},
 	IT0000096 : { 
@@ -2157,7 +2157,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '1228', 
-		  src : 'Image\\we_staff014c.png', 
+		  src : 'we_staff014c.png', 
 		  exp : '기계 종족의 체력을 추가로 12% 회복시켜주는 공구형태의 지팡이.', 
 	},
 	IT0000096 : { 
@@ -2178,7 +2178,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '124216', 
-		  src : 'Image\\we_spear017b.png', 
+		  src : 'we_spear017b.png', 
 		  exp : '40% 이하의 체력을 가진 상대에게 30%의 추가 피해를 입힘.', 
 	},
 	IT0000097 : { 
@@ -2199,7 +2199,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '4478', 
-		  src : 'Image\\we_other011.png', 
+		  src : 'we_other011.png', 
 		  exp : '주로 군대에서 사용되는 국자. 음식을 먹을 때 받는 효과 5% 상승.', 
 	},
 	IT0000098 : { 
@@ -2220,7 +2220,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '0', 
-		  src : 'Image\\we_bow009b.png', 
+		  src : 'we_bow009b.png', 
 		  exp : '전설적인 사냥꾼이 사용했다고 전해지는 활', 
 	},
 	IT0000099 : { 
@@ -2241,7 +2241,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '34124', 
-		  src : 'Image\\we_bow015b.png', 
+		  src : 'we_bow015b.png', 
 		  exp : '.', 
 	},
 	IT0000100 : { 
@@ -2262,7 +2262,7 @@ const dataItem = {
 			 }, 
 		 }, 
 		  price: '1712', 
-		  src : 'Image\\we_axe022.png', 
+		  src : 'we_axe022.png', 
 		  exp : '몽둥이에 박힌 못은 상대방을 기죽게 만든다. 7% 확률로 공포에 걸리게 만듬.', 
 	},
 	IT9000016 : { 
@@ -2271,7 +2271,7 @@ const dataItem = {
 	 category : 'Other', 
 	 type : 'Item', 
 	  price: '384', 
-	  src : 'Image\\food_018.png', 
+	  src : 'food_018.png', 
 	  exp : 'hp, sp, mp를 즉시 1/4 회복 시켜주는 음식. 30% 확률로 혼란상태에 빠진다.', 
 	},
 	IT9000017 : { 
@@ -2280,7 +2280,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: '86', 
-		  src : 'Image\\food_019.png', 
+		  src : 'food_019.png', 
 		  exp : 'hp, sp, mp를 즉시 1/8 회복 시켜주는 음식.', 
 	},
 	IT9000018 : { 
@@ -2289,7 +2289,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: '3092', 
-		  src : 'Image\\food_038.png', 
+		  src : 'food_038.png', 
 		  exp : '사용시 4턴 동안 공격력을 20% 증가시킨다.', 
 	},
 	IT9000019 : { 
@@ -2298,7 +2298,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: '3092', 
-		  src : 'Image\\food_038.png', 
+		  src : 'food_038.png', 
 		  exp : '사용시 4턴 동안 최대 체력을 20% 증가시킨다.', 
 	},
 	IT9000020 : { 
@@ -2307,7 +2307,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: '3092', 
-		  src : 'Image\\food_038.png', 
+		  src : 'food_038.png', 
 		  exp : '사용시 4턴 동안 방어력을 20% 증가시킨다.', 
 	},
 	IT9000021 : { 
@@ -2316,7 +2316,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: '3092', 
-		  src : 'Image\\food_038.png', 
+		  src : 'food_038.png', 
 		  exp : '사용시 4턴 동안 마법 공격력을 20% 증가시킨다.', 
 	},
 	IT9000022 : { 
@@ -2325,7 +2325,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: '3092', 
-		  src : 'Image\\food_038.png', 
+		  src : 'food_038.png', 
 		  exp : '사용시 4턴 동안 마법 방어력을 20% 증가시킨다.', 
 	},
 	IT9000023 : { 
@@ -2334,7 +2334,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: '3092', 
-		  src : 'Image\\food_038.png', 
+		  src : 'food_038.png', 
 		  exp : '사용시 4턴 동안 스피드를 20% 증가시킨다.', 
 	},
 	IT9000024 : { 
@@ -2343,7 +2343,7 @@ const dataItem = {
 		 category : 'Other', 
 		 type : 'Item', 
 		  price: '26421', 
-		  src : 'Image\\food_032b.png', 
+		  src : 'food_032b.png', 
 		  exp : '사용시 4번의 전투 동안 20% 많은 양의 경험치를 획득한다.', 
 	},
 	IT9910000: {
@@ -2353,7 +2353,7 @@ const dataItem = {
 	    type: 'Map',
 	    useData: '20001',//지도의 경우 해방되는 아이템.
 		price: 100,
-	    src: 'Image\\MI_item.png',
+	    src: 'MI_item.png',
 	    exp: '끝이 꺽여 있는 나뭇가지. 어째선지 가리키고 있는 방향이 있는 것 같다.'
 
 	},
@@ -2364,7 +2364,7 @@ const dataItem = {
 	    type: 'Key',
 	    useData: '20001',//지도의 경우 해방되는 아이템.
 		price: 100,
-	    src: 'Image\\MI_item.png',
+	    src: 'MI_item.png',
 	    exp: '부러진 나뭇가지. 어째선지 가리키고 있는 방향이 있는 것 같다(1 회용).'
 
 	},
@@ -2375,7 +2375,7 @@ const dataItem = {
 	    type: 'Navigate',
 	    useData: 'All',//지도의 경우 해방되는 아이템.
 		price: 100,
-	    src: 'Image\\MI_item.png',
+	    src: 'MI_item.png',
 	    exp: '기본적인 지도. 지나간 길이 기록된다. 1회용 아이템'
 
 	},
@@ -2385,7 +2385,7 @@ const dataItem = {
 	    category: 'Other',
 	    type: 'Rebirth',
 	    useData: 'Random',//지도의 경우 해방되는 아이템.
-	    src: 'Image\\item_000.png',
+	    src: 'item_000.png',
 	    exp: '환생시켜주는 물약. 무엇으로 환생할지 알 수 없다. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 
 	},
@@ -2395,7 +2395,7 @@ const dataItem = {
 	    category: 'Other',
 	    type: 'Rebirth',
 	    useData: '0',
-	    src: 'Image\\item_000.png',
+	    src: 'item_000.png',
 	    exp: 'Human 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 
 	},
@@ -2405,7 +2405,7 @@ const dataItem = {
 	    category: 'Other',
 	    type: 'Rebirth',
 	    useData: '1',
-	    src: 'Image\\item_001.png',
+	    src: 'item_001.png',
 	    exp: 'Machina 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 
 	},
@@ -2415,7 +2415,7 @@ const dataItem = {
 	    category: 'Other',
 	    type: 'Rebirth',
 	    useData: '2',
-	    src: 'Image\\item_002.png',
+	    src: 'item_002.png',
 	    exp: 'Ort 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 
 	},
@@ -2425,7 +2425,7 @@ const dataItem = {
 	    category: 'Other',
 	    type: 'Rebirth',
 	    useData: '3',
-	    src: 'Image\\item_003.png',
+	    src: 'item_003.png',
 	    exp: 'Sprit 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 
 	},
@@ -2435,7 +2435,7 @@ const dataItem = {
 	    category: 'Other',
 	    type: 'Rebirth',
 	    useData: '4',
-	    src: 'Image\\item_004.png',
+	    src: 'item_004.png',
 	    exp: 'Beast 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 
 	},
@@ -2445,7 +2445,7 @@ const dataItem = {
 	    category: 'Other',
 	    type: 'Rebirth',
 	    useData: '5',
-	    src: 'Image\\item_005.png',
+	    src: 'item_005.png',
 	    exp: 'Kernel 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 
 	},
@@ -2455,7 +2455,7 @@ const dataItem = {
 	    category: 'Other',
 	    type: 'Rebirth',
 	    useData: '6',
-	    src: 'Image\\item_006.png',
+	    src: 'item_006.png',
 	    exp: 'Dead 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 
 	},
@@ -2465,7 +2465,7 @@ const dataItem = {
 	    category: 'Other',
 	    type: 'Rebirth',
 	    useData: '7',
-	    src: 'Image\\item_007.png',
+	    src: 'item_007.png',
 	    exp: 'Formless 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 
 	},
@@ -2475,7 +2475,7 @@ const dataItem = {
 	    category: 'Other',
 	    type: 'Rebirth',
 	    useData: '8',
-	    src: 'Image\\item_008.png',
+	    src: 'item_008.png',
 	    exp: 'Inorganic 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 
 	},
@@ -2485,7 +2485,7 @@ const dataItem = {
 	    category: 'Other',
 	    type: 'Rebirth',
 	    useData: '9',
-	    src: 'Image\\item_000.png',
+	    src: 'item_000.png',
 	    exp: 'Exterior 속성으로 환생시켜주는 물약. 환생이 가능할 때에도 마실 수 있으니 마셔서 손해 보는 일은 없도록 하자'
 
 	},

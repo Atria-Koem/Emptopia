@@ -92,20 +92,18 @@ class Item{
 		return code
 	}
 	inputInventory(){
-		var category = this.category
 		var code = this.code
 
-			inventoryData[category][code] = this
+			inventoryData[code] = this
 	}
 	checkOverlap(){
-		var category = this.category
 		var code = this.code
 		var number = 0;
-		if(!inventoryData[category][code]){
+		if(!inventoryData[code]){
 			number = 1
 				}
 		else{
-			number = inventoryData[category][code].number + 1
+			number = inventoryData[code].number + 1
 		}
 		return number
 	}
@@ -124,19 +122,12 @@ class Item{
 		return talent
 	}
 	checkInventory(itemCode){
-		var slotName =  Object.getOwnPropertyNames(inventoryData)
-		var slotNameLength = slotName.length
-		for(var i = 0; i < slotNameLength ; i++){
-			var slotInventory = Object.getOwnPropertyNames(inventoryData[slotName[i]])
-			var itemCheck = slotInventory.indexOf(itemCode)
-			if(itemCheck != -1){
-				break;
-			}
+		var slotInventory =  Object.getOwnPropertyNames(inventoryData)
+		var itemCheck = slotInventory.indexOf(itemCode)
+		if(itemCheck == -1){
+			return 0;
 		}
-		if(i === slotNameLength){
-			return 0
-		}
-		var item = inventoryData[slotName[i]][itemCode]
+		var item = inventoryData[itemCode]
 		return item
 	}
 	calculrate(type){
@@ -207,7 +198,7 @@ class refineItem /*extends Item*/{
 				itemData.number -= 1;
 			}
 			else{
-				delete inventoryData[itemData.category][itemData.code];
+				delete inventoryData[itemData.code];
 			}
 	}
 	succesRefine(itemData){

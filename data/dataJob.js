@@ -70,7 +70,7 @@ const  dataJob = {
  		str : 100, 	vit : 101, 	int : 100, 	wis : 100, 	dex : 101, 	
  		agi : 101, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
 	}, 
-	  limit : ['Sword', 'TwoHandSword', 'Dagger', 'Hatchet', 'Axe', 'Mace', 'Wand', 'Staff', 'Bow', 'Whip', 'MainGauche', 'BowGun', 'Shield', 'Book', 'ArrowCase', 'Ammor', 'Robe', 'Helmet', 'Circlet'], 
+	  limit : ['Sword', 'TwoHandSword', 'Dagger', 'Hatchet', 'Axe', 'Mace', 'Wand', 'Staff', 'Bow', 'Whip', 'MainGauche', 'BowGun', 'Shield', 'Book', 'ArrowCase', 'Armor', 'Robe', 'Helmet', 'Circlet'], 
 	  exp : '오로지 총과 창만을 사용할 수 있다.' 
 	},
 	J21000000 : { 
@@ -170,7 +170,7 @@ const  dataJob = {
 			str : 101, 	vit : 101, 	int : 101, 	wis : 100, 	dex : 100, 	
 			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
 		}, 
-		  limit : ['Sword', 'TwoHandSword', 'Dagger', 'Pike', 'Spear', 'Hatchet', 'Axe', 'Pistol', 'Gun', 'Wand', 'Bow', 'Whip', 'MainGauche', 'SubSword', 'SubSword', 'SubPike', 'SubHatchet', 'SubMace', 'SubPistol', 'Shield', 'Book', 'ArrowCase', 'Ammor', 'Robe'], 
+		  limit : ['Sword', 'TwoHandSword', 'Dagger', 'Pike', 'Spear', 'Hatchet', 'Axe', 'Pistol', 'Gun', 'Wand', 'Bow', 'Whip', 'MainGauche', 'SubSword', 'SubSword', 'SubPike', 'SubHatchet', 'SubMace', 'SubPistol', 'Shield', 'Book', 'ArrowCase', 'Armor', 'Robe'], 
 		  exp : '치료능력보다는 근접 전투에 특화된 전투사제' 
 	},
 	J11000000 : { 
@@ -180,7 +180,7 @@ const  dataJob = {
 			str : 104, 	vit : 101, 	int : 98, 	wis : 100, 	dex : 100, 	
 			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
 		}, 
-		  limit : ['Shield', 'Book', 'Ammor', 'Cloth', 'Robe'], 
+		  limit : ['Shield', 'Book', 'Armor', 'Cloth', 'Robe'], 
 		  exp : '높은 공격력을 가지고 있지만 방어구를 착용하지 못하는 광전사.' 
 	},
 	J12000000 : { 
@@ -409,7 +409,7 @@ const  dataJob = {
 			str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 103, 	
 			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 100
 		}, 
-		  limit : ['TwoHandSword', 'Pike', 'Spear', 'Staff', 'Whip', 'Ammor', 'Helmet'], 
+		  limit : ['TwoHandSword', 'Pike', 'Spear', 'Staff', 'Whip', 'Armor', 'Helmet'], 
 		  exp : '이 도둑들은 적이 가지고 있는 아이템을 무료로 훔쳐줍니다.' 
 	},
 	J46000000 : { 
@@ -449,7 +449,7 @@ const  dataJob = {
 			str : 100, 	vit : 100, 	int : 101, 	wis : 100, 	dex : 101, 	
 			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 101
 		}, 
-		  limit : ['Pistol', 'Gun', 'Bow', 'SubPistol', 'BowGun', 'Shield', 'ArrowCase', 'Ammor'], 
+		  limit : ['Pistol', 'Gun', 'Bow', 'SubPistol', 'BowGun', 'Shield', 'ArrowCase', 'Armor'], 
 		  exp : '현혹에 특화된 무희.' 
 	},
 	J62000000 : { 
@@ -459,7 +459,7 @@ const  dataJob = {
 			str : 100, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 100, 	
 			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 103
 		}, 
-		  limit : ['Pistol', 'Gun', 'Bow', 'SubPistol', 'BowGun', 'Shield', 'ArrowCase', 'Ammor'], 
+		  limit : ['Pistol', 'Gun', 'Bow', 'SubPistol', 'BowGun', 'Shield', 'ArrowCase', 'Armor'], 
 		  exp : '언변으로 적을 혼란스럽게 만든다.' 
 	},
 	J63000000 : { 
@@ -469,7 +469,7 @@ const  dataJob = {
 			str : 101, 	vit : 100, 	int : 100, 	wis : 100, 	dex : 101, 	
 			agi : 100, 	dis : 100, 	res : 100, 	spd : 100, 	luk : 101
 		}, 
-		  limit : ['Pistol', 'Gun', 'Bow', 'SubPistol', 'BowGun', 'Shield', 'ArrowCase', 'Ammor'], 
+		  limit : ['Pistol', 'Gun', 'Bow', 'SubPistol', 'BowGun', 'Shield', 'ArrowCase', 'Armor'], 
 		  exp : '근접 전투 능력에 특화된 무희로 큰 피해를 주지는 못하지만 주로 상태이상 피해를 준다.' 
 	},
 }
