@@ -95,7 +95,6 @@ class CreateItemData extends CreateData{
     this.getOption();
     this.getExp();
         this.getSrc();
-      this.getPrice();
     this.codePrint();
     }
 
@@ -115,12 +114,9 @@ getHealth(){
         for(let j = 0 ; j < type.length ; j++){
             if(document.getElementById(sumType[i] + type[j]).value != ""){
                 if( i == 1){
-                    dataTxt += "p" + type[j]
+                    dataTxt +="p"
                 }
-                else {
-                    dataTxt += type[j].slice(0, 1).toLowerCase() + "p"
-                }
-                dataTxt +=   " : " + document.getElementById(sumType[i] + type[j]).value + ","
+                dataTxt += type[j] + " : " + document.getElementById(sumType[i] + type[j]).value + ","
                 count ++;
                 this.check = 1;
             }
@@ -168,17 +164,14 @@ getExp(){
     this.exp = document.getElementById("exp").value;
 }
 getSrc(){
-    this.src = "Image\\\\" + document.getElementById("image").value ;
-}
-getPrice(){
-    this.price = document.getElementById("Price").value;
+    this.src = document.getElementById("image").value ;
 }
 codePrint(){
     let txt ;
     txt = this.code + " : { \n"
     
-    txt += "\t code : '" + this.code + "', \n"
-    txt += "\t name : '" + this.name + "', \n"
+    txt += "\t  code : '" + this.code + "', \n"
+    txt += "\t  name : '" + this.name + "', \n"
     txt += "\t category : '" + this.category  + "', \n"
     txt += "\t type : '" + this.itemType + "', \n"
     if(this.check == 1){
@@ -195,7 +188,6 @@ codePrint(){
         txt += "\t }, \n"
 
 }
-    txt+="\t  price: '"  + this.price + "', \n"
     txt+="\t  src : '"  + this.src + "', \n"
     txt += "\t  exp : '" + this.exp + "', \n"
     txt = txt + "},";
