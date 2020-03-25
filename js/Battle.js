@@ -64,7 +64,7 @@ class BattleData{
 			new AddLog([{text : 'new Enemy Search'}],'Battle')
 			new DOMSearch( 'class','MenuTabs')[0].children[1].click()
 		}
-		else if(battleCheck === 1){
+		else if(battleCheck === 1){ 
 			if(type != 'player'){
 			gagueChange()
 			}
@@ -1662,7 +1662,7 @@ class Performer{
 	let width = Math.abs(stock)
 
 	if(stock > 0){
-		gauge.style.backgroundColor = 'limegreen';
+		gauge.style.backgroundColor = 'rgb(30, 130, 30)';
 		if(width > 100){
 			width = 100
 		}

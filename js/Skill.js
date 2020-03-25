@@ -7,7 +7,7 @@ class CheckSkill{
 			}
 		},
 		fail : {
-			0 : { tribe : "T*4*"}
+			0 : { tribe : "T*4*"} 
 		}
 	}*/
 	constructor(performerNumber,skillCode){

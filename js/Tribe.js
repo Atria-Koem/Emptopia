@@ -122,7 +122,7 @@ class Rebirth{
     createDefaultData(){
         this.count = 0;
         this.stack = [];
-        
+         
     }
 	createRebirthObject(){
 		let rebirth = {

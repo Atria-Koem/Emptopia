@@ -387,7 +387,7 @@ class Player extends CreateSpec{
 	checkRebirthData(){
 		if(this.rebirth.state){
 			const stateName = Object.getOwnPropertyNames(this.baseState);
-			const length = stateName.length;
+			const length = stateName.length; 
 			for(let i =0 ; i < length ; i++){
 				
 				this.baseState[stateName[i]] += this.rebirth.state[stateName[i]]
@@ -1152,7 +1152,7 @@ class StatusView{
 			}
 		}
 		else{
-			boardColor = '#426842'
+			boardColor = '#64a064'
 		}
 		return boardColor
 	}
@@ -1160,13 +1160,13 @@ class StatusView{
 		let color = ''
 		switch(healthName){
 			case 'HP' :
-			color = 'red'
+			color = 'rgb(200,30,30)'
 			break;
 			case 'SP' :
-			color = 'yellow'
+			color = 'rgb(200, 200, 30)'
 			break;
 			case 'MP' :
-			color = 'blue'
+			color = 'rgb(30,30,200)'
 			break;
 		}
 		const disorder = performer.disorder

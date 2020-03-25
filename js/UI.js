@@ -2164,14 +2164,14 @@ class Text {
 			case 'HP':
 			case 'atkPhy':
 			case 'HpDamage':
-				color = 'red'
+				color = 'rgb(200,30,30)'
 				break;
 			case 'Change':
 			case 'Clear':
 			case 'individual':
 			case 'defPhy':
 			case 'HpRecovery':
-				color = 'green'
+				color = 'rgb(30, 130, 30)'
 				break;
 			case 'hitCount':
 			case 'multi':
@@ -2182,7 +2182,7 @@ class Text {
 			case 'friend':
 			case 'MP':
 			case 'MpRecovery':
-				color = 'blue'
+				color = 'rgb(30,30,200)'
 				break;
 			case 'SpDamage':
 				color = 'yellowgreen'
@@ -2193,11 +2193,11 @@ class Text {
 			case 'SP':
 			case 'SpRecovery':
 			case 'paralyzed':
-				color = 'yellow'
+				color = 'rgb(200, 200, 30)'
 				break;
 			case 'self':
 			case 'Delay':
-				color = 'limegreen'
+				color = 'rgb(30, 130, 30)'
 				break;
 			case 'Death':
 				color = 'darkred'
@@ -2533,7 +2533,7 @@ class Shop {
 			label.appendChild(inputLabel)
 			div.appendChild(label);
 			this.standBoard.appendChild(div);
-		}
+		 }
 		}
 		
 
@@ -2842,7 +2842,7 @@ class SkillButtonView {
 		skillButton.addEventListener('click',
 			function () {
 				const performer = this.parentNode.parentNode.parentNode.parentNode.parentNode.value
-				new DOMSearch('id', 'Battle' + performer + 'Border').style.backgroundColor = 'rgb(66, 104, 66)'
+				new DOMSearch('id', 'Battle' + performer + 'Border').style.backgroundColor = 'rgb(100, 160, 100)'
 			/*this.parentNode.parentNode*/new DOMSearch('id', 'SkillBorder').style.visibility = 'collapse';
 				//this.parentNode.parentNode.innerHTML = ''
 				dataActiveCharacter[performer].active = 0;

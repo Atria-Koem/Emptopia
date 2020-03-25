@@ -114,7 +114,7 @@ class Item{
 			case 9 :
 			case 11 :
 				talent =  100 //+ Math.ceil(Math.random() * 100 - 50)
-				break;
+				break; 
 			default :
 				talent = parseInt(code.slice(11,14))
 				break;
@@ -221,6 +221,53 @@ class refineItem /*extends Item*/{
 			return false;
 		}
 	}
+}
+class MoveItem{
+	constructor(type,item){
+		this.type= type
+		this.item = item 
+		this.selectTarget();
+		this.checkDelete();
+		this.checkAdd();
+		if(this.toAdd == true){
+			this.toData[this.item.code].number+= 1;
+		}
+		else{
+			this.toData[this.item.code] = this.item;
+		}
+		if(this.fromDelete == true){
+			delete this.fromData[this.item.code]
+		}
+		else{
+			this.toData[this.item.code].number -= 1;
+		}
+	}
+	selectTarget(){
+		switch(this.type){
+			case 'ToMap' :
+				this.toData = mapInventoryData;
+				this.fromData= inventoryData;
+			break;
+			case 'ToInventory':
+			this.toData =inventoryData ;
+			this.fromData= mapInventoryData ;
+			break;
+		}
+	}
+	checkDelete(){
+		this.fromDelete = false;
+		let count = this.fromData[this.item.code].number
+		if( count == 1){
+			this.fromDelete = true;
+		}
+	}
+	checkAdd(){
+		this.toAdd = false;
+		if(this.toData[this.item.code]){
+			this.toAdd = true;
+		}
+	}
+
 }
 class UseItem{
 	constructor(code){

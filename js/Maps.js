@@ -67,6 +67,7 @@ class Area{
     }
 }
 }
+
 class CreateMap extends Area{
 	// 0 = road , 1 = wall , 5 = enemy , 7 = exit ,10 = start , 15 = fog
 	constructor(areaCode,level){
@@ -318,9 +319,11 @@ class CreateMap extends Area{
 			y = 600
 		}
     for (var i = 0; i < y; i++) {
-        map[i] = []
+		map[i] = []
+
         for (var j = 0; j < x; j++) {
-            map[i][j] = Math.round(Math.random() * 0.90);
+			map[i][j] = Math.round(Math.random() * 0.90);
+
         }
     }
 //42 8
@@ -434,7 +437,10 @@ class CreateMap extends Area{
 			
 		}while(count > 0)
 
-    }
+	}
+	createBossEnemy(){
+
+	}
     createPositionEnemy(count){
 		let x;
 		let y;
@@ -1357,20 +1363,76 @@ class Sight{
 		canvas.height = (length)*20 
 		Map.style.width = canvas.width + 'px'
 		Map.style.height = canvas.height + 'px'
-		for (var i = 0; i < length; i++) {
-				for (var j = 0; j < length; j++) {
-							inner.fillStyle = this.returnColor(draw[i][j])									
-						if(baseX ===  j && baseY === i){
-							inner.fillStyle = "aqua"
-						}
 
-					inner.fillRect((j)*20,(i)*20,20,20)
-					if(Math.floor(draw[i][j]) == 5){
-						inner.font = "15px consolas";
-						inner.fillStyle = "white";
-						inner.fillText("E", (j)*20 + 10,(i)*20 + 10);
+		for (var i = 0; i < length; i++) {
+
+				for (var j = 0; j < length; j++) {
+					let image = new Image();
+					inner.fillStyle = this.returnColor(draw[i][j])	
+					image.src = "Image\\field\\floor.png"
+					inner.drawImage(image,(j)*20,(i)*20);
+					image.src = this.returnImage(draw[i][j]);								
+					if(baseX ===  j && baseY === i){
+			
+						image.src = "Image\\field\\player.png";
+						inner.drawImage(image,(j)*20,(i)*20);
+						//inner.fillStyle = "aqua"
 					}
 
+					
+					else if(image.src.indexOf("png") !=-1){
+						if(image.src.indexOf("wall") !=-1){
+		//top left bottom rigth 0 0 0 0
+					
+							let y = i + this.minY 
+							let x = j + this.minX
+							let top =  0
+							let left =  0
+							let bottom =  0
+							let rigth = 0
+							let checkA =0
+
+						
+							if(y - 1 <= 0 || mapData.map[y - 1][x]==1){
+								
+								top = 1
+								checkA +=8
+							}
+							if(x - 1 <= 0 || mapData.map[y][x - 1]==1){
+	
+								left = 1
+								checkA +=4
+							}
+
+							if(y + 1 >= length || mapData.map[y + 1][x]==1){
+								checkA +=2
+								bottom = 1
+							}
+
+							if(x + 1 >= length || mapData.map[y][x + 1]==1){
+								checkA +=1
+								rigth = 1
+							}
+
+						
+							inner.drawImage(image, bottom * 40 + rigth *20,top * 40 +left * 20,20,20,(j)*20,(i)*20,20,20);
+							console.log(checkA);
+						}
+						else{
+							inner.drawImage(image,(j)*20,(i)*20,20,20); 
+						}
+						
+					}
+					else{
+						inner.fillStyle = this.returnColor(draw[i][j])	
+						inner.fillRect((j)*20,(i)*20,20,20)
+					}
+					if(Math.floor(draw[i][j]) == 5){
+						//inner.font = "15px consolas";
+						//inner.fillStyle = "white";
+						//inner.fillText("E", (j)*20 + 10,(i)*20 + 10);
+					}
+					
 				}
 			
 		}
@@ -1397,6 +1459,54 @@ class Sight{
 				}
 			
 		}
+	}
+	returnImage(value,x,y){
+
+		// 0 = road , 1 = wall , 5 = enemy , 7 = exit ,10 = start , 15 = fog
+		let imageValue = Math.floor(value);
+		let returnSrc = "Image\\field\\"
+		switch(imageValue){
+			case 0:
+				returnSrc += "floor.png"
+				break;
+			case 1:
+			    returnSrc += "wall.png"
+				break;
+            case 5:
+			returnSrc += "enemy.png"
+                    break;
+			case 7:
+		
+				break;
+			case 10:
+
+				break;
+			default : 
+			case 15:
+                
+
+                break;
+            case 11:
+			returnSrc += "chest.png"
+                    break;
+			case 300:
+
+				break;
+		}
+		return returnSrc			
+	}
+	sightConvert(){
+		let canvas = new DOMSearch( 'id','MapDraw')
+		let inner = canvas.getContext('2d');
+		
+		let pixels = inner.getImageData(0,0,canvas.width,canvas.height)
+		let data = pixels.data
+		for(let i =0 ; i <data.length; i+=4){
+			data[i] = ((data[i] -= sightTrans) > 0)? Math.floor(data[i] - sightTrans) : 0 ;
+			data[i + 1] = ((data[i + 1] -= sightTrans) > 0)? Math.floor(data[i + 1] - sightTrans) : 0 ;
+			data[i + 2] = ((data[i + 2] -= sightTrans) > 0)? Math.floor(data[i + 2] - sightTrans) : 0 ;
+		}
+		canvas.putImageData(pixels,0,0)
 	}
 }
 class MoveInMap{

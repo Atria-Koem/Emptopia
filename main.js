@@ -177,7 +177,9 @@ let inventoryData = {
 
 }
 
-
+let mapInventoryData = {
+	
+}
 var dataName = ['Alent', 'Bastie', 'Ceait','Diman','Eginea','Fiwn','Gaoel']
 
 

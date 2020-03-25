@@ -113,4 +113,4 @@ function loadCharact(){
 			playerTeam.character[storageData[i]] = new Player(localStorage[storageData[i]],"Load")
 		}
 	}
-}
+} 
