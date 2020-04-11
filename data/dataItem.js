@@ -2275,15 +2275,38 @@ const dataItem = {
 			sp : 124
 			 }, 
 			 state : {
-			str : 33, 	vit : -21
+			str : 33, 	
 			 }, 
 			 option : {
-			atkPhy : 167, 	atkPhyTrue : 25, 	rateHit : 75, 	rateCrt : 4, 	valCrt : 130
+			atkPhy : 167, 	atkPhyTrue : 25, 	rateHit : 75, 	rateCrt : 4, 	valCrt : 130,
+				 atkRapid : 2
 			 }, 
 		 }, 
 		  price: '5542', 
 		  src : 'Image\\we_sword039.png', 
 		  exp : '오래되어 말라붙은 피가 지워지지 않는다.', 
+	},
+	IT0000102 : { 
+		 code : 'IT0000102', 
+		 name : 'Green Leaf', 
+		 category : 'Weapon', 
+		 type : 'Dagger', 
+		 spec : { 
+			 health : {
+			sp : 67,
+			pMp : 3
+			 }, 
+			 state : {
+			str : 16, 	dex : 17
+			 }, 
+			 option : {
+			atkPhy : 84, 	atkMag : 26, 	atkPhyTrue : 17, 	atkMagTrue : 26, 	rateHit : 85, 	
+			rateCrt : 5, 	valCrt : 180, 	atkRapid : 4
+			 }, 
+		 }, 
+		  price: '3720', 
+		  src : 'Image\\we_sword040.png', 
+		  exp : '공격 당 추가적으로 마법피해를 입히는 무기.', 
 	},
 	IT9000016 : { 
 	 code : 'IT9000016', 
