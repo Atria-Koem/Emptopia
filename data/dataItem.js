@@ -2265,6 +2265,26 @@ const dataItem = {
 		  src : 'we_axe022.png', 
 		  exp : '몽둥이에 박힌 못은 상대방을 기죽게 만든다. 7% 확률로 공포에 걸리게 만듬.', 
 	},
+	IT0000101 : { 
+		 code : 'IT0000101', 
+		 name : '피묻은 대검', 
+		 category : 'Weapon', 
+		 type : 'Sword', 
+		 spec : { 
+			 health : {
+			sp : 124
+			 }, 
+			 state : {
+			str : 33, 	vit : -21
+			 }, 
+			 option : {
+			atkPhy : 167, 	atkPhyTrue : 25, 	rateHit : 75, 	rateCrt : 4, 	valCrt : 130
+			 }, 
+		 }, 
+		  price: '5542', 
+		  src : 'Image\\we_sword039.png', 
+		  exp : '오래되어 말라붙은 피가 지워지지 않는다.', 
+	},
 	IT9000016 : { 
 	 code : 'IT9000016', 
 	 name : 'Spicy Pepper', 
