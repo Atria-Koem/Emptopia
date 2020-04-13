@@ -2308,6 +2308,50 @@ const dataItem = {
 		  src : 'Image\\we_sword040.png', 
 		  exp : '공격 당 추가적으로 마법피해를 입히는 무기.', 
 	},
+	IT0000103 : { 
+		 code : 'IT0000103', 
+		 name : '삽을 닮은 대검', 
+		 category : 'Weapon', 
+		 type : 'TwoHandSword', 
+		 spec : { 
+			 health : {
+
+			pHp : 25,pSp : 15
+			 }, 
+			 state : {
+			str : 122, 	vit : 30
+			 }, 
+			 option : {
+			atkPhy : 266, 	atkPhyTrue : 79, 	rateHit : 80, 	rateCrt : 2, 	valCrt : 220, 	
+			atkRapid : 1
+			 }, 
+		 }, 
+		  price: '54325', 
+		  src : 'Image\\we_sword042.png', 
+		  exp : '땅을 파거나 무엇인가를 짓이기는 것에 사용하는 것이 더 유용할 수도 있다.', 
+	},
+	IT0000104 : { 
+		 code : 'IT0000103', 
+		 name : 'Mens symbol', 
+		 category : 'Ammor', 
+		 type : 'Robe', 
+		 spec : { 
+			 health : {
+			hp : 25,sp : 25,mp : 25
+			 }, 
+			 state : {
+			str : 25, 	vit : 25, 	int : 25, 	wis : 25, 	dex : 25, 	
+			agi : 25, 	dis : 25, 	res : 25, 	spd : 25, 	luk : 25
+			 }, 
+			 option : {
+			defPhyPer : 25, 	resPhyPer : 25, 	defMagPer : 25, 	resMagPer : 25, 	rateDodge : 25, 	
+			rateRes : 25, 	rateDodgeLuk : 25
+			 }, 
+		 }, 
+		  price: '25000', 
+		  src : 'Image\\armor_003b.png', 
+		  exp : '영롱한 색으로 빛이 난다.', 
+	},
 	IT9000016 : { 
 	 code : 'IT9000016', 
 	 name : 'Spicy Pepper', 
