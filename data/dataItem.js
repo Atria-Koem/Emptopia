@@ -2352,6 +2352,27 @@ const dataItem = {
 		  src : 'Image\\armor_003b.png', 
 		  exp : '영롱한 색으로 빛이 난다.', 
 	},
+	IT0000105 : { 
+		 code : 'IT0000105', 
+		 name : 'Magic Guard', 
+		 category : 'Ammor', 
+		 type : 'Shield', 
+		 spec : { 
+			 health : {
+
+			pMp : 15
+			 }, 
+			 state : {
+			int : 21
+			 }, 
+			 option : {
+			defPhyPer : 4, 	defMagPer : 12, 	rateRes : 15
+			 }, 
+		 }, 
+		  price: '', 
+		  src : 'Image\\acce_003f.png', 
+		  exp : '착용자가 공격당할 때 보이지 않는 방패가 생성되지만 높은 방어력을 기대하기는 어렵다.', 
+	},
 	IT9000016 : { 
 	 code : 'IT9000016', 
 	 name : 'Spicy Pepper', 
