@@ -335,7 +335,7 @@ class CharacterDesk {
 			let healthNameP = new CreateTag('p')
 			healthNameP.innerText = healthName[3 + i].toUpperCase()
 			let healthValueP = new CreateTag('p')
-			let innerText = health[healthName[i]]
+			let innerText = Math.floor(battleHealth[healthName[3 + i]]) + ' / ' + health[healthName[i]]
 			let healthGap = battleHealth[healthName[i]] - health[healthName[i]]
 			if (healthGap > 0) {
 				innerText += ' + ' + healthGap
@@ -859,6 +859,7 @@ class CreateViewHTML {
 	constructor() { }
 	createViewLabel(forId, type) {
 		let label = new CreateTag('label')
+		label.id = forId + "Label"
 		label.setAttribute("for", forId)
 		label.className = type + 'Label DataLabel'
 		return label
@@ -1379,6 +1380,9 @@ class CreateDataView {
 		dataDiv.value = character.code
 		let name = new CreateTag('a');
 		name.innerText = character.name
+		if(character.status == "Death"){
+			name.innerText += "_(Death)"
+		}
 		name.className = 'name'
 		let level = new CreateTag('a');
 		level.innerText = 'Lv. ' + character.level
@@ -1425,7 +1429,7 @@ class CreateDataView {
 		div.appendChild(nameP)
 		div.appendChild(slash)
 
-		
+
 		if (item.spec) {
 			this.createItemData(div, item)
 		}
@@ -1489,7 +1493,7 @@ class CreateDataView {
 		let countP = new Text('x' + item.number, 'ItemCount').p
 		div.appendChild(countP)
 		div.appendChild(slash)
-	
+
 		if (item.spec) {
 			this.createItemData(div, item)
 		}
@@ -1602,6 +1606,7 @@ class CreateDataView {
 
 	}
 }
+let shopData;
 class addEventListner {
 	constructor(type) {
 	}
@@ -1634,13 +1639,13 @@ class addEventListner {
 					case 'inParty':
 						character.selected = 1
 						changeDiv.className = 'inParty'
-						changeDiv.parentElement.lastChild.lastChild.firstChild.innerText = 'inParty';
+						//changeDiv.parentElement.lastChild.lastChild.firstChild.innerText = 'inParty';
 						changeDiv.parentElement.lastChild.firstChild.checked = true
 						break;
 					case 'outParty':
 						character.selected = 0
 						changeDiv.className = 'outParty'
-						changeDiv.parentElement.lastChild.lastChild.firstChild.innerText = 'outParty'
+						//changeDiv.parentElement.lastChild.lastChild.firstChild.innerText = 'outParty'
 						changeDiv.parentElement.lastChild.firstChild.checked = false
 						break;
 				}
@@ -1987,15 +1992,15 @@ class addEventListner {
 	addEventTownTabs() {
 		new DOMSearch('id', "BuyMenuTabs").addEventListener('click',
 			function () {
-				new Shop("Buy")
+				shopData = new Shop("Buy")
 			})
 		new DOMSearch('id', "SellMenuTabs").addEventListener('click',
 			function () {
-				new Shop("Sell")
+				shopData = new Shop("Sell")
 			})
 		new DOMSearch('id', "RefineMenuTabs").addEventListener('click',
 			function () {
-				new Shop("Refine")
+				shopData = new Shop("Refine")
 			})
 	}
 	addInventoryListRefresh(tab) {
@@ -2292,6 +2297,12 @@ class Shop {
 
 		this.boardClear()
 		this.selectBoard(type)
+		if (!shopData || !shopData.itemList) {
+			this.createItemList();
+		}
+		else {
+			this.itemList = shopData.itemList
+		}
 		switch (type) {
 			case 'Buy':
 				this.createBuyData();
@@ -2343,9 +2354,19 @@ class Shop {
 		div.innerText = 'Reset'
 		return div
 	}
+	createItemList() {
+		let list = Object.getOwnPropertyNames(dataItem);
+		let itemList = []
+		for (let i = 0; i < 30; i++) {
+			let rand = Math.floor(Math.random() * list.length)
+			itemList.push(list.splice(rand, 1)[0])
+		}
+		itemList.sort();
+		this.itemList = itemList
+	}
 	createBuyData() {
 
-		const itemList = Object.getOwnPropertyNames(dataItem);
+		const itemList = this.itemList;
 		const length = itemList.length;
 
 		let fButtonGroup = new CreateTag('div');
@@ -2499,43 +2520,43 @@ class Shop {
 		this.standBoard.appendChild(fButtonGroup)
 
 		for (let i = 0; i < length; i++) {
-			if(inventoryData[itemList[i]].category != 'Other'){
-			let div = new CreateTag("div");
-			let Radio = CreateViewHTML.prototype.createViewRadio(itemList[i], "ItemData", itemList[i], "ItemRefine");
+			if (inventoryData[itemList[i]].category != 'Other') {
+				let div = new CreateTag("div");
+				let Radio = CreateViewHTML.prototype.createViewRadio(itemList[i], "ItemData", itemList[i], "ItemRefine");
 
-			div.appendChild(Radio);
-			div.className = "ItemData"
-			let label = new CreateTag("label");
-			label.setAttribute("for", Radio.id);
-			label.className = "ItemData DataLabel"
-			let formCheck = new CreateTag("div");
+				div.appendChild(Radio);
+				div.className = "ItemData"
+				let label = new CreateTag("label");
+				label.setAttribute("for", Radio.id);
+				label.className = "ItemData DataLabel"
+				let formCheck = new CreateTag("div");
 
-			let checkDiv = new CreateTag("div");
-			checkDiv.className = "ItemSelecter";
+				let checkDiv = new CreateTag("div");
+				checkDiv.className = "ItemSelecter";
 
-			formCheck.style.width = "5%";
-			formCheck.appendChild(checkDiv)
-			label.appendChild(formCheck)
+				formCheck.style.width = "5%";
+				formCheck.appendChild(checkDiv)
+				label.appendChild(formCheck)
 
-			let funds = dataItem[inventoryData[itemList[i]].baseCode].price;
-			funds = funds * 5;
-			if (!funds) {
-				funds = 0;
+				let funds = dataItem[inventoryData[itemList[i]].baseCode].price;
+				funds = funds * 5;
+				if (!funds) {
+					funds = 0;
+				}
+				let fundiv = new CreateTag("div")
+				fundiv.style.width = "10%";
+				let fundData = new Text("$" + funds).p;
+				fundiv.appendChild(fundData);
+				label.appendChild(fundiv);
+
+				let inputLabel = new CreateDataView('ShopRefine', 0, inventoryData[itemList[i]]).div
+				inputLabel.style.width = "65%";
+				label.appendChild(inputLabel)
+				div.appendChild(label);
+				this.standBoard.appendChild(div);
 			}
-			let fundiv = new CreateTag("div")
-			fundiv.style.width = "10%";
-			let fundData = new Text("$" + funds).p;
-			fundiv.appendChild(fundData);
-			label.appendChild(fundiv);
-
-			let inputLabel = new CreateDataView('ShopRefine', 0, inventoryData[itemList[i]]).div
-			inputLabel.style.width = "65%";
-			label.appendChild(inputLabel)
-			div.appendChild(label);
-			this.standBoard.appendChild(div);
-		 }
 		}
-		
+
 
 		let sfButtonGroup = new CreateTag('div');
 		sfButtonGroup.style.display = "flex";
@@ -2568,7 +2589,7 @@ class ShopRefine {
 	}
 	refineItem() {
 		new refineItem(this.codeData);
-		new Shop('Refine');
+		shopData = new Shop('Refine');
 	}
 }
 class ShopInter {

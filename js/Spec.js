@@ -86,7 +86,7 @@ class CreateSpec {
                 state[name[i]] = value
             }
         }
-        if (type === 'enemy') {
+        if (type === 'enemy' || type === 'summon') {
             for (let i = 0; i < length; i++) {
                 state[name[i]] = base[name[i]] *  (level + Math.pow(level / 10,1.1)) + seed
             }
@@ -192,12 +192,19 @@ class CreateSpec {
             }
         }
         return extend
-    }
+	}
 }
 class Enemy extends CreateSpec{
 	constructor(code,level,count,ally,type){
 		super('enemy');
 		var enemyData = dataMonster[code];
+		let fixedData ;
+		let fixedHealth = 0;
+		if(enemyData.fixedData){
+			fixedData = enemyData.fixedData;
+			fixedHealth = fixedData.health;
+		}
+
 		this.level = level;
 		this.name = enemyData.name + '(' + count+  ')';
 		this.enemyCode = code
@@ -207,7 +214,7 @@ class Enemy extends CreateSpec{
 		var baseState = this.createState('enemy',this.seed, level,enemyData.state)
 		this.baseState = baseState
 		var state = new State(0,this.baseState,this.job,this.tribe) 
-		var health = new Health('enemy',state,0,enemyData.health,this.level);
+		var health = new Health('enemy',state,0,enemyData.health,this.level,fixedHealth);
 		var option = this.createOption(state);
 		this.battle = this.extendLinkOption('extend',state,option,health);
 		this.origin = this.extendLinkOption('extend',state,option,health);
@@ -251,7 +258,7 @@ class CharacterCode{
 		var length = this.createLengthCode(code)
 		var random = this.createRandomCode(code,length)
 		this.code = code + length + random 
-		if(!type){
+		if(type){
 			var typeCode = this.createTypeCode(type)
 			this.code += typeCode
 		}
@@ -315,7 +322,65 @@ class CharacterCode{
 		return code
 	}
 }
+class Summon extends CreateSpec{
+	constructor(code,level,count,ally,type){
+		super('summon');
+		var summonData = dataMonster[code];
+		let fixedData ;
+		let fixedHealth = 0;
+		if(summonData.fixedData){
+			fixedData = summonData.fixedData;
+			fixedHealth = fixedData.health;
+		}
 
+
+		this.level = level;
+		this.name = summonData.name + '(' + count+  ')';
+		this.summonCode = code
+		this.exp = this.createExp(summonData.exp);
+		this.job = summonData.job
+		this.tribe = summonData.tribe
+		var baseState = this.createState('summon',this.seed, level,summonData.state)
+		this.baseState = baseState
+		var state = new State(0,this.baseState,this.job,this.tribe) 
+		var health = new Health('summon',state,0,summonData.health,this.level,fixedHealth);
+		var option = this.createOption(state);
+		this.battle = this.extendLinkOption('extend',state,option,health);
+		this.origin = this.extendLinkOption('extend',state,option,health);
+		this.add = {option : summonData.option}
+		this.funds = summonData.funds
+		this.parttern = this.createParttern(summonData.parttern)
+		this.skill = (!summonData.skill) ? [] : summonData.skill
+		this.dropTable = summonData.dropTable
+		this.protectType = summonData.protectType		
+		if(!summonData.coordinates){
+			var coordinates = (Math.round(Math.random())) ? 'Back' : 'Front'
+		}
+		else{
+			var coordinates = summonData.coordinates
+		}
+		this.coordinates = coordinates
+		this.type = (!type) ? '' : type
+		this.ally = (!ally) ? 'enemy' : ally
+		this.code = new CharacterCode(this.ally,'summon').code
+	}
+	createExp(exp){
+		var level = this.level
+		var name = Object.getOwnPropertyNames(exp)
+		var returnValue = {}
+		for(var i = 0, length = name.length; i < length; i++){
+			returnValue[name[i]] = Math.round(exp[name[i]] * (1 + (level - 1) / 10) + Math.pow(level, 3 / 2) / 10)
+		}
+		return returnValue
+	}
+	createParttern(parttern){
+		var returnParttern = []
+		for(var i = 0 ,length = parttern.length ; i < length ; i++){
+			returnParttern[i] = (parttern[i].slice(0))
+		}
+		return returnParttern
+	}	
+}
 class Player extends CreateSpec{
 	constructor(data,type,grade){
 
@@ -349,6 +414,7 @@ class Player extends CreateSpec{
 		var coordinates = (Math.round(Math.random())) ? 'Back' : 'Front'
 		this.coordinates = coordinates
 
+		this.activeType = 'None'
 		this.selected = 0;
 		this.parttern = [['OT00000',0,'KA100000']]
 		this.status = 'Live'
@@ -484,6 +550,7 @@ class Player extends CreateSpec{
 		}
 		this.bonusState = parseInt( splitData[17])
 		this.skillPoint = parseInt( splitData[18])
+		this.activeType = splitData[19]
 		this.addPlayerDesk();
 	}
 }
@@ -753,9 +820,19 @@ class Job{
 }
 class Health{
 	constructor(type , state , color , base , level , subType){
-		let hp = this.calculrateHp(state.vit,state.wis,state.str,state.int)
-		let mp = this.calculrateMp(state.wis,state.int)
-		let sp = this.calculrateSp(state.vit,state.str)
+		let hp , mp, sp ;
+		let mHp , mMp, sMp ;
+
+		if(subType === 'fixed'){
+			 hp = base.hp
+			 mp = base.mp
+			 sp = base.sp
+		}
+		else {
+			 hp = this.calculrateHp(state.vit, state.wis, state.str, state.int)
+			 mp = this.calculrateMp(state.wis, state.int)
+			 sp = this.calculrateSp(state.vit, state.str)
+		}
 		this.mHp = hp		
 		this.mSp = sp
 		this.mMp = mp
@@ -763,9 +840,11 @@ class Health{
 		this.sp = sp
 		this.mp = mp
 
-		if(type ==='enemy'){
-    this.addBaseValue(base,level)
+		if(type ==='enemy' || type === 'summon' ){
+			if(subType != 'fixed'){
+    		this.addBaseValue(base,level)
 			}
+		}
 	}
 	calculrateHp(vit,wis,str,int){
 		let valueVW = Math.pow( (vit + wis) * 5 , 1.73 / Math.PI) 

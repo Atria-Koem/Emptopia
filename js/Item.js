@@ -234,6 +234,7 @@ class MoveItem{
 		}
 		else{
 			this.toData[this.item.code] = this.item;
+			this.toData[this.item.code].number = 1;
 		}
 		if(this.fromDelete == true){
 			delete this.fromData[this.item.code]
