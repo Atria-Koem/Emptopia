@@ -1,4 +1,47 @@
 const dataMonster = {
+		M00000000: {
+		name: 'SummonTest',
+		health: {
+			hp: 100, sp: 100, mp: 100
+		},
+		state: {
+			str: 10, int: 10, dex: 10, dis: 10, spd: 10,
+			vit: 10, wis: 10, agi: 10, res: 10, luk: 10
+		},
+		coordinates: 0,
+		protectType: ['None', 0],
+		exp: {
+			str: 0, int: 0, dex: 0, dis: 0, spd: 0,
+			vit: 0, wis: 0, agi: 0, res: 0, luk: 0
+		},
+		funds: 0,
+		job: 'J00000000',
+		tribe: 'T00',
+		dropTable: [],
+		parttern: [['OT00000', 0, 'KA100000']]
+	},
+	M00000001: {
+		name: 'SummonTest1',
+		health: {
+			hp: 100, sp: 100, mp: 100
+		},
+		state: {
+			str: 10, int: 10, dex: 10, dis: 10, spd: 10,
+			vit: 10, wis: 10, agi: 10, res: 10, luk: 10
+		},
+		coordinates: 0,
+		protectType: ['None', 0],
+		exp: {
+			str: 0, int: 0, dex: 0, dis: 0, spd: 0,
+			vit: 0, wis: 0, agi: 0, res: 0, luk: 0
+		},
+		funds: 0,
+		job: 'J00000000',
+		tribe: 'T00',
+		dropTable: [],
+		parttern: [['OT00000', 0, 'KA100000']],
+		fixedData: { health: 'fixed' }
+	},
     M10000000: {
         name: 'Goblin',
       health:{
