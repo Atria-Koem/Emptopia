@@ -198,3 +198,4 @@ playerTeam = 현재 플레이어의 캐릭터/돈/이름 데이터
 platerTema.character.~~~
 
 imsi
+
