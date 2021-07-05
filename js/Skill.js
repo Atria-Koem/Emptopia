@@ -1,3 +1,4 @@
+
 class CheckSkill{	
 	/*KA100003 : { 
 		success : {
