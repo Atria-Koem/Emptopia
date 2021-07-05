@@ -1,3 +1,4 @@
+
 let openCheck = {
 	Equip: 0,
 	GetSkill: 0,
