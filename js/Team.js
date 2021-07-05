@@ -1,3 +1,4 @@
+
 class Team{
 	constructor(){
 		var name = "TEST"//new DOMSearch( 'id','InputTeamName').value
