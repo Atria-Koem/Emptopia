@@ -1,3 +1,4 @@
+
 class Area {
 	constructor() {
 		this.areaCode = new DOMSearch('id', "AreaSelect").value
