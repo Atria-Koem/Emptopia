@@ -1,3 +1,4 @@
+
 class Item{
 	constructor(code,refine,type){
 		if(type == "load" || type == "loadChar"){
