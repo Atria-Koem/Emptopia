@@ -1,3 +1,4 @@
+
 const nameState = ['str', 'vit', 'int', 'wis', 'dex', 'agi', 'dis', 'res', 'spd', 'luk'];
 const nameOption = ['atkPhy','defPhyPer','defPhyNum','resPhyPer','resPhyNum',
                   'atkMag','defMagPer','defMagNum','resMagPer','resMagNum',
