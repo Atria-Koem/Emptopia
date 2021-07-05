@@ -1,3 +1,4 @@
+
 const dataPartternType = {
 	'OT00000' : { text : "반드시"},
 	'OTRAND0' : { text : "○○%의 확률로"},
