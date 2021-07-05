@@ -1,3 +1,4 @@
+
 const dataSkillTree = {
 	KA100001 : {
 		success : {
