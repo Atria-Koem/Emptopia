@@ -1,3 +1,4 @@
+
 class CreateSpec {
     constructor(type) {
         this.seed = this.createSeed()
