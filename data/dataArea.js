@@ -1,3 +1,4 @@
+
 const dataArea = {
 	10000: {
 			name: '-Goblin Field',
