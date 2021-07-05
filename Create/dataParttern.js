@@ -39,3 +39,4 @@ const dataPartternType = {
 	'DE30100' : { text : "전체 사망자가 ○○ 보다 클 때"},
 	'DE30200' : { text : "전체 사망자가 ○○ 보다 작을 때"}
 }
+
