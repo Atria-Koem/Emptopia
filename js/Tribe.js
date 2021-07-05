@@ -1,3 +1,4 @@
+
 class Tribe {
 	constructor(performer) {
 		this.performer = performer
