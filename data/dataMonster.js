@@ -1,3 +1,4 @@
+
 const dataMonster = {
 		M00000000: {
 		name: 'SummonTest',
