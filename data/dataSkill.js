@@ -1,3 +1,4 @@
+
 const dataSkill = {
 	//KA = active , KP = passive + simpleJobCode 0000 + count
 	//KPT simpleTribeCode 000 + count
