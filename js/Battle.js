@@ -1,3 +1,4 @@
+
 let dataActiveCharacter = {};
 let playerGroup = {};
 let enemyGroup = {};
